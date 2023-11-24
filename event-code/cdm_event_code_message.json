@@ -1,0 +1,5157 @@
+{
+"cdm_event_code_message": [
+	{
+		"code" : "cdm-cloud.api_gateway.new_auth_handler.failure-marshal",
+		"language" : "kor",
+		"brief" : "API-Gateway 서비스 인증 핸들러 생성 실패",
+		"detail" : "사용자 정보를 JSON 형식으로 변환하는데 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.api_gateway.error_filter.failure-parse",
+		"language" : "kor",
+		"brief" : "에러 필터 처리 실패",
+		"detail" : "서비스를 찾을 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.api_gateway.error_filter.failure-match_string",
+		"language" : "kor",
+		"brief" : "에러 필터 처리 실패",
+		"detail" : "유효하지 않은 파라미터입니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_user.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "사용자 상세 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_user.failure-validate",
+		"language" : "kor",
+		"brief" : "사용자 상세 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_user.failure-get",
+		"language" : "kor",
+		"brief" : "사용자 상세 조회 실패",
+		"detail" : "사용자를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_user.success",
+		"language" : "kor",
+		"brief" : "사용자 상세 조회 성공",
+		"detail" : "사용자 상세 내용이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_simple_user.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "사용자 간소화 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_simple_user.failure-get",
+		"language" : "kor",
+		"brief" : "사용자 간소화 조회 실패",
+		"detail" : "사용자 간소화 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_simple_user.success",
+		"language" : "kor",
+		"brief" : "사용자 간소화 조회 성공",
+		"detail" : "사용자 간소화 내용이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.add_user.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "사용자 추가 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.add_user.failure-validate",
+		"language" : "kor",
+		"brief" : "사용자 추가 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.add_user.failure-generate_password",
+		"language" : "kor",
+		"brief" : "사용자 추가 실패",
+		"detail" : "사용자의 패스워드 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.add_user.failure-add",
+		"language" : "kor",
+		"brief" : "사용자 추가 실패",
+		"detail" : "사용자를 추가할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.add_user.success",
+		"language" : "kor",
+		"brief" : "사용자 추가 성공",
+		"detail" : "사용자가 추가되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "사용자 수정 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user.failure-validate",
+		"language" : "kor",
+		"brief" : "사용자 수정 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user.failure-update",
+		"language" : "kor",
+		"brief" : "사용자 수정 실패",
+		"detail" : "사용자를 수정할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user.success",
+		"language" : "kor",
+		"brief" : "사용자 수정 성공",
+		"detail" : "사용자가 수정되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_user.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "사용자 삭제 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_user.failure-delete",
+		"language" : "kor",
+		"brief" : "사용자 삭제 실패",
+		"detail" : "사용자를 삭제할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_user.success",
+		"language" : "kor",
+		"brief" : "사용자 삭제 성공",
+		"detail" : "사용자가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_users.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "사용자 목록 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_users.failure-validate",
+		"language" : "kor",
+		"brief" : "사용자 목록 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_users.failure-get",
+		"language" : "kor",
+		"brief" : "사용자 목록 조회 실패",
+		"detail" : "사용자 목록을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_users.failure-get_user_count",
+		"language" : "kor",
+		"brief" : "사용자 목록 조회 실패",
+		"detail" : "유저 목록 건수를 가져올 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_users.success-get",
+		"language" : "kor",
+		"brief" : "조회된 사용자 없음",
+		"detail" : "사용자 목록을 조회했으나, 조회된 사용자가 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_users.success",
+		"language" : "kor",
+		"brief" : "사용자 목록 조회 성공",
+		"detail" : "사용자 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user_password.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "사용자 비밀번호 수정 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user_password.failure-validate",
+		"language" : "kor",
+		"brief" : "사용자 비밀번호 수정 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user_password.failure-update",
+		"language" : "kor",
+		"brief" : "사용자 비밀번호 수정 실패",
+		"detail" : "사용자 비밀번호를 수정할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user_password.success",
+		"language" : "kor",
+		"brief" : "사용자 비밀번호 수정 성공",
+		"detail" : "사용자 비밀번호가 수정되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.reset_user_password.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "사용자 비밀번호 초기화 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.reset_user_password.failure-reset",
+		"language" : "kor",
+		"brief" : "사용자 비밀번호 초기화 실패",
+		"detail" : "사용자 비밀번호를 초기화할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.reset_user_password.success",
+		"language" : "kor",
+		"brief" : "사용자 비밀번호 초기화 성공",
+		"detail" : "사용자 비밀번호가 초기화되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_groups.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "그룹 목록 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_groups.failure-validate",
+		"language" : "kor",
+		"brief" : "그룹 목록 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_groups.failure-get",
+		"language" : "kor",
+		"brief" : "그룹 목록 조회 실패",
+		"detail" : "그룹 목록을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_groups.success-get",
+		"language" : "kor",
+		"brief" : "조회된 그룹이 없음",
+		"detail" : "그룹을 조회했으나, 조회된 그룹이 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_groups.success",
+		"language" : "kor",
+		"brief" : "그룹 목록 조회 성공",
+		"detail" : "그룹 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_group.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "그룹 상세 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_group.failure-get",
+		"language" : "kor",
+		"brief" : "그룹 상세 조회 실패",
+		"detail" : "그룹 상세 내용을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_group.success",
+		"language" : "kor",
+		"brief" : "그룹 상세 조회 성공",
+		"detail" : "그룹 상세 내용이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.add_group.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "그룹 추가 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.add_group.failure-add",
+		"language" : "kor",
+		"brief" : "그룹 추가 실패",
+		"detail" : "그룹을 추가할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.add_group.success",
+		"language" : "kor",
+		"brief" : "그룹 추가 성공",
+		"detail" : "그룹이 추가되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_group.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "그룹 수정 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_group.failure-validate",
+		"language" : "kor",
+		"brief" : "그룹 수정 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_group.failure-update",
+		"language" : "kor",
+		"brief" : "그룹 수정 실패",
+		"detail" : "그룹을 수정할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_group.success",
+		"language" : "kor",
+		"brief" : "그룹 수정 성공",
+		"detail" : "그룹이 수정되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_group.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "그룹 삭제 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_group.failure-delete",
+		"language" : "kor",
+		"brief" : "그룹 삭제 실패",
+		"detail" : "그룹을 삭제할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_group.success",
+		"language" : "kor",
+		"brief" : "그룹 삭제 성공",
+		"detail" : "그룹이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.set_group_users.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "그룹 사용자 목록 수정 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.set_group_users.failure-set",
+		"language" : "kor",
+		"brief" : "그룹 사용자 목록 수정 실패",
+		"detail" : "그룹의 사용자 목록을 수정할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.set_group_users.success",
+		"language" : "kor",
+		"brief" : "그룹 사용자 목록 수정 성공",
+		"detail" : "그룹의 사용자 목록이 수정되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_roles.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "역할 목록 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_roles.failure-validate",
+		"language" : "kor",
+		"brief" : "역할 목록 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_roles.failure-get",
+		"language" : "kor",
+		"brief" : "역할 목록 조회 실패",
+		"detail" : "역할 목록을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_roles.success-get",
+		"language" : "kor",
+		"brief" : "조회된 역할이 없음",
+		"detail" : "역할 목록을 조회했으나, 조회된 역할이 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_roles.success",
+		"language" : "kor",
+		"brief" : "역할 목록 조회 성공",
+		"detail" : "역할 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.login.warning-update_user_login_failed_info",
+		"language" : "kor",
+		"brief" : "로그인 실패 내역 수정 실패",
+		"detail" : "로그인 실패 내역을 수정할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.login.failure-login",
+		"language" : "kor",
+		"brief" : "세션 로그인 실패",
+		"detail" : "로그인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.login.failure-new_session",
+		"language" : "kor",
+		"brief" : "세션 로그인 실패",
+		"detail" : "세션을 생성할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.login.success",
+		"language" : "kor",
+		"brief" : "세션 로그인 성공",
+		"detail" : "로그인 되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.logout.failure-get_authenticated_session",
+		"language" : "kor",
+		"brief" : "세션 로그아웃 실패",
+		"detail" : "인증된 세션을 가져오지 못했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.logout.failure-get_authenticated_user",
+		"language" : "kor",
+		"brief" : "세션 로그아웃 실패",
+		"detail" : "인증된 사용자를 가져오지 못했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.logout.failure-validate_delete_session",
+		"language" : "kor",
+		"brief" : "세션 로그아웃 실패",
+		"detail" : "세션 삭제 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.logout.failure-delete_session",
+		"language" : "kor",
+		"brief" : "세션 로그아웃 실패",
+		"detail" : "세션을 삭제할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.logout.success",
+		"language" : "kor",
+		"brief" : "세션 로그아웃 성공",
+		"detail" : "로그아웃 되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.verify_session.failure-get_authenticated_session",
+		"language" : "kor",
+		"brief" : "세션 유효성 확인 실패",
+		"detail" : "인증된 세션을 가져오지 못했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.verify_session.failure-get_tenant_id",
+		"language" : "kor",
+		"brief" : "세션 유효성 확인 실패",
+		"detail" : "테넌트 ID를 찾을 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.verify_session.failure-verify",
+		"language" : "kor",
+		"brief" : "세션 유효성 확인 실패",
+		"detail" : "세션 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.verify_session.failure-get_user",
+		"language" : "kor",
+		"brief" : "세션 유효성 확인 실패",
+		"detail" : "세션 사용자 정보를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.verify_session.failure-update_session",
+		"language" : "kor",
+		"brief" : "세션 유효성 확인 실패",
+		"detail" : "세션을 업데이트할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.verify_session.success",
+		"language" : "kor",
+		"brief" : "세션 유효성 확인 성공",
+		"detail" : "세션 유효성이 확인되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.logout.failure-validate_revoke_session",
+		"language" : "kor",
+		"brief" : "세션 강제 로그아웃 실패",
+		"detail" : "세션 강제 삭제 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.revoke_session.failure-delete_session",
+		"language" : "kor",
+		"brief" : "세션 강제 로그아웃 실패",
+		"detail" : "세션을 삭제할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.revoke_session.success",
+		"language" : "kor",
+		"brief" : "세션 강제 로그아웃 성공",
+		"detail" : "강제 로그아웃되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_config.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "사용자 인증 설정 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_config.failure-get",
+		"language" : "kor",
+		"brief" : "사용자 인증 설정 조회 실패",
+		"detail" : "사용자 인증 설정을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_config.success",
+		"language" : "kor",
+		"brief" : "사용자 인증 설정 조회 성공",
+		"detail" : "사용자 인증 설정이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.set_config.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "사용자 인증 변경 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.set_config.failure-set",
+		"language" : "kor",
+		"brief" : "사용자 인증 설정 변경 실패",
+		"detail" : "사용자 인증 설정을 변경할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.set_config.failure-get",
+		"language" : "kor",
+		"brief" : "사용자 인증 설정 변경 실패",
+		"detail" : "변경된 사용자 인증 설정을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.set_config.success",
+		"language" : "kor",
+		"brief" : "사용자 인증 설정 변경 성공",
+		"detail" : "사용자 인증 설정이 변경되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.check_authorization.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "사용자 인가 여부 확인 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.check_authorization.failure-transaction",
+		"language" : "kor",
+		"brief" : "사용자 인가 여부 확인 실패",
+		"detail" : " 사용자 인가 여부를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.check_authorization.failure-mismatch_user",
+		"language" : "kor",
+		"brief" : "사용자 인가 여부 확인 실패",
+		"detail" : "사용자 인가 여부를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.check_authorization.failure-enforce",
+		"language" : "kor",
+		"brief" : "사용자 인가 여부 확인 실패",
+		"detail" : "사용자 인가 여부를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.check_authorization.failure",
+		"language" : "kor",
+		"brief" : "사용자 인가 실패",
+		"detail" : "해당 사용자는 인가 되지 않았습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.check_authorization.success",
+		"language" : "kor",
+		"brief" : "사용자 인가 여부 확인 성공",
+		"detail" : "사용자 인가 여부가 확인되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenants.failure-validate",
+		"language" : "kor",
+		"brief" : "테넌트 목록 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenants.failure-get",
+		"language" : "kor",
+		"brief" : "테넌트 목록 조회 실패",
+		"detail" : "테넌트 목록을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenants.success-get",
+		"language" : "kor",
+		"brief" : "조회된 테넌트 없음",
+		"detail" : "테넌트 목록을 조회했으나, 조회된 테넌트가 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenants.success",
+		"language" : "kor",
+		"brief" : "테넌트 목록 조회 성공",
+		"detail" : "테넌트 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenant.failure-get",
+		"language" : "kor",
+		"brief" : "테넌트 상세 조회 실패",
+		"detail" : "테넌트 상세 내용을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenant.success",
+		"language" : "kor",
+		"brief" : "테넌트 상세 조회 성공",
+		"detail" : "테넌트 상세 내용이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.add_tenant.failure-add",
+		"language" : "kor",
+		"brief" : "테넌트 추가 실패",
+		"detail" : "테넌트를 추가할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.add_tenant.success",
+		"language" : "kor",
+		"brief" : "테넌트 추가 성공",
+		"detail" : "테넌트가 추가되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_tenant.failure-update",
+		"language" : "kor",
+		"brief" : "테넌트 수정 실패",
+		"detail" : "테넌트를 수정할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.update_tenant.success",
+		"language" : "kor",
+		"brief" : "테넌트 수정 성공",
+		"detail" : "테넌트가 수정되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.activate_tenant.failure-activate",
+		"language" : "kor",
+		"brief" : "테넌트 활성화 실패",
+		"detail" : "테넌트를 활성화 할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.activate_tenant.success",
+		"language" : "kor",
+		"brief" : "테넌트 활성화 성공",
+		"detail" : "테넌트가 활성화되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.deactivate_tenant.failure-deactivate",
+		"language" : "kor",
+		"brief" : "테넌트 비활성화 실패",
+		"detail" : "테넌트를 비활성화 할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.deactivate_tenant.success",
+		"language" : "kor",
+		"brief" : "테넌트 비활성화 성공",
+		"detail" : "테넌트가 비활성화되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_service_configs.failure-get",
+		"language" : "kor",
+		"brief" : "서비스 설정 조회 실패",
+		"detail" : "서비스 설정을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_service_configs.success-get",
+		"language" : "kor",
+		"brief" : "조회된 서비스 설정 없음",
+		"detail" : "서비스 설정을 조회했으나, 조회된 서비스 설정이 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_service_configs.success",
+		"language" : "kor",
+		"brief" : "서비스 설정 조회 성공",
+		"detail" : "서비스 설정이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.set_service_config.failure-set",
+		"language" : "kor",
+		"brief" : "서비스 설정 추가\/수정 실패",
+		"detail" : "서비스 설정을 추가\/수정할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.set_service_config.success",
+		"language" : "kor",
+		"brief" : "서비스 설정 추가\/수정 성공",
+		"detail" : "서비스 설정이 추가\/수정되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_service_config.failure-delete",
+		"language" : "kor",
+		"brief" : "서비스 설정 삭제 실패",
+		"detail" : "서비스 설정을 삭제할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenants.success",
+		"language" : "kor",
+		"brief" : "서비스 설정 삭제 성공",
+		"detail" : "서비스 설정이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.main.failure-create_handler",
+		"language" : "kor",
+		"brief" : "핸들러 생성 실패",
+		"detail" : "핸들러를 생성할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.main.failure-close_handler",
+		"language" : "kor",
+		"brief" : "핸들러 종료 실패",
+		"detail" : "핸들러를 정상적으로 종료할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.main.failure-register_handler",
+		"language" : "kor",
+		"brief" : "핸들러 등록 실패",
+		"detail" : "핸들러를 등록할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.identity.main.failure-run_service",
+		"language" : "kor",
+		"brief" : "서비스 실행 실패",
+		"detail" : "서비스를 실행할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.get_product_uuid.success",
+		"language" : "kor",
+		"brief" : "제품 UUID 조회 성공",
+		"detail" : "Product UUID가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.get_hardware_uuid.failure",
+		"language" : "kor",
+		"brief" : "하드웨어 UUID 조회 실패",
+		"detail" : "Hardware UUID를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.get_hardware_uuid.success",
+		"language" : "kor",
+		"brief" : "하드웨어 UUID 조회 성공",
+		"detail" : "Hardware UUID가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.get_license.failure-get",
+		"language" : "kor",
+		"brief" : "라이선스 조회 실패",
+		"detail" : "라이선스를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.get_license.failure-payloads",
+		"language" : "kor",
+		"brief" : "라이선스 조회 실패",
+		"detail" : "라이선스 페이로드를 읽을 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.get_license.failure-marshal",
+		"language" : "kor",
+		"brief" : "라이선스 조회 실패",
+		"detail" : "라이선스 페이로드를 JSON 형식으로 변환하는데 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.get_license.success-get",
+		"language" : "kor",
+		"brief" : "조회된 라이선스 없음",
+		"detail" : "조회된 라이선스가 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.get_license.success",
+		"language" : "kor",
+		"brief" : "라이선스 조회 성공",
+		"detail" : "라이선스가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.set_license.failure-payloads",
+		"language" : "kor",
+		"brief" : "라이선스 변경 실패",
+		"detail" : "라이선스 페이로드를 읽을 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.set_license.failure-marshal",
+		"language" : "kor",
+		"brief" : "라이선스 변경 실패",
+		"detail" : "라이선스 페이로드를 JSON 형식으로 변환하는데 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.set_license.failure-put",
+		"language" : "kor",
+		"brief" : "라이선스 변경 실패",
+		"detail" : "라이선스를 저장할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.set_license.success",
+		"language" : "kor",
+		"brief" : "라이선스 변경 성공",
+		"detail" : "라이선스가 변경되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.verify_license.failure-payloads",
+		"language" : "kor",
+		"brief" : "라이선스 유효성 검증 실패",
+		"detail" : "라이선스 페이로드를 읽을 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.verify_license.failure-marshal",
+		"language" : "kor",
+		"brief" : "라이선스 유효성 검증 실패",
+		"detail" : "라이선스 페이로드를 JSON 형식으로 변환하는데 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.verify_license.success",
+		"language" : "kor",
+		"brief" : "라이선스 유효성 검증 성공",
+		"detail" : "라이선스 유효성이 검증되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.main.failure-create_handler",
+		"language" : "kor",
+		"brief" : "핸들러 생성 실패",
+		"detail" : "핸들러를 생성할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.main.failure-register_handler",
+		"language" : "kor",
+		"brief" : "핸들러 등록 실패",
+		"detail" : "핸들러를 등록할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.license.main.failure-run_service",
+		"language" : "kor",
+		"brief" : "서비스 실행 실패",
+		"detail" : "서비스를 실행할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.new_telemetry_client.failure-new",
+		"language" : "kor",
+		"brief" : "Telemetry 클라이언트 생성 실패",
+		"detail" : "Telemetry 클라이언트를 생성할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_nodes.failure-validate",
+		"language" : "kor",
+		"brief" : "노드 목록 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_nodes.failure-get_nodes_status",
+		"language" : "kor",
+		"brief" : "노드 목록 조회 실패",
+		"detail" : "노드 상태를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_nodes.success",
+		"language" : "kor",
+		"brief" : "노드 목록 조회 성공",
+		"detail" : "노드 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.failure-validate",
+		"language" : "kor",
+		"brief" : "노드 상세 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.failure-validate_node_id",
+		"language" : "kor",
+		"brief" : "노드 상세 조회 실패",
+		"detail" : "노드 ID에 대한 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.failure-validate_system_monitor_interval",
+		"language" : "kor",
+		"brief" : "노드 상세 조회 실패",
+		"detail" : "로그 모니터링 수신 간격 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.failure-get_system_monitor_interval",
+		"language" : "kor",
+		"brief" : "노드 상세 조회 실패",
+		"detail" : "모니터링 주기값을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.failure-get_nodes_status",
+		"language" : "kor",
+		"brief" : "노드 상세 조회 실패",
+		"detail" : "노드 상태를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.failure-send",
+		"language" : "kor",
+		"brief" : "노드 상세 조회 실패",
+		"detail" : "데이터를 송신할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.success",
+		"language" : "kor",
+		"brief" : "노드 상세 조회 성공",
+		"detail" : "노드 상세 내용이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.failure-validate",
+		"language" : "kor",
+		"brief" : "노드 서비스 목록 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.failure-validate_node_id",
+		"language" : "kor",
+		"brief" : "노드 서비스 목록 조회 실패",
+		"detail" : "노드 ID에 대한 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.failure-validate_system_monitor_interval",
+		"language" : "kor",
+		"brief" : "노드 서비스 목록 조회 실패",
+		"detail" : "로그 모니터링 수신 간격 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.failure-get_system_monitor_interval",
+		"language" : "kor",
+		"brief" : "노드 서비스 목록 조회 실패",
+		"detail" : "모니터링 주기값을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.failure-get_node_services_status",
+		"language" : "kor",
+		"brief" : "노드 서비스 목록 조회 실패",
+		"detail" : "노드 상태를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.failure-send",
+		"language" : "kor",
+		"brief" : "노드 서비스 목록 조회 실패",
+		"detail" : "데이터를 송신할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.success",
+		"language" : "kor",
+		"brief" : "노드 서비스 목록 조회 성공",
+		"detail" : "노드 서비스 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_services.failure-validate",
+		"language" : "kor",
+		"brief" : "서비스 목록 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_services.failure-get_services_status",
+		"language" : "kor",
+		"brief" : "서비스 목록 조회 실패",
+		"detail" : "서비스 상태를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_services.success-get_services_status",
+		"language" : "kor",
+		"brief" : "조회된 서비스 없음",
+		"detail" : "조회된 서비스가 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_services.success",
+		"language" : "kor",
+		"brief" : "서비스 목록 조회 성공",
+		"detail" : "서비스 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.failure-validate",
+		"language" : "kor",
+		"brief" : "서비스 상세 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.failure-validate_service_name",
+		"language" : "kor",
+		"brief" : "서비스 상세 조회 실패",
+		"detail" : "서비스 이름에 대한 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.failure-validate_system_monitor_interval",
+		"language" : "kor",
+		"brief" : "서비스 상세 조회 실패",
+		"detail" : "모니터링 주기값을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.failure-get_system_monitor_interval",
+		"language" : "kor",
+		"brief" : "서비스 상세 조회 실패",
+		"detail" : "서비스 상태를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.failure-get_service_status",
+		"language" : "kor",
+		"brief" : "서비스 상세 조회 실패",
+		"detail" : "서비스 상태를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.failure-send",
+		"language" : "kor",
+		"brief" : "서비스 상세 조회 실패",
+		"detail" : "데이터를 송신할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.success",
+		"language" : "kor",
+		"brief" : "서비스 상세 조회 성공",
+		"detail" : "서비스 상세 내용이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.failure-validate",
+		"language" : "kor",
+		"brief" : "서비스 로그 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.failure-validate_service_name",
+		"language" : "kor",
+		"brief" : "서비스 로그 조회 실패",
+		"detail" : "서비스 이름에 대한 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.failure-validate_log_date",
+		"language" : "kor",
+		"brief" : "서비스 로그 조회 실패",
+		"detail" : "서비스 로그 날짜에 대한 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.failure-new_service",
+		"language" : "kor",
+		"brief" : "서비스 로그 조회 실패",
+		"detail" : "서비스 상태를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.failure-get_log",
+		"language" : "kor",
+		"brief" : "서비스 로그 조회 실패",
+		"detail" : "서비스 로그를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.success-get_log",
+		"language" : "kor",
+		"brief" : "조회된 서비스 로그 없음",
+		"detail" : "조회된 서비스 로그가 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.success",
+		"language" : "kor",
+		"brief" : "서비스 로그 조회 성공",
+		"detail" : "서비스 로그가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_global_config.failure-validate",
+		"language" : "kor",
+		"brief" : "전역 설정 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_global_config.failure-get",
+		"language" : "kor",
+		"brief" : "전역 설정 조회 실패",
+		"detail" : "서비스 설정 값을 찾을 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_global_config.success",
+		"language" : "kor",
+		"brief" : "전역 설정 조회 성공",
+		"detail" : "전역 설정이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.set_global_config.failure-validate",
+		"language" : "kor",
+		"brief" : "전역 설정 변경 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.set_global_config.failure-set",
+		"language" : "kor",
+		"brief" : "전역 설정 변경 실패",
+		"detail" : "전역 설정을 변경할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.set_global_config.success",
+		"language" : "kor",
+		"brief" : "전역 설정 변경 성공",
+		"detail" : "전역 설정이 변경되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_config.failure-validate",
+		"language" : "kor",
+		"brief" : "서비스 설정 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_config.failure-get",
+		"language" : "kor",
+		"brief" : "서비스 설정 조회 실패",
+		"detail" : "서비스 설정을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_config.success-get",
+		"language" : "kor",
+		"brief" : "조회된 서비스 설정 없음",
+		"detail" : "조회된 서비스 설정이 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_config.success",
+		"language" : "kor",
+		"brief" : "서비스 설정 조회 성공",
+		"detail" : "서비스 설정이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.set_service_config.failure-validate",
+		"language" : "kor",
+		"brief" : "서비스 설정 변경 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.set_service_config.failure-set",
+		"language" : "kor",
+		"brief" : "서비스 설정 변경 실패",
+		"detail" : "서비스 설정을 변경할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.set_service_config.success",
+		"language" : "kor",
+		"brief" : "서비스 설정 변경 성공",
+		"detail" : "서비스 설정이 변경되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.main.failure-register_handler",
+		"language" : "kor",
+		"brief" : "핸들러 등록 실패",
+		"detail" : "핸들러를 등록할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.monitor.main.failure-run_service",
+		"language" : "kor",
+		"brief" : "서비스 실행 실패",
+		"detail" : "서비스를 실행할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_config.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "이벤트 설정 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_config.failure-get",
+		"language" : "kor",
+		"brief" : "이벤트 설정 조회 실패",
+		"detail" : "이벤트 설정을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_config.success",
+		"language" : "kor",
+		"brief" : "이벤트 설정 조회 성공",
+		"detail" : "이벤트 설정이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.set_config.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "이벤트 설정 변경 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.set_config.failure-validate",
+		"language" : "kor",
+		"brief" : "이벤트 설정 변경 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.set_config.failure-set",
+		"language" : "kor",
+		"brief" : "이벤트 설정 변경 실패",
+		"detail" : "이벤트 설정을 변경할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.set_config.success",
+		"language" : "kor",
+		"brief" : "이벤트 설정 변경 성공",
+		"detail" : "이벤트 설정이 변경되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_event.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "이벤트 상세 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_event.failure-get",
+		"language" : "kor",
+		"brief" : "이벤트 상세 조회 실패",
+		"detail" : "이벤트 상세 내용을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_event.failure-check_authorization",
+		"language" : "kor",
+		"brief" : "이벤트 상세 조회 실패",
+		"detail" : "사용자가 조회 권한이 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_event.success",
+		"language" : "kor",
+		"brief" : "이벤트 상세 조회 성공",
+		"detail" : "이벤트 상세 내용이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "이벤트 목록 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events.failure-validate",
+		"language" : "kor",
+		"brief" : "이벤트 목록 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events.failure-new_events_query",
+		"language" : "kor",
+		"brief" : "이벤트 목록 조회 실패",
+		"detail" : "목록 조회 쿼리를 생성할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events.failure-get",
+		"language" : "kor",
+		"brief" : "이벤트 목록 조회 실패",
+		"detail" : "이벤트 목록을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events.success-get",
+		"language" : "kor",
+		"brief" : "조회된 이벤트 없음",
+		"detail" : "조회된 이벤트 목록이 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events.success",
+		"language" : "kor",
+		"brief" : "이벤트 목록 조회 성공",
+		"detail" : "이벤트 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events_stream.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "이벤트 목록 실시간 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events_stream.failure-validate",
+		"language" : "kor",
+		"brief" : "이벤트 목록 실시간 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events_stream.failure-validate_interval",
+		"language" : "kor",
+		"brief" : "이벤트 목록 실시간 조회 실패",
+		"detail" : "인터벌 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events_stream.failure-subscribe_template_queue",
+		"language" : "kor",
+		"brief" : "이벤트 목록 실시간 조회 실패",
+		"detail" : "임시 브로커를 구독할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events_stream.failure-send_response",
+		"language" : "kor",
+		"brief" : "이벤트 목록 실시간 조회 실패",
+		"detail" : "데이터를 송신하는데 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events_stream.success",
+		"language" : "kor",
+		"brief" : "이벤트 목록 실시간 조회 성공",
+		"detail" : "이벤트 목록 실시간 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_event_classifications.failure-get",
+		"language" : "kor",
+		"brief" : "이벤트 코드 분류 목록 조회 실패",
+		"detail" : "이벤트 코드 분류 목록을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_event_classifications.success",
+		"language" : "kor",
+		"brief" : "이벤트 코드 분류 목록 조회 성공",
+		"detail" : "이벤트 코드 분류 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_tenant_event_receives.failure-validate",
+		"language" : "kor",
+		"brief" : "이벤트 테넌트 수신 여부 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_tenant_event_receives.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "이벤트 테넌트 수신 여부 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_tenant_event_receives.failure-get",
+		"language" : "kor",
+		"brief" : "이벤트 테넌트 수신 여부 조회 실패",
+		"detail" : "특정 테넌트의 모든 이벤트 수신 여부를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_tenant_event_receives.success",
+		"language" : "kor",
+		"brief" : "이벤트 테넌트 수신 여부 조회 성공",
+		"detail" : "특정 테넌트의 모든 이벤트 수신 여부가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.set_tenant_event_receives.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "이벤트 수신 여부 변경 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.set_tenant_event_receives.failure-validate",
+		"language" : "kor",
+		"brief" : "이벤트 수신 여부 변경 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.set_tenant_event_receives.failure-set",
+		"language" : "kor",
+		"brief" : "이벤트 수신 여부 변경 실패",
+		"detail" : "이벤트 수신 여부를 변경할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.set_tenant_event_receives.success",
+		"language" : "kor",
+		"brief" : "이벤트 수신 여부 변경 성공",
+		"detail" : "특정 테넌트의 이벤트 수신 여부가 변경되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_user_event_receives.failure-validate",
+		"language" : "kor",
+		"brief" : "이벤트 사용자 수신 여부 조회 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_user_event_receives.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "이벤트 사용자 수신 여부 조회 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_user_event_receives.failure-get",
+		"language" : "kor",
+		"brief" : "이벤트 사용자 수신 여부 조회 실패",
+		"detail" : "특정 사용자의 모든 이벤트 수신 여부를 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_user_event_receives.success-get",
+		"language" : "kor",
+		"brief" : "조회된 이벤트 수신 여부 없음",
+		"detail" : "조회된 이벤트 수신 여부가 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.get_user_event_receives.success",
+		"language" : "kor",
+		"brief" : "이벤트 사용자 수신 여부 조회 성공",
+		"detail" : "사용자의 모든 이벤트 수신 여부가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.set_user_event_receives.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "이벤트 사용자 수신 여부 변경 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.set_user_event_receives.failure-validate",
+		"language" : "kor",
+		"brief" : "이벤트 사용자 수신 여부 변경 실패",
+		"detail" : "파라미터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.set_user_event_receives.failure-set",
+		"language" : "kor",
+		"brief" : "이벤트 사용자 수신 여부 변경 실패",
+		"detail" : "사용자의 모든 이벤트 수신 여부를 수정할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.set_user_event_receives.success",
+		"language" : "kor",
+		"brief" : "이벤트 사용자 수신 여부 변경 성공",
+		"detail" : "사용자의 모든 이벤트 수신 여부가 수정되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.reset_user_event_receives.failure-get_request_metadata",
+		"language" : "kor",
+		"brief" : "이벤트 사용자 수신 여부 초기화 실패",
+		"detail" : "요청자의 메타데이터를 확인할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.reset_user_event_receives.failure-reset",
+		"language" : "kor",
+		"brief" : "이벤트 사용자 수신 여부 초기화 실패",
+		"detail" : "이벤트 수신 여부를 초기화할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.reset_user_event_receives.success",
+		"language" : "kor",
+		"brief" : "이벤트 사용자 수신 여부 초기화 실패",
+		"detail" : "사용자의 이벤트 수신 여부가 초기화되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-clean_expired_event",
+		"language" : "kor",
+		"brief" : "유지기한 ",
+		"detail" : "유지기한 초과 이벤트를 정리하는데 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.subscribe_event.failure-classify_event",
+		"language" : "kor",
+		"brief" : "이벤트 브로커 구독 실패",
+		"detail" : "이벤트 분류를 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.notify_event.failure-unmarshal",
+		"language" : "kor",
+		"brief" : "이벤트 알림 실패",
+		"detail" : "JSON 형식을 변환하는데 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.notify_event.failure-notify",
+		"language" : "kor",
+		"brief" : "이벤트 알림 실패",
+		"detail" : "이벤트 알림이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-notification_event_subscribe",
+		"language" : "kor",
+		"brief" : "이벤트 알림 구독 실패",
+		"detail" : "이벤트 알림을 구독하는데 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-notification_event_unsubscribe",
+		"language" : "kor",
+		"brief" : "이벤트 알림 구독 취소 실패",
+		"detail" : "이벤트 알림을 구독 취소하는데 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-notifier_subscribe",
+		"language" : "kor",
+		"brief" : "알림 구독 실패",
+		"detail" : "알림을 구독하는데 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-notifier_unsubscribe",
+		"language" : "kor",
+		"brief" : "알림 구독 취소 실패",
+		"detail" : "알림을 구독 취소하는데 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-register_handler",
+		"language" : "kor",
+		"brief" : "핸들러 등록 실패",
+		"detail" : "핸들러를 등록할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-run_service",
+		"language" : "kor",
+		"brief" : "서비스 실행 실패",
+		"detail" : "서비스를 실행할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.get_schedule.failure-get_schedule",
+		"language" : "kor",
+		"brief" : "스케줄 조회 실패",
+		"detail" : "해당 스케줄을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.get_schedule.failure-set_from_model",
+		"language" : "kor",
+		"brief" : "스케줄 조회 실패",
+		"detail" : "데이터 마샬링\/언마샬링이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.get_schedule.failure-calculate_schedule_job_next_runtime",
+		"language" : "kor",
+		"brief" : "스케줄 조회 실패",
+		"detail" : "스케줄의 다음 job run time을 계산하는 중 오류가 발생하여 스케줄을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.get_schedule.success",
+		"language" : "kor",
+		"brief" : "스케줄 조회 성공",
+		"detail" : "스케줄이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.failure-model",
+		"language" : "kor",
+		"brief" : "스케줄 생성 실패",
+		"detail" : "데이터 마샬링\/언마샬링이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.failure-validate_schedule_broker_message",
+		"language" : "kor",
+		"brief" : "스케줄 생성 실패",
+		"detail" : "메시지 브로커 오류로 인해 스케줄 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.failure-validate_schedule",
+		"language" : "kor",
+		"brief" : "스케줄 생성 실패",
+		"detail" : "스케줄 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.failure-create_schedule",
+		"language" : "kor",
+		"brief" : "스케줄 생성 실패",
+		"detail" : "스케줄을 생성할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.failure-set_from_model",
+		"language" : "kor",
+		"brief" : "스케줄 생성 실패",
+		"detail" : "데이터 마샬링\/언마샬링이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.failure-calculate_schedule_job_next_runtime",
+		"language" : "kor",
+		"brief" : "스케줄 생성 실패",
+		"detail" : "스케줄의 다음 job run time을 계산하는 중 오류가 발생하여 스케줄을 생성할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.success",
+		"language" : "kor",
+		"brief" : "스케줄 생성 성공",
+		"detail" : "스케줄이 생성되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.failure-model",
+		"language" : "kor",
+		"brief" : "스케줄 수정 실패",
+		"detail" : "데이터 마샬링\/언마샬링이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.failure-validate_schedule_broker_message",
+		"language" : "kor",
+		"brief" : "스케줄 수정 실패",
+		"detail" : "메시지 브로커 오류로 인해 스케줄 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.failure-validate_schedule",
+		"language" : "kor",
+		"brief" : "스케줄 수정 실패",
+		"detail" : "스케줄 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.failure-update_schedule",
+		"language" : "kor",
+		"brief" : "스케줄 수정 실패",
+		"detail" : "스케줄을 수정할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.failure-set_from_model",
+		"language" : "kor",
+		"brief" : "스케줄 수정 실패",
+		"detail" : "데이터 마샬링\/언마샬링이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.failure-calculate_schedule_job_next_runtime",
+		"language" : "kor",
+		"brief" : "스케줄 수정 실패",
+		"detail" : "스케줄의 다음 job run time을 계산하는 중 오류가 발생하여 스케줄을 수정할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.success",
+		"language" : "kor",
+		"brief" : "스케줄 수정 성공",
+		"detail" : "스케줄이 수정되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.delete_schedule.failure-model",
+		"language" : "kor",
+		"brief" : "스케줄 삭제 실패",
+		"detail" : "데이터 마샬링\/언마샬링이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.delete_schedule.failure-delete_schedule",
+		"language" : "kor",
+		"brief" : "스케줄 삭제 실패",
+		"detail" : "스케줄을 삭제할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.delete_schedule.success",
+		"language" : "kor",
+		"brief" : "스케줄 삭제 성공",
+		"detail" : "스케줄이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.calculate_next_runtime.failure-model",
+		"language" : "kor",
+		"brief" : "다음 run time 계산 실패",
+		"detail" : "데이터 마샬링\/언마샬링이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.calculate_next_runtime.failure-validate_schedule",
+		"language" : "kor",
+		"brief" : "다음 run time 계산 실패",
+		"detail" : "스케줄 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.calculate_next_runtime.failure-calculate_schedule_job_next_runtime",
+		"language" : "kor",
+		"brief" : "다음 run time 계산 실패",
+		"detail" : "스케줄의 다음 job run time을 계산하는 중 오류가 발생하여 스케줄을 수정할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.calculate_next_runtime.success",
+		"language" : "kor",
+		"brief" : "다음 run time 계산 성공",
+		"detail" : "다음 run time 계산되었습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule_handler.failure-parse_schedule_id",
+		"language" : "kor",
+		"brief" : "스케줄 핸들러 생성 실패",
+		"detail" : "스케줄 ID 파싱이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule_handler.failure-find_schedule",
+		"language" : "kor",
+		"brief" : "스케줄 핸들러 생성 실패",
+		"detail" : "등록된 스케줄을 찾을 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule_handler.failure-create_schedule_job",
+		"language" : "kor",
+		"brief" : "스케줄 핸들러 생성 실패",
+		"detail" : "스케줄 Job을 생성할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule_handler.failure-parse_schedule_id",
+		"language" : "kor",
+		"brief" : "스케줄 핸들러 수정 실패",
+		"detail" : "스케줄 ID 파싱이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule_handler.failure-find_schedule",
+		"language" : "kor",
+		"brief" : "스케줄 핸들러 수정 실패",
+		"detail" : "등록된 스케줄을 찾을 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule_handler.failure-create_schedule_job",
+		"language" : "kor",
+		"brief" : "스케줄 핸들러 수정 실패",
+		"detail" : "스케줄 Job을 수정할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.delete_schedule_handler.failure-parse_schedule_id",
+		"language" : "kor",
+		"brief" : "스케줄 핸들러 삭제 실패",
+		"detail" : "스케줄 ID 파싱이 실패했습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.main.failure-create_handler",
+		"language" : "kor",
+		"brief" : "핸들러 생성 실패",
+		"detail" : "핸들러를 생성할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.main.failure-close_service",
+		"language" : "kor",
+		"brief" : "서비스 종료 실패",
+		"detail" : "서비스를 정상적으로 종료할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.main.failure-register_handler",
+		"language" : "kor",
+		"brief" : "핸들러 등록 실패",
+		"detail" : "핸들러를 등록할 수 없습니다."
+	},
+	{
+		"code" : "cdm-cloud.scheduler.main.failure-run_service",
+		"language" : "kor",
+		"brief" : "서비스 실행 실패",
+		"detail" : "서비스를 실행할 수 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_public_key.failure-validate_request",
+		"language" : "kor",
+		"brief" : "공개키 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_public_key.failure-marshal",
+		"language" : "kor",
+		"brief" : "공개키 조회 실패",
+		"detail" : "공개키 마샬링이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_public_key.success",
+		"language" : "kor",
+		"brief" : "공개키 조회 성공",
+		"detail" : "공개키가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_connection.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 연결 확인 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_connection.failure-credential_password",
+		"language" : "kor",
+		"brief" : "클러스터 연결 확인 실패",
+		"detail" : "비밀번호 자격증명에 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_connection.failure-check",
+		"language" : "kor",
+		"brief" : "클러스터 연결 확인 실패",
+		"detail" : "클러스터 연결 확인이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_connection.success",
+		"language" : "kor",
+		"brief" : "클러스터 연결 확인 성공",
+		"detail" : "클러스터 연결이 확인되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_credential.failure-validate_request",
+		"language" : "kor",
+		"brief" : "자격 증명 수정 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_credential.failure-update_credential",
+		"language" : "kor",
+		"brief" : "자격 증명 수정 실패",
+		"detail" : "자격 증명 수정에 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_credential.success",
+		"language" : "kor",
+		"brief" : "자격 증명 수정 성공",
+		"detail" : "자격 증명이 수정되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.sync_cluster.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 동기화 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.sync_cluster.failure-sync",
+		"language" : "kor",
+		"brief" : "클러스터 동기화 실패",
+		"detail" : "클러스터 동기화가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.sync_cluster.success",
+		"language" : "kor",
+		"brief" : "클러스터 동기화 성공",
+		"detail" : "클러스터 동기화되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.sync_exception.failure-get_status_map",
+		"language" : "kor",
+		"brief" : "클러스터 상태 제외대상 설정 실패",
+		"detail" : "클러스터 상태 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.sync_exception.failure-marshal",
+		"language" : "kor",
+		"brief" : "클러스터 상태 제외대상 설정 실패",
+		"detail" : "클러스터 상태 마샬링이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.sync_exception.failure-publish",
+		"language" : "kor",
+		"brief" : "클러스터 상태 제외대상 설정 실패",
+		"detail" : "클러스터 상태 제외대상 메시지 전달에 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.sync_exception.success",
+		"language" : "kor",
+		"brief" : "클러스터 상태 제외대상 설정 성공",
+		"detail" : "클러스터 상태 제외대상이 설정되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_sync_status.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 동기화 상태 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_sync_cluster_status.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 동기화 상태 조회 실패",
+		"detail" : "클러스터 동기화 상태 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_sync_status.success",
+		"language" : "kor",
+		"brief" : "클러스터 동기화 상태 조회 성공",
+		"detail" : "클러스터 동기화 상태 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 목록 조회 실패",
+		"detail" : "클러스터 목록을 조회할 수 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 없음",
+		"detail" : "조회된 클러스터가 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 목록 조회 성공",
+		"detail" : "클러스터 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.add_cluster.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 등록 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.add_cluster.failure-add",
+		"language" : "kor",
+		"brief" : "클러스터 등록 실패",
+		"detail" : "클러스터 등록이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.add_cluster.success",
+		"language" : "kor",
+		"brief" : "클러스터 등록 성공",
+		"detail" : "클러스터가 등록되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 상세 조회 실패",
+		"detail" : "클러스터 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster.success",
+		"language" : "kor",
+		"brief" : "클러스터 상세 조회 성공",
+		"detail" : "클러스터가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 수정 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster.failure-cluster_db_lock",
+		"language" : "kor",
+		"brief" : "클러스터 수정 실패",
+		"detail" : "클러스터 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster.failure-update",
+		"language" : "kor",
+		"brief" : "클러스터 수정 실패",
+		"detail" : "클러스터 수정이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster.success",
+		"language" : "kor",
+		"brief" : "클러스터 수정 성공",
+		"detail" : "클러스터가 수정되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster.failure-cluster_db_lock",
+		"language" : "kor",
+		"brief" : "클러스터 삭제 실패",
+		"detail" : "클러스터 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 삭제 실패",
+		"detail" : "클러스터 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster.success",
+		"language" : "kor",
+		"brief" : "클러스터 삭제 성공",
+		"detail" : "클러스터가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 하이퍼바이저 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 하이퍼바이저 목록 조회 실패",
+		"detail" : "클러스터 하이퍼바이저 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 하이퍼바이저 없음",
+		"detail" : "조회된 클러스터 하이퍼바이저가 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 하이퍼바이저 목록 조회 성공",
+		"detail" : "클러스터 하이퍼바이저 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 하이퍼바이저 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 하이퍼바이저 상세 조회 실패",
+		"detail" : "클러스터 하이퍼바이저 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor.success",
+		"language" : "kor",
+		"brief" : "클러스터 하이퍼바이저 상세 조회 성공",
+		"detail" : "클러스터 하이퍼바이저가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_hypervisor.failure-cluster_db_lock",
+		"language" : "kor",
+		"brief" : "클러스터 하이퍼바이저 수정 실패",
+		"detail" : "클러스터 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_hypervisor.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 하이퍼바이저 수정 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_hypervisor.failure-update",
+		"language" : "kor",
+		"brief" : "클러스터 하이퍼바이저 수정 실패",
+		"detail" : "클러스터 하이퍼바이저 수정이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_hypervisor.success",
+		"language" : "kor",
+		"brief" : "클러스터 하이퍼바이저 수정 성공",
+		"detail" : "클러스터 하이퍼바이저가 수정되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 가용구역 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 가용구역 목록 조회 실패",
+		"detail" : "클러스터 가용구역 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 가용구역 없음",
+		"detail" : "조회된 클러스터 가용구역이 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 가용구역 목록 조회 성공",
+		"detail" : "클러스터 가용구역 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 가용구역 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 가용구역 상세 조회 실패",
+		"detail" : "클러스터 가용구역 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone.success",
+		"language" : "kor",
+		"brief" : "클러스터 가용구역 상세 조회 성공",
+		"detail" : "클러스터 가용구역이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_tenant.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 삭제 실패",
+		"detail" : "오픈스택의 클러스터 테넌트 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_tenant.success",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 삭제 성공",
+		"detail" : "오픈스택의 클러스터 테넌트가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 목록 조회 실패",
+		"detail" : "클러스터 테넌트 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 테넌트 없음",
+		"detail" : "조회된 클러스터 테넌트가 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 목록 조회 성공",
+		"detail" : "클러스터 테넌트 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_tenant.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 생성 실패",
+		"detail" : "오픈스택의 클러스터 테넌트 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_tenant.success",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 생성 성공",
+		"detail" : "오픈스택의 클러스터 테넌트가 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 상세 조회 실패",
+		"detail" : "클러스터 테넌트 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant.success",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 상세 조회 성공",
+		"detail" : "클러스터 테넌트가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_by_uuid.failure-validate_request",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 테넌트 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_by_uuid.failure-get",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 테넌트 상세 조회 실패",
+		"detail" : "클러스터 테넌트 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_by_uuid.success",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 테넌트 상세 조회 성공",
+		"detail" : "클러스터 테넌트가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_network.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 네트워크 생성 실패",
+		"detail" : "오픈스택의 클러스터 네트워크 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_network.success",
+		"language" : "kor",
+		"brief" : "클러스터 네트워크 생성 성공",
+		"detail" : "오픈스택의 클러스터 네트워크가 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_network.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 네트워크 삭제 실패",
+		"detail" : "오픈스택의 클러스터 네트워크와 서브넷 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_network.success",
+		"language" : "kor",
+		"brief" : "클러스터 네트워크 삭제 성공",
+		"detail" : "오픈스택의 클러스터 네트워크와 서브넷이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 네트워크 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 네트워크 목록 조회 실패",
+		"detail" : "클러스터 네트워크 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 네트워크 없음",
+		"detail" : "조회된 클러스터 네트워크가 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 네트워크 목록 조회 성공",
+		"detail" : "클러스터 네트워크 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 네트워크 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 네트워크 상세 조회 실패",
+		"detail" : "클러스터 네트워크 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network.success",
+		"language" : "kor",
+		"brief" : "클러스터 네트워크 상세 조회 성공",
+		"detail" : "클러스터 네트워크가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_by_uuid.failure-validate_request",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 네트워크 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_by_uuid.failure-get",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 네트워크 상세 조회 실패",
+		"detail" : "클러스터 네트워크 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_by_uuid.success",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 네트워크 상세 조회 성공",
+		"detail" : "클러스터 네트워크가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_subnet.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 서브넷 생성 실패",
+		"detail" : "오픈스택의 클러스터 서브넷 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_subnet.success",
+		"language" : "kor",
+		"brief" : "클러스터 서브넷 생성 성공",
+		"detail" : "오픈스택의 클러스터 서브넷이 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_subnet.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 서브넷 삭제 실패",
+		"detail" : "오픈스택의 클러스터 서브넷 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_subnet.success",
+		"language" : "kor",
+		"brief" : "클러스터 서브넷 삭제 성공",
+		"detail" : "오픈스택의 클러스터 서브넷이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_subnet.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 서브넷 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_subnet.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 서브넷 상세 조회 실패",
+		"detail" : "클러스터 서브넷 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_subnet.success",
+		"language" : "kor",
+		"brief" : "클러스터 서브넷 상세 조회 성공",
+		"detail" : "클러스터 서브넷이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_floating_ip.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 Floating IP 생성 실패",
+		"detail" : "오픈스택의 클러스터 Floating IP 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_floating_ip.success",
+		"language" : "kor",
+		"brief" : "클러스터 Floating IP 생성 성공",
+		"detail" : "오픈스택의 클러스터 Floating IP가 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_floating_ip.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 Floating IP 삭제 실패",
+		"detail" : "오픈스택의 클러스터 Floating IP 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_floating_ip.success",
+		"language" : "kor",
+		"brief" : "클러스터 Floating IP 삭제 성공",
+		"detail" : "오픈스택의 클러스터 Floating IP가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_floating_ip.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 Floating IP 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_floating_ip.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 Floating IP 상세 조회 실패",
+		"detail" : "클러스터 Floating IP 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_floating_ip.success",
+		"language" : "kor",
+		"brief" : "클러스터 Floating IP 상세 조회 성공",
+		"detail" : "클러스터 Floating IP가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_router.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 라우터 생성 실패",
+		"detail" : "오픈스택의 클러스터 라우터 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_router.success",
+		"language" : "kor",
+		"brief" : "클러스터 라우터 생성 성공",
+		"detail" : "오픈스택의 클러스터 라우터가 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_router.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 라우터 삭제 실패",
+		"detail" : "오픈스택의 클러스터 라우터 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_router.success",
+		"language" : "kor",
+		"brief" : "클러스터 라우터 삭제 성공",
+		"detail" : "오픈스택의 클러스터 라우터가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 라우터 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 라우터 목록 조회 실패",
+		"detail" : "클러스터 라우터 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 라우터 없음",
+		"detail" : "조회된 클러스터 라우터가 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 라우터 목록 조회 성공",
+		"detail" : "클러스터 라우터 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 라우터 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 라우터 상세 조회 실패",
+		"detail" : "클러스터 라우터 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router.success",
+		"language" : "kor",
+		"brief" : "클러스터 라우터 상세 조회 성공",
+		"detail" : "클러스터 라우터가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_by_uuid.failure-validate_request",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 라우터 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_by_uuid.failure-get",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 라우터 상세 조회 실패",
+		"detail" : "클러스터 라우터 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_by_uuid.success",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 라우터 상세 조회 성공",
+		"detail" : "클러스터 라우터가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_storage_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨타입 목록 조회 실패",
+		"detail" : "클러스터 볼륨타입 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_storage_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 볼륨타입 없음",
+		"detail" : "조회된 클러스터 볼륨타입이 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_storage_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨타입 목록 조회 성공",
+		"detail" : "클러스터 볼륨타입 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_storage.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨타입 상세 조회 실패",
+		"detail" : "클러스터 볼륨타입 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_storage.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨타입 상세 조회 성공",
+		"detail" : "클러스터 볼륨타입이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_storage_metadata.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨타입 메타데이터 수정 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_storage_metadata.failure-get_storage",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨타입 메타데이터 수정 실패",
+		"detail" : "클러스터 볼륨타입이 조회되지 않았습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_storage_metadata.failure-merge",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨타입 메타데이터 수정 실패",
+		"detail" : "클러스터 볼륨타입이 변경되지 않았습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_storage_metadata.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨타입 메타데이터 수정 실패",
+		"detail" : "변경된 볼륨타입 메타데이터를 찾을 수 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_storage_metadata.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨타입 메타데이터 수정 성공",
+		"detail" : "클러스터 볼륨타입 메타데이터가 변경되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 그룹 목록 조회 실패",
+		"detail" : "클러스터 볼륨 그룹 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 볼륨 그룹 없음",
+		"detail" : "조회된 클러스터 볼륨 그룹이 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 그룹 목록 조회 성공",
+		"detail" : "클러스터 볼륨 그룹 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 조회 실패",
+		"detail" : "클러스터 볼륨그룹 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 조회 성공",
+		"detail" : "클러스터 볼륨그룹이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_group.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 생성 실패",
+		"detail" : "클러스터 볼륨그룹 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_group.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 생성 성공",
+		"detail" : "클러스터 볼륨그룹이 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_group.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 삭제 실패",
+		"detail" : "클러스터 볼륨그룹 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_group.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 삭제 성공",
+		"detail" : "클러스터 볼륨그룹이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_volume_group.failure-update",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 수정 실패",
+		"detail" : "클러스터 볼륨그룹 수정이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_volume_group.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 수정 성공",
+		"detail" : "클러스터 볼륨그룹이 수정되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_group_snapshot.failure-volume_group_snapshot_db_lock",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 스냅샷 생성 실패",
+		"detail" : "볼륨그룹 스냅샷 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_group_snapshot.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 스냅샷 생성 실패",
+		"detail" : "클러스터 볼륨그룹 스냅샷 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_group_snapshot.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 스냅샷 생성 성공",
+		"detail" : "클러스터 볼륨그룹 스냅샷이 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_group_snapshot.failure-volume_group_snapshot_db_lock",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 스냅샷 삭제 실패",
+		"detail" : "볼륨그룹 스냅샷 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_group_snapshot.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 스냅샷 삭제 실패",
+		"detail" : "클러스터 볼륨그룹 스냅샷 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_group_snapshot.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 스냅샷 삭제 성공",
+		"detail" : "클러스터 볼륨그룹 스냅샷이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group_snapshot_list.failure",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 스냅샷 목록 조회 실패",
+		"detail" : "클러스터 볼륨그룹 스냅샷 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group_snapshot_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨그룹 스냅샷 목록 조회 성공",
+		"detail" : "클러스터 볼륨그룹 스냅샷 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 목록 조회 실패",
+		"detail" : "클러스터 볼륨 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 볼륨 없음",
+		"detail" : "조회된 클러스터 볼륨이 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 목록 조회 성공",
+		"detail" : "클러스터 볼륨 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 상세 조회 성공",
+		"detail" : "클러스터 볼륨이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 상세 조회 실패",
+		"detail" : "클러스터 볼륨 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_by_uuid.failure-validate_request",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 볼륨 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_by_uuid.failure-get",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 볼륨 상세 조회 실패",
+		"detail" : "클러스터 볼륨 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_by_uuid.success",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 볼륨 상세 조회 성공",
+		"detail" : "클러스터 볼륨이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 생성 실패",
+		"detail" : "오픈스택의 클러스터 볼륨 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 생성 성공",
+		"detail" : "오픈스택의 클러스터 볼륨이 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.import_cluster_volume.failure-import",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 추가 실패",
+		"detail" : "오픈스택의 클러스터 볼륨 추가가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.import_cluster_volume.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 추가 성공",
+		"detail" : "오픈스택의 클러스터 볼륨이 추가되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.copy_cluster_volume.failure-copy",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 복제 실패",
+		"detail" : "오픈스택의 클러스터 볼륨 복제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.copy_cluster_volume.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 복제 성공",
+		"detail" : "오픈스택의 클러스터 볼륨이 복제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_copy.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 복제파일 삭제 실패",
+		"detail" : "오픈스택의 클러스터 볼륨 복제파일 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_copy.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 복제파일 삭제 성공",
+		"detail" : "오픈스택의 클러스터 볼륨 복제파일이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 삭제 실패",
+		"detail" : "오픈스택의 클러스터 볼륨 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 삭제 성공",
+		"detail" : "오픈스택의 클러스터 볼륨이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.unmanage_cluster_volume.failure-unmanage",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 unmanage 실패",
+		"detail" : "오픈스택의 클러스터 볼륨 unmanage 가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.unmanage_cluster_volume.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 unmanage 성공",
+		"detail" : "오픈스택의 클러스터 볼륨이 unmanage 되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.sync_cluster_volume_snapshot_list.failure-cluster_db_lock",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 스냅샷 목록 동기화 실패",
+		"detail" : "클러스터 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.sync_cluster_volume_snapshot_list.failure-sync",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 스냅샷 목록 동기화 실패",
+		"detail" : "클러스터 볼륨 스냅샷 목록 동기화가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.sync_cluster_volume_snapshot_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 스냅샷 목록 동기화 성공",
+		"detail" : "클러스터 볼륨 스냅샷 목록이 동기화되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_snapshot.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 스냅샷 생성 실패",
+		"detail" : "클러스터 볼륨 스냅샷 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_snapshot.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 스냅샷 생성 성공",
+		"detail" : "클러스터 볼륨 스냅샷이 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_snapshot.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 스냅샷 삭제 실패",
+		"detail" : "클러스터 볼륨 스냅샷 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_snapshot.success",
+		"language" : "kor",
+		"brief" : "클러스터 볼륨 스냅샷 삭제 성공",
+		"detail" : "클러스터 볼륨 스냅샷이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 목록 조회 실패",
+		"detail" : "클러스터 인스턴스 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 인스턴스 없음",
+		"detail" : "조회된 클러스터 인스턴스이 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 목록 조회 성공",
+		"detail" : "클러스터 인스턴스 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 상세 조회 실패",
+		"detail" : "클러스터 인스턴스 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance.success",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 상세 조회 성공",
+		"detail" : "클러스터 인스턴스가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_by_uuid.failure-validate_request",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 인스턴스 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_by_uuid.failure-get",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 인스턴스 상세 조회 실패",
+		"detail" : "클러스터 인스턴스 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_by_uuid.success",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 인스턴스 상세 조회 성공",
+		"detail" : "클러스터 인스턴스가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_number.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 개수 조회 실패",
+		"detail" : "클러스터 인스턴스 개수 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_number.success",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 개수 조회 성공",
+		"detail" : "클러스터 인스턴스 개수가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_instance.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 생성 실패",
+		"detail" : "오픈스택의 클러스터 인스턴스 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_instance.success",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 생성 성공",
+		"detail" : "오픈스택의 클러스터 인스턴스가 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_instance.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 삭제 실패",
+		"detail" : "오픈스택의 클러스터 인스턴스 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_instance.success",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 삭제 성공",
+		"detail" : "오픈스택의 클러스터 인스턴스가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 스팩 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 스팩 목록 조회 실패",
+		"detail" : "클러스터 인스턴스 스팩 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 인스턴스 스팩 없음",
+		"detail" : "조회된 클러스터 인스턴스 스팩이 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 스팩 목록 조회 성공",
+		"detail" : "클러스터 인스턴스 스팩 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 스팩 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 스팩 상세 조회 실패",
+		"detail" : "클러스터 인스턴스 스팩 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec.success",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 스팩 상세 조회 성공",
+		"detail" : "클러스터 인스턴스 스팩이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_by_uuid.failure-validate_request",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 인스턴스 스팩 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_by_uuid.failure-get",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 인스턴스 스팩 상세 조회 실패",
+		"detail" : "클러스터 인스턴스 스팩 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_by_uuid.success",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 인스턴스 스팩 상세 조회 성공",
+		"detail" : "클러스터 인스턴스 스팩이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_instance_spec.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 스팩 생성 실패",
+		"detail" : "오픈스택의 클러스터 인스턴스 스팩 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_instance_spec.success",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 스팩 생성 성공",
+		"detail" : "오픈스택의 클러스터 인스턴스 스팩이 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_instance_spec.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 스팩 삭제 실패",
+		"detail" : "오픈스택의 클러스터 인스턴스 스팩 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_instance_spec.success",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 스팩 삭제 성공",
+		"detail" : "오픈스택의 클러스터 인스턴스 스팩이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_keypair.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 키페어 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_keypair.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 키페어 조회 실패",
+		"detail" : "클러스터 키페어 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_keypair.success",
+		"language" : "kor",
+		"brief" : "클러스터 키페어 조회 성공",
+		"detail" : "클러스터 키페어가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_keypair.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 키페어 생성 실패",
+		"detail" : "오픈스택의 클러스터 키페어 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_keypair.success",
+		"language" : "kor",
+		"brief" : "클러스터 키페어 생성 성공",
+		"detail" : "오픈스택의 클러스터 키페어가 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_keypair.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 키페어 삭제 실패",
+		"detail" : "오픈스택의 클러스터 키페어 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_keypair.success",
+		"language" : "kor",
+		"brief" : "클러스터 키페어 삭제 성공",
+		"detail" : "오픈스택의 클러스터 키페어가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.start_cluster_instance.failure-start",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 기동 실패",
+		"detail" : "오픈스택의 클러스터 인스턴스 기동이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.start_cluster_instance.success",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 기동 성공",
+		"detail" : "오픈스택의 클러스터 인스턴스가 기동되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.stop_cluster_instance.failure-stop",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 중지 실패",
+		"detail" : "오픈스택의 클러스터 인스턴스 중지가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.stop_cluster_instance.success",
+		"language" : "kor",
+		"brief" : "클러스터 인스턴스 중지 성공",
+		"detail" : "오픈스택의 클러스터 인스턴스가 중지되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_security_group.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 보안그룹 생성 실패",
+		"detail" : "오픈스택의 클러스터 보안그룹 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_security_group.success",
+		"language" : "kor",
+		"brief" : "클러스터 보안그룹 생성 성공",
+		"detail" : "오픈스택의 클러스터 보안그룹이 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_security_group_rule.failure-create",
+		"language" : "kor",
+		"brief" : "클러스터 보안그룹 규칙 생성 실패",
+		"detail" : "오픈스택의 클러스터 보안그룹 규칙 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_security_group_rule.success",
+		"language" : "kor",
+		"brief" : "클러스터 보안그룹 규칙 생성 성공",
+		"detail" : "오픈스택의 클러스터 보안그룹 규칙이 생성되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_security_group.failure-delete",
+		"language" : "kor",
+		"brief" : "클러스터 보안그룹 삭제 실패",
+		"detail" : "오픈스택의 클러스터 보안그룹과 보안그룹 규칙 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_security_group.success",
+		"language" : "kor",
+		"brief" : "클러스터 보안그룹 삭제 성공",
+		"detail" : "오픈스택의 클러스터 보안그룹과 보안그룹 규칙이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 보안그룹 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 보안그룹 목록 조회 실패",
+		"detail" : "클러스터 보안그룹 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 보안그룹 없음",
+		"detail" : "조회된 클러스터 보안그룹이 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 보안그룹 목록 조회 성공",
+		"detail" : "클러스터 보안그룹 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 보안그룹 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 보안그룹 상세 조회 실패",
+		"detail" : "클러스터 보안그룹 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group.success",
+		"language" : "kor",
+		"brief" : "클러스터 보안그룹 상세 조회 성공",
+		"detail" : "클러스터 보안그룹이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_by_uuid.failure-validate_request",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 보안그룹 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_by_uuid.failure-get",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 보안그룹 상세 조회 실패",
+		"detail" : "클러스터 보안그룹 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_by_uuid.success",
+		"language" : "kor",
+		"brief" : "UUID 를 통해 클러스터 보안그룹 상세 조회 성공",
+		"detail" : "클러스터 보안그룹이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_is_exist_cluster_floating_ip.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 Floating IP 존재 확인 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_is_exist_cluster_floating_ip.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 Floating IP 존재 여부 확인 실패",
+		"detail" : "클러스터 Floating IP 존재 여부 확인이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_is_exist_cluster_floating_ip.success",
+		"language" : "kor",
+		"brief" : "클러스터 Floating IP 존재 여부 확인 성공",
+		"detail" : "클러스터 Floating IP 존재 여부가 확인되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_is_exist_cluster_tenant.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 존재 여부 확인 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_is_exist_cluster_tenant.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 존재 여부 확인 실패",
+		"detail" : "클러스터 테넌트 존재 여부 확인이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_is_exist_cluster_tenant.success",
+		"language" : "kor",
+		"brief" : "클러스터 테넌트 존재 여부 확인 성공",
+		"detail" : "클러스터 테넌트 존재 여부가 확인되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.main.failure-create_handler",
+		"language" : "kor",
+		"brief" : "핸들러 생성 실패",
+		"detail" : "핸들러를 생성할 수 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.main.failure-register_handler",
+		"language" : "kor",
+		"brief" : "핸들러 등록 실패",
+		"detail" : "핸들러를 등록할 수 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.main.failure-run_service",
+		"language" : "kor",
+		"brief" : "서비스 실행 실패",
+		"detail" : "서비스를 실행할 수 없습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_center_config.failure-put",
+		"language" : "kor",
+		"brief" : "클러스터 설정 조회 실패",
+		"detail" : "클러스터 설정 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.get_center_config.success",
+		"language" : "kor",
+		"brief" : "클러스터 설정 조회 성공",
+		"detail" : "클러스터 설정이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_center_config.failure-put",
+		"language" : "kor",
+		"brief" : "클러스터 설정 수정 실패",
+		"detail" : "클러스터 설정 수정이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.update_center_config.success",
+		"language" : "kor",
+		"brief" : "클러스터 설정 수정 성공",
+		"detail" : "클러스터 설정이 수정되었습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_cluster.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 상태확인 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_cluster.failure-validate_sync_cluster",
+		"language" : "kor",
+		"brief" : "클러스터 상태확인 실패",
+		"detail" : "클러스터 동기화 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_cluster.failure-check_cluster",
+		"language" : "kor",
+		"brief" : "클러스터 상태확인 실패",
+		"detail" : "클러스터 상태 확인이 실패했습니다."
+	},
+	{
+		"code" : "cdm-center.manager.check_cluster.success",
+		"language" : "kor",
+		"brief" : "클러스터 상태확인 성공",
+		"detail" : "클러스터 상태가 확인되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.check_deletable_cluster.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 삭제 가능 여부 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.check_deletable_cluster.failure-check",
+		"language" : "kor",
+		"brief" : "클러스터 삭제 가능 여부 실패",
+		"detail" : "클러스터를 삭제할 수 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.check_deletable_cluster.success",
+		"language" : "kor",
+		"brief" : "클러스터 삭제 가능 여부 성공",
+		"detail" : "클러스터가 삭제 가능합니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_unprotected_instance_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "비보호 인스턴스 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_unprotected_instance_list.failure-get",
+		"language" : "kor",
+		"brief" : "비보호 인스턴스 목록 조회 실패",
+		"detail" : "비보호 인스턴스 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_unprotected_instance_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 비보호 인스턴스 없음",
+		"detail" : "조회된 비보호 인스턴스가 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_unprotected_instance_list.success",
+		"language" : "kor",
+		"brief" : "비보호 인스턴스 목록 조회 성공",
+		"detail" : "비보호 인스턴스 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "보호그룹 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_list.failure-get",
+		"language" : "kor",
+		"brief" : "보호그룹 목록 조회 실패",
+		"detail" : "보호그룹 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 보호그룹 없음",
+		"detail" : "조회된 보호그룹이 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_list.success",
+		"language" : "kor",
+		"brief" : "보호그룹 목록 조회 성공",
+		"detail" : "보호그룹 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_protection_group.failure-validate_request",
+		"language" : "kor",
+		"brief" : "보호그룹 등록 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_protection_group.failure-add",
+		"language" : "kor",
+		"brief" : "보호그룹 등록 실패",
+		"detail" : "보호그룹 등록이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_protection_group.success",
+		"language" : "kor",
+		"brief" : "보호그룹 등록 성공",
+		"detail" : "보호그룹이 등록되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group.failure-validate_request",
+		"language" : "kor",
+		"brief" : "보호그룹 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group.failure-get",
+		"language" : "kor",
+		"brief" : "보호그룹 상세 조회 실패",
+		"detail" : "보호그룹 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group.success",
+		"language" : "kor",
+		"brief" : "보호그룹 상세 조회 성공",
+		"detail" : "보호그룹이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_protection_group.failure-validate_request",
+		"language" : "kor",
+		"brief" : "보호그룹 수정 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_protection_group.failure-protection_group_db_lock",
+		"language" : "kor",
+		"brief" : "보호그룹 수정 실패",
+		"detail" : "보호그룹 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_protection_group.failure-update",
+		"language" : "kor",
+		"brief" : "보호그룹 수정 실패",
+		"detail" : "보호그룹 수정이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_protection_group.success",
+		"language" : "kor",
+		"brief" : "보호그룹 수정 성공",
+		"detail" : "보호그룹이 수정되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_protection_group.failure-validate_request",
+		"language" : "kor",
+		"brief" : "보호그룹 삭제 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_protection_group.failure-protection_group_db_lock",
+		"language" : "kor",
+		"brief" : "보호그룹 삭제 실패",
+		"detail" : "보호그룹 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_protection_group.failure-delete",
+		"language" : "kor",
+		"brief" : "보호그룹 삭제 실패",
+		"detail" : "보호그룹 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_protection_group.success",
+		"language" : "kor",
+		"brief" : "보호그룹 삭제 성공",
+		"detail" : "보호그룹이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_snapshot_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "보호그룹 스냅샷 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_snapshot_list.failure-get",
+		"language" : "kor",
+		"brief" : "보호그룹 스냅샷 목록 조회 실패",
+		"detail" : "보호그룹 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_snapshot_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 보호그룹 스냅샷 없음",
+		"detail" : "조회된 보호그룹 스냅샷이 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_snapshot_list.success",
+		"language" : "kor",
+		"brief" : "보호그룹 스냅샷 목록 조회 성공",
+		"detail" : "보호그룹 스냅샷 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_protection_group_snapshot_queue.failure-validate_request",
+		"language" : "kor",
+		"brief" : "보호그룹 스냅샷 대기열 추가 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_protection_group_snapshot_queue.failure-add",
+		"language" : "kor",
+		"brief" : "보호그룹 스냅샷 대기열 추가 실패",
+		"detail" : "보호그룹 스냅샷 대기열 추가가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_protection_group_snapshot_queue.success",
+		"language" : "kor",
+		"brief" : "보호그룹 스냅샷 대기열 추가 성공",
+		"detail" : "보호그룹 스냅샷 대기열이 추가되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_protection_group_snapshot.failure-delete",
+		"language" : "kor",
+		"brief" : "보호그룹 스냅샷 삭제 실패",
+		"detail" : "보호그룹 스냅샷 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_protection_group_snapshot.success",
+		"language" : "kor",
+		"brief" : "보호그룹 스냅샷 삭제 성공",
+		"detail" : "보호그룹 스냅샷이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구계획 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan_list.failure-get",
+		"language" : "kor",
+		"brief" : "재해 복구계획 목록 조회 실패",
+		"detail" : "재해 복구계획 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 재해 복구계획 없음",
+		"detail" : "조회된 재해 복구계획이 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan_list.success",
+		"language" : "kor",
+		"brief" : "재해 복구계획 목록 조회 성공",
+		"detail" : "재해 복구계획 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_plan.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구계획 추가 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_plan.failure-add",
+		"language" : "kor",
+		"brief" : "재해 복구계획 추가 실패",
+		"detail" : "재해 복구계획 등록이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_plan.success",
+		"language" : "kor",
+		"brief" : "재해 복구계획 추가 성공",
+		"detail" : "재해 복구계획이 추가되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구계획 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan.failure-get",
+		"language" : "kor",
+		"brief" : "재해 복구계획 상세 조회 실패",
+		"detail" : "재해 복구계획 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan.success",
+		"language" : "kor",
+		"brief" : "재해 복구계획 상세 조회 성공",
+		"detail" : "재해 복구계획이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_plan.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_plan.failure-recovery_plan_db_lock",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정 실패",
+		"detail" : "복구계획 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_plan.failure-update",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정 실패",
+		"detail" : "재해 복구계획 수정이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_plan.success-update",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정 성공",
+		"detail" : "재해복구계획이 수정되었으나, 비정상 상태 오류로 인해 작업을 생성할 수 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_plan.success",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정 성공",
+		"detail" : "재해 복구계획이 수정되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_plan.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구계획 삭제 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_plan.failure-recovery_plan_db_lock",
+		"language" : "kor",
+		"brief" : "재해 복구계획 삭제 실패",
+		"detail" : "복구계획 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_plan.failure-delete",
+		"language" : "kor",
+		"brief" : "재해 복구계획 삭제 실패",
+		"detail" : "재해 복구계획 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_plan.success",
+		"language" : "kor",
+		"brief" : "재해 복구계획 삭제 성공",
+		"detail" : "재해 복구계획이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job_list.failure-get",
+		"language" : "kor",
+		"brief" : "재해 복구작업 목록 조회 실패",
+		"detail" : "재해 복구작업 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 재해 복구작업 없음",
+		"detail" : "조회된 재해 복구작업이 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job_list.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 목록 조회 성공",
+		"detail" : "재해 복구작업 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_job.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 등록 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_job.failure-add",
+		"language" : "kor",
+		"brief" : "재해 복구작업 등록 실패",
+		"detail" : "재해 복구작업 등록이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_job.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 등록 성공",
+		"detail" : "재해 복구작업이 등록되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job.failure-get",
+		"language" : "kor",
+		"brief" : "재해 복구작업 상세 조회 실패",
+		"detail" : "재해 복구작업 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 상세 조회 성공",
+		"detail" : "재해 복구작업이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_job.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 수정 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_job.failure-recovery_job_db_lock",
+		"language" : "kor",
+		"brief" : "재해 복구작업 수정 실패",
+		"detail" : "재해 복구작업 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_job.failure-update",
+		"language" : "kor",
+		"brief" : "재해 복구작업 수정 실패",
+		"detail" : "재해 복구작업 수정이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_job.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 수정 성공",
+		"detail" : "재해 복구작업이 수정되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_job.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 삭제 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_job.failure-recovery_job_db_lock",
+		"language" : "kor",
+		"brief" : "재해 복구작업 삭제 실패",
+		"detail" : "재해 복구작업 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_job.failure-delete",
+		"language" : "kor",
+		"brief" : "재해 복구작업 삭제 실패",
+		"detail" : "재해 복구작업 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_job.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 삭제 성공",
+		"detail" : "재해 복구작업이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 모니터링 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job.failure-validate_monitor_recovery_job",
+		"language" : "kor",
+		"brief" : "재해 복구작업 모니터링 실패",
+		"detail" : "재해 복구작업 모니터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job.failure-monitor",
+		"language" : "kor",
+		"brief" : "재해 복구작업 모니터링 실패",
+		"detail" : "재해 복구작업 모니터링에 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 모니터링 성공",
+		"detail" : "재해 복구작업이 모니터링되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_task_logs.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 작업내역 모니터링 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_task_logs.failure-validate_monitor_recovery_job",
+		"language" : "kor",
+		"brief" : "재해 복구작업 작업내역 모니터링 실패",
+		"detail" : "재해 복구작업 모니터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_task_logs.failure-monitor",
+		"language" : "kor",
+		"brief" : "재해 복구작업 작업내역 모니터링 실패",
+		"detail" : "재해 복구작업 작업내역 모니터링에 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_task_logs.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 작업내역 모니터링 성공",
+		"detail" : "재해 복구작업 작업내역이 모니터링되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_instance_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 인스턴스 모니터링 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_instance_list.failure-validate_monitor_recovery_job",
+		"language" : "kor",
+		"brief" : "재해 복구작업 인스턴스 모니터링 실패",
+		"detail" : "재해 복구작업 모니터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_instance_list.failure-monitor",
+		"language" : "kor",
+		"brief" : "재해 복구작업 인스턴스 모니터링 실패",
+		"detail" : "재해 복구작업 인스턴스 모니터링에 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_instance_list.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 인스턴스 모니터링 성공",
+		"detail" : "재해 복구작업 작업내역이 모니터링되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_volume_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 볼륨 모니터링 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_volume_list.failure-validate_monitor",
+		"language" : "kor",
+		"brief" : "재해 복구작업 볼륨 모니터링 실패",
+		"detail" : "모니터 유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_volume_list.failure-monitor",
+		"language" : "kor",
+		"brief" : "재해 복구작업 볼륨 모니터링 실패",
+		"detail" : "재해 복구작업 볼륨 모니터링에 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_volume_list.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 볼륨 모니터링 성공",
+		"detail" : "재해 복구작업 볼륨이 모니터링되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.pause_recovery_job.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 일시중지 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.pause_recovery_job.failure-pause",
+		"language" : "kor",
+		"brief" : "재해 복구작업 일시중지 실패",
+		"detail" : "재해 복구작업 일시중지가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.pause_recovery_job.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 일시중지 성공",
+		"detail" : "재해 복구작업이 일시중지되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.extend_recovery_job_pause_time.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 일시중지 시간 연장 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.extend_recovery_job_pause_time.failure-extend",
+		"language" : "kor",
+		"brief" : "재해 복구작업 일시중지 시간 연장 실패",
+		"detail" : "재해 복구작업 일시중지 시간 연장이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.extend_recovery_job_pause_time.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 일시중지 시간 연장 성공",
+		"detail" : "재해 복구작업 일시중지 시간이 연장되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.resume_recovery_job.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 재개 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.resume_recovery_job.failure-resume",
+		"language" : "kor",
+		"brief" : "재해 복구작업 재개 실패",
+		"detail" : "재해 복구작업 재개가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.resume_recovery_job.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 재개 성공",
+		"detail" : "재해 복구작업이 재개되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.cancel_recovery_job.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 취소 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.cancel_recovery_job.failure-cancel",
+		"language" : "kor",
+		"brief" : "재해 복구작업 취소 실패",
+		"detail" : "재해 복구작업 취소가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.cancel_recovery_job.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 취소 성공",
+		"detail" : "재해 복구작업이 취소되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.do_simulation_job_rollback.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 실패(모의훈련)",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.do_simulation_job_rollback.failure-rollback",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 실패(모의훈련)",
+		"detail" : "재해 복구작업 롤백이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.do_simulation_job_rollback.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백: 모의훈련 성공",
+		"detail" : "재해 복구작업 롤백이 성공했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.do_migration_job_rollback.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 실패(재해복구)",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.do_migration_job_rollback.failure-rollback",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 실패(재해복구)",
+		"detail" : "재해 복구작업 롤백이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.do_migration_job_rollback.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백: 재해복구 성공",
+		"detail" : "재해 복구작업 롤백이 취소되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.retry_recovery_job_rollback.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 재시도 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.retry_recovery_job_rollback.failure-retry",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 재시도 실패",
+		"detail" : "재해 복구작업 롤백 재시도가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.retry_recovery_job_rollback.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 재시도 성공",
+		"detail" : "재해 복구작업 롤백 재시도가 취소되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.extend_recovery_job_rollback_time.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 대기시간 연장 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.extend_recovery_job_rollback_time.failure-extend",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 대기시간 연장 실패",
+		"detail" : "재해 복구작업 대기시간 연장이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.extend_recovery_job_rollback_time.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 대기시간 연장 성공",
+		"detail" : "재해 복구작업 롤백 대기시간이 연장되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.ignore_recovery_job_rollback.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 무시 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.ignore_recovery_job_rollback.failure-ignore",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 무시 실패",
+		"detail" : "재해 복구작업 무시가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.ignore_recovery_job_rollback.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 롤백 무시 성공",
+		"detail" : "재해 복구작업 롤백이 무시되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.confirm_recovery_job.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 확정 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.confirm_recovery_job.failure-confirm",
+		"language" : "kor",
+		"brief" : "재해 복구작업 확정 실패",
+		"detail" : "재해 복구작업 확정이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.confirm_recovery_job.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 확정 성공",
+		"detail" : "재해 복구작업이 확정되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.retry_confirm_recovery_job.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 확정 재시도 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.retry_confirm_recovery_job.failure-retry",
+		"language" : "kor",
+		"brief" : "재해 복구작업 확정 재시도 실패",
+		"detail" : "재해 복구작업 확정 재시도가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.retry_confirm_recovery_job.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 확정 재시도 성공",
+		"detail" : "재해 복구작업 확정이 재시도되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.cancel_confirm_recovery_job.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 확정 취소 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.cancel_confirm_recovery_job.failure-cancel",
+		"language" : "kor",
+		"brief" : "재해 복구작업 확정 취소 실패",
+		"detail" : "재해 복구작업 확정 취소가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.cancel_confirm_recovery_job.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 확정 취소 성공",
+		"detail" : "재해 복구작업 확정이 취소되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.retry_recovery_job.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 재시도 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.retry_recovery_job.failure-retry",
+		"language" : "kor",
+		"brief" : "재해 복구작업 재시도 실패",
+		"detail" : "재해 복구작업 재시도가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.retry_recovery_job.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 재시도 성공",
+		"detail" : "재해 복구작업이 재시도 되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_history.failure-validate_request",
+		"language" : "kor",
+		"brief" : "보호그룹 history 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_history.failure-get",
+		"language" : "kor",
+		"brief" : "보호그룹 history 조회 실패",
+		"detail" : "보호그룹 history 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_history.success-get",
+		"language" : "kor",
+		"brief" : "조회된 보호그룹 history 없음",
+		"detail" : "조회된 보호그룹 history 가 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_history.success",
+		"language" : "kor",
+		"brief" : "보호그룹 history 조회 성공",
+		"detail" : "보호그룹 history 가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 보고서 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report_list.failure-get",
+		"language" : "kor",
+		"brief" : "재해 복구작업 보고서 목록 조회 실패",
+		"detail" : "재해 복구작업 보고서 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 재해 복구작업 보고서 없음",
+		"detail" : "조회된 재해 복구작업 보고서가 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report_list.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 보고서 목록 조회 성공",
+		"detail" : "재해 복구작업 보고서 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해복구작업 보고서 상세 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report.failure-get",
+		"language" : "kor",
+		"brief" : "재해복구작업 보고서 상세 조회 실패",
+		"detail" : "재해 복구작업 보고서 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report.success",
+		"language" : "kor",
+		"brief" : "재해복구작업 보고서 상세 조회 성공",
+		"detail" : "재해 복구작업 보고서가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_report.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 모의훈련 보고서 삭제 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_report.failure-recovery_report_db_lock",
+		"language" : "kor",
+		"brief" : "재해 복구작업 모의훈련 보고서 삭제 실패",
+		"detail" : "복구 보고서 데이터베이스 Lock 을 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_report.failure-delete",
+		"language" : "kor",
+		"brief" : "재해 복구작업 모의훈련 보고서 삭제 실패",
+		"detail" : "재해 복구작업 모의훈련 보고서 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_report.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 모의훈련 보고서 삭제 성공",
+		"detail" : "재해 복구작업 모의훈련 보고서가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_job_queue.failure-add",
+		"language" : "kor",
+		"brief" : "재해 복구작업 대기열 추가 실패",
+		"detail" : "재해 복구작업 대기열 추가가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_job_queue.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 대기열 추가 성공",
+		"detail" : "재해 복구작업 대기열이 추가되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_summary.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 요약 정보 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_summary.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 요약 정보 조회 실패",
+		"detail" : "클러스터 요약 정보 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_summary.success",
+		"language" : "kor",
+		"brief" : "클러스터 요약 정보 조회 성공",
+		"detail" : "클러스터 요약 정보 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_summary.failure-validate_request",
+		"language" : "kor",
+		"brief" : "보호그룹 요약 정보 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_summary.failure-get",
+		"language" : "kor",
+		"brief" : "보호그룹 요약 정보 조회 실패",
+		"detail" : "보호그룹 요약 정보 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_summary.success-get",
+		"language" : "kor",
+		"brief" : "조회된 보호그룹 요약 정보 없음",
+		"detail" : "조회된 보호그룹 요약 정보가 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_summary.success",
+		"language" : "kor",
+		"brief" : "보호그룹 요약 정보 조회 성공",
+		"detail" : "보호그룹 요약 정보가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_instance_summary.failure-validate_request",
+		"language" : "kor",
+		"brief" : "인스턴스 요약 정보 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_instance_summary.failure-get",
+		"language" : "kor",
+		"brief" : "인스턴스 요약 정보 조회 실패",
+		"detail" : "보호그룹 요약 정보 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_instance_summary.success",
+		"language" : "kor",
+		"brief" : "인스턴스 요약 정보 조회 성공",
+		"detail" : "인스턴스 요약 정보가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_volume_summary.failure-validate_request",
+		"language" : "kor",
+		"brief" : "볼륨 요약 정보 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_volume_summary.failure-get",
+		"language" : "kor",
+		"brief" : "볼륨 요약 정보 조회 실패",
+		"detail" : "볼륨 요약 정보 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_volume_summary.success",
+		"language" : "kor",
+		"brief" : "볼륨 요약 정보 조회 성공",
+		"detail" : "볼륨 요약 정보가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_job_summary.failure-validate_request",
+		"language" : "kor",
+		"brief" : "재해 복구작업 요약 정보 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_job_summary.failure-get",
+		"language" : "kor",
+		"brief" : "재해 복구작업 요약 정보 조회 실패",
+		"detail" : "재해 복구작업 요약 정보 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_job_summary.success-get",
+		"language" : "kor",
+		"brief" : "조회된 재해 복구작업 요약 정보 없음",
+		"detail" : "조회된 재해 복구작업 요약 정보가 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_job_summary.success",
+		"language" : "kor",
+		"brief" : "재해 복구작업 요약 정보 조회 성공",
+		"detail" : "재해 복구작업 요약 정보가 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_relationship_list.failure-validate_request",
+		"language" : "kor",
+		"brief" : "클러스터 관계 목록 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_relationship_list.failure-get",
+		"language" : "kor",
+		"brief" : "클러스터 관계 목록 조회 실패",
+		"detail" : "클러스터 관계 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_relationship_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 클러스터 관계 정보 없음",
+		"detail" : "조회된 클러스터 관계 정보가 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_relationship_list.success",
+		"language" : "kor",
+		"brief" : "클러스터 관계 목록 조회 성공",
+		"detail" : "클러스터 관계 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_cluster_hypervisor_resources.failure-validate_request",
+		"language" : "kor",
+		"brief" : "복구대상 클러스터 하이퍼바이저 리소스 조회 실패",
+		"detail" : "유효성 검증이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_cluster_hypervisor_resources.failure-get",
+		"language" : "kor",
+		"brief" : "복구대상 클러스터 하이퍼바이저 리소스 조회 실패",
+		"detail" : "복구대상 클러스터 하이퍼바이저 리소스 조회 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_cluster_hypervisor_resources.success-get",
+		"language" : "kor",
+		"brief" : "복구대상 클러스터 하이퍼바이저 리소스 정보 없음",
+		"detail" : "복구대상 클러스터 하이퍼바이저 리소스 정보가 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_cluster_hypervisor_resources.success",
+		"language" : "kor",
+		"brief" : "복구대상 클러스터 하이퍼바이저 리소스 조회 성공",
+		"detail" : "복구대상 클러스터 하이퍼바이저 리소스 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.during_recovery_job_running.warning",
+		"language" : "kor",
+		"brief" : "클러스터 관계 목록 조회 성공",
+		"detail" : "클러스터 관계 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.main.failure-create_handler",
+		"language" : "kor",
+		"brief" : "핸들러 생성 실패",
+		"detail" : "핸들러를 생성할 수 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.main.failure-register_handler",
+		"language" : "kor",
+		"brief" : "핸들러 등록 실패",
+		"detail" : "핸들러를 등록할 수 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.main.failure-run_service",
+		"language" : "kor",
+		"brief" : "서비스 실행 실패",
+		"detail" : "서비스를 실행할 수 없습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.tenant.mirror_name.duplicated",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획에 설정된 복구대상 클러스터 tenant 의 이름이 중복되어 수정이 필요합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.tenants.recovery_cluster_tenant.need_to_be_updated",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획에 설정된 복구대상 클러스터 tenant 를 확인 후 복구계획 수정이 필요합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.availability_zone.recovery_cluster_hypervisor.insufficient_resources",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터 하이퍼바이저 용량이 부족합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.availability_zone.recovery_cluster_availability_zone.required",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획에 복구대상 가용구역이 지정되지 않았습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.availability_zone.recovery_cluster_availability_zone.deleted",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획에 지정된 복구대상 클러스터 가용구역이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.availability_zones.recovery_availability_zone.need_to_be_updated",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터 가용구역을 확인 후 복구계획 수정이 필요합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.volume.protection_cluster_volume.init_copy.required",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획에 지정된 보호대상 클러스터 볼륨의 초기복제가 필요합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.volume.recovery_cluster_storage.backend_name_changed",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터 볼륨에 지정된 스토리지(볼륨타입) backend 이름이 변경되었습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.volume.recovery_cluster_storage.required",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획에 복구대상 클러스터 볼륨의 복구대상 스토리지(볼륨타입)가 지정되지 않았습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.volume.recovery_cluster_storage.deleted",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 클러스터 볼륨에 지정된 스토리지(볼륨타입)가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.volumes.cluster_storage.need_to_be_updated",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터 볼륨에 지정된 스토리지(볼륨타입)를 확인 후 복구계획 수정이 필요합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.volumes.cluster_storage.unavailable_state",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터 볼륨에 지정된 스토리지(볼륨타입)가 사용 불가능 상태입니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.storage.protection_cluster_storage.type.unknown",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 보호대상 클러스터 스토리지가 알 수 없는 타입입니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.storage.recovery_cluster_storage.backend_name_changed",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터 스토리지(볼륨타입) backend 이름이 변경되었습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.storage.recovery_cluster_storage.required",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획에 복구대상 클러스터 스토리지(볼륨타입)가 지정되지 않았습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.storage.recovery_cluster_storage.deleted",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획에 지정된 복구대상 클러스터 스토리지(볼륨타입)가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.storages.cluster_storage.need_to_be_updated",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터 스토리지(볼륨타입)를 확인 후 복구계획 수정이 필요합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.storages.cluster_storage.unavailable_state",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터 스토리지(볼륨타입)가 사용 불가능 상태입니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.external_network.recovery_cluster_external_network.external_flag_changed",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터 네트워크의 외부\/내부 설정이 변경 되었습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.external_network.recovery_cluster_external_network.required",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획에 복구대상 클러스터 네트워크가 지정되지 않았습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.external_network.recovery_cluster_external_network.deleted",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획에 지정된 복구대상 네트워크가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.external_networks.recovery_cluster_external_network.need_to_be_updated",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터 네트워크를 확인 후 복구계획 수정이 필요합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.router.recovery_cluster_external_network.external_flag_changed",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 클러스터 라우터에 지정된 복구대상 클러스터 네트워크 외부\/내부 설정이 변경 되었습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.router.recovery_cluster_external_network.deleted",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 클러스터 라우터에 지정된 복구대상 네트워크가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.routers.recovery_cluster_external_network.need_to_be_updated",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터 라우터에 지정된 네트워크를 확인 후 복구계획 수정이 필요합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance.recovery_cluster_availability_zone.required",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 클러스터 인스턴스에 복구대상 가용구역이 지정되지 않았습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance.recovery_cluster_availability_zone.deleted",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 클러스터 인스턴스에 지정된 복구대상 가용구역이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance.recovery_cluster_hypervisor.insufficient_resources",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 클러스터 인스턴스에 지정된 복구대상 가용구역의 용량이 부족합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance.recovery_cluster_hypervisor.unusable",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 클러스터 인스턴스에 지정된 복구대상 하이퍼바이저가 사용 불가능합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance.recovery_cluster_hypervisor.required",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 클러스터 인스턴스에 복구대상 하이퍼바이저가 지정되지 않았습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance.recovery_cluster_hypervisor.deleted",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 클러스터 인스턴스에 지정된 복구대상 하이퍼바이저가 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.instances.recovery_cluster_hypervisor.need_to_be_updated",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터 인스턴스에 지정된 하이퍼바이저를 확인 후 복구계획 수정이 필요합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance_floating_ip-ip_address.duplicated_with_recovery_floating_ip",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터에 보호대상 인스턴스 floating IP의 IP address 와 중복되는 floating IP가 존재합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance_floating_ip-ip_address.duplicated_with_recovery_routing_interface",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터에 보호대상 인스턴스 floating IP의 IP address 와 중복되는 라우팅 인터페이스가 존재합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance_floating_ip-ip_address.duplicated_with_recovery_floating_ip_and_recovery_routing_interface",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터에 보호대상 인스턴스 floating IP의 IP address 와 중복되는 floating IP와 라우팅 인터페이스가 존재합니다."
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.instance_floating_ips.recovery_cluster_ip_address.need_to_be_updated",
+		"language" : "kor",
+		"brief" : "재해 복구계획 수정\/확인 필요",
+		"detail" : "재해 복구계획의 복구대상 클러스터의 ip address 관련된 수정이 필요합니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_plan_check_protection_cluster_connection.failure-ipc_failed",
+		"language" : "kor",
+		"brief" : "재해 복구계획 리소스 상태 확인 필요",
+		"detail" : "재해 복구계획에 등록된 보호대상 클러스터의 연결상태 확인이 필요합니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_plan_check_recovery_cluster_connection.failure-ipc_failed",
+		"language" : "kor",
+		"brief" : "재해 복구계획 리소스 상태 확인 필요",
+		"detail" : "재해 복구계획에 등록된 복구대상 클러스터의 연결상태 확인이 필요합니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_plan_mirror_status.not_found_mirror_volume",
+		"language" : "kor",
+		"brief" : "재해 복구계획 리소스 상태 확인 필요",
+		"detail" : "볼륨 복제의 볼륨 정보를 찾을 수 없습니다."
+	},
+	{
+		"code" : "cdm-dr.manager.get_plan_mirror_status.not_found_mirror_volume_status",
+		"language" : "kor",
+		"brief" : "재해 복구계획 리소스 상태 확인 필요",
+		"detail" : "볼륨 복제의 볼륨 상태 정보를 찾을 수 없습니다."
+	},
+	{
+		"code" : "dr.volume.mirror.state.waiting",
+		"language" : "kor",
+		"brief" : "재해 복구계획 리소스 상태 확인 필요",
+		"detail" : "볼륨 복제의 상태가 실시간 복제 대기 중 입니다."
+	},
+	{
+		"code" : "dr.volume.mirror.state.initializing",
+		"language" : "kor",
+		"brief" : "재해 복구계획 리소스 상태 확인 필요",
+		"detail" : "볼륨 복제의 상태가 실시간 복제 이전 동기화 중 입니다."
+	},
+	{
+		"code" : "dr.volume.mirror.state.mirroring",
+		"language" : "kor",
+		"brief" : "재해 복구계획 리소스 상태 확인 필요",
+		"detail" : "볼륨 복제의 상태가 실시간 복제 중 입니다.(정상)"
+	},
+	{
+		"code" : "dr.volume.mirror.state.paused",
+		"language" : "kor",
+		"brief" : "재해 복구계획 리소스 상태 확인 필요",
+		"detail" : "볼륨 복제 일시 정지 상태입니다."
+	},
+	{
+		"code" : "dr.volume.mirror.state.stopping",
+		"language" : "kor",
+		"brief" : "재해 복구계획 리소스 상태 확인 필요",
+		"detail" : "볼륨 복제 중지 중 입니다."
+	},
+	{
+		"code" : "dr.volume.mirror.state.deleting",
+		"language" : "kor",
+		"brief" : "재해 복구계획 리소스 상태 확인 필요",
+		"detail" : "볼륨 복제의 상태가 실시간 복제 대기 데이터 삭제 중 입니다."
+	},
+	{
+		"code" : "dr.volume.mirror.state.stopped",
+		"language" : "kor",
+		"brief" : "재해 복구계획 리소스 상태 확인 필요",
+		"detail" : "볼륨 복제 중지 완료 상태입니다."
+	},
+	{
+		"code" : "dr.volume.mirror.state.error",
+		"language" : "kor",
+		"brief" : "재해 복구계획 리소스 상태 확인 필요",
+		"detail" : "볼륨 복제 에러 발생 상태입니다."
+	},
+	{
+		"code" : "cdm-dr.manager.update_instance_recovery_plan_list_for_sync.success-plan_deleted_by_protection_instance_deleted",
+		"language" : "kor",
+		"brief" : "재해 복구계획 동기화 - 삭제된 인스턴스",
+		"detail" : "보호그룹 인스턴스가 삭제되어 복구 계획 동기화 중 복구 계획이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.create_snapshot.failure-create",
+		"language" : "kor",
+		"brief" : "스냅샷 생성 실패",
+		"detail" : "스냅샷 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.create_snapshot.success",
+		"language" : "kor",
+		"brief" : "스냅샷 생성 성공",
+		"detail" : "스냅샷이 생성되었습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.delete_snapshot.failure-delete",
+		"language" : "kor",
+		"brief" : "스냅샷 삭제 실패",
+		"detail" : "스냅샷 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.delete_snapshot.success",
+		"language" : "kor",
+		"brief" : "스냅샷 삭제 성공",
+		"detail" : "스냅샷이 삭제되었습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_snapshot_list.failure-get",
+		"language" : "kor",
+		"brief" : "보호그룹 스냅샷 목록 조회 실패",
+		"detail" : "보호그룹 스냅샷 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_snapshot_list.success-get",
+		"language" : "kor",
+		"brief" : "조회된 보호그룹 스냅샷 없음",
+		"detail" : "조회된 보호그룹 스냅샷이 없습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_snapshot_list.success",
+		"language" : "kor",
+		"brief" : "보호그룹 스냅샷 목록 조회 성공",
+		"detail" : "보호그룹 스냅샷 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_snapshot_list_by_plan.failure-get",
+		"language" : "kor",
+		"brief" : "복구계획 보호그룹 스냅샷 목록 조회 실패",
+		"detail" : "복구계획 보호그룹 스냅샷 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_snapshot_list_by_plan.success-get",
+		"language" : "kor",
+		"brief" : "조회된 복구계획 보호그룹 스냅샷 없음",
+		"detail" : "조회된 복구계획 보호그룹 스냅샷이 없습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_snapshot_list_by_plan.success",
+		"language" : "kor",
+		"brief" : "복구계획 보호그룹 스냅샷 목록 조회 성공",
+		"detail" : "복구계획 보호그룹 스냅샷 목록이 조회되었습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_plan_snapshot.failure-get",
+		"language" : "kor",
+		"brief" : "복구계획 스냅샷 상세 조회 실패",
+		"detail" : "복구계획 스냅샷 상세 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_plan_snapshot.success",
+		"language" : "kor",
+		"brief" : "복구계획 스냅샷 상세 조회 성공",
+		"detail" : "복구계획 스냅샷 상세 조회가 되었습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.delete_plan_all_snapshots.failure-delete",
+		"language" : "kor",
+		"brief" : "복구계획 스냅샷 전체 삭제 실패",
+		"detail" : "복구계획 스냅샷 전체 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.delete_plan_all_snapshots.success",
+		"language" : "kor",
+		"brief" : "복구계획 스냅샷 전체 삭제 성공",
+		"detail" : "복구계획 스냅샷 전체 삭제가 되었습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.delete_all_snapshot.failure-delete",
+		"language" : "kor",
+		"brief" : "보호그룹 스냅샷 전체 삭제 실패",
+		"detail" : "보호그룹 스냅샷 전체 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.delete_all_snapshot.success",
+		"language" : "kor",
+		"brief" : "보호그룹 스냅샷 전체 삭제 성공",
+		"detail" : "보호그룹 스냅샷 전체 삭제가 되었습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_volume_snapshot_metadata.failure-get",
+		"language" : "kor",
+		"brief" : "볼륨 메타데이터 스냅샷 조회 실패",
+		"detail" : "볼륨 메타데이터 스냅샷 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_volume_snapshot_metadata.success",
+		"language" : "kor",
+		"brief" : "볼륨 메타데이터 스냅샷 조회 성공",
+		"detail" : "볼륨 메타데이터 스냅샷이 조회 되었습니다."
+	},
+	{
+		"code" : "cdm-target-snapshot.main.failure-register_handler",
+		"language" : "kor",
+		"brief" : "핸들러 등록 실패",
+		"detail" : "핸들러를 등록할 수 없습니다."
+	},
+	{
+		"code" : "cdm-target-snapshot.main.failure-run_service",
+		"language" : "kor",
+		"brief" : "서비스 실행 실패",
+		"detail" : "서비스를 실행할 수 없습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_monitor_run.failure-get_environment",
+		"language" : "kor",
+		"brief" : "복제 환경 목록 조회",
+		"detail" : "복제 환경 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_run.failure-create_storage",
+		"language" : "kor",
+		"brief" : "복제 환경 데몬 실행 실패",
+		"detail" : "스토리지 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_preprocess.failure-storage_prepare",
+		"language" : "kor",
+		"brief" : "복제 환경 명령어 실패",
+		"detail" : "스토리지 실행이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_preprocess.failure-storage_start",
+		"language" : "kor",
+		"brief" : "복제 환경 명령어 실패",
+		"detail" : "스토리지 실행이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_preprocess.failure-env_set_status",
+		"language" : "kor",
+		"brief" : "복제 환경 명령어 실패",
+		"detail" : "복제 환경 설정이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_preprocess.failure-env_delete",
+		"language" : "kor",
+		"brief" : "복제 환경 명령어 실패",
+		"detail" : "복제 환경 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_preprocess.failure-storage_stop",
+		"language" : "kor",
+		"brief" : "복제 환경 명령어 실패",
+		"detail" : "스토리지 중지가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_preprocess.failure-storage_destroy",
+		"language" : "kor",
+		"brief" : "복제 환경 명령어 실패",
+		"detail" : "스토리지 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_monitor.failure-storage_monitor",
+		"language" : "kor",
+		"brief" : "복제 환경 확인 실패",
+		"detail" : "스토리지 확인이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_monitor.failure-env_set_status",
+		"language" : "kor",
+		"brief" : "복제 환경 확인 실패",
+		"detail" : "복제 환경 설정이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_monitor.failure-env_delete",
+		"language" : "kor",
+		"brief" : "복제 환경 확인 실패",
+		"detail" : "복제 환경 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_monitor.failure-storage_stop",
+		"language" : "kor",
+		"brief" : "복제 환경 확인 실패",
+		"detail" : "스토리지 중지가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_monitor.failure-storage_destroy",
+		"language" : "kor",
+		"brief" : "복제 환경 확인 실패",
+		"detail" : "스토리지 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_run.failure-create_storage",
+		"language" : "kor",
+		"brief" : "복제 볼륨 데몬 실행 실패",
+		"detail" : "스토리지 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-is_usable_mirror_env",
+		"language" : "kor",
+		"brief" : "복제 볼륨 명령어 실패",
+		"detail" : "복제 환경 사용 가능 확인이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-work_start",
+		"language" : "kor",
+		"brief" : "복제 볼륨 명령어 실패",
+		"detail" : "복제 볼륨 작업 실행이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-work_resume",
+		"language" : "kor",
+		"brief" : "복제 볼륨 명령어 실패",
+		"detail" : "복제 볼륨 작업 재개가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-work_stop",
+		"language" : "kor",
+		"brief" : "복제 볼륨 명령어 실패",
+		"detail" : "복제 볼륨 작업 중지가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-work_stop_and_delete",
+		"language" : "kor",
+		"brief" : "복제 볼륨 명령어 실패",
+		"detail" : "복제 볼륨 작업 중지 및 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-work_destroy",
+		"language" : "kor",
+		"brief" : "복제 볼륨 명령어 실패",
+		"detail" : "복제 볼륨 작업 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-work_pause",
+		"language" : "kor",
+		"brief" : "복제 볼륨 명령어 실패",
+		"detail" : "복제 볼륨 작업 일시중지가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_monitor_run.failure-get_volume_list",
+		"language" : "kor",
+		"brief" : "복제 볼륨 모니터링 실행 실패",
+		"detail" : "볼륨 복제 목록 조회가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_tenant.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 테넌트 생성이 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_security_group.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 보안 그룹 생성이 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_security_group_rule.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 보안 그룹 규칙 생성이 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.copy_volume.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 볼륨 복제가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.import_volume.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 볼륨 추가가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_spec.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 인스턴스 스팩 생성이 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_keypair.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 키페어 생성이 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_floating_ip.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 Floating IP 생성이 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_network.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 네트워크 생성이 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_subnet.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 서브넷 생성이 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_router.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 라우터 생성이 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_and_diagnosis_instance.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 인스턴스 생성 및 정상 동작 여부 확인(기동)이 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.stop_instance.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 인스턴스 중지가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_instance.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 인스턴스 삭제가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_spec.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 인스턴스 스팩 삭제가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_keypair.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 키페어 삭제가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.unmanage_volume.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 볼륨 unmanage 가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_volume_copy.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 볼륨 복제파일 삭제가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_security_group.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 보안 그룹 및 보안 그룹 규칙 삭제가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_floating_ip.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 Floating IP 삭제가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_router.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 라우터 삭제가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_network.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 네트워크 및 서브넷 삭제가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_tenant.ignored-dependency_task_failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "실패된 선행(의존) task 에 의해 오픈스택의 클러스터 테넌트 삭제가 무시됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_tenant.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 테넌트 생성이 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_security_group.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 보안 그룹 생성이 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_security_group_rule.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 보안 그룹 규칙 생성이 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.copy_volume.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 볼륨 복제가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.import_volume.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 볼륨 추가가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_spec.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 인스턴스 스팩 생성이 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_keypair.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 키페어 생성이 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_floating_ip.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 Floating IP 생성이 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_network.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 네트워크 생성이 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_subnet.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 서브넷 생성이 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_router.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 라우터 생성이 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_and_diagnosis_instance.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 인스턴스 생성 및 정상 동작 여부 확인(기동)이 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.stop_instance.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 인스턴스 중지가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_instance.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 인스턴스 삭제가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_spec.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 인스턴스 스팩 삭제가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_keypair.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 키페어 삭제가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.unmanage_volume.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 볼륨 unmanage 가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_volume_copy.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 볼륨 복제파일 삭제가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_security_group.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 보안 그룹 및 보안 그룹 규칙 삭제가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_floating_ip.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 Floating IP 삭제가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_router.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 라우터 삭제가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_network.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 네트워크 및 서브넷 삭제가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_tenant.canceled",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 테넌트 삭제가 취소됐습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_tenant.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 테넌트 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_security_group.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 보안 그룹 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_security_group_rule.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 보안 그룹 규칙 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.copy_volume.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 볼륨 복제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.import_volume.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 볼륨 추가가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_spec.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 인스턴스 스팩 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_keypair.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 키페어 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_floating_ip.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 Floating IP 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_network.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 네트워크 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_subnet.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 서브넷 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_router.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 라우터 생성이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.create_and_diagnosis_instance.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 인스턴스 생성 및 정상 동작 여부 확인(기동)이 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.stop_instance.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 인스턴스 중지가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_instance.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 인스턴스 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_spec.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 인스턴스 스팩 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_keypair.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 키페어 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.unmanage_volume.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 볼륨 unmanage 가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_volume_copy.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 볼륨 복제파일 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_security_group.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 보안 그룹 및 보안 그룹 규칙 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_floating_ip.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 Floating IP 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_router.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 라우터 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_network.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 네트워크 및 서브넷 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_tenant.failed",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 테넌트 삭제가 실패했습니다."
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_spec.skipped-shared_task_in_used",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 인스턴스 스팩이 삭제되었습니다.(공유리소스를 사용 중인 다른 task 가 존재하여 생략되었습니다.)"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_keypair.skipped-shared_task_in_used",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 키페어가 삭제되었습니다.(공유리소스를 사용 중인 다른 task 가 존재하여 생략되었습니다.)"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_security_group.skipped-shared_task_in_used",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 보안 그룹 및 보안 그룹 규칙이 삭제되었습니다.(공유리소스를 사용 중인 다른 task 가 존재하여 생략되었습니다.)"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_floating_ip.skipped-shared_task_in_used",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 Floating IP 가 삭제되었습니다.(공유리소스를 사용 중인 다른 task 가 존재하여 생략되었습니다.)"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_router.skipped-shared_task_in_used",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 라우터가 삭제되었습니다.(공유리소스를 사용 중인 다른 task 가 존재하여 생략되었습니다.)"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_network.skipped-shared_task_in_used",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 네트워크와 서브넷이 삭제되었습니다.(공유리소스를 사용 중인 다른 task 가 존재하여 생략되었습니다.)"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_tenant.skipped-shared_task_in_used",
+		"language" : "kor",
+		"brief" : "",
+		"detail" : "오픈스택의 클러스터 테넌트가 삭제되었습니다.(공유리소스를 사용 중인 다른 task 가 존재하여 생략되었습니다.)"
+	}
+]}

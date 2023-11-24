@@ -1,0 +1,6867 @@
+{
+"cdm_event_code": [
+	{
+		"code" : "cdm-center.manager.add_cluster.failure-add",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddCluster"
+	},
+	{
+		"code" : "cdm-center.manager.add_cluster.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddCluster"
+	},
+	{
+		"code" : "cdm-center.manager.add_cluster.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddCluster"
+	},
+	{
+		"code" : "cdm-center.manager.check_cluster.failure-check_cluster",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckCluster"
+	},
+	{
+		"code" : "cdm-center.manager.check_cluster.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckCluster"
+	},
+	{
+		"code" : "cdm-center.manager.check_cluster.failure-validate_sync_cluster",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckCluster"
+	},
+	{
+		"code" : "cdm-center.manager.check_cluster.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckCluster"
+	},
+	{
+		"code" : "cdm-center.manager.check_connection.failure-check",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckConnection"
+	},
+	{
+		"code" : "cdm-center.manager.check_connection.failure-credential_password",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckConnection"
+	},
+	{
+		"code" : "cdm-center.manager.check_connection.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckConnection"
+	},
+	{
+		"code" : "cdm-center.manager.check_connection.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckConnection"
+	},
+	{
+		"code" : "cdm-center.manager.check_is_exist_cluster_floating_ip.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckIsExistClusterFloatingIP"
+	},
+	{
+		"code" : "cdm-center.manager.check_is_exist_cluster_floating_ip.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckIsExistClusterFloatingIP"
+	},
+	{
+		"code" : "cdm-center.manager.check_is_exist_cluster_floating_ip.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckIsExistClusterFloatingIP"
+	},
+	{
+		"code" : "cdm-center.manager.check_is_exist_cluster_tenant.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckIsExistClusterTenant"
+	},
+	{
+		"code" : "cdm-center.manager.check_is_exist_cluster_tenant.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckIsExistClusterTenant"
+	},
+	{
+		"code" : "cdm-center.manager.check_is_exist_cluster_tenant.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckIsExistClusterTenant"
+	},
+	{
+		"code" : "cdm-center.manager.copy_cluster_volume.failure-copy",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CopyClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.copy_cluster_volume.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CopyClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_floating_ip.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterFloatingIP"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_floating_ip.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterFloatingIP"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_instance.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterInstance"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_instance.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterInstance"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_instance_spec.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterInstanceSpec"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_instance_spec.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterInstanceSpec"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_keypair.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterKeypair"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_keypair.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterKeypair"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_network.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterNetwork"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_network.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterNetwork"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_router.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterRouter"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_router.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterRouter"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_security_group.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterSecurityGroup"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_security_group.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterSecurityGroup"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_security_group_rule.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterSecurityGroupRule"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_security_group_rule.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterSecurityGroupRule"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_subnet.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterSubnet"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_subnet.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterSubnet"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_tenant.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterTenant"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_tenant.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterTenant"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_group.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterVolumeGroup"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_group.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterVolumeGroup"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_group_snapshot.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterVolumeGroupSnapshot"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_group_snapshot.failure-volume_group_snapshot_db_lock",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterVolumeGroupSnapshot"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_group_snapshot.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterVolumeGroupSnapshot"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_snapshot.failure-create",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterVolumeSnapshot"
+	},
+	{
+		"code" : "cdm-center.manager.create_cluster_volume_snapshot.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CreateClusterVolumeSnapshot"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster.failure-cluster_db_lock",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteCluster"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteCluster"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteCluster"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_floating_ip.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterFloatingIP"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_floating_ip.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterFloatingIP"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_instance.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterInstance"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_instance.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterInstance"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_instance_spec.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterInstanceSpec"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_instance_spec.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterInstanceSpec"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_keypair.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterKeypair"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_keypair.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterKeypair"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_network.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterNetwork"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_network.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterNetwork"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_router.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterRouter"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_router.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterRouter"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_security_group.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterSecurityGroup"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_security_group.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterSecurityGroup"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_subnet.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterSubnet"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_subnet.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterSubnet"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_tenant.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterTenant"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_tenant.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterTenant"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_copy.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterVolumeCopy"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_copy.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterVolumeCopy"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_group.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterVolumeGroup"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_group.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterVolumeGroup"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_group_snapshot.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterVolumeGroupSnapshot"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_group_snapshot.failure-volume_group_snapshot_db_lock",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterVolumeGroupSnapshot"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_group_snapshot.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterVolumeGroupSnapshot"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_snapshot.failure-delete",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterVolumeSnapshot"
+	},
+	{
+		"code" : "cdm-center.manager.delete_cluster_volume_snapshot.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteClusterVolumeSnapshot"
+	},
+	{
+		"code" : "cdm-center.manager.get_center_config.failure-put",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetCenterConfig"
+	},
+	{
+		"code" : "cdm-center.manager.get_center_config.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetCenterConfig"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetCluster"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetCluster"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetCluster"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterAvailabilityZone"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterAvailabilityZone"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterAvailabilityZone"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone_list.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterAvailabilityZoneList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone_list.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterAvailabilityZoneList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterAvailabilityZoneList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_availability_zone_list.success-get",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterAvailabilityZoneList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_floating_ip.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterFloatingIP"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_floating_ip.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterFloatingIP"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_floating_ip.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterFloatingIP"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterHypervisor"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterHypervisor"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterHypervisor"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor_list.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterHypervisorList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor_list.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterHypervisorList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterHypervisorList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_hypervisor_list.success-get",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterHypervisorList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstance"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstance"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstance"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_by_uuid.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_by_uuid.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_by_uuid.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_list.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_list.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_list.success-get",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_number.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceNumber"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_number.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceNumber"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceSpec"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceSpec"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceSpec"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_by_uuid.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceSpecByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_by_uuid.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceSpecByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_by_uuid.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceSpecByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_list.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceSpecList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_list.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceSpecList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceSpecList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_instance_spec_list.success-get",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterInstanceSpecList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_keypair.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterKeyPair"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_keypair.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterKeyPair"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_keypair.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterKeyPair"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_list.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_list.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_list.success-get",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterNetwork"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterNetwork"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterNetwork"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_by_uuid.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterNetworkByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_by_uuid.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterNetworkByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_by_uuid.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterNetworkByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_list.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterNetworkList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_list.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterNetworkList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterNetworkList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_network_list.success-get",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterNetworkList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRouter"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRouter"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRouter"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_by_uuid.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRouterByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_by_uuid.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRouterByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_by_uuid.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRouterByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_list.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRouterList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_list.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRouterList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRouterList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_router_list.success-get",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRouterList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSecurityGroup"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSecurityGroup"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSecurityGroup"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_by_uuid.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSecurityGroupByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_by_uuid.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSecurityGroupByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_by_uuid.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSecurityGroupByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_list.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSecurityGroupList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_list.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSecurityGroupList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSecurityGroupList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_security_group_list.success-get",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSecurityGroupList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_storage.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterStorage"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_storage.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterStorage"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_storage_list.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterStorageList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_storage_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterStorageList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_storage_list.success-get",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterStorageList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_subnet.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSubnet"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_subnet.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSubnet"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_subnet.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSubnet"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_sync_status.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSyncStatus"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_sync_status.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSyncStatus"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterTenant"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterTenant"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterTenant"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_by_uuid.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterTenantByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_by_uuid.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterTenantByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_by_uuid.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterTenantByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_list.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterTenantList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_list.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterTenantList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterTenantList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_tenant_list.success-get",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterTenantList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_by_uuid.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_by_uuid.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_by_uuid.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeGroupByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeGroupByUUID"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group_list.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeGroupList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeGroupList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group_list.success-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeGroupList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group_snapshot_list.failure",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeGroupSnapshotList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_group_snapshot_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeGroupSnapshotList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_list.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_list.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeList"
+	},
+	{
+		"code" : "cdm-center.manager.get_cluster_volume_list.success-get",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterVolumeList"
+	},
+	{
+		"code" : "cdm-center.manager.get_public_key.failure-marshal",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetPublicKey"
+	},
+	{
+		"code" : "cdm-center.manager.get_public_key.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetPublicKey"
+	},
+	{
+		"code" : "cdm-center.manager.get_public_key.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetPublicKey"
+	},
+	{
+		"code" : "cdm-center.manager.get_sync_cluster_status.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSyncStatus"
+	},
+	{
+		"code" : "cdm-center.manager.import_cluster_volume.failure-import",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ImportClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.import_cluster_volume.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ImportClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.main.failure-create_handler",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-center.manager.main.failure-register_handler",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-center.manager.main.failure-run_service",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-center.manager.start_cluster_instance.failure-start",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "StartClusterInstance"
+	},
+	{
+		"code" : "cdm-center.manager.start_cluster_instance.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "StartClusterInstance"
+	},
+	{
+		"code" : "cdm-center.manager.stop_cluster_instance.failure-stop",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "StopClusterInstance"
+	},
+	{
+		"code" : "cdm-center.manager.stop_cluster_instance.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "StopClusterInstance"
+	},
+	{
+		"code" : "cdm-center.manager.sync_cluster.failure-sync",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "SyncCluster"
+	},
+	{
+		"code" : "cdm-center.manager.sync_cluster.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "SyncCluster"
+	},
+	{
+		"code" : "cdm-center.manager.sync_cluster.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "SyncCluster"
+	},
+	{
+		"code" : "cdm-center.manager.sync_cluster_volume_snapshot_list.failure-cluster_db_lock",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "SyncClusterVolumeSnapshotList"
+	},
+	{
+		"code" : "cdm-center.manager.sync_cluster_volume_snapshot_list.failure-sync",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "SyncClusterVolumeSnapshotList"
+	},
+	{
+		"code" : "cdm-center.manager.sync_cluster_volume_snapshot_list.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "SyncClusterVolumeSnapshotList"
+	},
+	{
+		"code" : "cdm-center.manager.sync_exception.failure-get_status_map",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "SyncException"
+	},
+	{
+		"code" : "cdm-center.manager.sync_exception.failure-marshal",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "SyncException"
+	},
+	{
+		"code" : "cdm-center.manager.sync_exception.failure-publish",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "SyncException"
+	},
+	{
+		"code" : "cdm-center.manager.sync_exception.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "SyncException"
+	},
+	{
+		"code" : "cdm-center.manager.unmanage_cluster_volume.failure-unmanage",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UnmanageClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.unmanage_cluster_volume.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UnmanageClusterVolume"
+	},
+	{
+		"code" : "cdm-center.manager.update_center_config.failure-put",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateCenterConfig"
+	},
+	{
+		"code" : "cdm-center.manager.update_center_config.success",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateCenterConfig"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster.failure-cluster_db_lock",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateCluster"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster.failure-update",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateCluster"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateCluster"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateCluster"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_hypervisor.failure-cluster_db_lock",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateClusterHypervisor"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_hypervisor.failure-update",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateClusterHypervisor"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_hypervisor.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateClusterHypervisor"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_hypervisor.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateClusterHypervisor"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_storage_metadata.failure-get",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateClusterStorageMetadata"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_storage_metadata.failure-get_storage",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateClusterStorageMetadata"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_storage_metadata.failure-merge",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateClusterStorageMetadata"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_storage_metadata.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateClusterStorageMetadata"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_storage_metadata.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateClusterStorageMetadata"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_volume_group.failure-update",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateClusterVolumeGroup"
+	},
+	{
+		"code" : "cdm-center.manager.update_cluster_volume_group.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateClusterVolumeGroup"
+	},
+	{
+		"code" : "cdm-center.manager.update_credential.failure-update_credential",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateCredential"
+	},
+	{
+		"code" : "cdm-center.manager.update_credential.failure-validate_request",
+		"solution" : "CDM-Center",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateCredential"
+	},
+	{
+		"code" : "cdm-center.manager.update_credential.success",
+		"solution" : "CDM-Center",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateCredential"
+	},
+	{
+		"code" : "cdm-cloud.api_gateway.error_filter.failure-match_string",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "API-Gateway",
+		"class_2" : "",
+		"class_3" : "Wrap"
+	},
+	{
+		"code" : "cdm-cloud.api_gateway.error_filter.failure-parse",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "API-Gateway",
+		"class_2" : "",
+		"class_3" : "Wrap"
+	},
+	{
+		"code" : "cdm-cloud.api_gateway.new_auth_handler.failure-marshal",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "API-Gateway",
+		"class_2" : "",
+		"class_3" : "Wrap"
+	},
+	{
+		"code" : "cdm-cloud.identity.activate_tenant.failure-activate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "ActivateTenant"
+	},
+	{
+		"code" : "cdm-cloud.identity.activate_tenant.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "ActivateTenant"
+	},
+	{
+		"code" : "cdm-cloud.identity.add_group.failure-add",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "AddGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.add_group.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "AddGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.add_group.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "AddGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.add_tenant.failure-add",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "AddTenant"
+	},
+	{
+		"code" : "cdm-cloud.identity.add_tenant.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "AddTenant"
+	},
+	{
+		"code" : "cdm-cloud.identity.add_user.failure-add",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "AddUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.add_user.failure-generate_password",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "AddUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.add_user.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "AddUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.add_user.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "AddUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.add_user.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "AddUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.check_authorization.failure",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "CheckAuthorization"
+	},
+	{
+		"code" : "cdm-cloud.identity.check_authorization.failure-enforce",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "CheckAuthorization"
+	},
+	{
+		"code" : "cdm-cloud.identity.check_authorization.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "CheckAuthorization"
+	},
+	{
+		"code" : "cdm-cloud.identity.check_authorization.failure-mismatch_user",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "CheckAuthorization"
+	},
+	{
+		"code" : "cdm-cloud.identity.check_authorization.failure-transaction",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "CheckAuthorization"
+	},
+	{
+		"code" : "cdm-cloud.identity.check_authorization.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "CheckAuthorization"
+	},
+	{
+		"code" : "cdm-cloud.identity.deactivate_tenant.failure-deactivate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "DeactivateTenant"
+	},
+	{
+		"code" : "cdm-cloud.identity.deactivate_tenant.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "DeactivateTenant"
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_group.failure-delete",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "DeleteGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_group.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "DeleteGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_group.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "DeleteGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_service_config.failure-delete",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "DeleteServiceConfig"
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_user.failure-delete",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "DeleteUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_user.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "DeleteUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.delete_user.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "DeleteUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_config.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetConfig"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_config.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetConfig"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_config.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetConfig"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_group.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_group.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_group.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_groups.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetGroups"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_groups.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetGroups"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_groups.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetGroups"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_groups.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetGroups"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_groups.success-get",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetGroups"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_roles.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetRoles"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_roles.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetRoles"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_roles.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetRoles"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_roles.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetRoles"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_roles.success-get",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetRoles"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_service_configs.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetServiceConfigs"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_service_configs.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetServiceConfigs"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_service_configs.success-get",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetServiceConfigs"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_simple_user.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetSimpleUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_simple_user.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetSimpleUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_simple_user.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetSimpleUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenant.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetTenant"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenant.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetTenant"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenants.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetTenants"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenants.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetTenants"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenants.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetTenants"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_tenants.success-get",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetTenants"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_user.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_user.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_user.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_user.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_users.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetUsers"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_users.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetUsers"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_users.failure-get_user_count",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetUsers"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_users.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetUsers"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_users.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetUsers"
+	},
+	{
+		"code" : "cdm-cloud.identity.get_users.success-get",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "GetUsers"
+	},
+	{
+		"code" : "cdm-cloud.identity.login.failure-login",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "Login"
+	},
+	{
+		"code" : "cdm-cloud.identity.login.failure-new_session",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "Login"
+	},
+	{
+		"code" : "cdm-cloud.identity.login.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "Login"
+	},
+	{
+		"code" : "cdm-cloud.identity.login.warning-update_user_login_failed_info",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "Login"
+	},
+	{
+		"code" : "cdm-cloud.identity.logout.failure-delete_session",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "Logout"
+	},
+	{
+		"code" : "cdm-cloud.identity.logout.failure-get_authenticated_session",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "Logout"
+	},
+	{
+		"code" : "cdm-cloud.identity.logout.failure-get_authenticated_user",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "Logout"
+	},
+	{
+		"code" : "cdm-cloud.identity.logout.failure-validate_delete_session",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "Logout"
+	},
+	{
+		"code" : "cdm-cloud.identity.logout.failure-validate_revoke_session",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "RevokeSession"
+	},
+	{
+		"code" : "cdm-cloud.identity.logout.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "Logout"
+	},
+	{
+		"code" : "cdm-cloud.identity.main.failure-close_handler",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.identity.main.failure-create_handler",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.identity.main.failure-register_handler",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.identity.main.failure-run_service",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.identity.reset_user_password.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "ResetUserPassword"
+	},
+	{
+		"code" : "cdm-cloud.identity.reset_user_password.failure-reset",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "ResetUserPassword"
+	},
+	{
+		"code" : "cdm-cloud.identity.reset_user_password.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "ResetUserPassword"
+	},
+	{
+		"code" : "cdm-cloud.identity.revoke_session.failure-delete_session",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "RevokeSession"
+	},
+	{
+		"code" : "cdm-cloud.identity.revoke_session.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "RevokeSession"
+	},
+	{
+		"code" : "cdm-cloud.identity.set_config.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "SetConfig"
+	},
+	{
+		"code" : "cdm-cloud.identity.set_config.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "SetConfig"
+	},
+	{
+		"code" : "cdm-cloud.identity.set_config.failure-set",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "SetConfig"
+	},
+	{
+		"code" : "cdm-cloud.identity.set_config.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "SetConfig"
+	},
+	{
+		"code" : "cdm-cloud.identity.set_group_users.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "SetGroupUsers"
+	},
+	{
+		"code" : "cdm-cloud.identity.set_group_users.failure-set",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "SetGroupUsers"
+	},
+	{
+		"code" : "cdm-cloud.identity.set_group_users.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "SetGroupUsers"
+	},
+	{
+		"code" : "cdm-cloud.identity.set_service_config.failure-set",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "SetServiceConfig"
+	},
+	{
+		"code" : "cdm-cloud.identity.set_service_config.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "SetServiceConfig"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_group.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_group.failure-update",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_group.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_group.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateGroup"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_tenant.failure-update",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateTenant"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_tenant.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateTenant"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user.failure-update",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateUser"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user_password.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateUserPassword"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user_password.failure-update",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateUserPassword"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user_password.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateUserPassword"
+	},
+	{
+		"code" : "cdm-cloud.identity.update_user_password.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "UpdateUserPassword"
+	},
+	{
+		"code" : "cdm-cloud.identity.verify_session.failure-get_authenticated_session",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "VerifySession"
+	},
+	{
+		"code" : "cdm-cloud.identity.verify_session.failure-get_tenant_id",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "VerifySession"
+	},
+	{
+		"code" : "cdm-cloud.identity.verify_session.failure-get_user",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "VerifySession"
+	},
+	{
+		"code" : "cdm-cloud.identity.verify_session.failure-update_session",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "VerifySession"
+	},
+	{
+		"code" : "cdm-cloud.identity.verify_session.failure-verify",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "VerifySession"
+	},
+	{
+		"code" : "cdm-cloud.identity.verify_session.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Identity",
+		"class_2" : "",
+		"class_3" : "VerifySession"
+	},
+	{
+		"code" : "cdm-cloud.license.get_hardware_uuid.failure",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "GetHardwareUUID"
+	},
+	{
+		"code" : "cdm-cloud.license.get_hardware_uuid.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "GetHardwareUUID"
+	},
+	{
+		"code" : "cdm-cloud.license.get_license.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "GetLicense"
+	},
+	{
+		"code" : "cdm-cloud.license.get_license.failure-marshal",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "GetLicense"
+	},
+	{
+		"code" : "cdm-cloud.license.get_license.failure-payloads",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "GetLicense"
+	},
+	{
+		"code" : "cdm-cloud.license.get_license.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "GetLicense"
+	},
+	{
+		"code" : "cdm-cloud.license.get_license.success-get",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "GetLicense"
+	},
+	{
+		"code" : "cdm-cloud.license.get_product_uuid.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "GetProductUUID"
+	},
+	{
+		"code" : "cdm-cloud.license.main.failure-create_handler",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.license.main.failure-register_handler",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.license.main.failure-run_service",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.license.set_license.failure-marshal",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "SetLicense"
+	},
+	{
+		"code" : "cdm-cloud.license.set_license.failure-payloads",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "SetLicense"
+	},
+	{
+		"code" : "cdm-cloud.license.set_license.failure-put",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "SetLicense"
+	},
+	{
+		"code" : "cdm-cloud.license.set_license.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "SetLicense"
+	},
+	{
+		"code" : "cdm-cloud.license.verify_license.failure-marshal",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "VerifyLicense"
+	},
+	{
+		"code" : "cdm-cloud.license.verify_license.failure-payloads",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "VerifyLicense"
+	},
+	{
+		"code" : "cdm-cloud.license.verify_license.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "License",
+		"class_2" : "",
+		"class_3" : "VerifyLicense"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_global_config.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetGlobalConfig"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_global_config.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetGlobalConfig"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_global_config.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetGlobalConfig"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.failure-get_nodes_status",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNode"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.failure-get_system_monitor_interval",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNode"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.failure-send",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNode"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNode"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.failure-validate_node_id",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNode"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.failure-validate_system_monitor_interval",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNode"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNode"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.failure-get_node_services_status",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNodeServices"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.failure-get_system_monitor_interval",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNodeServices"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.failure-send",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNodeServices"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNodeServices"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.failure-validate_node_id",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNodeServices"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.failure-validate_system_monitor_interval",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNodeServices"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_node_services.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNodeServices"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_nodes.failure-get_nodes_status",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNodes"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_nodes.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNodes"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_nodes.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetNodes"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.failure-get_service_status",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetService"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.failure-get_system_monitor_interval",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetService"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.failure-send",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetService"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetService"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.failure-validate_service_name",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetService"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.failure-validate_system_monitor_interval",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetService"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetService"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_config.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServiceConfig"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_config.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServiceConfig"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_config.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServiceConfig"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_config.success-get",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServiceConfig"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.failure-get_log",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServiceLog"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.failure-new_service",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServiceLog"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServiceLog"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.failure-validate_log_date",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServiceLog"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.failure-validate_service_name",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServiceLog"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServiceLog"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_service_log.success-get_log",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServiceLog"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_services.failure-get_services_status",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServices"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_services.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServices"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_services.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServices"
+	},
+	{
+		"code" : "cdm-cloud.monitor.get_services.success-get_services_status",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "GetServices"
+	},
+	{
+		"code" : "cdm-cloud.monitor.main.failure-register_handler",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.monitor.main.failure-run_service",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.monitor.new_telemetry_client.failure-new",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "newTelemetryClient"
+	},
+	{
+		"code" : "cdm-cloud.monitor.set_global_config.failure-set",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "SetGlobalConfig"
+	},
+	{
+		"code" : "cdm-cloud.monitor.set_global_config.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "SetGlobalConfig"
+	},
+	{
+		"code" : "cdm-cloud.monitor.set_global_config.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "SetGlobalConfig"
+	},
+	{
+		"code" : "cdm-cloud.monitor.set_service_config.failure-set",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "SetServiceConfig"
+	},
+	{
+		"code" : "cdm-cloud.monitor.set_service_config.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "SetServiceConfig"
+	},
+	{
+		"code" : "cdm-cloud.monitor.set_service_config.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Monitor",
+		"class_2" : "",
+		"class_3" : "SetServiceConfig"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_config.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetConfig"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_config.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetConfig"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_config.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetConfig"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_event.failure-check_authorization",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEvent"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_event.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEvent"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_event.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEvent"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_event.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEvent"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_event_classifications.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEventClassifications"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_event_classifications.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEventClassifications"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEvents"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEvents"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events.failure-new_events_query",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEvents"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEvents"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEvents"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events.success-get",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEvents"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events_stream.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEventsStream"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events_stream.failure-send_response",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEventsStream"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events_stream.failure-subscribe_template_queue",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEventsStream"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events_stream.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEventsStream"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events_stream.failure-validate_interval",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEventsStream"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_events_stream.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetEventsStream"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_tenant_event_receives.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetTenantEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_tenant_event_receives.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetTenantEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_tenant_event_receives.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetTenantEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_tenant_event_receives.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetTenantEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_user_event_receives.failure-get",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetUserEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_user_event_receives.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetUserEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_user_event_receives.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetUserEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_user_event_receives.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetUserEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.get_user_event_receives.success-get",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "GetUserEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-clean_expired_event",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "cleanExpiredEvent"
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-notification_event_subscribe",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-notification_event_unsubscribe",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-notifier_subscribe",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-notifier_unsubscribe",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-register_handler",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.notification.main.failure-run_service",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.notification.notify_event.failure-notify",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "notifyEvent"
+	},
+	{
+		"code" : "cdm-cloud.notification.notify_event.failure-unmarshal",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "notifyEvent"
+	},
+	{
+		"code" : "cdm-cloud.notification.reset_user_event_receives.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "ResetUserEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.reset_user_event_receives.failure-reset",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "ResetUserEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.reset_user_event_receives.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "ResetUserEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.set_config.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "SetConfig"
+	},
+	{
+		"code" : "cdm-cloud.notification.set_config.failure-set",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "SetConfig"
+	},
+	{
+		"code" : "cdm-cloud.notification.set_config.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "SetConfig"
+	},
+	{
+		"code" : "cdm-cloud.notification.set_config.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "SetConfig"
+	},
+	{
+		"code" : "cdm-cloud.notification.set_tenant_event_receives.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "SetTenantEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.set_tenant_event_receives.failure-set",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "SetTenantEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.set_tenant_event_receives.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "SetTenantEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.set_tenant_event_receives.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "SetTenantEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.set_user_event_receives.failure-get_request_metadata",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "SetUserEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.set_user_event_receives.failure-set",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "SetUserEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.set_user_event_receives.failure-validate",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "SetUserEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.set_user_event_receives.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "SetUserEventReceives"
+	},
+	{
+		"code" : "cdm-cloud.notification.subscribe_event.failure-classify_event",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Notification",
+		"class_2" : "",
+		"class_3" : "subscribeEvent"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.calculate_next_runtime.failure-calculate_schedule_job_next_runtime",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "CalculateNextRuntime"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.calculate_next_runtime.failure-model",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "CalculateNextRuntime"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.calculate_next_runtime.failure-validate_schedule",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "CalculateNextRuntime"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.calculate_next_runtime.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "CalculateNextRuntime"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.failure-calculate_schedule_job_next_runtime",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "CreateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.failure-create_schedule",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "CreateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.failure-model",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "CreateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.failure-set_from_model",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "CreateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.failure-validate_schedule",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "CreateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.failure-validate_schedule_broker_message",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "CreateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "CreateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule_handler.failure-create_schedule_job",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "createScheduleHandler"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule_handler.failure-find_schedule",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "createScheduleHandler"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.create_schedule_handler.failure-parse_schedule_id",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "createScheduleHandler"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.delete_schedule.failure-delete_schedule",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "DeleteSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.delete_schedule.failure-model",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "DeleteSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.delete_schedule.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "DeleteSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.delete_schedule_handler.failure-parse_schedule_id",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "deleteScheduleHandler"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.get_schedule.failure-calculate_schedule_job_next_runtime",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "GetSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.get_schedule.failure-get_schedule",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "GetSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.get_schedule.failure-set_from_model",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "GetSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.get_schedule.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "GetSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.main.failure-close_service",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.main.failure-create_handler",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.main.failure-register_handler",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.main.failure-run_service",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.failure-calculate_schedule_job_next_runtime",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "UpdateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.failure-model",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "UpdateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.failure-set_from_model",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "UpdateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.failure-update_schedule",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "UpdateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.failure-validate_schedule",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "UpdateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.failure-validate_schedule_broker_message",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "UpdateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule.success",
+		"solution" : "CDM-Cloud",
+		"level" : "info",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "UpdateSchedule"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule_handler.failure-create_schedule_job",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "updateScheduleHandler"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule_handler.failure-find_schedule",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "updateScheduleHandler"
+	},
+	{
+		"code" : "cdm-cloud.scheduler.update_schedule_handler.failure-parse_schedule_id",
+		"solution" : "CDM-Cloud",
+		"level" : "error",
+		"class_1" : "Scheduler",
+		"class_2" : "",
+		"class_3" : "updateScheduleHandler"
+	},
+	{
+		"code" : "cdm-dr.manager.add_protection_group.failure-add",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.add_protection_group.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.add_protection_group.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.add_protection_group_snapshot_queue.failure-add",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddProtectionGroupSnapshotQueue"
+	},
+	{
+		"code" : "cdm-dr.manager.add_protection_group_snapshot_queue.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddProtectionGroupSnapshotQueue"
+	},
+	{
+		"code" : "cdm-dr.manager.add_protection_group_snapshot_queue.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddProtectionGroupSnapshotQueue"
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_job.failure-add",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_job.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_job.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_job_queue.failure-add",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddRecoveryJobQueue"
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_job_queue.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddRecoveryJobQueue"
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_plan.failure-add",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_plan.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.add_recovery_plan.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "AddRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.cancel_confirm_recovery_job.failure-cancel",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CancelConfirmRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.cancel_confirm_recovery_job.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CancelConfirmRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.cancel_confirm_recovery_job.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CancelConfirmRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.cancel_recovery_job.failure-cancel",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CancelRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.cancel_recovery_job.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CancelRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.cancel_recovery_job.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CancelRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.check_deletable_cluster.failure-check",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckDeletableCluster"
+	},
+	{
+		"code" : "cdm-dr.manager.check_deletable_cluster.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckDeletableCluster"
+	},
+	{
+		"code" : "cdm-dr.manager.check_deletable_cluster.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "CheckDeletableCluster"
+	},
+	{
+		"code" : "cdm-dr.manager.confirm_recovery_job.failure-confirm",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ConfirmRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.confirm_recovery_job.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ConfirmRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.confirm_recovery_job.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ConfirmRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_protection_group.failure-delete",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_protection_group.failure-protection_group_db_lock",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_protection_group.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_protection_group.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_protection_group_snapshot.failure-delete",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteProtectionGroupSnapshot"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_protection_group_snapshot.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteProtectionGroupSnapshot"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_job.failure-delete",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_job.failure-recovery_job_db_lock",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_job.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_job.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_plan.failure-delete",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_plan.failure-recovery_plan_db_lock",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_plan.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_plan.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_report.failure-delete",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryReport"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_report.failure-recovery_report_db_lock",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryReport"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_report.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryReport"
+	},
+	{
+		"code" : "cdm-dr.manager.delete_recovery_report.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryReport"
+	},
+	{
+		"code" : "cdm-dr.manager.do_migration_job_rollback.failure-rollback",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DoMigrationJobRollback"
+	},
+	{
+		"code" : "cdm-dr.manager.do_migration_job_rollback.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DoMigrationJobRollback"
+	},
+	{
+		"code" : "cdm-dr.manager.do_migration_job_rollback.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DoMigrationJobRollback"
+	},
+	{
+		"code" : "cdm-dr.manager.do_simulation_job_rollback.failure-rollback",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DoSimulationJobRollback"
+	},
+	{
+		"code" : "cdm-dr.manager.do_simulation_job_rollback.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DoSimulationJobRollback"
+	},
+	{
+		"code" : "cdm-dr.manager.do_simulation_job_rollback.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DoSimulationJobRollback"
+	},
+	{
+		"code" : "cdm-dr.manager.during_recovery_job_running.warning",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "handlePendingRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.extend_recovery_job_pause_time.failure-extend",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ExtendRecoveryJobPauseTime"
+	},
+	{
+		"code" : "cdm-dr.manager.extend_recovery_job_pause_time.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ExtendRecoveryJobPauseTime"
+	},
+	{
+		"code" : "cdm-dr.manager.extend_recovery_job_pause_time.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ExtendRecoveryJobPauseTime"
+	},
+	{
+		"code" : "cdm-dr.manager.extend_recovery_job_rollback_time.failure-extend",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ExtendRecoveryJobRollbackTime"
+	},
+	{
+		"code" : "cdm-dr.manager.extend_recovery_job_rollback_time.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ExtendRecoveryJobRollbackTime"
+	},
+	{
+		"code" : "cdm-dr.manager.extend_recovery_job_rollback_time.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ExtendRecoveryJobRollbackTime"
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_relationship_list.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRelationshipList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_relationship_list.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRelationshipList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_relationship_list.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRelationshipList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_relationship_list.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterRelationshipList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_summary.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_summary.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_cluster_summary.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetClusterSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_instance_summary.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetInstanceSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_instance_summary.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetInstanceSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_instance_summary.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetInstanceSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_job_summary.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetJobSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_job_summary.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetJobSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_job_summary.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetJobSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_job_summary.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetJobSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_plan_check_protection_cluster_connection.failure-ipc_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.get_plan_check_recovery_cluster_connection.failure-ipc_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.get_plan_mirror_status.not_found_mirror_volume",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.get_plan_mirror_status.not_found_mirror_volume_status",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_history.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupHistory"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_history.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupHistory"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_history.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupHistory"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_history.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupHistory"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_list.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_list.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_list.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_list.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_snapshot_list.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSnapshotList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_snapshot_list.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSnapshotList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_snapshot_list.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSnapshotList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_snapshot_list.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSnapshotList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_summary.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_summary.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_summary.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_protection_group_summary.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_cluster_hypervisor_resources.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryClusterHypervisorResources"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_cluster_hypervisor_resources.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryClusterHypervisorResources"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_cluster_hypervisor_resources.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryClusterHypervisorResources"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_cluster_hypervisor_resources.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryClusterHypervisorResources"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job_list.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryJobList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job_list.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryJobList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job_list.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryJobList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_job_list.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryJobList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan_list.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryPlanList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan_list.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryPlanList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan_list.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryPlanList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_plan_list.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryPlanList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryReport"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryReport"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryReport"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report_list.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryReportList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report_list.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryReportList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report_list.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryReportList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_recovery_report_list.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetRecoveryReportList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_unprotected_instance_list.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetUnprotectedInstanceList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_unprotected_instance_list.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetUnprotectedInstanceList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_unprotected_instance_list.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetUnprotectedInstanceList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_unprotected_instance_list.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetUnprotectedInstanceList"
+	},
+	{
+		"code" : "cdm-dr.manager.get_volume_summary.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetVolumeSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_volume_summary.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetVolumeSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.get_volume_summary.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "GetVolumeSummary"
+	},
+	{
+		"code" : "cdm-dr.manager.ignore_recovery_job_rollback.failure-ignore",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "IgnoreRecoveryJobRollback"
+	},
+	{
+		"code" : "cdm-dr.manager.ignore_recovery_job_rollback.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "IgnoreRecoveryJobRollback"
+	},
+	{
+		"code" : "cdm-dr.manager.ignore_recovery_job_rollback.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "IgnoreRecoveryJobRollback"
+	},
+	{
+		"code" : "cdm-dr.manager.main.failure-create_handler",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-dr.manager.main.failure-register_handler",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-dr.manager.main.failure-run_service",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job.failure-monitor",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job.failure-validate_monitor_recovery_job",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_instance_list.failure-monitor",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryJobInstanceList"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_instance_list.failure-validate_monitor_recovery_job",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryJobInstanceList"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_instance_list.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryJobInstanceList"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_instance_list.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryJobInstanceList"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_volume_list.failure-monitor",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryJobVolumeList"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_volume_list.failure-validate_monitor",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryJobVolumeList"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_volume_list.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryJobVolumeList"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_job_volume_list.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryJobVolumeList"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_task_logs.failure-monitor",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryTaskLogs"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_task_logs.failure-validate_monitor_recovery_job",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryTaskLogs"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_task_logs.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryTaskLogs"
+	},
+	{
+		"code" : "cdm-dr.manager.monitor_recovery_task_logs.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "MonitorRecoveryTaskLogs"
+	},
+	{
+		"code" : "cdm-dr.manager.pause_recovery_job.failure-pause",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "PauseRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.pause_recovery_job.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "PauseRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.pause_recovery_job.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "PauseRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.resume_recovery_job.failure-resume",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ResumeRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.resume_recovery_job.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ResumeRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.resume_recovery_job.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "ResumeRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.retry_confirm_recovery_job.failure-retry",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RetryConfirmRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.retry_confirm_recovery_job.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RetryConfirmRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.retry_confirm_recovery_job.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RetryConfirmRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.retry_recovery_job.failure-retry",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RetryRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.retry_recovery_job.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RetryRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.retry_recovery_job.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RetryRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.retry_recovery_job_rollback.failure-retry",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RetryRecoveryJobRollback"
+	},
+	{
+		"code" : "cdm-dr.manager.retry_recovery_job_rollback.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RetryRecoveryJobRollback"
+	},
+	{
+		"code" : "cdm-dr.manager.retry_recovery_job_rollback.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RetryRecoveryJobRollback"
+	},
+	{
+		"code" : "cdm-dr.manager.update_instance_recovery_plan_list_for_sync.success-plan_deleted_by_protection_instance_deleted",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "updateInstanceRecoveryPlanListForSync"
+	},
+	{
+		"code" : "cdm-dr.manager.update_protection_group.failure-protection_group_db_lock",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.update_protection_group.failure-update",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.update_protection_group.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.update_protection_group.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateProtectionGroup"
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_job.failure-recovery_job_db_lock",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_job.failure-update",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_job.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_job.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateRecoveryJob"
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_plan.failure-recovery_plan_db_lock",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_plan.failure-update",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_plan.failure-validate_request",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_plan.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "UpdateRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.manager.update_recovery_plan.success-update",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "DeleteRecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.migrator.copy_volume.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.copy_volume.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.copy_volume.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_and_diagnosis_instance.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_and_diagnosis_instance.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_and_diagnosis_instance.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_floating_ip.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_floating_ip.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_floating_ip.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_keypair.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_keypair.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_keypair.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_network.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_network.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_network.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_router.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_router.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_router.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_security_group.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_security_group.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_security_group.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_security_group_rule.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_security_group_rule.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_security_group_rule.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_spec.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_spec.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_spec.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_subnet.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_subnet.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_subnet.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_tenant.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_tenant.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.create_tenant.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_floating_ip.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_floating_ip.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_floating_ip.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_floating_ip.skipped-shared_task_in_used",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setSkipTaskResultSuccess"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_instance.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_instance.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_instance.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_keypair.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_keypair.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_keypair.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_keypair.skipped-shared_task_in_used",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setSkipTaskResultSuccess"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_network.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_network.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_network.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_network.skipped-shared_task_in_used",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setSkipTaskResultSuccess"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_router.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_router.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_router.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_router.skipped-shared_task_in_used",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setSkipTaskResultSuccess"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_security_group.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_security_group.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_security_group.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_security_group.skipped-shared_task_in_used",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setSkipTaskResultSuccess"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_spec.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_spec.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_spec.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_spec.skipped-shared_task_in_used",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setSkipTaskResultSuccess"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_tenant.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_tenant.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_tenant.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_tenant.skipped-shared_task_in_used",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setSkipTaskResultSuccess"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_volume_copy.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_volume_copy.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.delete_volume_copy.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.import_volume.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.import_volume.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.import_volume.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.stop_instance.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.stop_instance.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.stop_instance.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.migrator.unmanage_volume.canceled",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultCanceled"
+	},
+	{
+		"code" : "cdm-dr.migrator.unmanage_volume.failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultFailed"
+	},
+	{
+		"code" : "cdm-dr.migrator.unmanage_volume.ignored-dependency_task_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Migrator",
+		"class_2" : "",
+		"class_3" : "setTaskResultIgnored"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_monitor_run.failure-get_environment",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "Run"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_monitor.failure-env_delete",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_monitor.failure-env_set_status",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_monitor.failure-storage_destroy",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_monitor.failure-storage_monitor",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_monitor.failure-storage_stop",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_preprocess.failure-env_delete",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_preprocess.failure-env_set_status",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_preprocess.failure-storage_destroy",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_preprocess.failure-storage_prepare",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_preprocess.failure-storage_start",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_preprocess.failure-storage_stop",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.env_worker_run.failure-create_storage",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_monitor_run.failure-get_volume_list",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "Run"
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-is_usable_mirror_env",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-work_destroy",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-work_pause",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-work_resume",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-work_start",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-work_stop",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_operate.failure-work_stop_and_delete",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.mirror.volume_worker_run.failure-create_storage",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Mirror",
+		"class_2" : "",
+		"class_3" : "run"
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.availability_zones.recovery_availability_zone.need_to_be_updated",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.external_networks.recovery_cluster_external_network.need_to_be_updated",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.instance_floating_ips.recovery_cluster_ip_address.need_to_be_updated",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.instances.recovery_cluster_hypervisor.need_to_be_updated",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.routers.recovery_cluster_external_network.need_to_be_updated",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.storages.cluster_storage.need_to_be_updated",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.storages.cluster_storage.unavailable_state",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.tenants.recovery_cluster_tenant.need_to_be_updated",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.volumes.cluster_storage.need_to_be_updated",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.get_plan.volumes.cluster_storage.unavailable_state",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.availability_zone.recovery_cluster_availability_zone.deleted",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.availability_zone.recovery_cluster_availability_zone.required",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.availability_zone.recovery_cluster_hypervisor.insufficient_resources",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.external_network.recovery_cluster_external_network.deleted",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.external_network.recovery_cluster_external_network.external_flag_changed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.external_network.recovery_cluster_external_network.required",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance.recovery_cluster_availability_zone.deleted",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance.recovery_cluster_availability_zone.required",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance.recovery_cluster_hypervisor.deleted",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance.recovery_cluster_hypervisor.insufficient_resources",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance.recovery_cluster_hypervisor.required",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance.recovery_cluster_hypervisor.unusable",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance_floating_ip-ip_address.duplicated_with_recovery_floating_ip",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance_floating_ip-ip_address.duplicated_with_recovery_floating_ip_and_recovery_routing_interface",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.instance_floating_ip-ip_address.duplicated_with_recovery_routing_interface",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.router.recovery_cluster_external_network.deleted",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.router.recovery_cluster_external_network.external_flag_changed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.storage.protection_cluster_storage.type.unknown",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.storage.recovery_cluster_storage.backend_name_changed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.storage.recovery_cluster_storage.deleted",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.storage.recovery_cluster_storage.required",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.tenant.mirror_name.duplicated",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.volume.protection_cluster_volume.init_copy.required",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.volume.recovery_cluster_storage.backend_name_changed",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.volume.recovery_cluster_storage.deleted",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.recovery.plan.volume.recovery_cluster_storage.required",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.create_snapshot.failure-create",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "CreateSnapshot"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.create_snapshot.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "CreateSnapshot"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.delete_all_snapshot.failure-delete",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "DeleteAllSnapshots"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.delete_all_snapshot.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "DeleteAllSnapshots"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.delete_plan_all_snapshots.failure-delete",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "DeletePlanAllSnapshots"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.delete_plan_all_snapshots.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "DeletePlanAllSnapshots"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.delete_snapshot.failure-delete",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "DeleteSnapshot"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.delete_snapshot.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "DeleteSnapshot"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_plan_snapshot.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "GetPlanSnapshot"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_plan_snapshot.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "GetPlanSnapshot"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_snapshot_list.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSnapshotList"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_snapshot_list.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSnapshotList"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_snapshot_list.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSnapshotList"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_snapshot_list_by_plan.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSnapshotListByPlan"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_snapshot_list_by_plan.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSnapshotListByPlan"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_snapshot_list_by_plan.success-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "GetProtectionGroupSnapshotListByPlan"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_volume_snapshot_metadata.failure-get",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "GetVolumeSnapshotMetadata"
+	},
+	{
+		"code" : "cdm-dr.snapshot-manager.get_volume_snapshot_metadata.success",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "info",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "GetVolumeSnapshotMetadata"
+	},
+	{
+		"code" : "cdm-target-snapshot.main.failure-register_handler",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "cdm-target-snapshot.main.failure-run_service",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "error",
+		"class_1" : "Snapshot",
+		"class_2" : "",
+		"class_3" : "main"
+	},
+	{
+		"code" : "dr.volume.mirror.state.deleting",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "dr.volume.mirror.state.error",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "dr.volume.mirror.state.initializing",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "dr.volume.mirror.state.mirroring",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "dr.volume.mirror.state.paused",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "dr.volume.mirror.state.stopped",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "dr.volume.mirror.state.stopping",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	},
+	{
+		"code" : "dr.volume.mirror.state.waiting",
+		"solution" : "CDM-DisasterRecovery",
+		"level" : "warn",
+		"class_1" : "Manager",
+		"class_2" : "",
+		"class_3" : "RecoveryPlan"
+	}
+]}
