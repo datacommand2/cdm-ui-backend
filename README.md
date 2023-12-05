@@ -12,7 +12,7 @@ yarn install
 yarn start
 ```
 
-## 3. k8s
+### 3. k8s
 
 ```
 kubectl apply -f ./deployment_backend.yaml
