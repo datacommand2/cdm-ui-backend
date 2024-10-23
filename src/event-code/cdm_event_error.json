@@ -1,0 +1,1683 @@
+{
+"cdm_event_error": [
+	{
+		"code" : "abnormal_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: abnormal state"
+	},
+	{
+		"code" : "all_plan_snapshot_creation_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Snapshot",
+		"contents" : "detail: all plan snapshot creation failed \\n protection group ID: <%= protection_group_id %> \\n protection group snapshot ID: <%= protection_group_snapshot_id %>"
+	},
+	{
+		"code" : "already_deleted",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "이미 삭제된 사용자 그룹입니다. \\n ID: <%= group_id %>"
+	},
+	{
+		"code" : "already_login",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "이미 다른 장치에서 로그인한 사용자 입니다. \\n ID: <%= user_id %>"
+	},
+	{
+		"code" : "already_migration_job_registered",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: already recovery job registered \\n protection group ID: <%= protection_group_id %>"
+	},
+	{
+		"code" : "already_started_recovery_job_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "이미 시작된 재해복구작업은 삭제할 수 없습니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구작업: <%= recovery_job_resource_name %>"
+	},
+	{
+		"code" : "already_synchronizing_state_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "이미 동기화중입니다. \\n 클러스터ID: <%= cluster_id %>"
+	},
+	{
+		"code" : "bad_request",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: bad request \\n cause: <%= cause %>"
+	},
+	{
+		"code" : "cdm-disaster-recovery-openshift.manager.protection_deletion_block.recovery-plan-exists",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구계획이 존재하여 보호그룹을 삭제할 수 없습니다."
+	},
+	{
+		"code" : "conflict",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: conflict error \\n cause: <%= cause %>"
+	},
+	{
+		"code" : "conflict_parameter",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "중복된 값이 존재합니다. \\n 속성: <%= param %> \\n 입력값: <%= value %>"
+	},
+	{
+		"code" : "connection_failed",
+		"solution" : "CDM-Cloud",
+		"service" : "Monitor",
+		"contents" : "detail: could not connect to telemetry service"
+	},
+	{
+		"code" : "current_password_mismatch",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: current password mismatch \\n cluster ID: <%= cluster_id %>"
+	},
+	{
+		"code" : "deletion_blocked_by_controlled_recovery_job_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "실행중이거나 대기중인 재해복구작업이 존재합니다. 모든 재해복구작업이 종료되어야 스케쥴을 삭제할 수 있습니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구작업 스케쥴: <%= recovery_job_schedule_resource_name %>"
+	},
+	{
+		"code" : "deletion_blocked_by_controlled_recovery_job_schedule_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구작업 스케쥴이 존재합니다. 스케쥴을 먼저 삭제해야 재해복구계획을 삭제할 수 있습니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구계획: <%= recovery_plan_resource_name %>"
+	},
+	{
+		"code" : "deletion_blocked_storage",
+		"solution" : "CDM-Center",
+		"service" : "StorageManager",
+		"contents" : "detail: <%= detail %>"
+	},
+	{
+		"code" : "different_instances_list",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: different instances list of protection group and plan detail \\n protection group ID: <%= protection_group_id %> \\n plan ID: <%= plan_id %>"
+	},
+	{
+		"code" : "existing_protection_group_of_cluster_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "보호그룹이 존재하여 클러스터를 삭제할 수 없습니다. \\n 클러스터ID: <%= cluster_id %>"
+	},
+	{
+		"code" : "expired_license",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: expired license \\n now: <%= now %> \\n expire date: <%= expire_date %>"
+	},
+	{
+		"code" : "expired_session",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "만료된 사용자 세션입니다. \\n 세션: <%= session %>"
+	},
+	{
+		"code" : "failback_recovery_plan_existed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: failback recovery plan existed \\n protection group ID: <%= protection_group_id %> \\n recovery plan ID: <%= recovery_plan_id %>"
+	},
+	{
+		"code" : "floating_ip_address_duplicated",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: protection instance floating IP address is duplicated of recovery cluster floating IP address \\n protection instance UUID: <%= protection_instance_uuid %> \\n floating IP address: <%= floating_ip_address %>"
+	},
+	{
+		"code" : "format_mismatch_parameter",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "입력 값이 유효하지 않습니다. \\n 속성: <%= param %> \\n 입력값: <%= value %> \\n 유효형식: <%= format %>"
+	},
+	{
+		"code" : "found_multiple_protection_group_information_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "보호그룹 정보가 비정상적으로 다수 존재합니다. 관리자 확인이 필요합니다. \\n 보호그룹: <%= protection_group_resource_name %>"
+	},
+	{
+		"code" : "found_multiple_recovery_information_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구계획의 복구 정보가 비정상적으로 다수 존재합니다. 관리자 확인이 필요합니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구계획: <%= recovery_plan_resource_name %>"
+	},
+	{
+		"code" : "found_multiple_replication_info_by_recovery_plan_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구계획의 복제 정보가 비정상적으로 다수 존재합니다. 관리가 확인이 필요합니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구계획: <%= recovery_plan_resource_name %>"
+	},
+	{
+		"code" : "imminent_license_expiration_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "라이선스가 곧 만료됩니다. 라이선스가 만료되면 일부 기능을 사용할 수 없습니다. 라이선스를 갱신해주세요. \\n 만료일자: <%= expiration_date %>"
+	},
+	{
+		"code" : "imminent_service_expiration_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "라이선스가 만료되어 서비스가 곧 만료됩니다. 서비스가 만료되면 모든 기능을 사용할 수 없습니다. 라이선스를 갱신해주세요. \\n 만료일자: <%= expiration_date %>"
+	},
+	{
+		"code" : "import_volume_rollback_failed",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: fail to rollback import volume \\n volume pair: <%= volume_pair %> \\n snapshot pair list: <%= snapshot_pair_list %>"
+	},
+	{
+		"code" : "inaccessible_protection_group_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "엑세스 권한이 없는 클러스터의 보호그룹입니다. 관리자에게 문의하세요. \\n 보호그룹: <%= protection_group_resource_name %>"
+	},
+	{
+		"code" : "inactive_cluster",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: inactive cluster \\n protection group ID: <%= protection_group_id %> \\n cluster ID: <%= cluster_id %>"
+	},
+	{
+		"code" : "instance_number_exceeded",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: maximum number of instances allowed exceeded \\n added or updated: <%=added_or_updated %> \\n registered: <%= registered %> \\n limit: <%= limit %>"
+	},
+	{
+		"code" : "instance_status_timeout",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: instance status timeout \\n status: <%= status %> \\n instance UUID: <%= instance_uuid %>"
+	},
+	{
+		"code" : "insufficient_storage_space",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: insufficient storage space \\n protection group ID: <%= protection_group_id %> \\n plan ID: <%= plan_id %> \\n required size: <%= required_size %> \\n free size: <%= free_size %>"
+	},
+	{
+		"code" : "internal_error_storage",
+		"solution" : "CDM-Center",
+		"service" : "StorageManager",
+		"contents" : "detail: <%= detail %>"
+	},
+	{
+		"code" : "invalid_argument_storage",
+		"solution" : "CDM-Center",
+		"service" : "StorageManager",
+		"contents" : "detail: <%= detail %>"
+	},
+	{
+		"code" : "invalid_end_at",
+		"solution" : "CDM-Cloud",
+		"service" : "Scheduler",
+		"contents" : "스케쥴 종료시간이 설정되지 않았거나 시작시간보다 이전 시점입니다. \\n 종료시간: <%= end_at %>"
+	},
+	{
+		"code" : "invalid_license",
+		"solution" : "CDM-Cloud",
+		"service" : "License",
+		"contents" : "유효하지 않은 라이선스입니다. \\n 원인: <%= cause %>"
+	},
+	{
+		"code" : "invalid_message",
+		"solution" : "CDM-Cloud",
+		"service" : "Scheduler",
+		"contents" : "Message 가 설정되지 않았습니다. 관리자 확인이 필요합니다."
+	},
+	{
+		"code" : "invalid_parameter",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "입력 값이 유효하지 않습니다. \\n 속성: <%= param %> \\n 입력값: <%= value %> \\n 원인: <%= cause %>"
+	},
+	{
+		"code" : "invalid_request",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "잘못된 요청입니다. \\n IP: <%= client_ip %>"
+	},
+	{
+		"code" : "invalid_schedule_id",
+		"solution" : "CDM-Cloud",
+		"service" : "Scheduler",
+		"contents" : "유효하지 않은 스케쥴 ID 입니다."
+	},
+	{
+		"code" : "invalid_session",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "유효하지 않은 사용자 세션입니다. \\n 세션: <%= session %>"
+	},
+	{
+		"code" : "invalid_start_at",
+		"solution" : "CDM-Cloud",
+		"service" : "Scheduler",
+		"contents" : "스케쥴 시작시간이 설정되지 않았습니다. \\n 시작시간: <%= start_at %>"
+	},
+	{
+		"code" : "invalid_tenant_config",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "테넌트 설정이 유효하지 않습니다. \\n 설정키: <%= key %> \\n 설정값: <%= value %>"
+	},
+	{
+		"code" : "invalid_timezone",
+		"solution" : "CDM-Cloud",
+		"service" : "Scheduler",
+		"contents" : "유효하지 않은 타임존입니다. \\n 타임존: <%= timezone %>"
+	},
+	{
+		"code" : "invalid_topic",
+		"solution" : "CDM-Cloud",
+		"service" : "Scheduler",
+		"contents" : "Topic 이 설정되지 않았습니다. 관리자 확인이 필요합니다."
+	},
+	{
+		"code" : "invalid_user_account_or_password",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "입력한 사용자ID 혹은 비밀번호가 유효하지 않습니다."
+	},
+	{
+		"code" : "ipc_bad_request",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: ipc failed bad request \\n code: <%= code %> \\n message: <%= message %>"
+	},
+	{
+		"code" : "ipc_no_content",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: ipc no content"
+	},
+	{
+		"code" : "length_overflow_parameter",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "입력의 길이가 최대 길이를 초과했습니다. \\n 속성: <%= param %> \\n 입력값: <%= value %> \\n 최대길이: <%= max_length %>"
+	},
+	{
+		"code" : "license_expiration_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "라이선스가 만료되었습니다. 일부 기능을 사용할 수 없습니다. 라이선스를 갱신해주세요. \\n 만료일자: <%= expiration_date %>"
+	},
+	{
+		"code" : "license_missing_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "등록된 라이선스가 없습니다. 라이선스를 등록해 주세요."
+	},
+	{
+		"code" : "login_restricted",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "로그인이 제한된 사용자 계정입니다. \\n 계정: <%= account %> \\n 로그인 실패 횟수: <%= failed_count %> \\n 마지막 로그인 실패 일시: <%= last_failed_at %> \\n 로그인 제한 시간: <%= until %>"
+	},
+	{
+		"code" : "mismatch_password",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "현재 비밀번호가 일치하지 않습니다."
+	},
+	{
+		"code" : "no_content",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "데이터가 없습니다."
+	},
+	{
+		"code" : "no_result",
+		"solution" : "CDM-Cloud",
+		"service" : "Monitor",
+		"contents" : "detail: could not get result \\n query: <%= query %>"
+	},
+	{
+		"code" : "not_cancelable_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not cancelable state \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_confirm_cancelable_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not confirm cancelable state \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_confirm_retryable_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not confirm retryable state \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_confirmable_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not confirmable state \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_confirmable_state_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "복구에 성공한 워크로드가 없어 재해복구작업을 확정할 수 없습니다. 실패한 워크로드의 복구를 재시도하세요. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구계획: <%= recovery_job_resource_name %>"
+	},
+	{
+		"code" : "not_connected",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not connected to cluster \\n type code: <%= type_code %>"
+	},
+	{
+		"code" : "not_deletable_snapshot_existed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: deletable snapshot not existed \\n protection group ID: <%= protection_group_id %>"
+	},
+	{
+		"code" : "not_existed_creatable_plans",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not existed creatable plans \\n protection group ID: <%= protection_group_id %>"
+	},
+	{
+		"code" : "not_existed_replicator_snapshot_file",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not exist replicator snapshot file"
+	},
+	{
+		"code" : "not_extendable_pausing_time_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not extendable pause time state \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_extendable_rollback_time_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not extendable simulation rollback time state \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_found",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found request resource \\n cause: <%= cause %>"
+	},
+	{
+		"code" : "not_found_NFS_export_path",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found NFS export path \\n volume UUID: <%= volume_uuid %>"
+	},
+	{
+		"code" : "not_found_availability_zone_recovery_plan",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found availability zone recovery plan \\n recovery plan ID: <%= recovery_plan_id %> \\n availability zone ID: <%= availability_zone_id %>"
+	},
+	{
+		"code" : "not_found_available_service_host_name",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found available service host name \\n backend name: <%= backend_name %>"
+	},
+	{
+		"code" : "not_found_backup_result_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "지정한 백업을 찾을 수 없습니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 백업: <%= backup_result_resource_name %>"
+	},
+	{
+		"code" : "not_found_clear_task",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found clear task \\n job ID: <%= job_id %> \\n task ID: <%= task_id %>"
+	},
+	{
+		"code" : "not_found_cluster",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "등록된 클러스터를 찾을 수 없습니다. \\n ID: <%= cluster_id %>"
+	},
+	{
+		"code" : "not_found_cluster_availability_zone",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster availability zone \\n cluster availability zone ID: <%= cluster_availability_zone_id %>"
+	},
+	{
+		"code" : "not_found_cluster_floating_ip",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster floating ip \\n cluster floating IP ID: <%= cluster_floating_ip_id %>"
+	},
+	{
+		"code" : "not_found_cluster_hypervisor",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster hypervisor \\n cluster hypervisor ID: <%= cluster_hypervisor_id %>"
+	},
+	{
+		"code" : "not_found_cluster_instance",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster instance \\n cluster instance ID: <%= cluster_instance_id %>"
+	},
+	{
+		"code" : "not_found_cluster_instance_by_uuid",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster instance by uuid \\n cluster instance UUID: <%= cluster_instance_uuid %>"
+	},
+	{
+		"code" : "not_found_cluster_instance_spec",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster instance spec \\n cluster instance spec ID: <%= cluster_instance_spec_id %>"
+	},
+	{
+		"code" : "not_found_cluster_instance_spec_by_uuid",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster instance spec by uuid \\n cluster instance spec UUID: <%= cluster_instance_spec_uuid %>"
+	},
+	{
+		"code" : "not_found_cluster_keypair",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster keypair \\n cluster keypair ID: <%= cluster_keypair_id %>"
+	},
+	{
+		"code" : "not_found_cluster_network",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster network \\n cluster network ID: <%= cluster_network_id %>"
+	},
+	{
+		"code" : "not_found_cluster_network_by_uuid",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster network by uuid \\n cluster network UUID: <%= cluster_network_uuid %>"
+	},
+	{
+		"code" : "not_found_cluster_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "등록된 클러스터를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %>"
+	},
+	{
+		"code" : "not_found_cluster_router",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster router \\n cluster router ID : <%= cluster_router_id %>"
+	},
+	{
+		"code" : "not_found_cluster_router_by_uuid",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster router by uuid \\n cluster router UUID: <%= cluster_router_uuid %>"
+	},
+	{
+		"code" : "not_found_cluster_security_group",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster security group \\n cluster security group ID: <%= cluster_security_group_id %>"
+	},
+	{
+		"code" : "not_found_cluster_security_group_by_uuid",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster security group by uuid \\n cluster security group UUID: <%= cluster_security_group_uuid %>"
+	},
+	{
+		"code" : "not_found_cluster_storage",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster storage \\n cluster storage ID: <%= cluster_storage_id %>"
+	},
+	{
+		"code" : "not_found_cluster_subnet",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster subnet \\n cluster subnet ID: <%= cluster_subnet_id %>"
+	},
+	{
+		"code" : "not_found_cluster_sync_status",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster sync status \\n cluster ID: <%= cluster_id %>"
+	},
+	{
+		"code" : "not_found_cluster_tenant",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster tenant \\n cluster tenant ID: <%= cluster_tenant_id %>"
+	},
+	{
+		"code" : "not_found_cluster_tenant_by_uuid",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster tenant by uuid \\n cluster tenant UUID: <%= cluster_tenant_uuid %>"
+	},
+	{
+		"code" : "not_found_cluster_volume",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster volume \\n cluster volume ID: <%= cluster_volume_id %>"
+	},
+	{
+		"code" : "not_found_cluster_volume_by_uuid",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster volume by uuid \\n cluster volume UUID: <%= cluster_volume_uuid %>"
+	},
+	{
+		"code" : "not_found_config",
+		"solution" : "CDM-Cloud",
+		"service" : "Monitor",
+		"contents" : "설정을 찾을 수 없습니다. \\n 설정키: <%= key %>"
+	},
+	{
+		"code" : "not_found_consistency_group",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found consistency group \\n protection group ID: <%= protection_group_id %> \\n cluster storage ID: <%= cluster_storage_id %> \\n cluster tenant ID: <%= cluster_tenant_id %>"
+	},
+	{
+		"code" : "not_found_custom_resource_definition_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "커스텀 리소스 정의를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 커스텀리소스정의ID: <%= custom_resource_definition_resource_id %>"
+	},
+	{
+		"code" : "not_found_endpoint",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found endpoint \\n service type: <%= service_type %>"
+	},
+	{
+		"code" : "not_found_endpoint_of_broker_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "StatusManager Broker 의 접속 정보를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %>"
+	},
+	{
+		"code" : "not_found_endpoint_of_status_manager_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "StatusManager 의 접속 정보를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %>"
+	},
+	{
+		"code" : "not_found_event",
+		"solution" : "CDM-Cloud",
+		"service" : "Notification",
+		"contents" : "이벤트를 찾을 수 없습니다. \\n ID: <%= id %>"
+	},
+	{
+		"code" : "not_found_external_network_recovery_plan",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found external network recovery plan \\n recovery plan ID: <%= recovery_plan_id %> \\n external network ID: <%= external_network_id %>"
+	},
+	{
+		"code" : "not_found_external_routing_interface",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found external network routing interface \\n router ID: <%= router_id %>"
+	},
+	{
+		"code" : "not_found_finalizer_by_gvkname_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "파이널라이저를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 리소스그룹: <%= resource_group %> \\n 리소스버전: <%= resource_version %> \\n 리소스종류: <%= resource_kind %> \\n 파이널라이저: <%= finalizer_name %>"
+	},
+	{
+		"code" : "not_found_finalizer_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "파이널라이저를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 파이널라이저ID: <%= finalizer_id %>"
+	},
+	{
+		"code" : "not_found_floating_ip_recovery_plan",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found floating ip recovery plan \\n recovery plan ID: <%= recovery_plan_id %> \\n floating ip ID: <%= floating_ip_id %>"
+	},
+	{
+		"code" : "not_found_group",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "사용자 그룹을 찾을 수 없습니다. \\n group ID: <%= id %>"
+	},
+	{
+		"code" : "not_found_instance",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found cluster instance \\n cluster ID: <%= cluster_id %>"
+	},
+	{
+		"code" : "not_found_instance_hypervisor",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found hypervisor of instance \\n instance name: <%= instance_name %>"
+	},
+	{
+		"code" : "not_found_instance_recovery_plan",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found instance recovery plan \\n recovery plan ID: <%= recovery_plan_id %> \\n instance ID: <%= instance_id %>"
+	},
+	{
+		"code" : "not_found_instance_recovery_plan_snapshot",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found instance recovery plan snapshot \\n recovery plan ID: <%= recovery_plan_id %> \\n snapshot ID: <%= snapshot_id %> \\n instance ID: <%= instance_id %>"
+	},
+	{
+		"code" : "not_found_instance_spec",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found instance spec \\n instance name: <%= instance_name %> \\n flavor name: <%= flavor_name %>"
+	},
+	{
+		"code" : "not_found_job",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found job \\n job ID: <%= job_id %>"
+	},
+	{
+		"code" : "not_found_job_detail",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found job detail \\n job ID: <%= job_id %>"
+	},
+	{
+		"code" : "not_found_job_instance_status",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found job instance result \\n job ID: <%= job_id %> \\n instance ID: <%= instance_id %>"
+	},
+	{
+		"code" : "not_found_job_log",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found job log \\n job ID: <%= job_id %> \\n log sequence number: <%= log_seq %>"
+	},
+	{
+		"code" : "not_found_job_result",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found job result \\n job ID: <%= job_id %>"
+	},
+	{
+		"code" : "not_found_job_volume_status",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found job volume result \\n job ID: <%= job_id %> \\n volume ID: <%= volume_id %>"
+	},
+	{
+		"code" : "not_found_license",
+		"solution" : "CDM-Cloud",
+		"service" : "License",
+		"contents" : "라이선스가 등록되지 않았습니다."
+	},
+	{
+		"code" : "not_found_managed_volume",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found managed volume \\n volume pair: <%= volume_pair %>"
+	},
+	{
+		"code" : "not_found_mirror_environment",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found mirror environment \\n source storage ID: <%= source_storage_id %> \\n target storage ID: <%= target_storage_id %>"
+	},
+	{
+		"code" : "not_found_mirror_environment_operation",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found mirror environment operation \\n source storage ID: <%= source_storage_id %> \\n target storage ID: <%= target_storage_id %>"
+	},
+	{
+		"code" : "not_found_mirror_environment_status",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found mirror environment status \\n source storage ID: <%= source_storage_id %> \\n target storage ID: <%= target_storage_id %>"
+	},
+	{
+		"code" : "not_found_mirror_volume",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found mirror volume \\n source storage ID: <%= source_storage_id %> \\n target storage ID: <%= target_storage_id %> \\n source volume ID: <%= source_volume_id %>"
+	},
+	{
+		"code" : "not_found_mirror_volume_operation",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found mirror volume operation \\n source storage ID: <%= source_storage_id %> \\n target storage ID: <%= target_storage_id %> \\n source volume ID: <%= source_volume_id %>"
+	},
+	{
+		"code" : "not_found_mirror_volume_snapshot",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Snapshot",
+		"contents" : "detail: not found mirror volume snapshot \\n mirror volume: <%= mirror_volume %> \\n snapshot UUID: <%= snapshot_uuid %>"
+	},
+	{
+		"code" : "not_found_mirror_volume_status",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found mirror volume status \\n source storage ID: <%= source_storage_id %> \\n target storage ID: <%= target_storage_id %> \\n source volume ID: <%= source_volume_id %>"
+	},
+	{
+		"code" : "not_found_mirror_volume_target_agent",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found mirror volume target agent \\n source storage ID: <%= source_storage_id %> \\n target storage ID: <%= target_storage_id %> \\n source volume ID: <%= source_volume_id %>"
+	},
+	{
+		"code" : "not_found_mirror_volume_target_metadata",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found mirror volume target metadata \\n source storage ID: <%= source_storage_id %> \\n target storage ID: <%= target_storage_id %> \\n source volume ID: <%= source_volume_id %>"
+	},
+	{
+		"code" : "not_found_namespace_by_name_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "네임스페이스를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 네임스페이스: <%= namespace_name %>"
+	},
+	{
+		"code" : "not_found_namespace_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "네임스페이스를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 네임스페이스ID: <%= namespace_resource_id %>"
+	},
+	{
+		"code" : "not_found_node",
+		"solution" : "CDM-Cloud",
+		"service" : "Monitor",
+		"contents" : "NeverStop 노드를 찾을 수 없습니다. \\n ID: <%= id %>"
+	},
+	{
+		"code" : "not_found_persistentvolume_resource_id_by_name_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "영구볼륨을 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 영구볼륨: <%= persistent_volume_resource_name %>"
+	},
+	{
+		"code" : "not_found_plan_snapshot",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Snapshot",
+		"contents" : "detail: not found plan snapshot \\n protection group ID: <%= protection_group_id %> \\n protection group snapshot ID: <%= protection_group_snapshot_id %> \\n plan ID: <%= plan_id %>"
+	},
+	{
+		"code" : "not_found_priority_class_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "프라이어리티클래스를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 프라이어리티클래스ID: <%= priority_class_resource_id %>"
+	},
+	{
+		"code" : "not_found_protection_group",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found protection group \\n protection group ID: <%= protection_group_id %> \\n tenant ID: <%= tenant_id %>"
+	},
+	{
+		"code" : "not_found_protection_group_info_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "보호그룹 정보를 찾을 수 없습니다. 보호그룹 정보를 생성하고 있을 수 있습니다. 잠시 뒤 다시 확인해주시기 바랍니다. \\n 클러스터ID: <%= cluster_id %> \\n 보호그룹: <%= protection_group_resource_name %>"
+	},
+	{
+		"code" : "not_found_protection_group_information_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "보호그룹 정보를 찾을 수 없습니다. 보호그룹 정보를 생성하고 있을 수 있습니다. 잠시 뒤 다시 확인해주시기 바랍니다. \\n 보호그룹: <%= protection_group_resource_name %>"
+	},
+	{
+		"code" : "not_found_protection_group_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "보호그룹을 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 보호그룹: <%= protection_group_resource_name %>"
+	},
+	{
+		"code" : "not_found_protection_group_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "등록된 보호그룹을 찾을 수 없습니다. \\n 보호그룹: <%= protection_group_resource_name %>"
+	},
+	{
+		"code" : "not_found_protection_group_snapshot",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Snapshot",
+		"contents" : "detail: not found protection group snapshot \\n protection group ID: <%= protection_group_id %> \\n protection group snapshot ID: <%= protection_group_snapshot_id %>"
+	},
+	{
+		"code" : "not_found_protection_group_workloads_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "현재 동기화가 진행 중입니다. 잠시 뒤 다시 확인해주시기 바랍니다. \\n 클러스터ID: <%= cluster_id %> \\n 보호그룹: <%= protection_group_resource_name %>"
+	},
+	{
+		"code" : "not_found_recovery_information_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구계획의 복구 정보를 찾을 수 없습니다. 복구 정보를 생성하고 있을 수 있습니다. 잠시 뒤 다시 확인해주시기 바랍니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구계획: <%= recovery_plan_resource_name %>"
+	},
+	{
+		"code" : "not_found_recovery_job",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found recovery job \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_found_recovery_job_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구작업을 찾을 수 없습니다. 이미 종료된 작업인지 확인하세요. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구작업: <%= recovery_job_resource_name %>"
+	},
+	{
+		"code" : "not_found_recovery_job_schedule_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구작업 스케쥴을 찾을 수 없습니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구작업 스케쥴: <%= recovery_job_schedule_resource_name %>"
+	},
+	{
+		"code" : "not_found_recovery_job_task_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구작업 Task 를 찾을 수 없습니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구작업 Task: <%= recovery_job_task_resource_name %>"
+	},
+	{
+		"code" : "not_found_recovery_plan",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found recovery plan \\n protection group ID: <%= protection_group_id %> \\n recovery plan ID: <%= recovery_plan_id %>"
+	},
+	{
+		"code" : "not_found_recovery_plan_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구계획을 찾을 수 없습니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구계획: <%= recovery_plan_resource_name %>"
+	},
+	{
+		"code" : "not_found_recovery_plan_snapshot",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found recovery plan snapshot \\n protection group ID: <%= protection_group_id %> \\n recovery plan ID: <%= recovery_plan_id %> \\n protection group snapshot ID: <%= protection_group_snapshot_id %>"
+	},
+	{
+		"code" : "not_found_recovery_plans",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found recovery plans \\n protection group ID: <%= protection_group_id %>"
+	},
+	{
+		"code" : "not_found_recovery_point_snapshot",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found recovery point snapshot \\n protection group snapshot ID: <%= protection_group_snapshot_id %>"
+	},
+	{
+		"code" : "not_found_recovery_result",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found recovery result \\n recovery result ID: <%= recovery_result_id %>"
+	},
+	{
+		"code" : "not_found_recovery_result_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구결과를 찾을 수 없습니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구결과: <%= recovery_result_resource_name %>"
+	},
+	{
+		"code" : "not_found_recovery_security_group",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found recovery security group \\n protection group ID: <%= protection_group_id %> \\n cluster security group ID: <%= cluster_security_group_id %>"
+	},
+	{
+		"code" : "not_found_registry_by_url_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "레지스트리를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 레지스트리URL: <%= registry_url %>"
+	},
+	{
+		"code" : "not_found_registry_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "레지스트리를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 레지스트리ID: <%= registry_id %>"
+	},
+	{
+		"code" : "not_found_replication_info",
+		"solution" : "CDM-Replicator",
+		"service" : "ContainerController",
+		"contents" : "detail: not found replication info \\n cause: <%= cause %>"
+	},
+	{
+		"code" : "not_found_replication_info_by_recovery_plan_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구계획의 복제 정보를 찾을 수 없습니다. 복제 정보를 생성하고 있을 수 있습니다. 잠시 뒤 다시 확인해주시기 바랍니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구계획: <%= recovery_plan_resource_name %>"
+	},
+	{
+		"code" : "not_found_resource_manifest_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "리소스를 찾을 수 없습니다. 동기화 중일 수 있습니다. 잠시 뒤 다시 확인해주시기 바랍니다. \\n 클러스터ID: <%= cluster_id %> \\n 리소스ID: <%= resource_id %>"
+	},
+	{
+		"code" : "not_found_resource_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "리소스를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 리소스ID: <%= resource_id %>"
+	},
+	{
+		"code" : "not_found_router_external_network",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found relational external network \\n external network ID: <%= cluster_network_id %>"
+	},
+	{
+		"code" : "not_found_runtime_class_by_name_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "런타임클래스를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 런타임클래스: <%= runtime_class_name %>"
+	},
+	{
+		"code" : "not_found_runtime_class_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "런타임클래스를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 런타임클래스ID: <%= runtime_class_resource_id %>"
+	},
+	{
+		"code" : "not_found_schedule",
+		"solution" : "CDM-Cloud",
+		"service" : "Scheduler",
+		"contents" : "스케쥴을 찾을 수 없습니다. \\n ID: <%= id %>"
+	},
+	{
+		"code" : "not_found_scheduler_by_name_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "스케쥴러를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 스케쥴러: <%= scheduler_name %>"
+	},
+	{
+		"code" : "not_found_scheduler_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "스케쥴러를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 스케쥴러ID: <%= scheduler_id %>"
+	},
+	{
+		"code" : "not_found_service",
+		"solution" : "CDM-Cloud",
+		"service" : "Monitor",
+		"contents" : "detail: not found telemetry service \\n service name: <%= name %>"
+	},
+	{
+		"code" : "not_found_service_account_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "서비스어카운트를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 서비스어카운트ID: <%= service_account_resource_id %>"
+	},
+	{
+		"code" : "not_found_service_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "서비스를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 서비스ID: <%= service_resource_id %>"
+	},
+	{
+		"code" : "not_found_shared_task",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found shared task \\n shared task key: <%= shared_task_key %>"
+	},
+	{
+		"code" : "not_found_snapshot_source_name",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found snapshot source name"
+	},
+	{
+		"code" : "not_found_source_volume_reference",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found source volume reference \\n source storage ID: <%= source_storage_id %> \\n source volume ID: <%= source_volume_id %>"
+	},
+	{
+		"code" : "not_found_storage",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found storage \\n cluster ID: <%= cluster_id %> \\n cluster storage ID: <%= cluster_storage_id %>"
+	},
+	{
+		"code" : "not_found_storage_class_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "스토리지클래스를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 스토리지클래스ID: <%= storage_class_resource_id %>"
+	},
+	{
+		"code" : "not_found_storage_metadata",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found storage metadata \\n cluster ID: <%= cluster_id %> \\n cluster storage ID: <%= cluster_storage_id %>"
+	},
+	{
+		"code" : "not_found_storage_recovery_plan",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found storage recovery plan \\n recovery plan ID: <%= recovery_plan_id %> \\n storage ID: <%= storage_id %>"
+	},
+	{
+		"code" : "not_found_storage_resource",
+		"solution" : "CDM-Center",
+		"service" : "StorageManager",
+		"contents" : "detail: <%= detail %>"
+	},
+	{
+		"code" : "not_found_task",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found task \\n job ID: <%= job_id %> \\n task ID: <%= task_id %>"
+	},
+	{
+		"code" : "not_found_task_result",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not found task result \\n job ID: <%= job_id %> \\n task ID: <%= task_id %>"
+	},
+	{
+		"code" : "not_found_tenant",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "테넌트를 찾을 수 없습니다. \\n ID: <%= id %>"
+	},
+	{
+		"code" : "not_found_tenant_config",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "테넌트 설정을 찾을 수 없습니다. \\n 설정키: <%= key %>"
+	},
+	{
+		"code" : "not_found_tenant_recovery_plan",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found tenant recovery plan \\n recovery plan ID: <%= recovery_plan_id %> \\n tenant ID: <%= tenant_id %>"
+	},
+	{
+		"code" : "not_found_user",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "사용자를 찾을 수 없습니다. \\n ID: <%= id %>"
+	},
+	{
+		"code" : "not_found_volume",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found volume \\n cluster ID: <%= cluster_id %> \\n cluster volume ID: <%= cluster_volume_id %>"
+	},
+	{
+		"code" : "not_found_volume_backend_name",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found volume backend name \\n volume type name: <%= volume_type_name %>"
+	},
+	{
+		"code" : "not_found_volume_metadata",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found volume metadata \\n cluster ID: <%= cluster_id %> \\n cluster storage ID: <%= cluster_storage_id %>"
+	},
+	{
+		"code" : "not_found_volume_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "볼륨을 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 볼륨ID: <%= volume_id %>"
+	},
+	{
+		"code" : "not_found_volume_recovery_plan",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found volume recovery plan \\n recovery plan ID: <%= recovery_plan_id %> \\n volume ID: <%=volume_id  %>"
+	},
+	{
+		"code" : "not_found_volume_recovery_plan_snapshot",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not found volume recovery plan snapshot \\n recovery plan ID: <%= recovery_plan_id %> \\n snapshot ID: <%= snapshot_id %> \\n volume ID: <%= volume_id %>"
+	},
+	{
+		"code" : "not_found_volume_snapshot_class_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "볼륨스냅샷클래스를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 볼륨스냅샷클래스ID: <%= volume_snapshot_class_resource_id %>"
+	},
+	{
+		"code" : "not_found_volume_snapshot_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "볼륨스냅샷을 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 볼륨스냅샷ID: <%= volume_snapshot_resource_id %>"
+	},
+	{
+		"code" : "not_found_volume_source_name",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found volume source name"
+	},
+	{
+		"code" : "not_found_volume_type",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: not found volume type \\n volume name: <%= volume_name %> \\n volume type name: <%= volume_type_name %>"
+	},
+	{
+		"code" : "not_found_workload_by_gvk_namespace_name_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "워크로드를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 리소스그룹: <%= group %> \\n 리소스버전: <%= version %> \\n 리소스종류: <%= kind %> \\n 네임스페이스: <%= namespace %> \\n 리소스이름: <%= name %>"
+	},
+	{
+		"code" : "not_found_workload_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "워크로드를 찾을 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 워크로드ID: <%= workload_id %>"
+	},
+	{
+		"code" : "not_pausable_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not pausable state \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_ready_recovery_plan_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "아직 보호그룹의 데이터를 복구클러스터의 스토리지로 복제하는 중입니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구계획: <%= recovery_plan_resource_name %>"
+	},
+	{
+		"code" : "not_resumable_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not resumable state \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_retryable_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not retryable state \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_retryable_state_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구작업 워크로드의 복구를 재시도할 수 없는 상태입니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구작업: <%= recovery_job_resource_name %>"
+	},
+	{
+		"code" : "not_reusable_old_password",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "기존 비밀번호는 재사용 할 수 없습니다."
+	},
+	{
+		"code" : "not_rollback_ignorable_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not rollback ignorable state \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_rollback_retryable_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not rollback retryable state \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_rollbackable_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not rollbackable state \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "not_runnable_recovery_job",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: not runnable recovery job \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %> \\n cause: <%= cause %>"
+	},
+	{
+		"code" : "not_shared_task_type",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: not shared task type \\n task type: <%= task_type %>"
+	},
+	{
+		"code" : "not_simulation_recovery_job",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: mismatch job type code \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %> \\n recovery job type code: <%= recovery_job_type_code %>"
+	},
+	{
+		"code" : "not_supported_recovery_type_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "detail: not supported recovery type \\n protection_group_resource_name: <%= protection_group_resource_name %> \\n recovery_job_resource_name: <%= recovery_job_resource_name %> \\n recovery_job_resource_recovery_type: <%= recovery_job_resource_recovery_type %>"
+	},
+	{
+		"code" : "not_supported_storage_type",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Snapshot",
+		"contents" : "detail: not supported storage type \\n storage type: <%= storage_type %>"
+	},
+	{
+		"code" : "not_volume_mirroring_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Snapshot",
+		"contents" : "detail: not volume mirroring state \\n mirror volume: <%= mirror_volume %>"
+	},
+	{
+		"code" : "out_of_range_parameter",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "입력 값이 유효 범위를 벗어났습니다. \\n 속성: <%= param %> \\n 입력값: <%= value %> \\n 최소값: <%= min %> \\n 최대값: <%= max %>"
+	},
+	{
+		"code" : "pattern_mismatch_parameter_value",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "입력 값이 유효하지 않습니다. \\n 속성: <%= param %> \\n 입력값: <%= value %> \\n 유효패턴: <%= pattern %>"
+	},
+	{
+		"code" : "protection_group_deletion_blocked_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "하위 리소스가 존재하여 보호그룹을 삭제할 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 보호그룹: <%= protection_group_resource_name %>"
+	},
+	{
+		"code" : "protection_group_existed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: protection group is existed \\n cluster ID: <%= cluster_id %>"
+	},
+	{
+		"code" : "protection_group_snapshot_precondition_failed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: precondition failed to create protection group snapshot \\n protection group ID: <%= protection_group_id %> \\n protection group snapshot ID: <%= protection_group_snapshot_id %> \\n cause: <%= cause %>"
+	},
+	{
+		"code" : "recovery_job_existed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: recovery job is existed \\n protection group ID: <%= protection_group_id %> \\n recovery plan ID: <%= recovery_plan_id %>"
+	},
+	{
+		"code" : "recovery_job_running",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: recovery job state code is running \\n protection group ID: <%= protection_group_id %> \\n recovery plan ID: <%= recovery_plan_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "recovery_plan_existed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: recovery plan is existed \\n cluster ID: <%= cluster_id %> \\n protection_group ID: <%= protection_group_id %>"
+	},
+	{
+		"code" : "recovery_plan_in_warning_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구계획에 문제가 있어 수정이 필요합니다."
+	},
+	{
+		"code" : "remote_server_error",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: cluster server error \\n cause: <%= cause %>"
+	},
+	{
+		"code" : "required_parameter",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "필수 속성의 입력이 누락되었습니다. \\n 속성: <%= param %>"
+	},
+	{
+		"code" : "scheduling_time_is_before_now_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "작업예약시간은 현재시간보다 이전일 수 없습니다. 작업예약시간을 확인하세요. \\n 작업예약시간: <%= scheduling_timestamp %> \\n 현재시간: <%= now_timestamp %>"
+	},
+	{
+		"code" : "server_busy",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: server busy \\n cause: <%= cause %>"
+	},
+	{
+		"code" : "service_expiration_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "서비스가 만료되었습니다. 모든 기능을 사용할 수 없습니다. 라이선스를 갱신해주세요. \\n 만료일자: <%= expiration_date %>"
+	},
+	{
+		"code" : "snapshot_creation_time_has_passed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: snapshot creation time has passed \\n protection group ID: <%= protection_group_id %>"
+	},
+	{
+		"code" : "snapshot_creation_timeout",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: snapshot creation timeout \\n protection group ID: <%= protection_group_id %>"
+	},
+	{
+		"code" : "status_manager_connection_failed_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "StatusManager 와의 연결에 오류가 발생했습니다. \\n 클러스터ID: <%= cluster_id %> \\n 원인: <%= cause %>"
+	},
+	{
+		"code" : "status_manager_error",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "StatusManager 에서 오류가 발생했습니다. \\n 클러스터ID: <%= cluster_id %> \\n 원인: <%= cause %>"
+	},
+	{
+		"code" : "stopping_mirror_environment_existed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: stopping mirror environment is existed \\n source cluster storage ID: <%= source_cluster_storage_id %> \\n target cluster storage ID: <%= target_cluster_storage_id %>"
+	},
+	{
+		"code" : "stopping_mirror_volume_existed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: stopping mirror volume is existed \\n source cluster storage ID: <%= source_cluster_storage_id %> \\n target cluster storage ID: <%= target_cluster_storage_id %> \\n cluster volume ID: <%= cluster_volume_id %>"
+	},
+	{
+		"code" : "storage_keyring_registration_required",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: storage keyring registration required \\n cluster ID: <%= cluster_id %> \\n storage UUID: <%= storage_uuid %>"
+	},
+	{
+		"code" : "unable_to_change_state_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구작업의 상태를 요청한 상태로 변경할 수 없습니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구작업: <%= recovery_job_resource_name %>"
+	},
+	{
+		"code" : "unable_to_synchronize_because_of_status_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "클러스터가 활성화되지 않아 동기화를 할 수 없습니다. \\n 클러스터ID: <%= cluster_id %> \\n 상태: <%= status %>"
+	},
+	{
+		"code" : "unassignable_role",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "역할을 부여할 수 없습니다. \\n 역할: <%= role %>"
+	},
+	{
+		"code" : "unauthenticated",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: unauthenticated user \\n cause: <%= cause %>"
+	},
+	{
+		"code" : "unauthenticated_request",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "유효하지 않은 세션입니다. \\n IP: <%= client_ip %> \\n 세션: <%= session_key %>"
+	},
+	{
+		"code" : "unauthorized",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: unauthorized user \\n cause: <%= cause %>"
+	},
+	{
+		"code" : "unauthorized_request",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "권한이 없습니다. \\n IP: <%= client_ip %> \\n 사용자명: <%= user_name %> \\n 사용자계정: <%= user_account %>"
+	},
+	{
+		"code" : "unauthorized_user",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: unauthorized user \\n user name: <%= user_name %> \\n required role name: <%= required_role_name %>"
+	},
+	{
+		"code" : "unavailable_instance_existed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: unavailable instance is existed \\n instances: <%= instances %>"
+	},
+	{
+		"code" : "unavailable_parameter",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "입력 값이 유효하지 않습니다. \\n 속성: <%= param %> \\n 입력값: <%= value %> \\n 유효값: <%= available_values %>"
+	},
+	{
+		"code" : "unavailable_storage_existed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: unavailable storage is existed \\n storages: <%= storages %>"
+	},
+	{
+		"code" : "unchangeable_parameter",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "수정할 수 없는 속성입니다. \\n 속성: <%= param %>"
+	},
+	{
+		"code" : "unchangeable_recovery_job",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: unchangeable recovery job \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %>"
+	},
+	{
+		"code" : "undeletable_group",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "삭제할 수 없는 사용자 그룹입니다. \\n ID: <%= group_id %>"
+	},
+	{
+		"code" : "undeletable_recovery_job",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: undeletable recovery job \\n protection group ID: <%= protection_group_id %> \\n recovery job ID: <%= recovery_job_id %> \\n recovery job state code: <%= recovery_job_state_code %>"
+	},
+	{
+		"code" : "undeletable_recovery_result",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: undeletable recovery result \\n recovery result ID: <%= recovery_result_id %> \\n recovery_type_code: <%= recovery_type_code %>"
+	},
+	{
+		"code" : "undeletable_recovery_result_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "재해복구결과는 삭제할 수 없습니다. \\n 보호그룹: <%= protection_group_resource_name %> \\n 재해복구결과: <%= recovery_result_resource_name %>"
+	},
+	{
+		"code" : "undeletable_user",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "삭제할 수 없는 사용자입니다. \\n ID: <%= user_id %>"
+	},
+	{
+		"code" : "unexpected_job_operation",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: unexpected job operation \\n recovery job ID: <%= recovery_job_id %> \\n recovery job state: <%= recovery_job_state %> \\n recovery job operation: <%= recovery_job_operation %>"
+	},
+	{
+		"code" : "unknown",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "알 수 없는 오류가 발생했습니다. \\n 원인: <%= cause %>"
+	},
+	{
+		"code" : "unknown_cluster_node",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Manager",
+		"contents" : "detail: unknown cluster node"
+	},
+	{
+		"code" : "unknown_instance_state",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: unknown instance state \\n instance name: <%= instance_name %> \\n state: <%= state %>"
+	},
+	{
+		"code" : "unknown_job_operation",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: invalid job operation \\n operation: <%= operation %>"
+	},
+	{
+		"code" : "unknown_job_result_code",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: invalid job result \\n result code: <%= result_code %>"
+	},
+	{
+		"code" : "unknown_job_state_code",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: invalid job state \\n state code: <%= state_code %>"
+	},
+	{
+		"code" : "unknown_mirror_environment_operation",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: invalid mirror environment operation value \\n operation: <%= operation %>"
+	},
+	{
+		"code" : "unknown_mirror_environment_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: invalid mirror environment state value \\n state: <%= state %>"
+	},
+	{
+		"code" : "unknown_mirror_volume_operation",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: invalid mirror volume operation value \\n operation: <%= operation %>"
+	},
+	{
+		"code" : "unknown_mirror_volume_state",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: invalid mirror volume state value \\n state: <%= state %>"
+	},
+	{
+		"code" : "unknown_session",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "사용자 세션을 찾을 수 없습니다. \\n ID: <%= id %>"
+	},
+	{
+		"code" : "unknown_user",
+		"solution" : "CDM-Cloud",
+		"service" : "Notification",
+		"contents" : "detail: no role of solution \\n solution: <%= solution %> \\n user ID: <%= user_id %>"
+	},
+	{
+		"code" : "unsupported_cluster_type",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: unsupported cluster type \\n type code: <%= type_code %>"
+	},
+	{
+		"code" : "unsupported_schedule_type",
+		"solution" : "CDM-Cloud",
+		"service" : "Scheduler",
+		"contents" : "지원하지 않는 타임존입니다. \\n 타임존: <%= timezone %>"
+	},
+	{
+		"code" : "unsupported_storage_type",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: unsupported storage type \\n storage type: <%= storage_type %>"
+	},
+	{
+		"code" : "unsupported_timezone",
+		"solution" : "CDM-Cloud",
+		"service" : "Scheduler",
+		"contents" : "지원하지 않는 스케쥴 주기입니다. 관리자 확인이 필요합니다. \\n 주기: <%= type %>"
+	},
+	{
+		"code" : "unusable_broker",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "메시지 브로커에서 오류가 발생했습니다. \\n 원인: <%= cause %>"
+	},
+	{
+		"code" : "unusable_database",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "데이터베이스에서 오류가 발생했습니다. \\n 원인: <%= cause %> \\n DBMS 오류: <%= db_error %>"
+	},
+	{
+		"code" : "unusable_mirror_volume",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: unusable mirror volume \\n mirror volume: <%= mirror_volume %> \\n cause: <%= cause %>"
+	},
+	{
+		"code" : "unusable_status_manager_openshift",
+		"solution" : "CDM-Center",
+		"service" : "ClusterManager-OpenShift",
+		"contents" : "StatusManager 와의 연결에 오류가 발생했습니다. \\n 원인: <%= cause %>"
+	},
+	{
+		"code" : "unusable_store",
+		"solution" : "CDM-Cloud",
+		"service" : "Common",
+		"contents" : "키-밸류 스토어에서 오류가 발생했습니다. \\n 원인: <%= cause %>"
+	},
+	{
+		"code" : "unverified_session",
+		"solution" : "CDM-Cloud",
+		"service" : "Identity",
+		"contents" : "사용자 세션을 검증하지 못했습니다. \\n 세션: <%= session %> \\n 원인: <%= cause %>"
+	},
+	{
+		"code" : "violate_cpu_core_license_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "Manager",
+		"contents" : "라이선스에 할당된 CPU 코어갯수를 초과했습니다. 라이선스를 갱신해주세요. \\n 할당CPU코어갯수: <%= max_cpu_cores %> \\n 현재CPU코어갯수: <%= current_cpu_cores %>"
+	},
+	{
+		"code" : "volume_existed",
+		"solution" : "CDM-DisasterRecovery",
+		"service" : "Common",
+		"contents" : "detail: mirror volume exists"
+	},
+	{
+		"code" : "volume_status_timeout",
+		"solution" : "CDM-Center",
+		"service" : "Manager",
+		"contents" : "detail: volume status timeout \\n status: <%= status %> \\n volume UUID: <%= volume_uuid %>"
+	},
+	{
+		"code" : "warning_recovery_plan_openshift_dr",
+		"solution" : "CDM-DisasterRecovery-OpenShift",
+		"service" : "RecoveryPlanOperator",
+		"contents" : "재해복구계획에 문제가 있어 수정이 필요합니다. \\n 재해복구계획: <%= recovery_plan_resource_name %>"
+	}
+]}

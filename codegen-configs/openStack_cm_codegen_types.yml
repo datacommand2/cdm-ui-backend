@@ -1,0 +1,10 @@
+# This configuration file tells GraphQL Code Generator how
+# to generate types based on our schema.
+schema: "./src/graphql/openStack_cm/schemas.graphql"
+generates:
+  # Specify where our generated types should live.
+  ./src/graphql/openStack_cm/__generated__/types.ts:
+    plugins:
+      - "typescript"
+    config:
+      useIndexSignature: true

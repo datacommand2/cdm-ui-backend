@@ -1,0 +1,2257 @@
+scalar JSONObject
+
+scalar BigInt
+
+type Query {
+  # 백업 조회
+  # 설명추가
+  # @param Int backupId 백업 ID
+  # @return [CloudBackup]
+  GetCloudBackup(backupId: BigInt): CloudBackup
+  # 백업 예약 목록 조회
+  # 설명추가
+  # @return [CloudSchedule]
+  GetCloudBackupReservations: CloudSchedule
+  # 백업 목록 조회
+  # 설명추가
+  # @param Int limit 한 페이지에 표시할 항목 개수
+  # @param Int offset 페이지에 표시할 항목 인덱스
+  # @param Int startDate 백업 생성일 범위 시작일
+  # @param Int endDate 백업 생성일 범위 종료일
+  # @return [CloudBackup]
+  GetCloudBackups(limit: BigInt, offset: BigInt, startDate: BigInt, endDate: BigInt): CloudBackup
+  # 백업 복구
+  # 설명추가
+  # @param Int backupId 백업 ID
+  # @return [Boolean]
+  RestoreCloudBackup(backupId: BigInt): Boolean
+  # 백업 설정 조회
+  # 설명추가
+  # @return [CloudConfigBackup]
+  GetCloudBackupConfig: CloudConfigBackup
+  # 사용자 인증 설정 조회
+  # 설명추가
+  # @return [CloudIdentityConfigResponse]
+  GetIdentityConfig: CloudIdentityConfigResponse
+  # 사용자 서비스 설정 조회
+  # 서비스 설정 목록을 조회한다.
+  # @param String name 서비스 이름
+  # @param String key 서비스 설정 항목
+  # @return [CloudServiceConfigsResponse]
+  GetIdentityServiceConfigs(name: String, key: String): CloudServiceConfigsResponse
+  # 솔루션 역할 목록 조회
+  # 솔루션의 역할 목록을 조회한다.
+  # @param String solution 솔루션 이름
+  # @param String role 역할 이름
+  # @return [CloudRolesResponse]
+  GetRoles(solution: String, role: String): CloudRolesResponse
+  # 사용자 계정 상세 조회
+  # 사용자 계정 조회를 요청한다. 요청 성공 시, 응답은 JSON 객체로 전달되며 사용자 정보를 포함한다.
+  # @param Int userId 사용자 ID
+  # @return [CloudUserResponse]
+  GetUser(userId: BigInt): CloudUserResponse
+  # 사용자 그룹 상세 조회
+  # 사용자 그룹 상세 정보를 조회한다.
+  # @param Int groupId 사용자 그룹 ID
+  # @return [CloudUserGroupResponse]
+  GetUserGroup(groupId: BigInt): CloudUserGroupResponse
+  # 사용자 그룹 목록 조회
+  # 사용자 그룹 이름과 일치 하는 그룹 정보 혹은 전체 사용자 그룹들에 정보를 조회한다.
+  # @param String name 사용자 그룹 이름
+  # @return [CloudUserGroupsResponse]
+  GetUserGroups(name: String): CloudUserGroupsResponse
+  # 사용자 계정 목록 조회
+  # 설명추가
+  # @param Int limit 한 페이지에 표시할 항목 개수
+  # @param Int offset 페이지에 표시할 항목 인덱스
+  # @param String solution 솔루션 이름
+  # @param String role 역할 이름
+  # @param Int groupId 사용자 그룹 ID
+  # @param Int excludeGroupId 제외할 사용자 그룹 ID
+  # @param String name 사용자 이름
+  # @param String department 사용자 부서
+  # @param String position 사용자 직책
+  # @param Boolean loginOnly 로그인 된 사용자만 조회
+  # @return [CloudUsersResponse]
+  GetUsers(limit: BigInt, offset: BigInt, solution: String, role: String, groupId: BigInt, excludeGroupId: BigInt, name: String, department: String, position: String, loginOnly: Boolean): CloudUsersResponse
+  # 세션 유효성 확인
+  # 설명추가
+  # @param String xAuthenticatedSession 세션 키
+  # @return [CloudUserResponse]
+  VerifySession(xAuthenticatedSession: String): CloudUserResponse
+  # 라이선스 조회
+  # 등록된 라이선스 상세 정보를 조회 한다.
+  # @return [CloudLicenseResponse]
+  GetLicense: CloudLicenseResponse
+  # Product UUID 조회
+  # CDM-Cloud 의 Product UUID 를 조회한다.
+  # @return [CloudProductUuidResponse]
+  GetProductUuid: CloudProductUuidResponse
+  # 서비스 전역 설정 조회
+  # CDM 모니터 서비스 전역 설정을 조회한다.
+  # @return [CloudGlobalConfigResponse]
+  GetMonitorGlobalConfig: CloudGlobalConfigResponse
+  # 노드 상세 조회 (WebSocket 프로토콜 지원)
+  # CDM-Cloud가 전개된 노드의 상세 정보를 조회한다. 해당 노드의 정보와 상태, 그리고 실행중인 서비스를 반환힌다.
+  # @param String nodeId 노드의 ID
+  # @param Int interval WebSocket 데이터 수신 간격 (sec)
+  # @return [CloudNodeResponse]
+  GetMonitorNode(nodeId: String, interval: BigInt): CloudNodeResponse
+  # 노드 서비스 목록 조회 (WebSocket 프로토콜 지원)
+  # CDM-Cloud가 전개된 노드의 현재 동작중인 CDM 서비스의 목록을 조회한다. 각 서비스의 정보와 상태를 반환한다. 이 때 특정 노드에 같은 서비스가 여러 개 실행중인 경우 하나로 통합하여 보여준다.
+  # @param String nodeId 노드의 ID
+  # @param Int interval WebSocket 데이터 수신 간격 (sec)
+  # @return [CloudServicesResponse]
+  GetMonitorNodeServices(nodeId: String, interval: BigInt): CloudServicesResponse
+  # 노드 목록 조회
+  # CDM-Cloud가 전개된 노드 목록을 조회한다. 각 노드의 정보와 상태를 반환한다.
+  # @return [CloudNodesResponse]
+  GetMonitorNodes: CloudNodesResponse
+  # 서비스 상세 조회 (WebSocket 프로토콜 지원)
+  # 현재 동작중인 CDM 서비스의 상세 정보를 조회한다. 해당 서비스의 정보와 상태, 그리고 replicas 정보를 반환한다.
+  # @param String serviceName 서비스의 이름
+  # @param Int interval WebSocket 데이터 수신 간격 (sec)
+  # @return [CloudServiceResponse]
+  GetMonitorService(serviceName: String, interval: BigInt): CloudServiceResponse
+  # 서비스 설정 조회
+  # 현재 실행중인 모든 CDM 서비스의 모니터 서비스 설정을 조회한다.
+  # @return [CloudServiceConfigsResponse]
+  GetMonitorServiceConfigs: CloudServiceConfigsResponse
+  # 서비스 로그 조회
+  # 현재 동작중인 서비스의 특정 날짜 로그 내용을 조회한다. 해당 서비스의 로그 내용을 반환한다.
+  # @param String serviceName 서비스의 이름
+  # @param String logDate 서비스 로그 날짜 (YYYYMMDD)
+  # @return [CloudServiceLogResponse]
+  GetMonitorServiceLog(serviceName: String, logDate: String): CloudServiceLogResponse
+  # 서비스 목록 조회
+  # 현재 동작중인 CDM 서비스의 목록을 조회한다. 각 서비스의 정보와 상태를 반환한다.
+  # @return [CloudServicesResponse]
+  GetMonitorServices: CloudServicesResponse
+  # 이벤트 상세 조회
+  # 설명추가
+  # @param Int eventId 이벤트 ID
+  # @return [CloudEventResponse]
+  GetEvent(eventId: BigInt): CloudEventResponse
+  # 이벤트 코드 분류 목록 조회
+  # 이벤트 코드 분류 목록을 조회한다.
+  # @return [CloudEventClassificationsResponse]
+  GetEventClasses: CloudEventClassificationsResponse
+  # 이벤트 목록 조회
+  # 설명추가
+  # @param Int limit 한 페이지에 표시할 항목 개수
+  # @param Int offset 페이지에 표시할 항목 인덱스
+  # @param String solution 솔루션 이름
+  # @param String class1 이벤트 대분류
+  # @param String class2 이벤트 중분류
+  # @param String class3 이벤트 소분류
+  # @param CloudLogLevelEnum level 이벤트 레벨
+  # @param Int startDate 이벤트 발생일 범위 시작일시 (YYYYMMDDHHmm)
+  # @param Int endDate 이벤트 발생일 범위 종료일시 (YYYYMMDDHHmm)
+  # @return [CloudEventsResponse]
+  GetEvents(limit: BigInt, offset: BigInt, solution: String, class1: String, class2: String, class3: String, level: CloudLogLevelEnum, startDate: BigInt, endDate: BigInt): CloudEventsResponse
+  # 신규 이벤트 실시간 조회 (WebSocket 프로토콜 지원)
+  # 테넌트의 신규 이벤트를 실시간으로 조회한다.
+  # @param Int interval WebSocket 데이터 수신 간격 (sec)
+  # @param String solution 솔루션 이름
+  # @param String class1 이벤트 대분류
+  # @param String class2 이벤트 중분류
+  # @param String class3 이벤트 소분류
+  # @param CloudLogLevelEnum level 이벤트 레벨
+  # @return [CloudStreamEventsResponse]
+  GetMonitorEvents(interval: BigInt, solution: String, class1: String, class2: String, class3: String, level: CloudLogLevelEnum): CloudStreamEventsResponse
+  # 이벤트 설정 조회
+  # 테넌트의 이벤트 설정을 조회한다.
+  # @return [CloudEventConfigResponse]
+  GetNotificationConfig: CloudEventConfigResponse
+  # 이벤트 수신 여부 조회 (테넌트)
+  # 특정 테넌트의 모든 이벤트 수신 여부를 조회한다.
+  # @param String solution 솔루션 이름
+  # @param String class1 이벤트 대분류
+  # @param String class2 이벤트 중분류
+  # @param String class3 이벤트 소분류
+  # @param CloudLogLevelEnum level 이벤트 레벨
+  # @return [CloudEventNotificationResponse]
+  GetTenantEventReceives(solution: String, class1: String, class2: String, class3: String, level: CloudLogLevelEnum): CloudEventNotificationResponse
+  # 이벤트 수신 여부 조회 (사용자)
+  # 사용자의 모든 이벤트 수신 여부를 조회한다.
+  # @param String solution 솔루션 이름
+  # @param String class1 이벤트 대분류
+  # @param String class2 이벤트 중분류
+  # @param String class3 이벤트 소분류
+  # @param CloudLogLevelEnum level 이벤트 레벨
+  # @return [CloudEventNotificationResponse]
+  GetUserEventReceives(solution: String, class1: String, class2: String, class3: String, level: CloudLogLevelEnum): CloudEventNotificationResponse
+  # 테넌트 상세 조회
+  # 설명추가
+  # @param Int tenantId 테넌트 ID
+  # @return [CloudTenantResponse]
+  GetTenant(tenantId: BigInt): CloudTenantResponse
+  # 테넌트 목록 조회
+  # 설명추가
+  # @param String name 테넌트 이름
+  # @return [CloudTenantsResponse]
+  GetTenants(name: String): CloudTenantsResponse
+}
+
+type Mutation {
+  # 백업 예약 취소
+  # 설명추가
+  # @param Int scheduleId 특정일시 백업 예약 스케쥴 ID
+  # @return [Boolean]
+  CancelCloudBackupReservation(input: CancelCloudBackupReservationInput): Boolean
+  # 백업 생성
+  # 설명추가
+  # @return [CloudBackup]
+  CreateCloudBackup: CloudBackup
+  # 백업 예약
+  # 설명추가
+  # @param CloudSchedule cloudSchedule
+  # @return [CloudSchedule]
+  CreateCloudBackupReservation(input: CreateCloudBackupReservationInput): CloudSchedule
+  # 백업 삭제
+  # 설명추가
+  # @param Int backupId 백업 ID
+  # @return [Boolean]
+  DeleteCloudBackup(input: DeleteCloudBackupInput): Boolean
+  # 백업 수정
+  # 설명추가
+  # @param Int backupId 백업 ID
+  # @param CloudBackup cloudBackup
+  # @return [CloudBackup]
+  UpdateCloudBackup(input: UpdateCloudBackupInput): CloudBackup
+  # 백업 설정 변경
+  # 설명추가
+  # @param CloudConfigBackup cloudConfigBackup
+  # @return [CloudConfigBackup]
+  UpdateCloudBackupConfig(input: UpdateCloudBackupConfigInput): CloudConfigBackup
+  # 사용자 계정 추가
+  # 사용자 계정을 추가한다. 요청 성공 시, 응답은 JSON 객체로 전달되며 수정된 사용자 정보 및 임의로 생성된 암호를 포함한다.
+  # @param CloudUserRequest cloudUserRequest
+  # @return [CloudNewUserResponse]
+  CreateUser(input: CreateUserInput): CloudNewUserResponse
+  # 사용자 그룹 추가
+  # 사용자 그룹을 추가한다.
+  # @param CloudNewUserGroupRequest cloudNewUserGroupRequest
+  # @return [CloudUserGroupResponse]
+  CreateUserGroup(input: CreateUserGroupInput): CloudUserGroupResponse
+  # 사용자 서비스 설정 초기화
+  # 서비스 설정들을 초기화한다.
+  # @param CloudServiceConfigsRequest cloudServiceConfigsRequest
+  # @return [Boolean]
+  DeleteIdentityServiceConfigs(input: DeleteIdentityServiceConfigsInput): Boolean
+  # 사용자 계정 삭제
+  # 사용자 계정을 삭제한다. 요청 성공 시, 성공 코드를 반환한다.
+  # @param Int userId 사용자 ID
+  # @return [Boolean]
+  DeleteUser(input: DeleteUserInput): Boolean
+  # 사용자 그룹 삭제
+  # 사용자 그룹 정보를 삭제한다.
+  # @param Int groupId 사용자 그룹 ID
+  # @return [Boolean]
+  DeleteUserGroup(input: DeleteUserGroupInput): Boolean
+  # 로그인
+  # 설명추가
+  # @param CloudAuthRequest cloudAuthRequest
+  # @return [CloudUserResponse]
+  LoginUser(input: LoginUserInput): CloudUserResponse
+  # 로그아웃
+  # 설명추가
+  # @param String xAuthenticatedSession 세션 키
+  # @return [Boolean]
+  LogoutUser(input: LogoutUserInput): Boolean
+  # 사용자 계정 비밀번호 초기화
+  # 설명추가
+  # @param Int userId 사용자 ID
+  # @return [CloudUserPasswordResponse]
+  ResetUserPassword(input: ResetUserPasswordInput): CloudUserPasswordResponse
+  # 접속중인 사용자 강제 로그아웃
+  # 설명추가
+  # @param String sessionKey 사용자 세션 키
+  # @return [Boolean]
+  RevokeSession(input: RevokeSessionInput): Boolean
+  # 사용자 인증 설정 변경
+  # 설명추가
+  # @param CloudIdentityConfigRequest cloudIdentityConfigRequest
+  # @return [CloudIdentityConfigResponse]
+  UpdateIdentityConfig(input: UpdateIdentityConfigInput): CloudIdentityConfigResponse
+  # 사용자 서비스 설정 변경
+  # 서비스 설정들을 변경한다.
+  # @param CloudServiceConfigsRequest cloudServiceConfigsRequest
+  # @return [Boolean]
+  UpdateIdentityServiceConfigs(input: UpdateIdentityServiceConfigsInput): Boolean
+  # 사용자 계정 수정
+  # 사용자 계정을 수정한다. 요청 성공 시, 응답은 JSON 객체로 전달되며 수정된 사용자 정보를 포함한다.
+  # @param Int userId 사용자 ID
+  # @param CloudUserRequest cloudUserRequest
+  # @return [CloudUserResponse]
+  UpdateUser(input: UpdateUserInput): CloudUserResponse
+  # 사용자 그룹 수정
+  # 사용자 그룹 정보를 수정한다.
+  # @param Int groupId 사용자 그룹 ID
+  # @param CloudUserGroupRequest cloudUserGroupRequest
+  # @return [CloudUserGroupResponse]
+  UpdateUserGroup(input: UpdateUserGroupInput): CloudUserGroupResponse
+  # 사용자 그룹 사용자 목록 수정
+  # 사용자 그룹에 사용자 목록을 수정하며, 수정 시 해당 그룹의 기존 사용자 목록은 수정할 사용자 목록들로 덮어 쓰여진다.
+  # @param Int groupId 사용자 그룹 ID
+  # @param CloudGroupUsersRequest cloudGroupUsersRequest
+  # @return [CloudGroupUsersResponse]
+  UpdateUserGroupUsers(input: UpdateUserGroupUsersInput): CloudGroupUsersResponse
+  # 사용자 계정 비밀번호 변경
+  # 설명추가
+  # @param Int userId 사용자 ID
+  # @param CloudUserPasswordRequest cloudUserPasswordRequest
+  # @return [Boolean]
+  UpdateUserPassword(input: UpdateUserPasswordInput): Boolean
+  # 라이선스 유효성 확인
+  # 라이선스 유효성을 검사하고, 유효한 라이선스라면 상세 정보를 반환한다.
+  # @param CloudLicenseRequest cloudLicenseRequest
+  # @return [CloudLicenseResponse]
+  CheckLicense(input: CheckLicenseInput): CloudLicenseResponse
+  # 라이선스 입력
+  # 라이선스를 입력한다. 이미 라이선스가 등록되어 있다면 갱신한다.
+  # @param CloudLicenseRequest cloudLicenseRequest
+  # @return [CloudLicenseResponse]
+  UpdateLicense(input: UpdateLicenseInput): CloudLicenseResponse
+  # 서비스 전역 설정 변경
+  # CDM 모니터 서비스 전역 설정을 변경한다.
+  # @param CloudGlobalConfigRequest cloudGlobalConfigRequest
+  # @return [CloudGlobalConfigResponse]
+  UpdateMonitorGlobalConfig(input: UpdateMonitorGlobalConfigInput): CloudGlobalConfigResponse
+  # 서비스 설정 변경
+  # 현재 실행중인 모든 CDM 서비스의 모니터 서비스 설정을 변경한다.
+  # @param CloudServiceConfigsRequest cloudServiceConfigsRequest
+  # @return [CloudServiceConfigsResponse]
+  UpdateMonitorServiceConfigs(input: UpdateMonitorServiceConfigsInput): CloudServiceConfigsResponse
+  # 이벤트 수신 여부 초기화 (사용자)
+  # 사용자의 이벤트 수신 여부를 초기화한다.
+  # @return [Boolean]
+  ResetUserEventReceives: Boolean
+  # 이벤트 설정 변경
+  # 테넌트의 이벤트 설정을 변경한다.
+  # @param CloudEventConfigRequest cloudEventConfigRequest
+  # @return [CloudEventConfigResponse]
+  UpdateNotificationConfig(input: UpdateNotificationConfigInput): CloudEventConfigResponse
+  # 이벤트 수신 여부 변경 (테넌트)
+  # 특정 테넌트의 이벤트 수신 여부를 변경한다.
+  # @param CloudEventNotificationRequest cloudEventNotificationRequest
+  # @return [Boolean]
+  UpdateTenantEventReceives(input: UpdateTenantEventReceivesInput): Boolean
+  # 이벤트 수신 여부 변경 (사용자)
+  # 사용자의 이벤트 수신 여부를 변경한다.
+  # @param CloudEventNotificationRequest cloudEventNotificationRequest
+  # @return [Boolean]
+  UpdateUserEventReceives(input: UpdateUserEventReceivesInput): Boolean
+  # 테넌트 활성화
+  # 설명추가
+  # @param Int tenantId 테넌트 ID
+  # @return [CloudTenantResponse]
+  ActivateTenant(input: ActivateTenantInput): CloudTenantResponse
+  # 테넌트 추가
+  # 설명추가
+  # @param CloudNewTenantRequest cloudNewTenantRequest
+  # @return [CloudTenantResponse]
+  CreateTenant(input: CreateTenantInput): CloudTenantResponse
+  # 테넌트 비활성화
+  # 설명추가
+  # @param Int tenantId 테넌트 ID
+  # @return [CloudDeactivateTenantResponse]
+  DeactivateTenant(input: DeactivateTenantInput): CloudDeactivateTenantResponse
+  # 테넌트 수정
+  # 설명추가
+  # @param Int tenantId 테넌트 ID
+  # @param CloudTenantRequest cloudTenantRequest
+  # @return [CloudTenantResponse]
+  UpdateTenant(input: UpdateTenantInput): CloudTenantResponse
+}
+
+# backup_api
+input CancelCloudBackupReservationInput {
+    # 특정일시 백업 예약 스케쥴 ID
+    scheduleId: BigInt
+}
+
+input CreateCloudBackupReservationInput {
+    cloudSchedule: CloudScheduleInput
+}
+
+input DeleteCloudBackupInput {
+    # 백업 ID
+    backupId: BigInt
+}
+
+input UpdateCloudBackupInput {
+    # 백업 ID
+    backupId: BigInt,
+    cloudBackup: CloudBackupInput
+}
+
+# config_api
+input UpdateCloudBackupConfigInput {
+    cloudConfigBackup: CloudConfigBackupInput
+}
+
+# identity_api
+input CreateUserInput {
+    cloudUserRequest: CloudUserRequestInput
+}
+
+input CreateUserGroupInput {
+    cloudNewUserGroupRequest: CloudNewUserGroupRequestInput
+}
+
+input DeleteIdentityServiceConfigsInput {
+    cloudServiceConfigsRequest: CloudServiceConfigsRequestInput
+}
+
+input DeleteUserInput {
+    # 사용자 ID
+    userId: BigInt
+}
+
+input DeleteUserGroupInput {
+    # 사용자 그룹 ID
+    groupId: BigInt
+}
+
+input LoginUserInput {
+    cloudAuthRequest: CloudAuthRequestInput
+}
+
+input LogoutUserInput {
+    # 세션 키
+    xAuthenticatedSession: String
+}
+
+input ResetUserPasswordInput {
+    # 사용자 ID
+    userId: BigInt
+}
+
+input RevokeSessionInput {
+    # 사용자 세션 키
+    sessionKey: String
+}
+
+input UpdateIdentityConfigInput {
+    cloudIdentityConfigRequest: CloudIdentityConfigRequestInput
+}
+
+input UpdateIdentityServiceConfigsInput {
+    cloudServiceConfigsRequest: CloudServiceConfigsRequestInput
+}
+
+input UpdateUserInput {
+    # 사용자 ID
+    userId: BigInt,
+    cloudUserRequest: CloudUserRequestInput
+}
+
+input UpdateUserGroupInput {
+    # 사용자 그룹 ID
+    groupId: BigInt,
+    cloudUserGroupRequest: CloudUserGroupRequestInput
+}
+
+input UpdateUserGroupUsersInput {
+    # 사용자 그룹 ID
+    groupId: BigInt,
+    cloudGroupUsersRequest: CloudGroupUsersRequestInput
+}
+
+input UpdateUserPasswordInput {
+    # 사용자 ID
+    userId: BigInt,
+    cloudUserPasswordRequest: CloudUserPasswordRequestInput
+}
+
+# license_api
+input CheckLicenseInput {
+    cloudLicenseRequest: CloudLicenseRequestInput
+}
+
+input UpdateLicenseInput {
+    cloudLicenseRequest: CloudLicenseRequestInput
+}
+
+# monitor_api
+input UpdateMonitorGlobalConfigInput {
+    cloudGlobalConfigRequest: CloudGlobalConfigRequestInput
+}
+
+input UpdateMonitorServiceConfigsInput {
+    cloudServiceConfigsRequest: CloudServiceConfigsRequestInput
+}
+
+# notification_api
+input UpdateNotificationConfigInput {
+    cloudEventConfigRequest: CloudEventConfigRequestInput
+}
+
+input UpdateTenantEventReceivesInput {
+    cloudEventNotificationRequest: CloudEventNotificationRequestInput
+}
+
+input UpdateUserEventReceivesInput {
+    cloudEventNotificationRequest: CloudEventNotificationRequestInput
+}
+
+# tenant_api
+input ActivateTenantInput {
+    # 테넌트 ID
+    tenantId: BigInt
+}
+
+input CreateTenantInput {
+    cloudNewTenantRequest: CloudNewTenantRequestInput
+}
+
+input DeactivateTenantInput {
+    # 테넌트 ID
+    tenantId: BigInt
+}
+
+input UpdateTenantInput {
+    # 테넌트 ID
+    tenantId: BigInt,
+    cloudTenantRequest: CloudTenantRequestInput
+}
+
+#
+# cloud_auth_mechanism_enum.graphql
+#
+# 인증방식
+enum CloudAuthMechanismEnum {
+  PLAIN
+  LOGIN
+  GSSAPI
+  DIGEST_MD5
+  MD5
+  CRAM_MD5
+  OAUTH10A
+  OAUTHBEARER
+}
+
+#
+# cloud_auth_request.graphql
+#
+# 사용자 인증
+type CloudAuthRequest {
+  # 계정명
+  account: String
+  # 사용자 비밀번호 (SHA-256)
+  password: String
+  # 중복 로그인 시 강제 로그아웃 여부
+  force: Boolean
+}
+
+input CloudAuthRequestInput {
+    # 계정명
+    account: String
+    # 사용자 비밀번호 (SHA-256)
+    password: String
+    # 중복 로그인 시 강제 로그아웃 여부
+    force: Boolean
+}
+
+#
+# cloud_backup.graphql
+#
+# 백업
+type CloudBackup {
+  # 백업 ID
+  id: BigInt
+  # 백업 생성일시
+  backup_dt: BigInt
+  # 백업파일 경로
+  path: String
+  # 비고
+  remarks: String
+}
+
+input CloudBackupInput {
+    # 백업 ID
+    id: BigInt
+    # 백업 생성일시
+    backup_dt: BigInt
+    # 백업파일 경로
+    path: String
+    # 비고
+    remarks: String
+}
+
+#
+# cloud_backup_week_enum.graphql
+#
+# 요일
+enum CloudBackupWeekEnum {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+#
+# cloud_backup_week_of_month_enum.graphql
+#
+# 주차
+enum CloudBackupWeekOfMonthEnum {
+  FIRST_WEEK
+  SECOND_WEEK
+  THIRD_WEEK
+  FOURTH_WEEK
+  FIFTH_WEEK
+  LAST_WEEK
+}
+
+#
+# cloud_config_backup.graphql
+#
+# 솔루션 백업 설정
+type CloudConfigBackup {
+  # 솔루션 백업 스케쥴 활성화 여부
+  backup_schedule_enable: Boolean
+  backup_schedule: CloudConfigBackupSchedule
+  # 솔루션 백업본의 보유기간 (month, 0: unlimited)
+  backup_store_period: BigInt
+}
+
+input CloudConfigBackupInput {
+    # 솔루션 백업 스케쥴 활성화 여부
+    backup_schedule_enable: Boolean
+    backup_schedule: CloudConfigBackupScheduleInput
+    # 솔루션 백업본의 보유기간 (month, 0: unlimited)
+    backup_store_period: BigInt
+}
+
+#
+# cloud_config_backup_schedule.graphql
+#
+# 솔루션 백업 스케쥴
+type CloudConfigBackupSchedule {
+  type: CloudScheduleTypeEnum
+  # 타임존 ([참조링크](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))
+  tz: String
+  # 시작년도
+  start_year: BigInt
+  # 시작월
+  start_month: BigInt
+  # 시작일
+  start_day: BigInt
+  # 주기간격 (일)
+  interval_day: BigInt
+  # 주기간격 (주)
+  interval_week: BigInt
+  interval_month: CloudIntervalMonthEnum
+  week_of_month: CloudBackupWeekOfMonthEnum
+  day_of_month: CloudBackupWeekOfMonthEnum
+  day_of_week: CloudBackupWeekEnum
+  # 시
+  hour: BigInt
+  # 분
+  minute: BigInt
+}
+
+input CloudConfigBackupScheduleInput {
+    type: CloudScheduleTypeEnum
+    # 타임존 ([참조링크](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))
+    tz: String
+    # 시작년도
+    start_year: BigInt
+    # 시작월
+    start_month: BigInt
+    # 시작일
+    start_day: BigInt
+    # 주기간격 (일)
+    interval_day: BigInt
+    # 주기간격 (주)
+    interval_week: BigInt
+    interval_month: CloudIntervalMonthEnum
+    week_of_month: CloudBackupWeekOfMonthEnum
+    day_of_month: CloudBackupWeekOfMonthEnum
+    day_of_week: CloudBackupWeekEnum
+    # 시
+    hour: BigInt
+    # 분
+    minute: BigInt
+}
+
+#
+# cloud_config_event.graphql
+#
+# 이벤트 설정
+type CloudConfigEvent {
+  # 이벤트 알림 여부
+  event_notification_enable: Boolean
+  # SMTP 서버를 통한 이벤트 이메일 알림 여부
+  event_email_notification_enable: Boolean
+  # HTML5 기능을 이용한 이벤트 Desktop Notification 여부
+  event_desktop_notification_enable: Boolean
+  # 이벤트 브라우저 팝업 알림 여부
+  event_popup_notification_enable: Boolean
+  # SMS Provider 를 통한 이벤트 SMS 알림 여부
+  event_sms_notification_enable: Boolean
+  # 이벤트 Custom 알림 여부
+  event_custom_notification_enable: Boolean
+  # 이벤트 히스토리의 보유기간 (month, 0: unlimited)
+  event_store_period: BigInt
+  event_smtp_notifier: CloudConfigEventSmtpNotifier
+  event_sms_notifier: CloudConfigEventSmsNotifier
+}
+
+input CloudConfigEventInput {
+    # 이벤트 알림 여부
+    event_notification_enable: Boolean
+    # SMTP 서버를 통한 이벤트 이메일 알림 여부
+    event_email_notification_enable: Boolean
+    # HTML5 기능을 이용한 이벤트 Desktop Notification 여부
+    event_desktop_notification_enable: Boolean
+    # 이벤트 브라우저 팝업 알림 여부
+    event_popup_notification_enable: Boolean
+    # SMS Provider 를 통한 이벤트 SMS 알림 여부
+    event_sms_notification_enable: Boolean
+    # 이벤트 Custom 알림 여부
+    event_custom_notification_enable: Boolean
+    # 이벤트 히스토리의 보유기간 (month, 0: unlimited)
+    event_store_period: BigInt
+    event_smtp_notifier: CloudConfigEventSmtpNotifierInput
+    event_sms_notifier: CloudConfigEventSmsNotifierInput
+}
+
+#
+# cloud_config_event_sms_notifier.graphql
+#
+# SMS 알림을 위한 SMS Provider
+type CloudConfigEventSmsNotifier {
+  # SMS Provider
+  provider: String
+  # version
+  version: String
+}
+
+input CloudConfigEventSmsNotifierInput {
+    # SMS Provider
+    provider: String
+    # version
+    version: String
+}
+
+#
+# cloud_config_event_smtp_notifier.graphql
+#
+# 이메일 알림을 위한 SMTP 서버
+type CloudConfigEventSmtpNotifier {
+  # IP 주소 혹은 호스트네임
+  server_address: String
+  # 포트번호
+  server_port: BigInt
+  encryption: CloudEncryptionEnum
+  auth_mechanism: CloudAuthMechanismEnum
+  # 인증계정
+  auth_username: String
+  # 인증비밀번호
+  auth_password: String
+  # 송신자
+  sender: String
+}
+
+input CloudConfigEventSmtpNotifierInput {
+    # IP 주소 혹은 호스트네임
+    server_address: String
+    # 포트번호
+    server_port: BigInt
+    encryption: CloudEncryptionEnum
+    auth_mechanism: CloudAuthMechanismEnum
+    # 인증계정
+    auth_username: String
+    # 인증비밀번호
+    auth_password: String
+    # 송신자
+    sender: String
+}
+
+#
+# cloud_config_identity.graphql
+#
+# 사용자 인증 설정
+type CloudConfigIdentity {
+  # 로그인 제한 여부
+  user_login_restriction_enable: Boolean
+  # 로그인 시도 허용 횟수
+  user_login_restriction_try_count: BigInt
+  # 로그인 제한 시간
+  user_login_restriction_time: BigInt
+  # 이전 비밀번호 설정 가능여부
+  user_reuse_old_password: Boolean
+  # 사용지 계정의 비밀번호 변경 주기 (day, 0: None)
+  user_password_change_cycle: BigInt
+  # 사용자 조작없이 세션을 유지하는 시간 (minute, 1: 1440)
+  user_session_timeout: BigInt
+  # 기본 타임존
+  global_timezone: String
+  # 기본 언어셋
+  global_language_set: String
+}
+
+input CloudConfigIdentityInput {
+    # 로그인 제한 여부
+    user_login_restriction_enable: Boolean
+    # 로그인 시도 허용 횟수
+    user_login_restriction_try_count: BigInt
+    # 로그인 제한 시간
+    user_login_restriction_time: BigInt
+    # 이전 비밀번호 설정 가능여부
+    user_reuse_old_password: Boolean
+    # 사용지 계정의 비밀번호 변경 주기 (day, 0: None)
+    user_password_change_cycle: BigInt
+    # 사용자 조작없이 세션을 유지하는 시간 (minute, 1: 1440)
+    user_session_timeout: BigInt
+    # 기본 타임존
+    global_timezone: String
+    # 기본 언어셋
+    global_language_set: String
+}
+
+#
+# cloud_day_of_month_enum.graphql
+#
+# 일자(1-31, last-day)
+enum CloudDayOfMonthEnum {
+  ONE
+  TWO
+  THREE
+  FOUR
+  FIVE
+  SIX
+  SEVEN
+  EIGHT
+  NINE
+  TEN
+  ELEVEN
+  TWELVE
+  THIRTEEN
+  FOURTEEN
+  FIFTEEN
+  SIXTEEN
+  SEVENTEEN
+  EIGHTEEN
+  NINETEEN
+  TWENTY
+  TWENTY_ONE
+  TWENTY_TWO
+  TWENTY_THREE
+  TWENTY_FOUR
+  TWENTY_FIVE
+  TWENTY_SIX
+  TWENTY_SEVEN
+  TWENTY_EIGHT
+  TWENTY_NINE
+  THIRTY
+  THIRTY_ONE
+  LAST_DAY
+}
+
+#
+# cloud_deactivate_tenant_response.graphql
+#
+type CloudDeactivateTenantResponse {
+  tenant: CloudTenant
+}
+
+input CloudDeactivateTenantResponseInput {
+    tenant: CloudTenantInput
+}
+
+#
+# cloud_encryption_enum.graphql
+#
+# 암호화
+enum CloudEncryptionEnum {
+  NONE
+  SSL_TLS
+  STARTTLS
+}
+
+#
+# cloud_event.graphql
+#
+# 이벤트
+type CloudEvent {
+  # 이벤트 ID
+  id: BigInt
+  tenant: CloudTenant
+  # 이벤트 코드
+  code: String
+  # 이벤트 에러 코드
+  error_code: String
+  level: CloudLogLevelEnum
+  # 이벤트 발생 솔루션
+  solution: String
+  # 서비스 구분
+  class_1: String
+  # reserved
+  class_2: String
+  # 에러 위치
+  class_3: String
+  # 이벤트 상세내용 데이터 (JSON)
+  contents: String
+  # 이벤트 발생일시
+  created_at: BigInt
+}
+
+input CloudEventInput {
+    # 이벤트 ID
+    id: BigInt
+    tenant: CloudTenantInput
+    # 이벤트 코드
+    code: String
+    # 이벤트 에러 코드
+    error_code: String
+    level: CloudLogLevelEnum
+    # 이벤트 발생 솔루션
+    solution: String
+    # 서비스 구분
+    class_1: String
+    # reserved
+    class_2: String
+    # 에러 위치
+    class_3: String
+    # 이벤트 상세내용 데이터 (JSON)
+    contents: String
+    # 이벤트 발생일시
+    created_at: BigInt
+}
+
+#
+# cloud_event_classification.graphql
+#
+type CloudEventClassification {
+  # 솔루션 이름
+  solution: String
+  # 이벤트 대분류
+  class_1: String
+  # 이벤트 중분류
+  class_2: String
+  # 이벤트 소분류
+  class_3: String
+}
+
+input CloudEventClassificationInput {
+    # 솔루션 이름
+    solution: String
+    # 이벤트 대분류
+    class_1: String
+    # 이벤트 중분류
+    class_2: String
+    # 이벤트 소분류
+    class_3: String
+}
+
+#
+# cloud_event_classifications_response.graphql
+#
+type CloudEventClassificationsResponse {
+  event_classifications: [CloudEventClassification]
+}
+
+input CloudEventClassificationsResponseInput {
+    event_classifications: [CloudEventClassificationInput]
+}
+
+#
+# cloud_event_config_request.graphql
+#
+type CloudEventConfigRequest {
+  event_config: CloudConfigEvent
+}
+
+input CloudEventConfigRequestInput {
+    event_config: CloudConfigEventInput
+}
+
+#
+# cloud_event_config_response.graphql
+#
+type CloudEventConfigResponse {
+  event_config: CloudConfigEvent
+}
+
+input CloudEventConfigResponseInput {
+    event_config: CloudConfigEventInput
+}
+
+#
+# cloud_event_notification.graphql
+#
+# 이벤트 수신여부
+type CloudEventNotification {
+  # 이벤트 코드 (메시지 코드)
+  code: String
+  # 활성화 여부
+  enable: Boolean
+}
+
+input CloudEventNotificationInput {
+    # 이벤트 코드 (메시지 코드)
+    code: String
+    # 활성화 여부
+    enable: Boolean
+}
+
+#
+# cloud_event_notification_request.graphql
+#
+type CloudEventNotificationRequest {
+  event_notifications: [CloudEventNotification]
+}
+
+input CloudEventNotificationRequestInput {
+    event_notifications: [CloudEventNotificationInput]
+}
+
+#
+# cloud_event_notification_response.graphql
+#
+type CloudEventNotificationResponse {
+  event_notifications: [CloudEventNotification]
+}
+
+input CloudEventNotificationResponseInput {
+    event_notifications: [CloudEventNotificationInput]
+}
+
+#
+# cloud_event_response.graphql
+#
+type CloudEventResponse {
+  event: CloudEvent
+}
+
+input CloudEventResponseInput {
+    event: CloudEventInput
+}
+
+#
+# cloud_events_response.graphql
+#
+type CloudEventsResponse {
+  events: [CloudEvent]
+  pagination: CloudPagination
+}
+
+input CloudEventsResponseInput {
+    events: [CloudEventInput]
+    pagination: CloudPaginationInput
+}
+
+#
+# cloud_global_config_request.graphql
+#
+type CloudGlobalConfigRequest {
+  global_config: CloudMonitorCloudGlobalConfig
+}
+
+input CloudGlobalConfigRequestInput {
+    global_config: CloudMonitorCloudGlobalConfigInput
+}
+
+#
+# cloud_global_config_response.graphql
+#
+type CloudGlobalConfigResponse {
+  global_config: CloudMonitorCloudGlobalConfig
+}
+
+input CloudGlobalConfigResponseInput {
+    global_config: CloudMonitorCloudGlobalConfigInput
+}
+
+#
+# cloud_group_users_request.graphql
+#
+type CloudGroupUsersRequest {
+  users: [CloudUser]
+}
+
+input CloudGroupUsersRequestInput {
+    users: [CloudUserInput]
+}
+
+#
+# cloud_group_users_response.graphql
+#
+type CloudGroupUsersResponse {
+  users: [CloudUser]
+}
+
+input CloudGroupUsersResponseInput {
+    users: [CloudUserInput]
+}
+
+#
+# cloud_identity_config_request.graphql
+#
+type CloudIdentityConfigRequest {
+  identity_config: CloudConfigIdentity
+}
+
+input CloudIdentityConfigRequestInput {
+    identity_config: CloudConfigIdentityInput
+}
+
+#
+# cloud_identity_config_response.graphql
+#
+type CloudIdentityConfigResponse {
+  identity_config: CloudConfigIdentity
+}
+
+input CloudIdentityConfigResponseInput {
+    identity_config: CloudConfigIdentityInput
+}
+
+#
+# cloud_interval_hour_enum.graphql
+#
+# 주기간격 (시간)
+enum CloudIntervalHourEnum {
+  ONE
+  TWO
+  THREE
+  FOUR
+  SIX
+  TWELVE
+}
+
+#
+# cloud_interval_minute_enum.graphql
+#
+# 주기간격 (분)
+enum CloudIntervalMinuteEnum {
+  ONE
+  TWO
+  THREE
+  FOUR
+  FIVE
+  SIX
+  TEN
+  TWELVE
+  FIFTEEN
+  TWENTY
+  THIRTY
+}
+
+#
+# cloud_interval_month_enum.graphql
+#
+# 주기간격 (개월)
+enum CloudIntervalMonthEnum {
+  ONE
+  TWO
+  THREE
+  FOUR
+  SIX
+  TWELVE
+}
+
+#
+# cloud_language_set_enum.graphql
+#
+# 언어셋
+enum CloudLanguageSetEnum {
+  ENG
+  KOR
+}
+
+#
+# cloud_license.graphql
+#
+# License 정보
+type CloudLicense {
+  # 라이선스 키
+  cdm_cloud_license_key: String
+  # 제공자
+  cdm_cloud_provider: String
+  # 고객사
+  cdm_cloud_customer: String
+  # 라이선스 발급한 일자
+  cdm_dr_issue_dt: BigInt
+  # 라이선스가 만료되는 일자
+  cdm_dr_expiry_dt: BigInt
+  # 사용가능한 플랫폼 목록
+  cdm_dr_limits_platform: [CloudPlatformEnum]
+  # 사용가능한 스토리지 목록
+  cdm_dr_limits_storage: [CloudStorageEnum]
+  # 클러스텨 갯수 제한
+  cdm_dr_limits_cluster: BigInt
+  # 테넌트 갯수 제한
+  cdm_dr_limits_tenant: BigInt
+  # 인스턴스 갯수 제한
+  cdm_dr_limits_instance: BigInt
+  # 볼륨 갯수 제한
+  cdm_dr_limits_volume: BigInt
+  # 라이선스 발급한 일자
+  cdm_r_issue_dt: BigInt
+  # 라이선스가 만료되는 일자
+  cdm_r_expiry_dt: BigInt
+  # 에이전트 최대등록수 및 최대동시연결수
+  cdm_r_limits_agent: BigInt
+  # 그룹 최대등록수
+  cdm_r_limits_group: BigInt
+  # openshift disaster recovery 라이선스 발급한 일자
+  cdm_dr_openshift_issue_dt: BigInt
+  # openshift disaster recovery 라이선스가 만료되는 일자
+  cdm_dr_openshift_expiry_dt: BigInt
+  # openshift 클러스터들의 최대 CPU 코어 수
+  cdm_dr_openshift_limits_core: BigInt
+}
+
+input CloudLicenseInput {
+    # 라이선스 키
+    cdm_cloud_license_key: String
+    # 제공자
+    cdm_cloud_provider: String
+    # 고객사
+    cdm_cloud_customer: String
+    # 라이선스 발급한 일자
+    cdm_dr_issue_dt: BigInt
+    # 라이선스가 만료되는 일자
+    cdm_dr_expiry_dt: BigInt
+    # 사용가능한 플랫폼 목록
+    cdm_dr_limits_platform: [CloudPlatformEnum]
+    # 사용가능한 스토리지 목록
+    cdm_dr_limits_storage: [CloudStorageEnum]
+    # 클러스텨 갯수 제한
+    cdm_dr_limits_cluster: BigInt
+    # 테넌트 갯수 제한
+    cdm_dr_limits_tenant: BigInt
+    # 인스턴스 갯수 제한
+    cdm_dr_limits_instance: BigInt
+    # 볼륨 갯수 제한
+    cdm_dr_limits_volume: BigInt
+    # 라이선스 발급한 일자
+    cdm_r_issue_dt: BigInt
+    # 라이선스가 만료되는 일자
+    cdm_r_expiry_dt: BigInt
+    # 에이전트 최대등록수 및 최대동시연결수
+    cdm_r_limits_agent: BigInt
+    # 그룹 최대등록수
+    cdm_r_limits_group: BigInt
+    # openshift disaster recovery 라이선스 발급한 일자
+    cdm_dr_openshift_issue_dt: BigInt
+    # openshift disaster recovery 라이선스가 만료되는 일자
+    cdm_dr_openshift_expiry_dt: BigInt
+    # openshift 클러스터들의 최대 CPU 코어 수
+    cdm_dr_openshift_limits_core: BigInt
+}
+
+#
+# cloud_license_request.graphql
+#
+# 라이선스 키
+type CloudLicenseRequest {
+  license: String
+}
+
+input CloudLicenseRequestInput {
+    license: String
+}
+
+#
+# cloud_license_response.graphql
+#
+# 라이선스 정보
+type CloudLicenseResponse {
+  payloads: CloudLicense
+}
+
+input CloudLicenseResponseInput {
+    payloads: CloudLicenseInput
+}
+
+#
+# cloud_log_level_enum.graphql
+#
+# 로그 레벨 기본값
+enum CloudLogLevelEnum {
+  TRACE
+  DEBUG
+  INFO
+  WARNING
+  ERROR
+  FATAL
+}
+
+#
+# cloud_monitor_cloud_global_config.graphql
+#
+# 모니터 서비스 전역 설정
+type CloudMonitorCloudGlobalConfig {
+  global_log_level: CloudLogLevelEnum
+  # 로그 보유기간 기본값 (month, 0: unlimited)
+  global_log_store_period: BigInt
+  # WebSocket 프로토콜을 사용할 때의 데이터 수신 간격 기본값 (sec)
+  system_monitor_interval: BigInt
+}
+
+input CloudMonitorCloudGlobalConfigInput {
+    global_log_level: CloudLogLevelEnum
+    # 로그 보유기간 기본값 (month, 0: unlimited)
+    global_log_store_period: BigInt
+    # WebSocket 프로토콜을 사용할 때의 데이터 수신 간격 기본값 (sec)
+    system_monitor_interval: BigInt
+}
+
+#
+# cloud_monitor_cloud_node.graphql
+#
+# 노드의 상태
+type CloudMonitorCloudNode {
+  status: CloudNodeStatus
+  # 노드의 ID
+  id: String
+  # 노드의 이름
+  name: String
+}
+
+input CloudMonitorCloudNodeInput {
+    status: CloudNodeStatusInput
+    # 노드의 ID
+    id: String
+    # 노드의 이름
+    name: String
+}
+
+#
+# cloud_monitor_cloud_service.graphql
+#
+# 서비스의 정보를 반환한다.
+type CloudMonitorCloudService {
+  status: CloudServiceStatus
+  # 서비스의 이름
+  name: String
+  # 솔루션 이름
+  solution: String
+  # 서비스 설명
+  description: String
+  # 서비스의 버전
+  version: String
+}
+
+input CloudMonitorCloudServiceInput {
+    status: CloudServiceStatusInput
+    # 서비스의 이름
+    name: String
+    # 솔루션 이름
+    solution: String
+    # 서비스 설명
+    description: String
+    # 서비스의 버전
+    version: String
+}
+
+#
+# cloud_monitor_cloud_service_config.graphql
+#
+# 특정 서비스의 모니터 서비스 설정
+type CloudMonitorCloudServiceConfig {
+  # 서비스의 이름
+  name: String
+  log_level: CloudLogLevelEnum
+  # 서비스 로그 보유기간 (month, 0: unlimited)
+  log_store_period: BigInt
+}
+
+input CloudMonitorCloudServiceConfigInput {
+    # 서비스의 이름
+    name: String
+    log_level: CloudLogLevelEnum
+    # 서비스 로그 보유기간 (month, 0: unlimited)
+    log_store_period: BigInt
+}
+
+#
+# cloud_monitor_cloud_service_info.graphql
+#
+# 서비스의 정보
+type CloudMonitorCloudServiceInfo {
+  status: CloudServiceStatus
+  replicas: [CloudServiceReplica]
+  # 서비스의 이름
+  name: String
+  # 솔루션 이름
+  solution: String
+  # 서비스 설명
+  description: String
+  # 서비스의 버전
+  version: String
+}
+
+input CloudMonitorCloudServiceInfoInput {
+    status: CloudServiceStatusInput
+    replicas: [CloudServiceReplicaInput]
+    # 서비스의 이름
+    name: String
+    # 솔루션 이름
+    solution: String
+    # 서비스 설명
+    description: String
+    # 서비스의 버전
+    version: String
+}
+
+#
+# cloud_new_tenant_request.graphql
+#
+type CloudNewTenantRequest {
+  tenant: CloudTenant
+}
+
+input CloudNewTenantRequestInput {
+    tenant: CloudTenantInput
+}
+
+#
+# cloud_new_user_group_request.graphql
+#
+type CloudNewUserGroupRequest {
+  group: CloudUserGroup
+}
+
+input CloudNewUserGroupRequestInput {
+    group: CloudUserGroupInput
+}
+
+#
+# cloud_new_user_response.graphql
+#
+type CloudNewUserResponse {
+  user: CloudUser
+  password: String
+}
+
+input CloudNewUserResponseInput {
+    user: CloudUserInput
+    password: String
+}
+
+#
+# cloud_node.graphql
+#
+# 노드
+type CloudNode {
+  # 노드의 ID
+  id: String
+  # 노드의 이름
+  name: String
+}
+
+input CloudNodeInput {
+    # 노드의 ID
+    id: String
+    # 노드의 이름
+    name: String
+}
+
+#
+# cloud_node_resource_usage.graphql
+#
+# 노드의 시스템 리소스 사용량
+type CloudNodeResourceUsage {
+  # CPU Core 갯수
+  cpu_core_cnt: BigInt
+  # CPU 사용률
+  cpu_used_rate: Float
+  # 메모리 용량
+  mem_total_bytes: BigInt
+  # 메모리 사용량
+  mem_used_bytes: BigInt
+  # 네트워크 Input 사용량
+  network_receive_bytes: BigInt
+  # 네트워크 Output 사용량
+  network_transmit_bytes: BigInt
+  # 스토리지 용량
+  filesystem_size_bytes: BigInt
+  # 스토리지 사용량
+  filesystem_used_bytes: BigInt
+}
+
+input CloudNodeResourceUsageInput {
+    # CPU Core 갯수
+    cpu_core_cnt: BigInt
+    # CPU 사용률
+    cpu_used_rate: Float
+    # 메모리 용량
+    mem_total_bytes: BigInt
+    # 메모리 사용량
+    mem_used_bytes: BigInt
+    # 네트워크 Input 사용량
+    network_receive_bytes: BigInt
+    # 네트워크 Output 사용량
+    network_transmit_bytes: BigInt
+    # 스토리지 용량
+    filesystem_size_bytes: BigInt
+    # 스토리지 사용량
+    filesystem_used_bytes: BigInt
+}
+
+#
+# cloud_node_response.graphql
+#
+type CloudNodeResponse {
+  node: CloudMonitorCloudNode
+}
+
+input CloudNodeResponseInput {
+    node: CloudMonitorCloudNodeInput
+}
+
+#
+# cloud_node_status.graphql
+#
+# 노드의 상태
+type CloudNodeStatus {
+  resource_usage: CloudNodeResourceUsage
+}
+
+input CloudNodeStatusInput {
+    resource_usage: CloudNodeResourceUsageInput
+}
+
+#
+# cloud_nodes_response.graphql
+#
+type CloudNodesResponse {
+  nodes: [CloudMonitorCloudNode]
+}
+
+input CloudNodesResponseInput {
+    nodes: [CloudMonitorCloudNodeInput]
+}
+
+#
+# cloud_pagination.graphql
+#
+# UI 페이지 정보
+type CloudPagination {
+  # 현재 페이지
+  page: BigInt
+  # 전체 페이지의 수
+  total_page: BigInt
+  # 검색된 아이템 전체 아이템 수
+  total_items: BigInt
+}
+
+input CloudPaginationInput {
+    # 현재 페이지
+    page: BigInt
+    # 전체 페이지의 수
+    total_page: BigInt
+    # 검색된 아이템 전체 아이템 수
+    total_items: BigInt
+}
+
+#
+# cloud_platform_enum.graphql
+#
+# 플랫폼
+enum CloudPlatformEnum {
+  OPENSTACK
+  OPENSHIFT
+  KUBERNETES
+  VMWARE
+}
+
+#
+# cloud_product_uuid_response.graphql
+#
+# CDM-Cloud 최초 설치시 생성된 제품의 UUID
+type CloudProductUuidResponse {
+  uuid: String
+}
+
+input CloudProductUuidResponseInput {
+    uuid: String
+}
+
+#
+# cloud_role.graphql
+#
+# 솔루션 역할
+type CloudRole {
+  # 솔루션 역할의 ID
+  id: BigInt
+  # 솔루션 이름
+  solution: String
+  role: CloudRoleEnum
+}
+
+input CloudRoleInput {
+    # 솔루션 역할의 ID
+    id: BigInt
+    # 솔루션 이름
+    solution: String
+    role: CloudRoleEnum
+}
+
+#
+# cloud_role_enum.graphql
+#
+# 역할
+enum CloudRoleEnum {
+  ADMIN
+  MANAGER
+  OPERATOR
+  USER
+}
+
+#
+# cloud_roles_response.graphql
+#
+type CloudRolesResponse {
+  roles: [CloudRole]
+}
+
+input CloudRolesResponseInput {
+    roles: [CloudRoleInput]
+}
+
+#
+# cloud_schedule.graphql
+#
+# 스케쥴
+type CloudSchedule {
+  # 스케쥴 ID
+  id: BigInt
+  # 스케줄 활성화 여부
+  activation_flag: Boolean
+  # 메시지 Topic
+  topic: String
+  # 메시지
+  message: String
+  # 시작일
+  start_at: BigInt
+  # 종료일
+  end_at: BigInt
+  type: CloudScheduleTypeEnum
+  interval_minute: CloudIntervalMinuteEnum
+  interval_hour: CloudIntervalHourEnum
+  # 주기간격 (일)
+  interval_day: BigInt
+  # 주기간격 (주)
+  interval_week: BigInt
+  interval_month: CloudIntervalMonthEnum
+  week_of_month: CloudWeekOfMonthEnum
+  day_of_month: CloudDayOfMonthEnum
+  day_of_week: CloudWeekEnum
+  # 시
+  hour: BigInt
+  # 분
+  minute: BigInt
+  # [타임존](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+  timezone: String
+}
+
+input CloudScheduleInput {
+    # 스케쥴 ID
+    id: BigInt
+    # 스케줄 활성화 여부
+    activation_flag: Boolean
+    # 메시지 Topic
+    topic: String
+    # 메시지
+    message: String
+    # 시작일
+    start_at: BigInt
+    # 종료일
+    end_at: BigInt
+    type: CloudScheduleTypeEnum
+    interval_minute: CloudIntervalMinuteEnum
+    interval_hour: CloudIntervalHourEnum
+    # 주기간격 (일)
+    interval_day: BigInt
+    # 주기간격 (주)
+    interval_week: BigInt
+    interval_month: CloudIntervalMonthEnum
+    week_of_month: CloudWeekOfMonthEnum
+    day_of_month: CloudDayOfMonthEnum
+    day_of_week: CloudWeekEnum
+    # 시
+    hour: BigInt
+    # 분
+    minute: BigInt
+    # [타임존](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+    timezone: String
+}
+
+#
+# cloud_schedule_type_enum.graphql
+#
+# 주기 종류
+enum CloudScheduleTypeEnum {
+  SCHEDULE_TYPE_SPECIFIED
+  SCHEDULE_TYPE_MINUTELY
+  SCHEDULE_TYPE_HOURLY
+  SCHEDULE_TYPE_DAILY
+  SCHEDULE_TYPE_WEEKLY
+  SCHEDULE_TYPE_MONTHLY
+  SCHEDULE_TYPE_YEARLY
+  SCHEDULE_TYPE_DAY_OF_MONTHLY
+  SCHEDULE_TYPE_WEEK_OF_MONTHLY
+}
+
+#
+# cloud_service.graphql
+#
+# 서비스
+type CloudService {
+  # 서비스의 이름
+  name: String
+  # 솔루션 이름
+  solution: String
+  # 서비스 설명
+  description: String
+  # 서비스의 버전
+  version: String
+}
+
+input CloudServiceInput {
+    # 서비스의 이름
+    name: String
+    # 솔루션 이름
+    solution: String
+    # 서비스 설명
+    description: String
+    # 서비스의 버전
+    version: String
+}
+
+#
+# cloud_service_config.graphql
+#
+# 사용자 서비스 설정
+type CloudServiceConfig {
+  name: CloudServiceNameEnum
+  key: CloudServiceConfigItemEnum
+  # 서비스 설정 값
+  value: String
+}
+
+input CloudServiceConfigInput {
+    name: CloudServiceNameEnum
+    key: CloudServiceConfigItemEnum
+    # 서비스 설정 값
+    value: String
+}
+
+#
+# cloud_service_config_item_enum.graphql
+#
+# 서비스 설정 항목
+enum CloudServiceConfigItemEnum {
+  SERVICE_LOG_TYPE
+  SERVICE_LOG_LEVEL
+  SERVICE_LOG_STORE_PERIOD
+}
+
+#
+# cloud_service_configs_request.graphql
+#
+type CloudServiceConfigsRequest {
+  service_configs: [CloudServiceConfig]
+}
+
+input CloudServiceConfigsRequestInput {
+    service_configs: [CloudServiceConfigInput]
+}
+
+#
+# cloud_service_configs_response.graphql
+#
+type CloudServiceConfigsResponse {
+  service_configs: [CloudServiceConfig]
+}
+
+input CloudServiceConfigsResponseInput {
+    service_configs: [CloudServiceConfigInput]
+}
+
+#
+# cloud_service_log_response.graphql
+#
+type CloudServiceLogResponse {
+  # 서비스 로그
+  log: String
+}
+
+input CloudServiceLogResponseInput {
+    # 서비스 로그
+    log: String
+}
+
+#
+# cloud_service_name_enum.graphql
+#
+# 서비스 이름
+enum CloudServiceNameEnum {
+  SERVICE_NODE
+  CDM_CLOUD_API_GATEWAY
+  CDM_CLOUD_IDENTITY
+  CDM_CLOUD_LICENSE
+  CDM_CLOUD_NOTIFICATION
+  CDM_CLOUD_SCHEDULER
+  CDM_CLUSTER_MANAGER
+  CDM_DR_MANAGER
+  CDM_TARGET_SNAPSHOT
+  CDM_DR_MIGRATOR
+  CDM_DR_MIRRORD
+  CDM_OPENSTACK_REQUEST
+}
+
+#
+# cloud_service_replica.graphql
+#
+# 서비스 레플리카
+type CloudServiceReplica {
+  # 레플리카의 ID
+  id: String
+  node: CloudNode
+  status: CloudServiceReplicaStatus
+}
+
+input CloudServiceReplicaInput {
+    # 레플리카의 ID
+    id: String
+    node: CloudNodeInput
+    status: CloudServiceReplicaStatusInput
+}
+
+#
+# cloud_service_replica_status.graphql
+#
+# 서비스 레플리카의 상태
+type CloudServiceReplicaStatus {
+  resource_usage: CloudServiceResourceUsage
+}
+
+input CloudServiceReplicaStatusInput {
+    resource_usage: CloudServiceResourceUsageInput
+}
+
+#
+# cloud_service_resource_usage.graphql
+#
+# 서비스의 시스템 리소스 사용량
+type CloudServiceResourceUsage {
+  # 메모리 사용량
+  mem_used_bytes: BigInt
+  # 네트워크 Input 사용량
+  network_receive_bytes: BigInt
+  # 네트워크 Output 사용량
+  network_transmit_bytes: BigInt
+}
+
+input CloudServiceResourceUsageInput {
+    # 메모리 사용량
+    mem_used_bytes: BigInt
+    # 네트워크 Input 사용량
+    network_receive_bytes: BigInt
+    # 네트워크 Output 사용량
+    network_transmit_bytes: BigInt
+}
+
+#
+# cloud_service_response.graphql
+#
+type CloudServiceResponse {
+  service: CloudMonitorCloudServiceInfo
+}
+
+input CloudServiceResponseInput {
+    service: CloudMonitorCloudServiceInfoInput
+}
+
+#
+# cloud_service_status.graphql
+#
+# 서비스의 상태
+type CloudServiceStatus {
+  resource_usage: CloudServiceResourceUsage
+}
+
+input CloudServiceStatusInput {
+    resource_usage: CloudServiceResourceUsageInput
+}
+
+#
+# cloud_services_response.graphql
+#
+type CloudServicesResponse {
+  services: [CloudMonitorCloudService]
+}
+
+input CloudServicesResponseInput {
+    services: [CloudMonitorCloudServiceInput]
+}
+
+#
+# cloud_session.graphql
+#
+# 사용자 세션
+type CloudSession {
+  # 세션 키
+  key: String
+}
+
+input CloudSessionInput {
+    # 세션 키
+    key: String
+}
+
+#
+# cloud_storage_enum.graphql
+#
+enum CloudStorageEnum {
+  LVM
+  NFS
+  CEPH
+  NETAPP
+}
+
+#
+# cloud_stream_events_response.graphql
+#
+type CloudStreamEventsResponse {
+  events: [CloudEvent]
+}
+
+input CloudStreamEventsResponseInput {
+    events: [CloudEventInput]
+}
+
+#
+# cloud_tenant.graphql
+#
+# 테넌트
+type CloudTenant {
+  # 테넌트 ID
+  id: BigInt
+  # 테넌트 이름
+  name: String
+  # 사용여부
+  use_flag: Boolean
+  # 테넌트가 사용할 수 있는 솔루션 목록
+  solutions: [CloudTenantSolution]
+  # 비고
+  remarks: String
+  # 테넌트 생성 날짜
+  created_at: BigInt
+  # 테넌트 변경 날짜
+  updated_at: BigInt
+}
+
+input CloudTenantInput {
+    # 테넌트 ID
+    id: BigInt
+    # 테넌트 이름
+    name: String
+    # 사용여부
+    use_flag: Boolean
+    # 테넌트가 사용할 수 있는 솔루션 목록
+    solutions: [CloudTenantSolutionInput]
+    # 비고
+    remarks: String
+    # 테넌트 생성 날짜
+    created_at: BigInt
+    # 테넌트 변경 날짜
+    updated_at: BigInt
+}
+
+#
+# cloud_tenant_request.graphql
+#
+type CloudTenantRequest {
+  tenant: CloudTenant
+}
+
+input CloudTenantRequestInput {
+    tenant: CloudTenantInput
+}
+
+#
+# cloud_tenant_response.graphql
+#
+type CloudTenantResponse {
+  tenant: CloudTenant
+}
+
+input CloudTenantResponseInput {
+    tenant: CloudTenantInput
+}
+
+#
+# cloud_tenant_solution.graphql
+#
+# 테넌트
+type CloudTenantSolution {
+  # 솔루션 이름
+  name: String
+}
+
+input CloudTenantSolutionInput {
+    # 솔루션 이름
+    name: String
+}
+
+#
+# cloud_tenants_response.graphql
+#
+type CloudTenantsResponse {
+  tenants: [CloudTenant]
+}
+
+input CloudTenantsResponseInput {
+    tenants: [CloudTenantInput]
+}
+
+#
+# cloud_user.graphql
+#
+# 사용자
+type CloudUser {
+  # 사용자 ID
+  id: BigInt
+  # 계정 명
+  account: String
+  tenant: CloudTenant
+  # 솔루션별 역할
+  roles: [CloudRole]
+  # 사용자 그룹 목록
+  groups: [CloudUserGroup]
+  # 사용자 타임존 ([참조링크](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))
+  timezone: String
+  language_set: CloudLanguageSetEnum
+  # 사용자 이름
+  name: String
+  # 사용자 부서
+  department: String
+  # 사용자 직책
+  position: String
+  # 사용자 이메일
+  email: String
+  # 사용자 연락처
+  contact: String
+  # 계정 암호 변경 날짜
+  password_updated_at: BigInt
+  # 계정 암호 변경 필요 여부
+  password_update_flag: Boolean
+  # 계정 마지막 로그인 날짜
+  last_logged_in_at: BigInt
+  # 계정 생성 날짜
+  created_at: BigInt
+  # 계정 내용 변경 날짜
+  updated_at: BigInt
+  session: CloudSession
+}
+
+input CloudUserInput {
+    # 사용자 ID
+    id: BigInt
+    # 계정 명
+    account: String
+    tenant: CloudTenantInput
+    # 솔루션별 역할
+    roles: [CloudRoleInput]
+    # 사용자 그룹 목록
+    groups: [CloudUserGroupInput]
+    # 사용자 타임존 ([참조링크](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))
+    timezone: String
+    language_set: CloudLanguageSetEnum
+    # 사용자 이름
+    name: String
+    # 사용자 부서
+    department: String
+    # 사용자 직책
+    position: String
+    # 사용자 이메일
+    email: String
+    # 사용자 연락처
+    contact: String
+    # 계정 암호 변경 날짜
+    password_updated_at: BigInt
+    # 계정 암호 변경 필요 여부
+    password_update_flag: Boolean
+    # 계정 마지막 로그인 날짜
+    last_logged_in_at: BigInt
+    # 계정 생성 날짜
+    created_at: BigInt
+    # 계정 내용 변경 날짜
+    updated_at: BigInt
+    session: CloudSessionInput
+}
+
+#
+# cloud_user_group.graphql
+#
+# 사용자 그룹
+type CloudUserGroup {
+  # 사용자 그룹 ID
+  id: BigInt
+  tenant: CloudTenant
+  # 사용자 그룹 이름
+  name: String
+  # 비고
+  remarks: String
+  # 사용자 그룹 생성 날짜
+  created_at: BigInt
+  # 사용자 그룹 변경 날짜
+  updated_at: BigInt
+  # 삭제 여부
+  delete_flag: Boolean
+}
+
+input CloudUserGroupInput {
+    # 사용자 그룹 ID
+    id: BigInt
+    tenant: CloudTenantInput
+    # 사용자 그룹 이름
+    name: String
+    # 비고
+    remarks: String
+    # 사용자 그룹 생성 날짜
+    created_at: BigInt
+    # 사용자 그룹 변경 날짜
+    updated_at: BigInt
+    # 삭제 여부
+    delete_flag: Boolean
+}
+
+#
+# cloud_user_group_request.graphql
+#
+type CloudUserGroupRequest {
+  group: CloudUserGroup
+}
+
+input CloudUserGroupRequestInput {
+    group: CloudUserGroupInput
+}
+
+#
+# cloud_user_group_response.graphql
+#
+type CloudUserGroupResponse {
+  group: CloudUserGroup
+}
+
+input CloudUserGroupResponseInput {
+    group: CloudUserGroupInput
+}
+
+#
+# cloud_user_groups_response.graphql
+#
+type CloudUserGroupsResponse {
+  groups: [CloudUserGroup]
+}
+
+input CloudUserGroupsResponseInput {
+    groups: [CloudUserGroupInput]
+}
+
+#
+# cloud_user_password_request.graphql
+#
+# 사용자
+type CloudUserPasswordRequest {
+  # 현재 비밀번호 (SHA-256)
+  current_password: String
+  # 변경할 비밀번호 (SHA-256)
+  new_password: String
+}
+
+input CloudUserPasswordRequestInput {
+    # 현재 비밀번호 (SHA-256)
+    current_password: String
+    # 변경할 비밀번호 (SHA-256)
+    new_password: String
+}
+
+#
+# cloud_user_password_response.graphql
+#
+# 사용자 비밀번호
+type CloudUserPasswordResponse {
+  password: String
+}
+
+input CloudUserPasswordResponseInput {
+    password: String
+}
+
+#
+# cloud_user_request.graphql
+#
+# 사용자
+type CloudUserRequest {
+  user: CloudUser
+}
+
+input CloudUserRequestInput {
+    user: CloudUserInput
+}
+
+#
+# cloud_user_response.graphql
+#
+type CloudUserResponse {
+  user: CloudUser
+}
+
+input CloudUserResponseInput {
+    user: CloudUserInput
+}
+
+#
+# cloud_users_response.graphql
+#
+type CloudUsersResponse {
+  users: [CloudUser]
+  pagination: CloudPagination
+}
+
+input CloudUsersResponseInput {
+    users: [CloudUserInput]
+    pagination: CloudPaginationInput
+}
+
+#
+# cloud_week_enum.graphql
+#
+# 요일
+enum CloudWeekEnum {
+  MON
+  TUE
+  WED
+  THU
+  FRI
+  SAT
+  SUN
+}
+
+#
+# cloud_week_of_month_enum.graphql
+#
+# 주차
+enum CloudWeekOfMonthEnum {
+  ONE
+  TWO
+  THREE
+  FOUR
+  FIVE
+  LAST_WEEK
+}
+

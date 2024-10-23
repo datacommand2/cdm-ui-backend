@@ -1,3 +1,36 @@
-.env
-yarn.lock
-node_modules
+c# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.development
+.env.production
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# using Zero-Installs
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+tsconfig.tsbuildinfo
+
+.vite
+.vite/*
+.pnp.cjs
+.pnp.loader.mjs

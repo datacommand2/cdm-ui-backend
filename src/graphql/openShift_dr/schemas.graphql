@@ -1,0 +1,3205 @@
+scalar JSONObject
+
+scalar BigInt
+
+type Query {
+  # 재해복구작업 상세 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [OpenShiftDrRecoveryJobResponse]
+  GetRecoveryJob(protectionGroupResourceName: String, recoveryJobResourceName: String): OpenShiftDrRecoveryJobResponse
+  # 재해복구작업의 복구정보 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [OpenShiftDrRecoveryInfoResponse]
+  GetRecoveryJobInfo(protectionGroupResourceName: String, recoveryJobResourceName: String): OpenShiftDrRecoveryInfoResponse
+  # 재해복구작업 스케쥴 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobScheduleResourceName RecoveryJobSchedule CR 의 Name
+  # @return [OpenShiftDrRecoveryJobScheduleResponse]
+  GetRecoveryJobSchedule(protectionGroupResourceName: String, recoveryJobScheduleResourceName: String): OpenShiftDrRecoveryJobScheduleResponse
+  # 재해복구작업 스케쥴 상태 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobScheduleResourceName RecoveryJobSchedule CR 의 Name
+  # @return [OpenShiftDrRecoveryJobScheduleStatusResponse]
+  GetRecoveryJobScheduleStatus(protectionGroupResourceName: String, recoveryJobScheduleResourceName: String): OpenShiftDrRecoveryJobScheduleStatusResponse
+  # 재해복구작업 스케쥴 목록 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @return [OpenShiftDrRecoveryJobSchedulesResponse]
+  GetRecoveryJobSchedules(protectionGroupResourceName: String): OpenShiftDrRecoveryJobSchedulesResponse
+  # 재해복구작업 상태 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [OpenShiftDrRecoveryJobStatusResponse]
+  GetRecoveryJobStatus(protectionGroupResourceName: String, recoveryJobResourceName: String): OpenShiftDrRecoveryJobStatusResponse
+  # 재해복구작업 Task 로그 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @param String recoveryJobTaskResourceName RecoveryJobTask CR 의 Name. 특정 Task 의 로그만 조회할 때
+  # @return [OpenShiftDrRecoveryJobTaskLogsResponse]
+  GetRecoveryJobTaskLog(protectionGroupResourceName: String, recoveryJobResourceName: String, recoveryJobTaskResourceName: String): OpenShiftDrRecoveryJobTaskLogsResponse
+  # 재해복구작업의 Task 목록 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [OpenShiftDrRecoveryJobTasksResponse]
+  GetRecoveryJobTasks(protectionGroupResourceName: String, recoveryJobResourceName: String): OpenShiftDrRecoveryJobTasksResponse
+  # 재해복구작업 목록 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @return [OpenShiftDrRecoveryJobsResponse]
+  GetRecoveryJobs(protectionGroupResourceName: String): OpenShiftDrRecoveryJobsResponse
+  # 재해복구계획의 복구정보 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryPlanResourceName RecoveryPlan CR 의 Name
+  # @return [OpenShiftDrRecoveryInfoResponse]
+  GetRecoveryInfo(protectionGroupResourceName: String, recoveryPlanResourceName: String): OpenShiftDrRecoveryInfoResponse
+  # 재해복구계획 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryPlanResourceName RecoveryPlan CR 의 Name
+  # @return [OpenShiftDrRecoveryPlanResponse]
+  GetRecoveryPlan(protectionGroupResourceName: String, recoveryPlanResourceName: String): OpenShiftDrRecoveryPlanResponse
+  # 재해복구계획 상태 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryPlanResourceName RecoveryPlan CR 의 Name
+  # @return [OpenShiftDrRecoveryPlanStatusResponse]
+  GetRecoveryPlanStatus(protectionGroupResourceName: String, recoveryPlanResourceName: String): OpenShiftDrRecoveryPlanStatusResponse
+  # 재해복구계획 목록 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @return [OpenShiftDrRecoveryPlansResponse]
+  GetRecoveryPlans(protectionGroupResourceName: String): OpenShiftDrRecoveryPlansResponse
+  # 재해복구결과 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryResultResourceName RecoveryResult CR 의 Name
+  # @return [OpenShiftDrRecoveryResultResponse]
+  GetRecoveryResult(protectionGroupResourceName: String, recoveryResultResourceName: String): OpenShiftDrRecoveryResultResponse
+  # 재해복구결과 목록 조회
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @return [OpenShiftDrRecoveryResultsResponse]
+  GetRecoveryResults(protectionGroupResourceName: String): OpenShiftDrRecoveryResultsResponse
+}
+
+type Mutation {
+  # 재해복구작업 취소
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [Boolean]
+  CancelRecoveryJob(input: CancelRecoveryJobInput): Boolean
+  # 재해복구작업 확정
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [Boolean]
+  ConfirmRecoveryJob(input: ConfirmRecoveryJobInput): Boolean
+  # 재해복구작업 스케쥴 등록
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param OpenShiftDrRecoveryJobScheduleRequest openShiftDrRecoveryJobScheduleRequest
+  # @return [OpenShiftDrRecoveryJobScheduleResponse]
+  CreateRecoveryJobSchedule(input: CreateRecoveryJobScheduleInput): OpenShiftDrRecoveryJobScheduleResponse
+  # 재해복구작업 제거
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [Boolean]
+  DeleteRecoveryJob(input: DeleteRecoveryJobInput): Boolean
+  # 재해복구작업 스케쥴 삭제
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobScheduleResourceName RecoveryJobSchedule CR 의 Name
+  # @return [Boolean]
+  DeleteRecoveryJobSchedule(input: DeleteRecoveryJobScheduleInput): Boolean
+  # 재해복구작업 강제로 확정
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [Boolean]
+  ForcedConfirmRecoveryJob(input: ForcedConfirmRecoveryJobInput): Boolean
+  # 재해복구작업 롤백 무시
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [Boolean]
+  IgnoreRollbackRecoveryJob(input: IgnoreRollbackRecoveryJobInput): Boolean
+  # 재해복구작업 일시중지
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [Boolean]
+  PauseRecoveryJob(input: PauseRecoveryJobInput): Boolean
+  # 재해복구작업 재개
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [Boolean]
+  ResumeRecoveryJob(input: ResumeRecoveryJobInput): Boolean
+  # 재해복구작업 Workload 복구 재시도
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @param OpenShiftDrRecoveryJobRetryRequest openShiftDrRecoveryJobRetryRequest
+  # @return [Boolean]
+  RetryRecoveryJob(input: RetryRecoveryJobInput): Boolean
+  # 재해복구작업(재해복구) 롤백
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [Boolean]
+  RollbackMigrationRecoveryJob(input: RollbackMigrationRecoveryJobInput): Boolean
+  # 재해복구작업(모의 훈련) 롤백
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobResourceName RecoveryJob CR 의 Name
+  # @return [Boolean]
+  RollbackSimulationRecoveryJob(input: RollbackSimulationRecoveryJobInput): Boolean
+  # 재해복구작업 스케쥴 수정
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryJobScheduleResourceName RecoveryJobSchedule CR 의 Name
+  # @param OpenShiftDrRecoveryJobScheduleRequest openShiftDrRecoveryJobScheduleRequest
+  # @return [OpenShiftDrRecoveryJobScheduleResponse]
+  UpdateRecoveryJobSchedule(input: UpdateRecoveryJobScheduleInput): OpenShiftDrRecoveryJobScheduleResponse
+  # 재해복구계획 등록
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param OpenShiftDrRecoveryPlanRequest openShiftDrRecoveryPlanRequest
+  # @return [OpenShiftDrRecoveryPlanResponse]
+  CreateRecoveryPlan(input: CreateRecoveryPlanInput): OpenShiftDrRecoveryPlanResponse
+  # 재해복구계획 삭제
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryPlanResourceName RecoveryPlan CR 의 Name
+  # @return [Boolean]
+  DeleteRecoveryPlan(input: DeleteRecoveryPlanInput): Boolean
+  # 재해복구계획 수정
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryPlanResourceName RecoveryPlan CR 의 Name
+  # @param OpenShiftDrRecoveryPlanRequest openShiftDrRecoveryPlanRequest
+  # @return [OpenShiftDrRecoveryPlanResponse]
+  UpdateRecoveryPlan(input: UpdateRecoveryPlanInput): OpenShiftDrRecoveryPlanResponse
+  # 재해복구결과 삭제
+  # 설명추가
+  # @param String protectionGroupResourceName ProtectionGroup CR 의 Name
+  # @param String recoveryResultResourceName RecoveryResult CR 의 Name
+  # @return [Boolean]
+  DeleteRecoveryResult(input: DeleteRecoveryResultInput): Boolean
+}
+
+# disaster_recovery_job_api
+input CancelRecoveryJobInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryJob CR 의 Name
+    recoveryJobResourceName: String
+}
+
+input ConfirmRecoveryJobInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryJob CR 의 Name
+    recoveryJobResourceName: String
+}
+
+input CreateRecoveryJobScheduleInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    openShiftDrRecoveryJobScheduleRequest: OpenShiftDrRecoveryJobScheduleRequestInput
+}
+
+input DeleteRecoveryJobInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryJob CR 의 Name
+    recoveryJobResourceName: String
+}
+
+input DeleteRecoveryJobScheduleInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryJobSchedule CR 의 Name
+    recoveryJobScheduleResourceName: String
+}
+
+input ForcedConfirmRecoveryJobInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryJob CR 의 Name
+    recoveryJobResourceName: String
+}
+
+input IgnoreRollbackRecoveryJobInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryJob CR 의 Name
+    recoveryJobResourceName: String
+}
+
+input PauseRecoveryJobInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryJob CR 의 Name
+    recoveryJobResourceName: String
+}
+
+input ResumeRecoveryJobInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryJob CR 의 Name
+    recoveryJobResourceName: String
+}
+
+input RetryRecoveryJobInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryJob CR 의 Name
+    recoveryJobResourceName: String,
+    openShiftDrRecoveryJobRetryRequest: OpenShiftDrRecoveryJobRetryRequestInput
+}
+
+input RollbackMigrationRecoveryJobInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryJob CR 의 Name
+    recoveryJobResourceName: String
+}
+
+input RollbackSimulationRecoveryJobInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryJob CR 의 Name
+    recoveryJobResourceName: String
+}
+
+input UpdateRecoveryJobScheduleInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryJobSchedule CR 의 Name
+    recoveryJobScheduleResourceName: String,
+    openShiftDrRecoveryJobScheduleRequest: OpenShiftDrRecoveryJobScheduleRequestInput
+}
+
+# disaster_recovery_plan_api
+input CreateRecoveryPlanInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    openShiftDrRecoveryPlanRequest: OpenShiftDrRecoveryPlanRequestInput
+}
+
+input DeleteRecoveryPlanInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryPlan CR 의 Name
+    recoveryPlanResourceName: String
+}
+
+input UpdateRecoveryPlanInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryPlan CR 의 Name
+    recoveryPlanResourceName: String,
+    openShiftDrRecoveryPlanRequest: OpenShiftDrRecoveryPlanRequestInput
+}
+
+# disaster_recovery_result_api
+input DeleteRecoveryResultInput {
+    # ProtectionGroup CR 의 Name
+    protectionGroupResourceName: String,
+    # RecoveryResult CR 의 Name
+    recoveryResultResourceName: String
+}
+
+#
+# cloud_day_of_month_enum.graphql
+#
+# 일자(1-31, last-day)
+enum CloudDayOfMonthEnum {
+  ONE
+  TWO
+  THREE
+  FOUR
+  FIVE
+  SIX
+  SEVEN
+  EIGHT
+  NINE
+  TEN
+  ELEVEN
+  TWELVE
+  THIRTEEN
+  FOURTEEN
+  FIFTEEN
+  SIXTEEN
+  SEVENTEEN
+  EIGHTEEN
+  NINETEEN
+  TWENTY
+  TWENTY_ONE
+  TWENTY_TWO
+  TWENTY_THREE
+  TWENTY_FOUR
+  TWENTY_FIVE
+  TWENTY_SIX
+  TWENTY_SEVEN
+  TWENTY_EIGHT
+  TWENTY_NINE
+  THIRTY
+  THIRTY_ONE
+  LAST_DAY
+}
+
+#
+# cloud_interval_hour_enum.graphql
+#
+# 주기간격 (시간)
+enum CloudIntervalHourEnum {
+  ONE
+  TWO
+  THREE
+  FOUR
+  SIX
+  TWELVE
+}
+
+#
+# cloud_interval_minute_enum.graphql
+#
+# 주기간격 (분)
+enum CloudIntervalMinuteEnum {
+  ONE
+  TWO
+  THREE
+  FOUR
+  FIVE
+  SIX
+  TEN
+  TWELVE
+  FIFTEEN
+  TWENTY
+  THIRTY
+}
+
+#
+# cloud_interval_month_enum.graphql
+#
+# 주기간격 (개월)
+enum CloudIntervalMonthEnum {
+  ONE
+  TWO
+  THREE
+  FOUR
+  SIX
+  TWELVE
+}
+
+#
+# cloud_language_set_enum.graphql
+#
+# 언어셋
+enum CloudLanguageSetEnum {
+  ENG
+  KOR
+}
+
+#
+# cloud_role.graphql
+#
+# 솔루션 역할
+type CloudRole {
+  # 솔루션 역할의 ID
+  id: BigInt
+  # 솔루션 이름
+  solution: String
+  role: CloudRoleEnum
+}
+
+input CloudRoleInput {
+    # 솔루션 역할의 ID
+    id: BigInt
+    # 솔루션 이름
+    solution: String
+    role: CloudRoleEnum
+}
+
+#
+# cloud_role_enum.graphql
+#
+# 역할
+enum CloudRoleEnum {
+  ADMIN
+  MANAGER
+  OPERATOR
+  USER
+}
+
+#
+# cloud_schedule.graphql
+#
+# 스케쥴
+type CloudSchedule {
+  # 스케쥴 ID
+  id: BigInt
+  # 스케줄 활성화 여부
+  activation_flag: Boolean
+  # 메시지 Topic
+  topic: String
+  # 메시지
+  message: String
+  # 시작일
+  start_at: BigInt
+  # 종료일
+  end_at: BigInt
+  type: CloudScheduleTypeEnum
+  interval_minute: CloudIntervalMinuteEnum
+  interval_hour: CloudIntervalHourEnum
+  # 주기간격 (일)
+  interval_day: BigInt
+  # 주기간격 (주)
+  interval_week: BigInt
+  interval_month: CloudIntervalMonthEnum
+  week_of_month: CloudWeekOfMonthEnum
+  day_of_month: CloudDayOfMonthEnum
+  day_of_week: CloudWeekEnum
+  # 시
+  hour: BigInt
+  # 분
+  minute: BigInt
+  # [타임존](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+  timezone: String
+}
+
+input CloudScheduleInput {
+    # 스케쥴 ID
+    id: BigInt
+    # 스케줄 활성화 여부
+    activation_flag: Boolean
+    # 메시지 Topic
+    topic: String
+    # 메시지
+    message: String
+    # 시작일
+    start_at: BigInt
+    # 종료일
+    end_at: BigInt
+    type: CloudScheduleTypeEnum
+    interval_minute: CloudIntervalMinuteEnum
+    interval_hour: CloudIntervalHourEnum
+    # 주기간격 (일)
+    interval_day: BigInt
+    # 주기간격 (주)
+    interval_week: BigInt
+    interval_month: CloudIntervalMonthEnum
+    week_of_month: CloudWeekOfMonthEnum
+    day_of_month: CloudDayOfMonthEnum
+    day_of_week: CloudWeekEnum
+    # 시
+    hour: BigInt
+    # 분
+    minute: BigInt
+    # [타임존](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+    timezone: String
+}
+
+#
+# cloud_schedule_type_enum.graphql
+#
+# 주기 종류
+enum CloudScheduleTypeEnum {
+  SCHEDULE_TYPE_SPECIFIED
+  SCHEDULE_TYPE_MINUTELY
+  SCHEDULE_TYPE_HOURLY
+  SCHEDULE_TYPE_DAILY
+  SCHEDULE_TYPE_WEEKLY
+  SCHEDULE_TYPE_MONTHLY
+  SCHEDULE_TYPE_YEARLY
+  SCHEDULE_TYPE_DAY_OF_MONTHLY
+  SCHEDULE_TYPE_WEEK_OF_MONTHLY
+}
+
+#
+# cloud_session.graphql
+#
+# 사용자 세션
+type CloudSession {
+  # 세션 키
+  key: String
+}
+
+input CloudSessionInput {
+    # 세션 키
+    key: String
+}
+
+#
+# cloud_tenant.graphql
+#
+# 테넌트
+type CloudTenant {
+  # 테넌트 ID
+  id: BigInt
+  # 테넌트 이름
+  name: String
+  # 사용여부
+  use_flag: Boolean
+  # 테넌트가 사용할 수 있는 솔루션 목록
+  solutions: [CloudTenantSolution]
+  # 비고
+  remarks: String
+  # 테넌트 생성 날짜
+  created_at: BigInt
+  # 테넌트 변경 날짜
+  updated_at: BigInt
+}
+
+input CloudTenantInput {
+    # 테넌트 ID
+    id: BigInt
+    # 테넌트 이름
+    name: String
+    # 사용여부
+    use_flag: Boolean
+    # 테넌트가 사용할 수 있는 솔루션 목록
+    solutions: [CloudTenantSolutionInput]
+    # 비고
+    remarks: String
+    # 테넌트 생성 날짜
+    created_at: BigInt
+    # 테넌트 변경 날짜
+    updated_at: BigInt
+}
+
+#
+# cloud_tenant_solution.graphql
+#
+# 테넌트
+type CloudTenantSolution {
+  # 솔루션 이름
+  name: String
+}
+
+input CloudTenantSolutionInput {
+    # 솔루션 이름
+    name: String
+}
+
+#
+# cloud_user.graphql
+#
+# 사용자
+type CloudUser {
+  # 사용자 ID
+  id: BigInt
+  # 계정 명
+  account: String
+  tenant: CloudTenant
+  # 솔루션별 역할
+  roles: [CloudRole]
+  # 사용자 그룹 목록
+  groups: [CloudUserGroup]
+  # 사용자 타임존 ([참조링크](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))
+  timezone: String
+  language_set: CloudLanguageSetEnum
+  # 사용자 이름
+  name: String
+  # 사용자 부서
+  department: String
+  # 사용자 직책
+  position: String
+  # 사용자 이메일
+  email: String
+  # 사용자 연락처
+  contact: String
+  # 계정 암호 변경 날짜
+  password_updated_at: BigInt
+  # 계정 암호 변경 필요 여부
+  password_update_flag: Boolean
+  # 계정 마지막 로그인 날짜
+  last_logged_in_at: BigInt
+  # 계정 생성 날짜
+  created_at: BigInt
+  # 계정 내용 변경 날짜
+  updated_at: BigInt
+  session: CloudSession
+}
+
+input CloudUserInput {
+    # 사용자 ID
+    id: BigInt
+    # 계정 명
+    account: String
+    tenant: CloudTenantInput
+    # 솔루션별 역할
+    roles: [CloudRoleInput]
+    # 사용자 그룹 목록
+    groups: [CloudUserGroupInput]
+    # 사용자 타임존 ([참조링크](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))
+    timezone: String
+    language_set: CloudLanguageSetEnum
+    # 사용자 이름
+    name: String
+    # 사용자 부서
+    department: String
+    # 사용자 직책
+    position: String
+    # 사용자 이메일
+    email: String
+    # 사용자 연락처
+    contact: String
+    # 계정 암호 변경 날짜
+    password_updated_at: BigInt
+    # 계정 암호 변경 필요 여부
+    password_update_flag: Boolean
+    # 계정 마지막 로그인 날짜
+    last_logged_in_at: BigInt
+    # 계정 생성 날짜
+    created_at: BigInt
+    # 계정 내용 변경 날짜
+    updated_at: BigInt
+    session: CloudSessionInput
+}
+
+#
+# cloud_user_group.graphql
+#
+# 사용자 그룹
+type CloudUserGroup {
+  # 사용자 그룹 ID
+  id: BigInt
+  tenant: CloudTenant
+  # 사용자 그룹 이름
+  name: String
+  # 비고
+  remarks: String
+  # 사용자 그룹 생성 날짜
+  created_at: BigInt
+  # 사용자 그룹 변경 날짜
+  updated_at: BigInt
+  # 삭제 여부
+  delete_flag: Boolean
+}
+
+input CloudUserGroupInput {
+    # 사용자 그룹 ID
+    id: BigInt
+    tenant: CloudTenantInput
+    # 사용자 그룹 이름
+    name: String
+    # 비고
+    remarks: String
+    # 사용자 그룹 생성 날짜
+    created_at: BigInt
+    # 사용자 그룹 변경 날짜
+    updated_at: BigInt
+    # 삭제 여부
+    delete_flag: Boolean
+}
+
+#
+# cloud_week_enum.graphql
+#
+# 요일
+enum CloudWeekEnum {
+  MON
+  TUE
+  WED
+  THU
+  FRI
+  SAT
+  SUN
+}
+
+#
+# cloud_week_of_month_enum.graphql
+#
+# 주차
+enum CloudWeekOfMonthEnum {
+  ONE
+  TWO
+  THREE
+  FOUR
+  FIVE
+  LAST_WEEK
+}
+
+#
+# open_shift_cm_cluster.graphql
+#
+# 클러스터
+type OpenShiftCmCluster {
+  # 클러스터의 ID
+  id: BigInt
+  owner_group: CloudUserGroup
+  # 클러스터 이름
+  name: String
+  # 비고
+  remarks: String
+  # 클러스터 버전 정보
+  version: String
+  type_code: OpenShiftCmClusterTypeCodeEnum
+  # ### 클러스터 API server credential  credential 은 `\"{암호화된 대칭키}.{암호화된 credential 정보}\"` 로 구성된 문자열이다.   - 대칭키는 16 바이트 랜덤 문자열로 생성하고, ClusterManager 의 공개키로 암호화(base64) - credential json 을 대칭키로 암호화(aes-cbc-256, base64)  **credential json** 의 구성:   - `method`: 인증 방식   - kubeConfig - `kubeConfig`: (method 가 kubeConfig 인 경우) \"kube config text...\" > v1.0 에서는 `kubeConfig` 방식만 지원
+  credential: String
+  status: OpenShiftCmClusterStatus
+  sync_status: OpenShiftCmClusterSyncStatus
+  # 클러스터 등록 일시 (Unix timestamp)
+  created_at: BigInt
+  # 클러스터 수정 일시 (Unix timestamp)
+  updated_at: BigInt
+  # 클러스터 동기화 일시 (Unix timestamp)
+  synchronized_at: BigInt
+}
+
+input OpenShiftCmClusterInput {
+    # 클러스터의 ID
+    id: BigInt
+    owner_group: CloudUserGroupInput
+    # 클러스터 이름
+    name: String
+    # 비고
+    remarks: String
+    # 클러스터 버전 정보
+    version: String
+    type_code: OpenShiftCmClusterTypeCodeEnum
+    # ### 클러스터 API server credential  credential 은 `\"{암호화된 대칭키}.{암호화된 credential 정보}\"` 로 구성된 문자열이다.   - 대칭키는 16 바이트 랜덤 문자열로 생성하고, ClusterManager 의 공개키로 암호화(base64) - credential json 을 대칭키로 암호화(aes-cbc-256, base64)  **credential json** 의 구성:   - `method`: 인증 방식   - kubeConfig - `kubeConfig`: (method 가 kubeConfig 인 경우) \"kube config text...\" > v1.0 에서는 `kubeConfig` 방식만 지원
+    credential: String
+    status: OpenShiftCmClusterStatusInput
+    sync_status: OpenShiftCmClusterSyncStatusInput
+    # 클러스터 등록 일시 (Unix timestamp)
+    created_at: BigInt
+    # 클러스터 수정 일시 (Unix timestamp)
+    updated_at: BigInt
+    # 클러스터 동기화 일시 (Unix timestamp)
+    synchronized_at: BigInt
+}
+
+#
+# open_shift_cm_cluster_resource_service_type_enum.graphql
+#
+# 서비스 리소스의 유형 ClusterIP: ClusterIP NodePort: NodePort LoadBalancer: LoadBalancer ExternalName: ExternalName
+enum OpenShiftCmClusterResourceServiceTypeEnum {
+  CLUSTERIP
+  NODEPORT
+  LOADBALANCER
+  EXTERNALNAME
+}
+
+#
+# open_shift_cm_cluster_resource_volume_type_enum.graphql
+#
+# 클러스터 볼륨 유형 hostPath: hostPath emptyDir: emptyDir gcePersistentDisk: gcePersistentDisk awsElasticBlockStore: awsElasticBlockStore gitRepo: gitRepo nfs: nfs iscsi: iscsi glusterfs: glusterfs persistentVolumeClaim: persistentVolumeClaim rbd: rbd flexVolume: flexVolume cinder: cinder cephfs: cephfs flocker: flocker fc: fc azureFile: azureFile configMap: configMap vsphereVolume: vsphereVolume quobyte: quobyte azureDisk: azureDisk photonPersistentDisk: photonPersistentDisk portworxVolume: portworxVolume scaleIO: scaleIO storageos: storageos csi: csi ephemeral: ephemeral
+enum OpenShiftCmClusterResourceVolumeTypeEnum {
+  HOST_PATH
+  EMPTY_DIR
+  GCE_PERSISTENT_DISK
+  AWS_ELASTIC_BLOCK_STORE
+  GIT_REPO
+  NFS
+  ISCSI
+  GLUSTERFS
+  PERSISTENT_VOLUME_CLAIM
+  RBD
+  FLEX_VOLUME
+  CINDER
+  CEPHFS
+  FLOCKER
+  FC
+  AZURE_FILE
+  CONFIG_MAP
+  VSPHERE_VOLUME
+  QUOBYTE
+  AZURE_DISK
+  PHOTON_PERSISTENT_DISK
+  PORTWORX_VOLUME
+  SCALE_I_O
+  STORAGEOS
+  CSI
+  EPHEMERAL
+}
+
+#
+# open_shift_cm_cluster_state_code_enum.graphql
+#
+# 클러스터의 상태 코드 cluster.state.unknown: 알 수 없음 cluster.state.active: 활성 cluster.state.inactive: 비활성
+enum OpenShiftCmClusterStateCodeEnum {
+  CLUSTER_STATE_UNKNOWN
+  CLUSTER_STATE_ACTIVE
+  CLUSTER_STATE_INACTIVE
+}
+
+#
+# open_shift_cm_cluster_status.graphql
+#
+# 클러스터의 상태
+type OpenShiftCmClusterStatus {
+  state_code: OpenShiftCmClusterStateCodeEnum
+  reason: OpenShiftCmMessage
+}
+
+input OpenShiftCmClusterStatusInput {
+    state_code: OpenShiftCmClusterStateCodeEnum
+    reason: OpenShiftCmMessageInput
+}
+
+#
+# open_shift_cm_cluster_sync_state_code_enum.graphql
+#
+# 클러스터의 동기화 상태 코드 cluster.sync.state.unknown: 알 수 없음 cluster.sync.state.synchronizing: 동기화중 cluster.sync.state.synchronized: 동기화됨 cluster.sync.state.synchronize-failed: 동기화 실패
+enum OpenShiftCmClusterSyncStateCodeEnum {
+  CLUSTER_SYNC_STATE_UNKNOWN
+  CLUSTER_SYNC_STATE_SYNCHRONIZING
+  CLUSTER_SYNC_STATE_SYNCHRONIZED
+  CLUSTER_SYNC_STATE_SYNCHRONIZE_FAILED
+}
+
+#
+# open_shift_cm_cluster_sync_status.graphql
+#
+# 클러스터의 동기화 상태
+type OpenShiftCmClusterSyncStatus {
+  state_code: OpenShiftCmClusterSyncStateCodeEnum
+  reason: OpenShiftCmMessage
+}
+
+input OpenShiftCmClusterSyncStatusInput {
+    state_code: OpenShiftCmClusterSyncStateCodeEnum
+    reason: OpenShiftCmMessageInput
+}
+
+#
+# open_shift_cm_cluster_type_code_enum.graphql
+#
+# 클러스터 종류 cluster.type.openshift: OpenShift cluster.type.kubernetes: Kubernetes
+enum OpenShiftCmClusterTypeCodeEnum {
+  CLUSTER_TYPE_OPENSHIFT
+  CLUSTER_TYPE_KUBERNETES
+}
+
+#
+# open_shift_cm_finalizer.graphql
+#
+# 클러스터 finalizer
+type OpenShiftCmFinalizer {
+  # finalizer 의 ID
+  id: BigInt
+  # finalizer 의 이름
+  name: String
+  # finalizer 가 명시된 resource group
+  group: String
+  # finalizer 가 명시된 resource version
+  version: String
+  # finalizer 가 명시된 resource kind
+  kind: String
+  controller_workload: OpenShiftCmWorkload
+}
+
+input OpenShiftCmFinalizerInput {
+    # finalizer 의 ID
+    id: BigInt
+    # finalizer 의 이름
+    name: String
+    # finalizer 가 명시된 resource group
+    group: String
+    # finalizer 가 명시된 resource version
+    version: String
+    # finalizer 가 명시된 resource kind
+    kind: String
+    controller_workload: OpenShiftCmWorkloadInput
+}
+
+#
+# open_shift_cm_message.graphql
+#
+# 메세지
+type OpenShiftCmMessage {
+  # 메세지 코드
+  code: String
+  # 메세지 코드 상세 내용
+  contents: String
+}
+
+input OpenShiftCmMessageInput {
+    # 메세지 코드
+    code: String
+    # 메세지 코드 상세 내용
+    contents: String
+}
+
+#
+# open_shift_cm_namespace.graphql
+#
+# 클러스터 네임스페이스
+type OpenShiftCmNamespace {
+  # 네임스페이스의 resource id
+  resource_id: BigInt
+  # 네임스페이스의 이름
+  name: String
+}
+
+input OpenShiftCmNamespaceInput {
+    # 네임스페이스의 resource id
+    resource_id: BigInt
+    # 네임스페이스의 이름
+    name: String
+}
+
+#
+# open_shift_cm_priority_class.graphql
+#
+# 클러스터의 PriorityClass
+type OpenShiftCmPriorityClass {
+  # PriorityClass Resource ID
+  resource_id: BigInt
+  # PriorityClass Name
+  name: String
+  # PriorityClass Value
+  value: BigInt
+}
+
+input OpenShiftCmPriorityClassInput {
+    # PriorityClass Resource ID
+    resource_id: BigInt
+    # PriorityClass Name
+    name: String
+    # PriorityClass Value
+    value: BigInt
+}
+
+#
+# open_shift_cm_registry.graphql
+#
+# 클러스터 레지스트리
+type OpenShiftCmRegistry {
+  # 레지스트리의 ID
+  id: BigInt
+  # 레지스트리의 url
+  url: String
+  # private 레지스트리 여부
+  is_private: Boolean
+  # 레지스트리 push credential 필요 여부
+  is_required_push_credential: Boolean
+  # ### 레지스트리 push credential 정보  credential 은 `\"{암호화된 대칭키}.{암호화된 credential 정보}\"` 로 구성된 문자열이다.   - 대칭키는 16 바이트 랜덤 문자열로 생성하고, ClusterManager 의 공개키로 암호화(base64) - credential json 을 대칭키로 암호화(aes-cbc-256, base64)  **credential json** 의 구성: - `registry_server_url`: registry url - `username`: username - `password`: password > v1.0 에서는 `password` 방식만 지원
+  push_credential: String
+  # 레지스트리의 image pull secret 리소스 목록
+  image_pull_secret_resources: [OpenShiftCmResource]
+}
+
+input OpenShiftCmRegistryInput {
+    # 레지스트리의 ID
+    id: BigInt
+    # 레지스트리의 url
+    url: String
+    # private 레지스트리 여부
+    is_private: Boolean
+    # 레지스트리 push credential 필요 여부
+    is_required_push_credential: Boolean
+    # ### 레지스트리 push credential 정보  credential 은 `\"{암호화된 대칭키}.{암호화된 credential 정보}\"` 로 구성된 문자열이다.   - 대칭키는 16 바이트 랜덤 문자열로 생성하고, ClusterManager 의 공개키로 암호화(base64) - credential json 을 대칭키로 암호화(aes-cbc-256, base64)  **credential json** 의 구성: - `registry_server_url`: registry url - `username`: username - `password`: password > v1.0 에서는 `password` 방식만 지원
+    push_credential: String
+    # 레지스트리의 image pull secret 리소스 목록
+    image_pull_secret_resources: [OpenShiftCmResourceInput]
+}
+
+#
+# open_shift_cm_resource.graphql
+#
+# 클러스터 리소스
+type OpenShiftCmResource {
+  # 리소스의 ID
+  id: BigInt
+  # 리소스의 group
+  group: String
+  # 리소스의 version
+  version: String
+  # 리소스의 kind
+  kind: String
+  # 리소스의 네임 스페이스 이름
+  namespace: String
+  # 리소스의 name
+  name: String
+  # 리소스의 uid
+  uid: String
+  # 리소스의 resource version
+  resource_version: String
+  # 리소스의 manifest
+  manifest: String
+  # 리소스의 dependent 리소스 목록
+  dependent_resources: [BigInt]
+  # 리소스의 dependency_resources 리소스 목록
+  dependency_resources: [BigInt]
+}
+
+input OpenShiftCmResourceInput {
+    # 리소스의 ID
+    id: BigInt
+    # 리소스의 group
+    group: String
+    # 리소스의 version
+    version: String
+    # 리소스의 kind
+    kind: String
+    # 리소스의 네임 스페이스 이름
+    namespace: String
+    # 리소스의 name
+    name: String
+    # 리소스의 uid
+    uid: String
+    # 리소스의 resource version
+    resource_version: String
+    # 리소스의 manifest
+    manifest: String
+    # 리소스의 dependent 리소스 목록
+    dependent_resources: [BigInt]
+    # 리소스의 dependency_resources 리소스 목록
+    dependency_resources: [BigInt]
+}
+
+#
+# open_shift_cm_runtime_class.graphql
+#
+# 클러스터 runtime class
+type OpenShiftCmRuntimeClass {
+  # runtime class의 resource id
+  resource_id: BigInt
+  # runtime class의 handler
+  handler: String
+  # runtime class의 name
+  name: String
+}
+
+input OpenShiftCmRuntimeClassInput {
+    # runtime class의 resource id
+    resource_id: BigInt
+    # runtime class의 handler
+    handler: String
+    # runtime class의 name
+    name: String
+}
+
+#
+# open_shift_cm_scheduler.graphql
+#
+# 클러스터 스케줄러
+type OpenShiftCmScheduler {
+  # 스케줄러의 ID
+  id: BigInt
+  # 스케줄러의 이름
+  name: String
+  workload: OpenShiftCmWorkload
+}
+
+input OpenShiftCmSchedulerInput {
+    # 스케줄러의 ID
+    id: BigInt
+    # 스케줄러의 이름
+    name: String
+    workload: OpenShiftCmWorkloadInput
+}
+
+#
+# open_shift_cm_service.graphql
+#
+# 클러스터 서비스
+type OpenShiftCmService {
+  # 서비스의 resource id
+  resource_id: BigInt
+  # 서비스의 이름
+  name: String
+  type: OpenShiftCmClusterResourceServiceTypeEnum
+  # 서비스 유형이 cluster ip 일 경우 서비스의 cluster ip
+  cluster_ip: String
+  # 서비스 유형이 load balancer 일 경우 서비스의 load balancer ip
+  load_balancer_ip: String
+  # 서비스 유형이 load balancer 일 경우 load balance 가 동작 할 ip 범위
+  load_balancer_source_ranges: [String]
+  # 서비스 유형이 load balancer 일 경우 load balancer class 명
+  load_balancer_class: String
+  # 서비스 유형이 external name 일 경우 해당 external name
+  external_name: String
+}
+
+input OpenShiftCmServiceInput {
+    # 서비스의 resource id
+    resource_id: BigInt
+    # 서비스의 이름
+    name: String
+    type: OpenShiftCmClusterResourceServiceTypeEnum
+    # 서비스 유형이 cluster ip 일 경우 서비스의 cluster ip
+    cluster_ip: String
+    # 서비스 유형이 load balancer 일 경우 서비스의 load balancer ip
+    load_balancer_ip: String
+    # 서비스 유형이 load balancer 일 경우 load balance 가 동작 할 ip 범위
+    load_balancer_source_ranges: [String]
+    # 서비스 유형이 load balancer 일 경우 load balancer class 명
+    load_balancer_class: String
+    # 서비스 유형이 external name 일 경우 해당 external name
+    external_name: String
+}
+
+#
+# open_shift_cm_service_account.graphql
+#
+# 클러스터의 ServiceAccount
+type OpenShiftCmServiceAccount {
+  # ServiceAccount Resource ID
+  resource_id: BigInt
+  # ServiceAccount Name
+  name: String
+}
+
+input OpenShiftCmServiceAccountInput {
+    # ServiceAccount Resource ID
+    resource_id: BigInt
+    # ServiceAccount Name
+    name: String
+}
+
+#
+# open_shift_cm_storage_class.graphql
+#
+# 클러스터 스토리지 클래스
+type OpenShiftCmStorageClass {
+  # 스토리지 클래스의 resource id
+  resource_id: BigInt
+  # 스토리지 클래스의 이름
+  name: String
+  # 스토리지 클래스의 provisioner
+  provisioner: String
+}
+
+input OpenShiftCmStorageClassInput {
+    # 스토리지 클래스의 resource id
+    resource_id: BigInt
+    # 스토리지 클래스의 이름
+    name: String
+    # 스토리지 클래스의 provisioner
+    provisioner: String
+}
+
+#
+# open_shift_cm_volume.graphql
+#
+# 클러스터 볼륨
+type OpenShiftCmVolume {
+  # 볼륨의 ID
+  id: BigInt
+  type: OpenShiftCmClusterResourceVolumeTypeEnum
+  # 클러스터 볼륨 크기
+  size: String
+  # 볼륨의 resource id
+  resource_id: BigInt
+  snapshots: [OpenShiftCmVolumeSnapshot]
+}
+
+input OpenShiftCmVolumeInput {
+    # 볼륨의 ID
+    id: BigInt
+    type: OpenShiftCmClusterResourceVolumeTypeEnum
+    # 클러스터 볼륨 크기
+    size: String
+    # 볼륨의 resource id
+    resource_id: BigInt
+    snapshots: [OpenShiftCmVolumeSnapshotInput]
+}
+
+#
+# open_shift_cm_volume_snapshot.graphql
+#
+# 클러스터 볼륨 스냅샷
+type OpenShiftCmVolumeSnapshot {
+  # 볼륨 스냅샷의 resource id
+  resource_id: BigInt
+  # 볼륨 스냅샷의 volume id
+  volume_id: BigInt
+  # 볼륨 스냅샷의 이름
+  name: String
+}
+
+input OpenShiftCmVolumeSnapshotInput {
+    # 볼륨 스냅샷의 resource id
+    resource_id: BigInt
+    # 볼륨 스냅샷의 volume id
+    volume_id: BigInt
+    # 볼륨 스냅샷의 이름
+    name: String
+}
+
+#
+# open_shift_cm_volume_snapshot_class.graphql
+#
+# 클러스터 볼륨 스냅샷 클래스
+type OpenShiftCmVolumeSnapshotClass {
+  # 볼륨 스냅샷 클래스의 resource id
+  resource_id: BigInt
+  # 볼륨 스냅샷 클래스의 이름
+  name: String
+  # 볼륨 스냅샷 클래스의 driver
+  driver: String
+}
+
+input OpenShiftCmVolumeSnapshotClassInput {
+    # 볼륨 스냅샷 클래스의 resource id
+    resource_id: BigInt
+    # 볼륨 스냅샷 클래스의 이름
+    name: String
+    # 볼륨 스냅샷 클래스의 driver
+    driver: String
+}
+
+#
+# open_shift_cm_workload.graphql
+#
+type OpenShiftCmWorkload {
+  # 워크로드 리소스의 id
+  id: BigInt
+  # 워크로드의 네임스페이스
+  namespace: String
+  # 워크로드의 이름
+  name: String
+  # 워크로드 비고
+  remarks: String
+  # 워크로드의 대표 resource id
+  resource_id: BigInt
+  # 워크로드가 포함된 보호 그룹 리소스 이름
+  protection_group_resource_name: String
+  volumes: [OpenShiftCmWorkloadVolume]
+  resources: [OpenShiftCmResource]
+}
+
+input OpenShiftCmWorkloadInput {
+    # 워크로드 리소스의 id
+    id: BigInt
+    # 워크로드의 네임스페이스
+    namespace: String
+    # 워크로드의 이름
+    name: String
+    # 워크로드 비고
+    remarks: String
+    # 워크로드의 대표 resource id
+    resource_id: BigInt
+    # 워크로드가 포함된 보호 그룹 리소스 이름
+    protection_group_resource_name: String
+    volumes: [OpenShiftCmWorkloadVolumeInput]
+    resources: [OpenShiftCmResourceInput]
+}
+
+#
+# open_shift_cm_workload_volume.graphql
+#
+# 워크로드가 사용하는 Volume
+type OpenShiftCmWorkloadVolume {
+  volume: OpenShiftCmVolume
+  # volume 이름
+  name: String
+}
+
+input OpenShiftCmWorkloadVolumeInput {
+    volume: OpenShiftCmVolumeInput
+    # volume 이름
+    name: String
+}
+
+#
+# open_shift_dr_finalizer_fallback_policy_enum.graphql
+#
+# Finalizer 복구 계획에 문제가 있을 때 처리 방법 cdm.disaster-recovery-openshift.recovery-plan.finalizer-recovery-plan.fallback_policy.ignore-warning: 계획에 문제가 있어도 무시하고 연관 Workload 들을 복구 > 복구대상 클러스터에 Workload 들을 복구하지만 Workload 삭제시 finalizer 가 동작하지 않을 수 있음 cdm.disaster-recovery-openshift.recovery-plan.finalizer-recovery-plan.fallback_policy.ignore-recovery: 연관 Workload 들을 복구하지 않음 cdm.disaster-recovery-openshift.recovery-plan.finalizer-recovery-plan.fallback_policy.using-default: (no-action 이 아닌 경우) 복구대상 클러스터에서 finalizer 를 사용하지 않음 > 복구대상 클러스터에 Workload 들을 복구하지만 Workload 삭제시 finalizer 없이 삭제됨
+enum OpenShiftDrFinalizerFallbackPolicyEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_FINALIZER_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_WARNING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_FINALIZER_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_RECOVERY
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_FINALIZER_RECOVERY_PLAN_FALLBACK_POLICY_USING_DEFAULT
+}
+
+#
+# open_shift_dr_finalizer_recovery_plan.graphql
+#
+# Finalizer 복구계획
+type OpenShiftDrFinalizerRecoveryPlan {
+  protection_cluster_finalizer: OpenShiftCmFinalizer
+  recovery_type_code: OpenShiftDrFinalizerRecoveryTypeCodeEnum
+  # (update 인 경우만) 복구대상 클러스터에서 사용할 finalizer
+  recovery_cluster_finalizer: String
+  fallback_policy: OpenShiftDrFinalizerFallbackPolicyEnum
+}
+
+input OpenShiftDrFinalizerRecoveryPlanInput {
+    protection_cluster_finalizer: OpenShiftCmFinalizerInput
+    recovery_type_code: OpenShiftDrFinalizerRecoveryTypeCodeEnum
+    # (update 인 경우만) 복구대상 클러스터에서 사용할 finalizer
+    recovery_cluster_finalizer: String
+    fallback_policy: OpenShiftDrFinalizerFallbackPolicyEnum
+}
+
+#
+# open_shift_dr_finalizer_recovery_plan_state_code_enum.graphql
+#
+# Finalizer 복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.finalizer-recovery-plan.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-plan.finalizer-recovery-plan.state.not-set-finalizer: (update 인 경우만) 복구대상 클러스터에서 사용할 Finalizer 가 설정되어있지 않음 cdm.disaster-recovery-openshift.recovery-plan.finalizer-recovery-plan.state.not-found-finalizer: (update 인 경우만) 복구대상 클러스터에서 사용하도록 설정한 Finalizer 가 복구대상 클러스터에 존재하지 않음 ~~cdm.disaster-recovery-openshift.recovery-plan.finalizer-recovery-plan.state.not-set-finalizer-controller: (mirror 인 경우만) finalizer 를 처리하는 컨트롤러(operator) workload 가 설정되어있지 않음~~ ~~cdm.disaster-recovery-openshift.recovery-plan.finalizer-recovery-plan.state.not-found-finalizer-controller: (mirror 인 경우만) finalizer 를 처리하는 컨트롤러(operator) workload 가 보호대상 클러스터에 존재하지 않음~~ > mirror 방식은 v1.0.0 에서 지원하지 않음
+enum OpenShiftDrFinalizerRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_FINALIZER_RECOVERY_PLAN_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_FINALIZER_RECOVERY_PLAN_STATE_NOT_SET_FINALIZER
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_FINALIZER_RECOVERY_PLAN_STATE_NOT_FOUND_FINALIZER
+}
+
+#
+# open_shift_dr_finalizer_recovery_plan_status.graphql
+#
+# Finalizer 복구계획 상태
+type OpenShiftDrFinalizerRecoveryPlanStatus {
+  # Finalizer ID
+  id: BigInt
+  state_code: OpenShiftDrFinalizerRecoveryPlanStateCodeEnum
+}
+
+input OpenShiftDrFinalizerRecoveryPlanStatusInput {
+    # Finalizer ID
+    id: BigInt
+    state_code: OpenShiftDrFinalizerRecoveryPlanStateCodeEnum
+}
+
+#
+# open_shift_dr_finalizer_recovery_type_code_enum.graphql
+#
+# finalizer 복구 유형 cdm.disaster-recovery-openshift.recovery-plan.finalizer-recovery-plan.recovery-type.unused: 보호대상 클러스터에서 사용한 finalizer 를 복구대상 클러스터에서는 사용하지 않음 cdm.disaster-recovery-openshift.recovery-plan.finalizer-recovery-plan.recovery-type.no-action: 복구대상 클러스터에서 사용할 수 있는 finalizer 인 경우, finalizer 를 그대로 사용 ~~cdm.disaster-recovery-openshift.recovery-plan.finalizer-recovery-plan.recovery-type.mirror: finalizer 를 처리하는 컨트롤러(operator) workload 를 복구대상 클러스터에 복제하여 사용하는 방식이며, controller workload 를 알고 있는 경우에만 mirror 방식의 복구계획을 설정할 수 있다~~ > mirror 방식은 v1.0.0 에서 지원하지 않음 cdm.disaster-recovery-openshift.recovery-plan.finalizer-recovery-plan.recovery-type.update: 복구대상 클러스터에서 사용할 수 있는 finalizer 로 대체
+enum OpenShiftDrFinalizerRecoveryTypeCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_FINALIZER_RECOVERY_PLAN_RECOVERY_TYPE_UNUSED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_FINALIZER_RECOVERY_PLAN_RECOVERY_TYPE_NO_ACTION
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_FINALIZER_RECOVERY_PLAN_RECOVERY_TYPE_UPDATE
+}
+
+#
+# open_shift_dr_image_recovery_info.graphql
+#
+# Image 복구정보
+type OpenShiftDrImageRecoveryInfo {
+  # 보호대상 원본 이미지 (e.g docker.io/nginx:latest)
+  protection_image: String
+  # 복구대상 레지스트리 URL
+  recovery_registry_url: String
+  # ### 레지스트리 push credential 정보  credential 은 `\"{암호화된 대칭키}.{암호화된 credential 정보}\"` 로 구성된 문자열이다.   - 대칭키는 16 바이트 랜덤 문자열로 생성하고, ClusterManager 의 공개키로 암호화(base64) - credential json 을 대칭키로 암호화(aes-cbc-256, base64)  **credential json** 의 구성: - `registry_server_url`: registry url - `username`: username - `password`: password > v1.0 에서는 `password` 방식만 지원
+  image_push_credential: String
+  # 복구대상 레지스트리에서 Pull 권한이 있는 Secret Resource 의 Manifest 목록
+  image_pull_secret_manifests: [String]
+}
+
+input OpenShiftDrImageRecoveryInfoInput {
+    # 보호대상 원본 이미지 (e.g docker.io/nginx:latest)
+    protection_image: String
+    # 복구대상 레지스트리 URL
+    recovery_registry_url: String
+    # ### 레지스트리 push credential 정보  credential 은 `\"{암호화된 대칭키}.{암호화된 credential 정보}\"` 로 구성된 문자열이다.   - 대칭키는 16 바이트 랜덤 문자열로 생성하고, ClusterManager 의 공개키로 암호화(base64) - credential json 을 대칭키로 암호화(aes-cbc-256, base64)  **credential json** 의 구성: - `registry_server_url`: registry url - `username`: username - `password`: password > v1.0 에서는 `password` 방식만 지원
+    image_push_credential: String
+    # 복구대상 레지스트리에서 Pull 권한이 있는 Secret Resource 의 Manifest 목록
+    image_pull_secret_manifests: [String]
+}
+
+#
+# open_shift_dr_namespace_recovery_plan.graphql
+#
+# Namespace 복구계획
+type OpenShiftDrNamespaceRecoveryPlan {
+  protection_cluster_namespace: OpenShiftCmNamespace
+  # 복구대상 클러스터에서 사용할 Namespace 이름
+  recovery_cluster_namespace_name: String
+}
+
+input OpenShiftDrNamespaceRecoveryPlanInput {
+    protection_cluster_namespace: OpenShiftCmNamespaceInput
+    # 복구대상 클러스터에서 사용할 Namespace 이름
+    recovery_cluster_namespace_name: String
+}
+
+#
+# open_shift_dr_namespace_recovery_plan_state_code_enum.graphql
+#
+# Namespace 복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.namespace-recovery-plan.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-plan.namespace-recovery-plan.state.not-set-name: 복구대상 클러스터에서 사용할 Namespace 이름이 설정되어있지 않음 cdm.disaster-recovery-openshift.recovery-plan.namespace-recovery-plan.state.invalid-name: 복구대상 클러스터에서 사용할 Namespace 이름이 유효하지 않음 [링크](https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names) cdm.disaster-recovery-openshift.recovery-plan.namespace-recovery-plan.state.duplicated-name: 복구대상 클러스터에서 사용할 Namespace 이름이 복구대상 클러스터에 이미 존재함
+enum OpenShiftDrNamespaceRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_NAMESPACE_RECOVERY_PLAN_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_NAMESPACE_RECOVERY_PLAN_STATE_NOT_SET_NAME
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_NAMESPACE_RECOVERY_PLAN_STATE_INVALID_NAME
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_NAMESPACE_RECOVERY_PLAN_STATE_DUPLICATED_NAME
+}
+
+#
+# open_shift_dr_namespace_recovery_plan_status.graphql
+#
+# Namespace 복구계획 상태
+type OpenShiftDrNamespaceRecoveryPlanStatus {
+  # Namespace ID
+  id: BigInt
+  state_code: OpenShiftDrNamespaceRecoveryPlanStateCodeEnum
+}
+
+input OpenShiftDrNamespaceRecoveryPlanStatusInput {
+    # Namespace ID
+    id: BigInt
+    state_code: OpenShiftDrNamespaceRecoveryPlanStateCodeEnum
+}
+
+#
+# open_shift_dr_priority_class_fallback_policy_enum.graphql
+#
+# PriorityClass 복구 계획에 문제가 있을 때 처리 방법 cdm.disaster-recovery-openshift.recovery-plan.priority-class-recovery-plan.fallback_policy.ignore-warning: 계획에 문제가 있어도 무시하고 연관 Workload 들을 복구 > 복구대상 클러스터에 Workload 들을 복구하지만 Pod 가 생성되지 않을 수 있음 cdm.disaster-recovery-openshift.recovery-plan.priority-class-recovery-plan.fallback_policy.ignore-recovery: 연관 Workload 들을 복구하지 않음 cdm.disaster-recovery-openshift.recovery-plan.priority-class-recovery-plan.fallback_policy.using-default: (unused 가 아닌 경우) 복구대상 클러스터의 default PriorityClass 를 사용하여 연관 Workload 들을 복구 > 복구대상 클러스터에 Workload 들을 복구하지만 우선순위가 다를 수 있음
+enum OpenShiftDrPriorityClassFallbackPolicyEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_PRIORITY_CLASS_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_WARNING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_PRIORITY_CLASS_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_RECOVERY
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_PRIORITY_CLASS_RECOVERY_PLAN_FALLBACK_POLICY_USING_DEFAULT
+}
+
+#
+# open_shift_dr_priority_class_recovery_plan.graphql
+#
+# PriorityClass 복구계획
+type OpenShiftDrPriorityClassRecoveryPlan {
+  protection_cluster_priority_class: OpenShiftCmPriorityClass
+  recovery_type_code: OpenShiftDrPriorityClassRecoveryTypeCodeEnum
+  recovery_cluster_priority_class: OpenShiftCmPriorityClass
+  fallback_policy: OpenShiftDrPriorityClassFallbackPolicyEnum
+}
+
+input OpenShiftDrPriorityClassRecoveryPlanInput {
+    protection_cluster_priority_class: OpenShiftCmPriorityClassInput
+    recovery_type_code: OpenShiftDrPriorityClassRecoveryTypeCodeEnum
+    recovery_cluster_priority_class: OpenShiftCmPriorityClassInput
+    fallback_policy: OpenShiftDrPriorityClassFallbackPolicyEnum
+}
+
+#
+# open_shift_dr_priority_class_recovery_plan_state_code_enum.graphql
+#
+# PriorityClass 복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.priority-class-recovery-plan.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-plan.priority-class-recovery-plan.state.not-set-priority-class: (mapping 인 경우만) 복구대상 클러스터에서 적용할 PriorityClass 가 설정되어있지 않음 cdm.disaster-recovery-openshift.recovery-plan.priority-class-recovery-plan.state.not-found-priority-class: (mapping 인 경우만) 복구대상 클러스터에서 적용하도록 설정한 PriorityClass 가 복구대상 클러스터에 존재하지 않음
+enum OpenShiftDrPriorityClassRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_PRIORITY_CLASS_RECOVERY_PLAN_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_PRIORITY_CLASS_RECOVERY_PLAN_STATE_NOT_SET_PRIORITY_CLASS
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_PRIORITY_CLASS_RECOVERY_PLAN_STATE_NOT_FOUND_PRIORITY_CLASS
+}
+
+#
+# open_shift_dr_priority_class_recovery_plan_status.graphql
+#
+# PriorityClass 복구계획 상태
+type OpenShiftDrPriorityClassRecoveryPlanStatus {
+  # PriorityClass ID
+  id: BigInt
+  state_code: OpenShiftDrPriorityClassRecoveryPlanStateCodeEnum
+}
+
+input OpenShiftDrPriorityClassRecoveryPlanStatusInput {
+    # PriorityClass ID
+    id: BigInt
+    state_code: OpenShiftDrPriorityClassRecoveryPlanStateCodeEnum
+}
+
+#
+# open_shift_dr_priority_class_recovery_type_code_enum.graphql
+#
+# PriorityClass 복구 유형 cdm.disaster-recovery-openshift.recovery-plan.priority-class-recovery-plan.recovery-type.unused: 보호대상 클러스터에서 Workload 에 적용한 PriorityClass 를 복구대상 클러스터에서는 사용하지 않음. 복구대상 클러스터의 default PriorityClass 를 사용 cdm.disaster-recovery-openshift.recovery-plan.priority-class-recovery-plan.recovery-type.mirror: 보호대상 클러스터에서 Workload 에 적용한 PriorityClass 를 복구대상 클러스터에 복제하여 적용하는 방식 cdm.disaster-recovery-openshift.recovery-plan.priority-class-recovery-plan.recovery-type.mapping: 복구대상 클러스터의 특정 PriorityClass 를 사용하는 방식
+enum OpenShiftDrPriorityClassRecoveryTypeCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_PRIORITY_CLASS_RECOVERY_PLAN_RECOVERY_TYPE_UNUSED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_PRIORITY_CLASS_RECOVERY_PLAN_RECOVERY_TYPE_MIRROR
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_PRIORITY_CLASS_RECOVERY_PLAN_RECOVERY_TYPE_MAPPING
+}
+
+#
+# open_shift_dr_readiness_gate_condition_fallback_policy_enum.graphql
+#
+# ReadinessGateCondition 복구 계획에 문제가 있을 때 처리 방법 cdm.disaster-recovery-openshift.recovery-plan.readiness-gate-condition-recovery-plan.fallback_policy.ignore-warning: 계획에 문제가 있어도 무시하고 연관 Workload 들을 복구 > 복구대상 클러스터에 Workload 들을 복구하지만 readinessGate 가 동작하지 않을 수 있음 cdm.disaster-recovery-openshift.recovery-plan.readiness-gate-condition-recovery-plan.fallback_policy.ignore-recovery: 연관 Workload 들을 복구하지 않음 cdm.disaster-recovery-openshift.recovery-plan.readiness-gate-condition-recovery-plan.fallback_policy.using-default: (no-action 이 아닌 경우) 복구대상 클러스터에서 readinessGate 를 사용하지 않음 > 복구대상 클러스터에 Workload 들을 복구하지만 readinessGate 가 동작하지 않음
+enum OpenShiftDrReadinessGateConditionFallbackPolicyEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_READINESS_GATE_CONDITION_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_WARNING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_READINESS_GATE_CONDITION_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_RECOVERY
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_READINESS_GATE_CONDITION_RECOVERY_PLAN_FALLBACK_POLICY_USING_DEFAULT
+}
+
+#
+# open_shift_dr_readiness_gate_condition_recovery_plan.graphql
+#
+# ReadinessGateCondition 복구계획
+type OpenShiftDrReadinessGateConditionRecoveryPlan {
+  # 보호대상 클러스터에서 사용한 readinessGate.condition
+  protection_cluster_readiness_gate_condition: String
+  recovery_type_code: OpenShiftDrReadinessGateConditionRecoveryTypeCodeEnum
+  # (update 인 경우만) 복구대상 클러스터에서 사용할 readinessGate.condition
+  recovery_cluster_readiness_gate_condition: String
+  fallback_policy: OpenShiftDrReadinessGateConditionFallbackPolicyEnum
+}
+
+input OpenShiftDrReadinessGateConditionRecoveryPlanInput {
+    # 보호대상 클러스터에서 사용한 readinessGate.condition
+    protection_cluster_readiness_gate_condition: String
+    recovery_type_code: OpenShiftDrReadinessGateConditionRecoveryTypeCodeEnum
+    # (update 인 경우만) 복구대상 클러스터에서 사용할 readinessGate.condition
+    recovery_cluster_readiness_gate_condition: String
+    fallback_policy: OpenShiftDrReadinessGateConditionFallbackPolicyEnum
+}
+
+#
+# open_shift_dr_readiness_gate_condition_recovery_plan_state_code_enum.graphql
+#
+# ReadinessGateCondition 복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.readiness-gate-condition-recovery-plan.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-plan.readiness-gate-condition-recovery-plan.state.not-set-condition: (update 인 경우만) 복구대상 클러스터에서 사용할 readinessGate.condition 이 설정되어있지 않음
+enum OpenShiftDrReadinessGateConditionRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_READINESS_GATE_CONDITION_RECOVERY_PLAN_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_READINESS_GATE_CONDITION_RECOVERY_PLAN_STATE_NOT_SET_CONDITION
+}
+
+#
+# open_shift_dr_readiness_gate_condition_recovery_plan_status.graphql
+#
+# ReadinessGateCondition 복구계획 상태
+type OpenShiftDrReadinessGateConditionRecoveryPlanStatus {
+  # 보호대상 클러스터에서 사용한 readinessGate.condition
+  readiness_gate_condition: String
+  state_code: OpenShiftDrReadinessGateConditionRecoveryPlanStateCodeEnum
+}
+
+input OpenShiftDrReadinessGateConditionRecoveryPlanStatusInput {
+    # 보호대상 클러스터에서 사용한 readinessGate.condition
+    readiness_gate_condition: String
+    state_code: OpenShiftDrReadinessGateConditionRecoveryPlanStateCodeEnum
+}
+
+#
+# open_shift_dr_readiness_gate_condition_recovery_type_code_enum.graphql
+#
+# readinessGate condition 복구 유형 cdm.disaster-recovery-openshift.recovery-plan.readiness-gate-condition-recovery-plan.recovery-type.unused: 보호대상 클러스터에서 사용한 readinessGate.condition 을 복구대상 클러스터에서는 사용하지 않음 cdm.disaster-recovery-openshift.recovery-plan.readiness-gate-condition-recovery-plan.recovery-type.no-action: 복구대상 클러스터에서 사용할 수 있는 readinessGate.condition 인 경우, readinessGate.condition 를 그대로 사용 cdm.disaster-recovery-openshift.recovery-plan.readiness-gate-condition-recovery-plan.recovery-type.update: 복구대상 클러스터에서 사용할 수 있는 readinessGate.condition 으로 대체
+enum OpenShiftDrReadinessGateConditionRecoveryTypeCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_READINESS_GATE_CONDITION_RECOVERY_PLAN_RECOVERY_TYPE_UNUSED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_READINESS_GATE_CONDITION_RECOVERY_PLAN_RECOVERY_TYPE_NO_ACTION
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_READINESS_GATE_CONDITION_RECOVERY_PLAN_RECOVERY_TYPE_UPDATE
+}
+
+#
+# open_shift_dr_recovery_cluster_state_code_enum.graphql
+#
+# 복구대상 클러스터 상태 cdm.disaster-recovery-openshift.recovery-plan.recovery-cluster.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-plan.recovery-cluster.state.not-found: 복구대상 클러스터가 존재하지 않음 cdm.disaster-recovery-openshift.recovery-plan.recovery-cluster.state.inactive: 복구대상 클러스터가 비활성화되어 복구할 수 없음
+enum OpenShiftDrRecoveryClusterStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_RECOVERY_CLUSTER_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_RECOVERY_CLUSTER_STATE_NOT_FOUND
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_RECOVERY_CLUSTER_STATE_INACTIVE
+}
+
+#
+# open_shift_dr_recovery_info.graphql
+#
+# 복구정보
+type OpenShiftDrRecoveryInfo {
+  # Workload 복구정보 목록
+  workloads: [OpenShiftDrWorkloadRecoveryInfo]
+  # Resource 복구정보 목록
+  resources: [OpenShiftDrResourceRecoveryInfo]
+  # Image 복구정보 목록
+  images: [OpenShiftDrImageRecoveryInfo]
+  # Volume 복구정보 목록
+  volumes: [OpenShiftDrVolumeRecoveryInfo]
+  # VolumeSnapshot 복구정보 목록
+  volume_snapshots: [OpenShiftDrVolumeSnapshotRecoveryInfo]
+}
+
+input OpenShiftDrRecoveryInfoInput {
+    # Workload 복구정보 목록
+    workloads: [OpenShiftDrWorkloadRecoveryInfoInput]
+    # Resource 복구정보 목록
+    resources: [OpenShiftDrResourceRecoveryInfoInput]
+    # Image 복구정보 목록
+    images: [OpenShiftDrImageRecoveryInfoInput]
+    # Volume 복구정보 목록
+    volumes: [OpenShiftDrVolumeRecoveryInfoInput]
+    # VolumeSnapshot 복구정보 목록
+    volume_snapshots: [OpenShiftDrVolumeSnapshotRecoveryInfoInput]
+}
+
+#
+# open_shift_dr_recovery_info_response.graphql
+#
+type OpenShiftDrRecoveryInfoResponse {
+  recovery_info: OpenShiftDrRecoveryInfo
+}
+
+input OpenShiftDrRecoveryInfoResponseInput {
+    recovery_info: OpenShiftDrRecoveryInfoInput
+}
+
+#
+# open_shift_dr_recovery_job.graphql
+#
+# 재해복구작업
+type OpenShiftDrRecoveryJob {
+  # 재해복구정보 Resource Name
+  resource_name: String
+  recovery_plan: OpenShiftDrRecoveryPlan
+  recovery_job_schedule: OpenShiftDrRecoveryJobSchedule
+  recovery_type_code: OpenShiftDrRecoveryTypeCodeEnum
+  recovery_point_type_code: OpenShiftDrRecoveryPointTypeCodeEnum
+  # Deprecated; 백업결과
+  recovery_point_backup_result: JSONObject
+  recovery_point_snapshot: ReplicatorPrimarySnapshot
+  creator: CloudUser
+  # 생성일시
+  created_at: BigInt
+  modifier: CloudUser
+  # 최종 수정일시
+  modified_at: BigInt
+}
+
+input OpenShiftDrRecoveryJobInput {
+    # 재해복구정보 Resource Name
+    resource_name: String
+    recovery_plan: OpenShiftDrRecoveryPlanInput
+    recovery_job_schedule: OpenShiftDrRecoveryJobScheduleInput
+    recovery_type_code: OpenShiftDrRecoveryTypeCodeEnum
+    recovery_point_type_code: OpenShiftDrRecoveryPointTypeCodeEnum
+    # Deprecated; 백업결과
+    recovery_point_backup_result: JSONObject
+    recovery_point_snapshot: ReplicatorPrimarySnapshotInput
+    creator: CloudUserInput
+    # 생성일시
+    created_at: BigInt
+    modifier: CloudUserInput
+    # 최종 수정일시
+    modified_at: BigInt
+}
+
+#
+# open_shift_dr_recovery_job_response.graphql
+#
+type OpenShiftDrRecoveryJobResponse {
+  recovery_job: OpenShiftDrRecoveryJob
+  recovery_job_status: OpenShiftDrRecoveryJobStatus
+}
+
+input OpenShiftDrRecoveryJobResponseInput {
+    recovery_job: OpenShiftDrRecoveryJobInput
+    recovery_job_status: OpenShiftDrRecoveryJobStatusInput
+}
+
+#
+# open_shift_dr_recovery_job_result_code_enum.graphql
+#
+# RecoveryJob 의 결과 cdm-disaster-recovery-openshift.recovery-job.result.succeed: 성공 cdm-disaster-recovery-openshift.recovery-job.result.canceled: 취소됨 cdm-disaster-recovery-openshift.recovery-job.result.failed: 실패
+enum OpenShiftDrRecoveryJobResultCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_RESULT_SUCCEED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_RESULT_CANCELED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_RESULT_FAILED
+}
+
+#
+# open_shift_dr_recovery_job_retry_request.graphql
+#
+type OpenShiftDrRecoveryJobRetryRequest {
+  # 재시도할 Workload 목록
+  workloads: [OpenShiftCmWorkload]
+}
+
+input OpenShiftDrRecoveryJobRetryRequestInput {
+    # 재시도할 Workload 목록
+    workloads: [OpenShiftCmWorkloadInput]
+}
+
+#
+# open_shift_dr_recovery_job_schedule.graphql
+#
+# 재해복구작업 스케쥴
+type OpenShiftDrRecoveryJobSchedule {
+  # 재해복구작업 스케쥴 Resource Name
+  resource_name: String
+  recovery_plan: OpenShiftDrRecoveryPlan
+  recovery_type_code: OpenShiftDrRecoveryTypeCodeEnum
+  recovery_point_type_code: OpenShiftDrRecoveryPointTypeCodeEnum
+  # Deprecated; 백업결과
+  recovery_point_backup_result: JSONObject
+  recovery_point_snapshot: ReplicatorPrimarySnapshot
+  schedule: CloudSchedule
+  creator: CloudUser
+  # 생성일시
+  created_at: BigInt
+  modifier: CloudUser
+  # 최종 수정일시
+  modified_at: BigInt
+}
+
+input OpenShiftDrRecoveryJobScheduleInput {
+    # 재해복구작업 스케쥴 Resource Name
+    resource_name: String
+    recovery_plan: OpenShiftDrRecoveryPlanInput
+    recovery_type_code: OpenShiftDrRecoveryTypeCodeEnum
+    recovery_point_type_code: OpenShiftDrRecoveryPointTypeCodeEnum
+    # Deprecated; 백업결과
+    recovery_point_backup_result: JSONObject
+    recovery_point_snapshot: ReplicatorPrimarySnapshotInput
+    schedule: CloudScheduleInput
+    creator: CloudUserInput
+    # 생성일시
+    created_at: BigInt
+    modifier: CloudUserInput
+    # 최종 수정일시
+    modified_at: BigInt
+}
+
+#
+# open_shift_dr_recovery_job_schedule_request.graphql
+#
+type OpenShiftDrRecoveryJobScheduleRequest {
+  recovery_job_schedule: OpenShiftDrRecoveryJobSchedule
+}
+
+input OpenShiftDrRecoveryJobScheduleRequestInput {
+    recovery_job_schedule: OpenShiftDrRecoveryJobScheduleInput
+}
+
+#
+# open_shift_dr_recovery_job_schedule_response.graphql
+#
+type OpenShiftDrRecoveryJobScheduleResponse {
+  recovery_job_schedule: OpenShiftDrRecoveryJobSchedule
+  recovery_job_schedule_status: OpenShiftDrRecoveryJobScheduleStatus
+}
+
+input OpenShiftDrRecoveryJobScheduleResponseInput {
+    recovery_job_schedule: OpenShiftDrRecoveryJobScheduleInput
+    recovery_job_schedule_status: OpenShiftDrRecoveryJobScheduleStatusInput
+}
+
+#
+# open_shift_dr_recovery_job_schedule_state_code_enum.graphql
+#
+# 상태 cdm.disaster-recovery-openshift.recovery-job-schedule.state.preparing: 준비중 cdm.disaster-recovery-openshift.recovery-job-schedule.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-job-schedule.state.failed: 실패
+enum OpenShiftDrRecoveryJobScheduleStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_SCHEDULE_STATE_PREPARING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_SCHEDULE_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_SCHEDULE_STATE_FAILED
+}
+
+#
+# open_shift_dr_recovery_job_schedule_status.graphql
+#
+# 재해복구작업 스케쥴 상태
+type OpenShiftDrRecoveryJobScheduleStatus {
+  state_code: OpenShiftDrRecoveryJobScheduleStateCodeEnum
+  # 실패 원인
+  failed_reason_code: String
+  # 실패 원인 상세
+  failed_reason_contents: String
+  # 다음 실행시간
+  next_runtime: BigInt
+}
+
+input OpenShiftDrRecoveryJobScheduleStatusInput {
+    state_code: OpenShiftDrRecoveryJobScheduleStateCodeEnum
+    # 실패 원인
+    failed_reason_code: String
+    # 실패 원인 상세
+    failed_reason_contents: String
+    # 다음 실행시간
+    next_runtime: BigInt
+}
+
+#
+# open_shift_dr_recovery_job_schedule_status_response.graphql
+#
+type OpenShiftDrRecoveryJobScheduleStatusResponse {
+  recovery_job_schedule_status: OpenShiftDrRecoveryJobScheduleStatus
+}
+
+input OpenShiftDrRecoveryJobScheduleStatusResponseInput {
+    recovery_job_schedule_status: OpenShiftDrRecoveryJobScheduleStatusInput
+}
+
+#
+# open_shift_dr_recovery_job_schedules_response.graphql
+#
+type OpenShiftDrRecoveryJobSchedulesResponse {
+  recovery_job_schedules: [OpenShiftDrRecoveryJobSchedulesResponseObject]
+}
+
+input OpenShiftDrRecoveryJobSchedulesResponseInput {
+    recovery_job_schedules: [OpenShiftDrRecoveryJobSchedulesResponseObjectInput]
+}
+
+#
+# open_shift_dr_recovery_job_schedules_response_object.graphql
+#
+type OpenShiftDrRecoveryJobSchedulesResponseObject {
+  recovery_job_schedule: OpenShiftDrRecoveryJobSchedule
+  recovery_job_schedule_status: OpenShiftDrRecoveryJobScheduleStatus
+}
+
+input OpenShiftDrRecoveryJobSchedulesResponseObjectInput {
+    recovery_job_schedule: OpenShiftDrRecoveryJobScheduleInput
+    recovery_job_schedule_status: OpenShiftDrRecoveryJobScheduleStatusInput
+}
+
+#
+# open_shift_dr_recovery_job_state_code_enum.graphql
+#
+# 재해복구작업 상태 cdm.disaster-recovery-openshift.recovery-job.state.pending: 스케쥴되었으나 (동일한 보호그룹의) 선행 재해복구작업의 종료를 기다리는 중 (default) cdm.disaster-recovery-openshift.recovery-job.state.running: 재해복구작업을 수행하는 중 cdm.disaster-recovery-openshift.recovery-job.state.pausing: 재해복구작업 일시중지를 시도하고 있는 중 cdm.disaster-recovery-openshift.recovery-job.state.paused: 재해복구작업을 일시중지한 상태 cdm.disaster-recovery-openshift.recovery-job.state.canceling: 재해복구작업을 취소하는 중 cdm.disaster-recovery-openshift.recovery-job.state.canceled: 재해복구작업을 취소한 상태 cdm.disaster-recovery-openshift.recovery-job.state.completed: 재해복구작업을 완료한 상태 cdm.disaster-recovery-openshift.recovery-job.state.rolling-back: 재해복구작업을 롤백하는 중 cdm.disaster-recovery-openshift.recovery-job.state.confirming: 재해복구작업을 확정하는 중 cdm.disaster-recovery-openshift.recovery-job.state.rolled-back: 재해복구작업을 롤백을 완료한 상태 cdm.disaster-recovery-openshift.recovery-job.state.rollback-ignored: 재해복구작업 롤백을 무시한 상태 cdm.disaster-recovery-openshift.recovery-job.state.confirmed: 재해복구작업을 확정을 완료한 상태 cdm.disaster-recovery-openshift.recovery-job.state.force-confirmed: 재해복구작업 확정에 대한 후처리를 무시한 상태
+enum OpenShiftDrRecoveryJobStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_PENDING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_RUNNING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_PAUSING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_PAUSED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_CANCELING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_CANCELED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_COMPLETED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_ROLLING_BACK
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_CONFIRMING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_ROLLED_BACK
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_ROLLBACK_IGNORED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_CONFIRMED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_STATE_FORCE_CONFIRMED
+}
+
+#
+# open_shift_dr_recovery_job_status.graphql
+#
+# 재해복구작업 상태
+type OpenShiftDrRecoveryJobStatus {
+  state_code: OpenShiftDrRecoveryJobStateCodeEnum
+  result_code: OpenShiftDrRecoveryJobResultCodeEnum
+}
+
+input OpenShiftDrRecoveryJobStatusInput {
+    state_code: OpenShiftDrRecoveryJobStateCodeEnum
+    result_code: OpenShiftDrRecoveryJobResultCodeEnum
+}
+
+#
+# open_shift_dr_recovery_job_status_response.graphql
+#
+type OpenShiftDrRecoveryJobStatusResponse {
+  recovery_job_status: OpenShiftDrRecoveryJobStatus
+  recovery_job_task_status: [OpenShiftDrRecoveryJobTaskStatus]
+  workload_recovery_status: [OpenShiftDrWorkloadRecoveryStatus]
+}
+
+input OpenShiftDrRecoveryJobStatusResponseInput {
+    recovery_job_status: OpenShiftDrRecoveryJobStatusInput
+    recovery_job_task_status: [OpenShiftDrRecoveryJobTaskStatusInput]
+    workload_recovery_status: [OpenShiftDrWorkloadRecoveryStatusInput]
+}
+
+#
+# open_shift_dr_recovery_job_task.graphql
+#
+# 재해복구작업 Task
+type OpenShiftDrRecoveryJobTask {
+  # 재해복구작업 Task 의 Resource Name
+  resource_name: String
+  type_code: OpenShiftDrRecoveryJobTaskTypeCodeEnum
+  # 선행 재해복구작업 Task 목록
+  dependencies: [String]
+  # 후행 재해복구작업 Task 목록
+  dependents: [String]
+  # (리소스 생성 Task 인 경우) 복구할 원본 리소스의 ID
+  resource_id: BigInt
+  # (이미지 Push Task 인 경우) 푸쉬할 원본 이미지
+  image: String
+  # (볼륨 생성 Task 인 경우) 복구할 원본 볼륨의 ID
+  volume_id: BigInt
+  # (볼륨스냅샷 생성 Task 인 경우) 복구할 원본 볼륨 스냅샷의 리소스 ID
+  volume_snapshot_id: BigInt
+}
+
+input OpenShiftDrRecoveryJobTaskInput {
+    # 재해복구작업 Task 의 Resource Name
+    resource_name: String
+    type_code: OpenShiftDrRecoveryJobTaskTypeCodeEnum
+    # 선행 재해복구작업 Task 목록
+    dependencies: [String]
+    # 후행 재해복구작업 Task 목록
+    dependents: [String]
+    # (리소스 생성 Task 인 경우) 복구할 원본 리소스의 ID
+    resource_id: BigInt
+    # (이미지 Push Task 인 경우) 푸쉬할 원본 이미지
+    image: String
+    # (볼륨 생성 Task 인 경우) 복구할 원본 볼륨의 ID
+    volume_id: BigInt
+    # (볼륨스냅샷 생성 Task 인 경우) 복구할 원본 볼륨 스냅샷의 리소스 ID
+    volume_snapshot_id: BigInt
+}
+
+#
+# open_shift_dr_recovery_job_task_failed_reason_code_enum.graphql
+#
+# Task 실패 사유 cdm-disaster-recovery-openshift.recovery-job-task.failed.unexpected_error: 예기치 못한 오류로 Task 수행이 실패함 cdm-disaster-recovery-openshift.recovery-job-task.failed.dependency_task_failed: 선행 Task 실패로 Task 를 수행하지 못함
+enum OpenShiftDrRecoveryJobTaskFailedReasonCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_FAILED_UNEXPECTED_ERROR
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_FAILED_DEPENDENCY_TASK_FAILED
+}
+
+#
+# open_shift_dr_recovery_job_task_logs_response.graphql
+#
+type OpenShiftDrRecoveryJobTaskLogsResponse {
+  logs: [String]
+}
+
+input OpenShiftDrRecoveryJobTaskLogsResponseInput {
+    logs: [String]
+}
+
+#
+# open_shift_dr_recovery_job_task_result_code_enum.graphql
+#
+# RecoveryJobTask 의 결과 cdm-disaster-recovery-openshift.recovery-job-task.result.succeed: 성공 cdm-disaster-recovery-openshift.recovery-job-task.result.canceled: 취소됨 cdm-disaster-recovery-openshift.recovery-job-task.result.failed: 실패
+enum OpenShiftDrRecoveryJobTaskResultCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_RESULT_SUCCEED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_RESULT_CANCELED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_RESULT_FAILED
+}
+
+#
+# open_shift_dr_recovery_job_task_state_code_enum.graphql
+#
+# 재해복구작업 Task 상태 cdm.disaster-recovery-openshift.recovery-job-task.state.pending: 선행 Task 의 완료를 기다리고 있는 상태 (default) cdm.disaster-recovery-openshift.recovery-job-task.state.running: Task 를 수행하고 있는 상태 cdm.disaster-recovery-openshift.recovery-job-task.state.paused: Task 를 수행하지 않고 대기하는 상태 cdm.disaster-recovery-openshift.recovery-job-task.state.canceled: Task 를 취소한 상태 cdm.disaster-recovery-openshift.recovery-job-task.state.completed: Task 의 수행을 완료한 상태 cdm.disaster-recovery-openshift.recovery-job-task.state.rolling-back: Task 의 수행결과를 롤백하고 있는 상태 cdm.disaster-recovery-openshift.recovery-job-task.state.rollback-failed: Task 의 수행결과 롤백이 실패한 상태 cdm.disaster-recovery-openshift.recovery-job-task.state.rollback-ignored: Task 의 수행결과 롤백을 무시한 상태 cdm.disaster-recovery-openshift.recovery-job-task.state.rolled-back: Task 의 수행결과 롤백을 완료한 상태 cdm.disaster-recovery-openshift.recovery-job-task.state.confirmed: Task 의 수행결과를 확정한 상태
+enum OpenShiftDrRecoveryJobTaskStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_STATE_PENDING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_STATE_RUNNING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_STATE_PAUSED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_STATE_CANCELED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_STATE_COMPLETED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_STATE_ROLLING_BACK
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_STATE_ROLLBACK_FAILED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_STATE_ROLLBACK_IGNORED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_STATE_ROLLED_BACK
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_STATE_CONFIRMED
+}
+
+#
+# open_shift_dr_recovery_job_task_status.graphql
+#
+# 재해복구작업 Task 상태
+type OpenShiftDrRecoveryJobTaskStatus {
+  # 재해복구작업 Task 의 Resource Name
+  resource_name: String
+  state_code: OpenShiftDrRecoveryJobTaskStateCodeEnum
+  # 재시도 횟수
+  retry_count: BigInt
+  result_code: OpenShiftDrRecoveryJobTaskResultCodeEnum
+  failed_reason_code: OpenShiftDrRecoveryJobTaskFailedReasonCodeEnum
+  # 실패 사유 상세 데이터
+  failed_reason_contents: String
+}
+
+input OpenShiftDrRecoveryJobTaskStatusInput {
+    # 재해복구작업 Task 의 Resource Name
+    resource_name: String
+    state_code: OpenShiftDrRecoveryJobTaskStateCodeEnum
+    # 재시도 횟수
+    retry_count: BigInt
+    result_code: OpenShiftDrRecoveryJobTaskResultCodeEnum
+    failed_reason_code: OpenShiftDrRecoveryJobTaskFailedReasonCodeEnum
+    # 실패 사유 상세 데이터
+    failed_reason_contents: String
+}
+
+#
+# open_shift_dr_recovery_job_task_type_code_enum.graphql
+#
+# Task 종류 cdm.disaster-recovery-openshift.recovery-job-task.type.create-resource: 리소스 생성 cdm.disaster-recovery-openshift.recovery-job-task.type.push-image: 이미지 Push cdm.disaster-recovery-openshift.recovery-job-task.type.create-volume: 볼륨 생성 cdm.disaster-recovery-openshift.recovery-job-task.type.create-volume-snapshot: 볼륨스냅샷 생성
+enum OpenShiftDrRecoveryJobTaskTypeCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_TYPE_CREATE_RESOURCE
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_TYPE_PUSH_IMAGE
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_TYPE_CREATE_VOLUME
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_TASK_TYPE_CREATE_VOLUME_SNAPSHOT
+}
+
+#
+# open_shift_dr_recovery_job_tasks_response.graphql
+#
+type OpenShiftDrRecoveryJobTasksResponse {
+  recovery_job_tasks: [OpenShiftDrRecoveryJobTask]
+}
+
+input OpenShiftDrRecoveryJobTasksResponseInput {
+    recovery_job_tasks: [OpenShiftDrRecoveryJobTaskInput]
+}
+
+#
+# open_shift_dr_recovery_jobs_response.graphql
+#
+type OpenShiftDrRecoveryJobsResponse {
+  queue: [OpenShiftDrRecoveryJobsResponseQueue]
+}
+
+input OpenShiftDrRecoveryJobsResponseInput {
+    queue: [OpenShiftDrRecoveryJobsResponseQueueInput]
+}
+
+#
+# open_shift_dr_recovery_jobs_response_queue.graphql
+#
+type OpenShiftDrRecoveryJobsResponseQueue {
+  # 순번
+  seq: BigInt
+  recovery_job: OpenShiftDrRecoveryJob
+  recovery_job_status: OpenShiftDrRecoveryJobStatus
+}
+
+input OpenShiftDrRecoveryJobsResponseQueueInput {
+    # 순번
+    seq: BigInt
+    recovery_job: OpenShiftDrRecoveryJobInput
+    recovery_job_status: OpenShiftDrRecoveryJobStatusInput
+}
+
+#
+# open_shift_dr_recovery_plan.graphql
+#
+# 재해복구계획
+type OpenShiftDrRecoveryPlan {
+  # 재해복구계획 Resource Name
+  resource_name: String
+  recovery_cluster: OpenShiftCmCluster
+  direction: OpenShiftDrRecoveryPlanDirectionCodeEnum
+  # 재해복구계획 이름
+  name: String
+  # 재해복구계획 설명
+  description: String
+  # 백업데이터로 복구 여부 Flag
+  recovery_from_backup_flag: Boolean
+  # replication info resource 이름
+  replication_info_resource_name: String
+  snapshot_schedules: [ReplicatorSnapshotSchedule]
+  workload_recovery_plans: [OpenShiftDrWorkloadRecoveryPlan]
+  namespace_recovery_plans: [OpenShiftDrNamespaceRecoveryPlan]
+  registry_recovery_plans: [OpenShiftDrRegistryRecoveryPlan]
+  scheduler_recovery_plans: [OpenShiftDrSchedulerRecoveryPlan]
+  runtime_class_recovery_plans: [OpenShiftDrRuntimeClassRecoveryPlan]
+  priority_class_recovery_plans: [OpenShiftDrPriorityClassRecoveryPlan]
+  service_account_recovery_plans: [OpenShiftDrServiceAccountRecoveryPlan]
+  volume_recovery_plans: [OpenShiftDrVolumeRecoveryPlan]
+  volume_snapshot_recovery_plans: [OpenShiftDrVolumeSnapshotRecoveryPlan]
+  service_recovery_plans: [OpenShiftDrServiceRecoveryPlan]
+  finalizer_recovery_plans: [OpenShiftDrFinalizerRecoveryPlan]
+  readiness_gate_condition_recovery_plans: [OpenShiftDrReadinessGateConditionRecoveryPlan]
+  creator: CloudUser
+  # 생성일시
+  created_at: BigInt
+  modifier: CloudUser
+  # 최종 수정일시
+  modified_at: BigInt
+}
+
+input OpenShiftDrRecoveryPlanInput {
+    # 재해복구계획 Resource Name
+    resource_name: String
+    recovery_cluster: OpenShiftCmClusterInput
+    direction: OpenShiftDrRecoveryPlanDirectionCodeEnum
+    # 재해복구계획 이름
+    name: String
+    # 재해복구계획 설명
+    description: String
+    # 백업데이터로 복구 여부 Flag
+    recovery_from_backup_flag: Boolean
+    # replication info resource 이름
+    replication_info_resource_name: String
+    snapshot_schedules: [ReplicatorSnapshotScheduleInput]
+    workload_recovery_plans: [OpenShiftDrWorkloadRecoveryPlanInput]
+    namespace_recovery_plans: [OpenShiftDrNamespaceRecoveryPlanInput]
+    registry_recovery_plans: [OpenShiftDrRegistryRecoveryPlanInput]
+    scheduler_recovery_plans: [OpenShiftDrSchedulerRecoveryPlanInput]
+    runtime_class_recovery_plans: [OpenShiftDrRuntimeClassRecoveryPlanInput]
+    priority_class_recovery_plans: [OpenShiftDrPriorityClassRecoveryPlanInput]
+    service_account_recovery_plans: [OpenShiftDrServiceAccountRecoveryPlanInput]
+    volume_recovery_plans: [OpenShiftDrVolumeRecoveryPlanInput]
+    volume_snapshot_recovery_plans: [OpenShiftDrVolumeSnapshotRecoveryPlanInput]
+    service_recovery_plans: [OpenShiftDrServiceRecoveryPlanInput]
+    finalizer_recovery_plans: [OpenShiftDrFinalizerRecoveryPlanInput]
+    readiness_gate_condition_recovery_plans: [OpenShiftDrReadinessGateConditionRecoveryPlanInput]
+    creator: CloudUserInput
+    # 생성일시
+    created_at: BigInt
+    modifier: CloudUserInput
+    # 최종 수정일시
+    modified_at: BigInt
+}
+
+#
+# open_shift_dr_recovery_plan_direction_code_enum.graphql
+#
+# 복구방향 cdm.dr-openshift.recovery-plan.direction.failover: 소스에서 타겟으로 failover cdm.dr-openshift.recovery-plan.direction.failback: 타겟에서 소스로 failback
+enum OpenShiftDrRecoveryPlanDirectionCodeEnum {
+  CDM_DR_OPENSHIFT_RECOVERY_PLAN_DIRECTION_FAILOVER
+  CDM_DR_OPENSHIFT_RECOVERY_PLAN_DIRECTION_FAILBACK
+}
+
+#
+# open_shift_dr_recovery_plan_request.graphql
+#
+type OpenShiftDrRecoveryPlanRequest {
+  recovery_plan: OpenShiftDrRecoveryPlan
+  # 경고를 무시하고, 복구계획 등록
+  force: Boolean
+}
+
+input OpenShiftDrRecoveryPlanRequestInput {
+    recovery_plan: OpenShiftDrRecoveryPlanInput
+    # 경고를 무시하고, 복구계획 등록
+    force: Boolean
+}
+
+#
+# open_shift_dr_recovery_plan_response.graphql
+#
+type OpenShiftDrRecoveryPlanResponse {
+  recovery_plan: OpenShiftDrRecoveryPlan
+}
+
+input OpenShiftDrRecoveryPlanResponseInput {
+    recovery_plan: OpenShiftDrRecoveryPlanInput
+}
+
+#
+# open_shift_dr_recovery_plan_state_code_enum.graphql
+#
+# 재해복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.state.preparing: 준비중 cdm.disaster-recovery-openshift.recovery-plan.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-plan.state.warning: 문제가 있음
+enum OpenShiftDrRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_STATE_PREPARING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_STATE_WARNING
+}
+
+#
+# open_shift_dr_recovery_plan_status.graphql
+#
+# 재해복구계획 상태
+type OpenShiftDrRecoveryPlanStatus {
+  state_code: OpenShiftDrRecoveryPlanStateCodeEnum
+  # 재해복구계획 상태가 warning 인 사유 목록 > 백업데이터로 복구하는 계획인 경우, 해당 보호그룹에 백업데이터가 없어서 복구할 수 없는 상태도 사유에 포함되어야 함
+  warning_reasons: [String]
+  recovery_cluster_state_code: OpenShiftDrRecoveryClusterStateCodeEnum
+  workload_recovery_plan_statuses: [OpenShiftDrWorkloadRecoveryPlanStatus]
+  namespace_recovery_plan_statuses: [OpenShiftDrNamespaceRecoveryPlanStatus]
+  registry_recovery_plan_statuses: [OpenShiftDrRegistryRecoveryPlanStatus]
+  scheduler_recovery_plan_statuses: [OpenShiftDrSchedulerRecoveryPlanStatus]
+  runtime_class_recovery_plan_statuses: [OpenShiftDrRuntimeClassRecoveryPlanStatus]
+  priority_class_recovery_plan_statuses: [OpenShiftDrPriorityClassRecoveryPlanStatus]
+  service_account_recovery_plan_statuses: [OpenShiftDrServiceAccountRecoveryPlanStatus]
+  volume_recovery_plan_statuses: [OpenShiftDrVolumeRecoveryPlanStatus]
+  volume_snapshot_recovery_plan_statuses: [OpenShiftDrVolumeSnapshotRecoveryPlanStatus]
+  service_recovery_plan_statuses: [OpenShiftDrServiceRecoveryPlanStatus]
+  finalizer_recovery_plan_statuses: [OpenShiftDrFinalizerRecoveryPlanStatus]
+  readiness_gate_condition_recovery_plan_statuses: [OpenShiftDrReadinessGateConditionRecoveryPlanStatus]
+}
+
+input OpenShiftDrRecoveryPlanStatusInput {
+    state_code: OpenShiftDrRecoveryPlanStateCodeEnum
+    # 재해복구계획 상태가 warning 인 사유 목록 > 백업데이터로 복구하는 계획인 경우, 해당 보호그룹에 백업데이터가 없어서 복구할 수 없는 상태도 사유에 포함되어야 함
+    warning_reasons: [String]
+    recovery_cluster_state_code: OpenShiftDrRecoveryClusterStateCodeEnum
+    workload_recovery_plan_statuses: [OpenShiftDrWorkloadRecoveryPlanStatusInput]
+    namespace_recovery_plan_statuses: [OpenShiftDrNamespaceRecoveryPlanStatusInput]
+    registry_recovery_plan_statuses: [OpenShiftDrRegistryRecoveryPlanStatusInput]
+    scheduler_recovery_plan_statuses: [OpenShiftDrSchedulerRecoveryPlanStatusInput]
+    runtime_class_recovery_plan_statuses: [OpenShiftDrRuntimeClassRecoveryPlanStatusInput]
+    priority_class_recovery_plan_statuses: [OpenShiftDrPriorityClassRecoveryPlanStatusInput]
+    service_account_recovery_plan_statuses: [OpenShiftDrServiceAccountRecoveryPlanStatusInput]
+    volume_recovery_plan_statuses: [OpenShiftDrVolumeRecoveryPlanStatusInput]
+    volume_snapshot_recovery_plan_statuses: [OpenShiftDrVolumeSnapshotRecoveryPlanStatusInput]
+    service_recovery_plan_statuses: [OpenShiftDrServiceRecoveryPlanStatusInput]
+    finalizer_recovery_plan_statuses: [OpenShiftDrFinalizerRecoveryPlanStatusInput]
+    readiness_gate_condition_recovery_plan_statuses: [OpenShiftDrReadinessGateConditionRecoveryPlanStatusInput]
+}
+
+#
+# open_shift_dr_recovery_plan_status_response.graphql
+#
+type OpenShiftDrRecoveryPlanStatusResponse {
+  recovery_plan_status: OpenShiftDrRecoveryPlanStatus
+  replication_info_status: ReplicatorReplicationInfoStatus
+}
+
+input OpenShiftDrRecoveryPlanStatusResponseInput {
+    recovery_plan_status: OpenShiftDrRecoveryPlanStatusInput
+    replication_info_status: ReplicatorReplicationInfoStatusInput
+}
+
+#
+# open_shift_dr_recovery_plan_warning_status_response.graphql
+#
+type OpenShiftDrRecoveryPlanWarningStatusResponse {
+  recovery_plan_status: OpenShiftDrRecoveryPlanStatus
+}
+
+input OpenShiftDrRecoveryPlanWarningStatusResponseInput {
+    recovery_plan_status: OpenShiftDrRecoveryPlanStatusInput
+}
+
+#
+# open_shift_dr_recovery_plans_response.graphql
+#
+type OpenShiftDrRecoveryPlansResponse {
+  recovery_plans: [OpenShiftDrRecoveryPlan]
+}
+
+input OpenShiftDrRecoveryPlansResponseInput {
+    recovery_plans: [OpenShiftDrRecoveryPlanInput]
+}
+
+#
+# open_shift_dr_recovery_point_type_code_enum.graphql
+#
+# 복구 데이터 시점 유형 cdm.disaster-recovery-openshift.recovery-job.recovery-point-type.latest: 최신 데이터로 복구 cdm.disaster-recovery-openshift.recovery-job.recovery-point-type.latest_snapshot: 최신 스냅샷(백업)으로 복구 cdm.disaster-recovery-openshift.recovery-job.recovery-point-type.snapshot: 특정 스냅샷(백업)으로 복구
+enum OpenShiftDrRecoveryPointTypeCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_RECOVERY_POINT_TYPE_LATEST
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_RECOVERY_POINT_TYPE_LATEST_SNAPSHOT
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_RECOVERY_POINT_TYPE_SNAPSHOT
+}
+
+#
+# open_shift_dr_recovery_result.graphql
+#
+# 재해복구결과
+type OpenShiftDrRecoveryResult {
+  # 재해복구결과 Resource name
+  resource_name: String
+  # 보호대상 클러스터 이름
+  protection_cluster_name: String
+  # 보호그룹 이름
+  protection_group_name: String
+  # 복구대상 클러스터 이름
+  recovery_cluster_name: String
+  # 복구계획 이름
+  recovery_plan_name: String
+  recovery_type_code: OpenShiftDrRecoveryTypeCodeEnum
+  # 백업데이터로 복구 여부
+  recovery_from_backup_flag: Boolean
+  recovery_point_type_code: OpenShiftDrRecoveryPointTypeCodeEnum
+  # 복구 데이터 시점
+  recovery_point: BigInt
+  # 복구 시작일시
+  started_at: BigInt
+  # 복구 종료일시
+  finished_at: BigInt
+  # 복구 소요시간
+  elapsed_time: BigInt
+  result_code: OpenShiftDrRecoveryResultCodeEnum
+  operator: CloudUser
+  approver: CloudUser
+}
+
+input OpenShiftDrRecoveryResultInput {
+    # 재해복구결과 Resource name
+    resource_name: String
+    # 보호대상 클러스터 이름
+    protection_cluster_name: String
+    # 보호그룹 이름
+    protection_group_name: String
+    # 복구대상 클러스터 이름
+    recovery_cluster_name: String
+    # 복구계획 이름
+    recovery_plan_name: String
+    recovery_type_code: OpenShiftDrRecoveryTypeCodeEnum
+    # 백업데이터로 복구 여부
+    recovery_from_backup_flag: Boolean
+    recovery_point_type_code: OpenShiftDrRecoveryPointTypeCodeEnum
+    # 복구 데이터 시점
+    recovery_point: BigInt
+    # 복구 시작일시
+    started_at: BigInt
+    # 복구 종료일시
+    finished_at: BigInt
+    # 복구 소요시간
+    elapsed_time: BigInt
+    result_code: OpenShiftDrRecoveryResultCodeEnum
+    operator: CloudUserInput
+    approver: CloudUserInput
+}
+
+#
+# open_shift_dr_recovery_result_code_enum.graphql
+#
+# 복구결과 cdm.disaster-recovery-openshift.recovery-result.success: 성공 cdm.disaster-recovery-openshift.recovery-result.failed: 실패 cdm.disaster-recovery-openshift.recovery-result.canceled: 취소
+enum OpenShiftDrRecoveryResultCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_RESULT_SUCCESS
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_RESULT_FAILED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_RESULT_CANCELED
+}
+
+#
+# open_shift_dr_recovery_result_response.graphql
+#
+type OpenShiftDrRecoveryResultResponse {
+  recovery_result: OpenShiftDrRecoveryResult
+}
+
+input OpenShiftDrRecoveryResultResponseInput {
+    recovery_result: OpenShiftDrRecoveryResultInput
+}
+
+#
+# open_shift_dr_recovery_results_response.graphql
+#
+type OpenShiftDrRecoveryResultsResponse {
+  recovery_results: [OpenShiftDrRecoveryResult]
+}
+
+input OpenShiftDrRecoveryResultsResponseInput {
+    recovery_results: [OpenShiftDrRecoveryResultInput]
+}
+
+#
+# open_shift_dr_recovery_type_code_enum.graphql
+#
+# 복구작업 유형 cdm.disaster-recovery-openshift.recovery-job.recovery-type.test: 모의훈련(테스트) 작업 cdm.disaster-recovery-openshift.recovery-job.recovery-type.recovery: 재해복구 작업
+enum OpenShiftDrRecoveryTypeCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_RECOVERY_TYPE_TEST
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_JOB_RECOVERY_TYPE_RECOVERY
+}
+
+#
+# open_shift_dr_registry_fallback_policy_enum.graphql
+#
+# Registry 복구 계획에 문제가 있을 때 처리 방법 cdm.disaster-recovery-openshift.recovery-plan.registry-recovery-plan.fallback_policy.ignore-warning: 계획에 문제가 있어도 무시하고 연관 Workload 들을 복구 > 복구대상 클러스터에 Workload 들을 복구하지만 Image 를 Push 하지 않아 동작하지 않음 (ImagePullBackOff). > 사용자가 수동으로 Registry 에 Image 를 push 해야 한다 cdm.disaster-recovery-openshift.recovery-plan.registry-recovery-plan.fallback_policy.ignore-recovery: 연관 Workload 들을 복구하지 않음 cdm.disaster-recovery-openshift.recovery-plan.registry-recovery-plan.fallback_policy.using-default: (mirror-secret 이 아닌 경우) 보호대상 클러스터의 Secret 만 복제하고, 연관 Workload 들을 복구 > 복구대상 클러스터에 Workload 들을 복구하지만 Source Registry 에 접근할 수 없는 경우 동작하지 않음 (ImagePullBackOff)
+enum OpenShiftDrRegistryFallbackPolicyEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_REGISTRY_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_WARNING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_REGISTRY_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_RECOVERY
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_REGISTRY_RECOVERY_PLAN_FALLBACK_POLICY_USING_DEFAULT
+}
+
+#
+# open_shift_dr_registry_recovery_plan.graphql
+#
+# Image Registry 복구계획
+type OpenShiftDrRegistryRecoveryPlan {
+  protection_cluster_registry: OpenShiftCmRegistry
+  recovery_type_code: OpenShiftDrRegistryRecoveryTypeCodeEnum
+  recovery_cluster_registry: OpenShiftCmRegistry
+  fallback_policy: OpenShiftDrRegistryFallbackPolicyEnum
+}
+
+input OpenShiftDrRegistryRecoveryPlanInput {
+    protection_cluster_registry: OpenShiftCmRegistryInput
+    recovery_type_code: OpenShiftDrRegistryRecoveryTypeCodeEnum
+    recovery_cluster_registry: OpenShiftCmRegistryInput
+    fallback_policy: OpenShiftDrRegistryFallbackPolicyEnum
+}
+
+#
+# open_shift_dr_registry_recovery_plan_state_code_enum.graphql
+#
+# Registry 복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.registry-recovery-plan.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-plan.registry-recovery-plan.state.not-set-registry: (mirror-image 인 경우만) 복구대상 클러스터에서 사용할 Registry 가 설정되어있지 않음 cdm.disaster-recovery-openshift.recovery-plan.registry-recovery-plan.state.not-found-registry: (mirror-image 인 경우만) 복구대상 클러스터에서 사용하도록 설정한 Registry 가 복구대상 클러스터에 존재하지 않음 cdm.disaster-recovery-openshift.recovery-plan.registry-recovery-plan.state.not-set-registry-push-credential: (mirror-image 인 경우만) 복구대상 클러스터에서 사용하도록 설정한 Registry 에 push 하기 위한 Credential 정보가 없음
+enum OpenShiftDrRegistryRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_REGISTRY_RECOVERY_PLAN_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_REGISTRY_RECOVERY_PLAN_STATE_NOT_SET_REGISTRY
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_REGISTRY_RECOVERY_PLAN_STATE_NOT_FOUND_REGISTRY
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_REGISTRY_RECOVERY_PLAN_STATE_NOT_SET_REGISTRY_PUSH_CREDENTIAL
+}
+
+#
+# open_shift_dr_registry_recovery_plan_status.graphql
+#
+# Image Registry 복구계획 상태
+type OpenShiftDrRegistryRecoveryPlanStatus {
+  # Registry ID
+  id: BigInt
+  state_code: OpenShiftDrRegistryRecoveryPlanStateCodeEnum
+}
+
+input OpenShiftDrRegistryRecoveryPlanStatusInput {
+    # Registry ID
+    id: BigInt
+    state_code: OpenShiftDrRegistryRecoveryPlanStateCodeEnum
+}
+
+#
+# open_shift_dr_registry_recovery_type_code_enum.graphql
+#
+# Registry 복구 유형 cdm.disaster-recovery-openshift.recovery-plan.registry-recovery-plan.recovery-type.mirror-secret: 복구대상 클러스터에서 Source Registry 에 접근이 가능한 경우, 보호대상 클러스터의 Secret 만 복제하는 방식 cdm.disaster-recovery-openshift.recovery-plan.registry-recovery-plan.recovery-type.mirror-image: Source Registry 의 Image 를 복구대상 클러스터에서 접근이 가능하고 권한이 충분한 Target Registry 에 복제하는 방식
+enum OpenShiftDrRegistryRecoveryTypeCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_REGISTRY_RECOVERY_PLAN_RECOVERY_TYPE_MIRROR_SECRET
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_REGISTRY_RECOVERY_PLAN_RECOVERY_TYPE_MIRROR_IMAGE
+}
+
+#
+# open_shift_dr_resource_recovery_info.graphql
+#
+# Resource 복구정보
+type OpenShiftDrResourceRecoveryInfo {
+  protection_cluster_resource: OpenShiftCmResource
+  recovery_cluster_resource: OpenShiftCmResource
+  # 리소스의 선행 리소스 ID 목록
+  dependencies: [BigInt]
+  # 리소스의 후행 리소스 ID 목록
+  dependents: [BigInt]
+}
+
+input OpenShiftDrResourceRecoveryInfoInput {
+    protection_cluster_resource: OpenShiftCmResourceInput
+    recovery_cluster_resource: OpenShiftCmResourceInput
+    # 리소스의 선행 리소스 ID 목록
+    dependencies: [BigInt]
+    # 리소스의 후행 리소스 ID 목록
+    dependents: [BigInt]
+}
+
+#
+# open_shift_dr_runtime_class_fallback_policy_enum.graphql
+#
+# RuntimeClass 복구 계획에 문제가 있을 때 처리 방법 cdm.disaster-recovery-openshift.recovery-plan.runtime-class-recovery-plan.fallback_policy.ignore-warning: 계획에 문제가 있어도 무시하고 연관 Workload 들을 복구 > 복구대상 클러스터에 Workload 들을 복구하지만 Pod 가 생성되지 않을 수 있음 cdm.disaster-recovery-openshift.recovery-plan.runtime-class-recovery-plan.fallback_policy.ignore-recovery: 연관 Workload 들을 복구하지 않음 cdm.disaster-recovery-openshift.recovery-plan.runtime-class-recovery-plan.fallback_policy.using-default: (unused 가 아닌 경우) 복구대상 클러스터의 default RuntimeClass 를 사용하여 연관 Workload 들을 복구 > 복구대상 클러스터에 Workload 들을 복구하지만 Container Runtime 이 다를 수 있음
+enum OpenShiftDrRuntimeClassFallbackPolicyEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_RUNTIME_CLASS_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_WARNING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_RUNTIME_CLASS_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_RECOVERY
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_RUNTIME_CLASS_RECOVERY_PLAN_FALLBACK_POLICY_USING_DEFAULT
+}
+
+#
+# open_shift_dr_runtime_class_recovery_plan.graphql
+#
+# RuntimeClass 복구계획
+type OpenShiftDrRuntimeClassRecoveryPlan {
+  protection_cluster_runtime_class: OpenShiftCmRuntimeClass
+  recovery_type_code: OpenShiftDrRuntimeClassRecoveryTypeCodeEnum
+  recovery_cluster_runtime_class: OpenShiftCmRuntimeClass
+  fallback_policy: OpenShiftDrRuntimeClassFallbackPolicyEnum
+}
+
+input OpenShiftDrRuntimeClassRecoveryPlanInput {
+    protection_cluster_runtime_class: OpenShiftCmRuntimeClassInput
+    recovery_type_code: OpenShiftDrRuntimeClassRecoveryTypeCodeEnum
+    recovery_cluster_runtime_class: OpenShiftCmRuntimeClassInput
+    fallback_policy: OpenShiftDrRuntimeClassFallbackPolicyEnum
+}
+
+#
+# open_shift_dr_runtime_class_recovery_plan_state_code_enum.graphql
+#
+# RuntimeClass 복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.runtime-class-recovery-plan.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-plan.runtime-class-recovery-plan.state.not-set-runtime-class: (mapping 인 경우만) 복구대상 클러스터에서 사용할 RuntimeClass 가 설정되어있지 않음 cdm.disaster-recovery-openshift.recovery-plan.runtime-class-recovery-plan.state.not-found-runtime-class: (mapping 인 경우만) 복구대상 클러스터에서 사용하도록 설정한 RuntimeClass 가 복구대상 클러스터에 존재하지 않음
+enum OpenShiftDrRuntimeClassRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_RUNTIME_CLASS_RECOVERY_PLAN_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_RUNTIME_CLASS_RECOVERY_PLAN_STATE_NOT_SET_RUNTIME_CLASS
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_RUNTIME_CLASS_RECOVERY_PLAN_STATE_NOT_FOUND_RUNTIME_CLASS
+}
+
+#
+# open_shift_dr_runtime_class_recovery_plan_status.graphql
+#
+# RuntimeClass 복구계획 상태
+type OpenShiftDrRuntimeClassRecoveryPlanStatus {
+  # RuntimeClass ID
+  id: BigInt
+  state_code: OpenShiftDrRuntimeClassRecoveryPlanStateCodeEnum
+}
+
+input OpenShiftDrRuntimeClassRecoveryPlanStatusInput {
+    # RuntimeClass ID
+    id: BigInt
+    state_code: OpenShiftDrRuntimeClassRecoveryPlanStateCodeEnum
+}
+
+#
+# open_shift_dr_runtime_class_recovery_type_code_enum.graphql
+#
+# RuntimeClass 복구 유형 cdm.disaster-recovery-openshift.recovery-plan.runtime-class-recovery-plan.recovery-type.unused: 복구대상 클러스터의 default RuntimeClass 를 사용하는 방식 cdm.disaster-recovery-openshift.recovery-plan.runtime-class-recovery-plan.recovery-type.mapping: 복구대상 클러스터의 특정 RuntimeClass 를 사용하는 방식
+enum OpenShiftDrRuntimeClassRecoveryTypeCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_RUNTIME_CLASS_RECOVERY_PLAN_RECOVERY_TYPE_UNUSED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_RUNTIME_CLASS_RECOVERY_PLAN_RECOVERY_TYPE_MAPPING
+}
+
+#
+# open_shift_dr_scheduler_fallback_policy_enum.graphql
+#
+# Scheduler 복구 계획에 문제가 있을 때 처리 방법 cdm.disaster-recovery-openshift.recovery-plan.scheduler-recovery-plan.fallback_policy.ignore-warning: 계획에 문제가 있어도 무시하고 연관 Workload 들을 복구 > 복구대상 클러스터에 연관 Workload 들을 복구하지만 Pod 가 스케쥴링되지 않을 수 있음 cdm.disaster-recovery-openshift.recovery-plan.scheduler-recovery-plan.fallback_policy.ignore-recovery: 연관 Workload 들을 복구하지 않음 cdm.disaster-recovery-openshift.recovery-plan.scheduler-recovery-plan.fallback_policy.using-default: (unused 가 아닌 경우) 복구대상 클러스터의 default scheduler 를 사용하여 연관 Workload 들을 복구 > 복구대상 클러스터에 Workload 들을 복구하지만 Pod 스케쥴링 규칙이 다를 수 있음
+enum OpenShiftDrSchedulerFallbackPolicyEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SCHEDULER_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_WARNING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SCHEDULER_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_RECOVERY
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SCHEDULER_RECOVERY_PLAN_FALLBACK_POLICY_USING_DEFAULT
+}
+
+#
+# open_shift_dr_scheduler_recovery_plan.graphql
+#
+# Scheduler 복구계획
+type OpenShiftDrSchedulerRecoveryPlan {
+  protection_cluster_scheduler: OpenShiftCmScheduler
+  recovery_type_code: OpenShiftDrSchedulerRecoveryTypeCodeEnum
+  recovery_cluster_scheduler: OpenShiftCmScheduler
+  fallback_policy: OpenShiftDrSchedulerFallbackPolicyEnum
+}
+
+input OpenShiftDrSchedulerRecoveryPlanInput {
+    protection_cluster_scheduler: OpenShiftCmSchedulerInput
+    recovery_type_code: OpenShiftDrSchedulerRecoveryTypeCodeEnum
+    recovery_cluster_scheduler: OpenShiftCmSchedulerInput
+    fallback_policy: OpenShiftDrSchedulerFallbackPolicyEnum
+}
+
+#
+# open_shift_dr_scheduler_recovery_plan_state_code_enum.graphql
+#
+# Scheduler 복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.scheduler-recovery-plan.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-plan.scheduler-recovery-plan.state.not-set-scheduler: (mapping 인 경우만) 복구대상 클러스터에서 적용할 Scheduler 가 설정되어있지 않음 cdm.disaster-recovery-openshift.recovery-plan.scheduler-recovery-plan.state.not-found-scheduler: (mapping 인 경우만) 복구대상 클러스터에서 적용하도록 설정한 Scheduler 가 복구대상 클러스터에 존재하지 않음 ~~cdm.disaster-recovery-openshift.recovery-plan.scheduler-recovery-plan.state.duplicated-scheduler-name: (mirror 인 경우만) 복구대상 클러스터에 동일한 schedulerName 의 scheduler 가 존재함~~ > mirror 방식은 v1.0.0 에서 지원하지 않음
+enum OpenShiftDrSchedulerRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SCHEDULER_RECOVERY_PLAN_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SCHEDULER_RECOVERY_PLAN_STATE_NOT_SET_SCHEDULER
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SCHEDULER_RECOVERY_PLAN_STATE_NOT_FOUND_SCHEDULER
+}
+
+#
+# open_shift_dr_scheduler_recovery_plan_status.graphql
+#
+# Scheduler 복구계획 상태
+type OpenShiftDrSchedulerRecoveryPlanStatus {
+  # Scheduler ID
+  id: BigInt
+  state_code: OpenShiftDrSchedulerRecoveryPlanStateCodeEnum
+}
+
+input OpenShiftDrSchedulerRecoveryPlanStatusInput {
+    # Scheduler ID
+    id: BigInt
+    state_code: OpenShiftDrSchedulerRecoveryPlanStateCodeEnum
+}
+
+#
+# open_shift_dr_scheduler_recovery_type_code_enum.graphql
+#
+# Scheduler 복구 유형 cdm.disaster-recovery-openshift.recovery-plan.scheduler-recovery-plan.recovery-type.unused: 보호대상 클러스터에서 Workload 에 적용한 Scheduler 를 복구대상 클러스터에서는 사용하지 않음. 복구대상 클러스터의 default scheduler 를 사용 cdm.disaster-recovery-openshift.recovery-plan.scheduler-recovery-plan.recovery-type.mapping: 복구대상 클러스터의 특정 Scheduler 를 사용하는 방식 ~~cdm.disaster-recovery-openshift.recovery-plan.scheduler-recovery-plan.recovery-type.mirror: 보호대상 클러스터에서 Workload 에 적용한 Scheduler 를 복구대상 클러스터에 복제하여 적용하는 방식~~ > mirror 방식은 v1.0.0 에서 지원하지 않음
+enum OpenShiftDrSchedulerRecoveryTypeCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SCHEDULER_RECOVERY_PLAN_RECOVERY_TYPE_UNUSED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SCHEDULER_RECOVERY_PLAN_RECOVERY_TYPE_MAPPING
+}
+
+#
+# open_shift_dr_service_account_fallback_policy_enum.graphql
+#
+# ServiceAccount 복구 계획에 문제가 있을 때 처리 방법 cdm.disaster-recovery-openshift.recovery-plan.service-account-recovery-plan.fallback_policy.ignore-warning: 계획에 문제가 있어도 무시하고 연관 Workload 들을 복구 > 복구대상 클러스터에 Workload 들을 복구하지만 Pod 가 생성되지 않을 수 있음 cdm.disaster-recovery-openshift.recovery-plan.service-account-recovery-plan.fallback_policy.ignore-recovery: 연관 Workload 들을 복구하지 않음 ~~cdm.disaster-recovery-openshift.recovery-plan.service-account-recovery-plan.fallback_policy.using-default: (unused 가 아닌 경우) 복구대상 클러스터의 default ServiceAccount 를 사용하여 연관 Workload 들을 복구~~ > 복구대상 클러스터에 Workload 들을 복구하지만 Service Account 가 다를 수 있음
+enum OpenShiftDrServiceAccountFallbackPolicyEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SERVICE_ACCOUNT_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_WARNING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SERVICE_ACCOUNT_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_RECOVERY
+}
+
+#
+# open_shift_dr_service_account_recovery_plan.graphql
+#
+# ServiceAccount 복구계획
+type OpenShiftDrServiceAccountRecoveryPlan {
+  protection_cluster_service_account: OpenShiftCmServiceAccount
+  recovery_type_code: OpenShiftDrServiceAccountRecoveryTypeCodeEnum
+  recovery_cluster_service_account: OpenShiftCmServiceAccount
+  fallback_policy: OpenShiftDrServiceAccountFallbackPolicyEnum
+}
+
+input OpenShiftDrServiceAccountRecoveryPlanInput {
+    protection_cluster_service_account: OpenShiftCmServiceAccountInput
+    recovery_type_code: OpenShiftDrServiceAccountRecoveryTypeCodeEnum
+    recovery_cluster_service_account: OpenShiftCmServiceAccountInput
+    fallback_policy: OpenShiftDrServiceAccountFallbackPolicyEnum
+}
+
+#
+# open_shift_dr_service_account_recovery_plan_state_code_enum.graphql
+#
+# ServiceAccount 복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.service-account-recovery-plan.state.normal: 정상 ~~cdm.disaster-recovery-openshift.recovery-plan.service-account-recovery-plan.state.not-set-service-account: (mapping 인 경우만) 복구대상 클러스터에서 사용할 ServiceAccount 가 설정되어있지 않음~~ ~~cdm.disaster-recovery-openshift.recovery-plan.service-account-recovery-plan.state.not-found-service-account: (mapping 인 경우만) 복구대상 클러스터에서 사용하도록 설정한 ServiceAccount 가 복구대상 클러스터에 존재하지 않음~~ > mapping 방식은 이미 존재하는 네임스페이스에 복구할 수 있을 때 추가한다.
+enum OpenShiftDrServiceAccountRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SERVICE_ACCOUNT_RECOVERY_PLAN_STATE_NORMAL
+}
+
+#
+# open_shift_dr_service_account_recovery_plan_status.graphql
+#
+# ServiceAccount 복구계획 상태
+type OpenShiftDrServiceAccountRecoveryPlanStatus {
+  # ServiceAccount ID
+  id: BigInt
+  state_code: OpenShiftDrServiceAccountRecoveryPlanStateCodeEnum
+}
+
+input OpenShiftDrServiceAccountRecoveryPlanStatusInput {
+    # ServiceAccount ID
+    id: BigInt
+    state_code: OpenShiftDrServiceAccountRecoveryPlanStateCodeEnum
+}
+
+#
+# open_shift_dr_service_account_recovery_type_code_enum.graphql
+#
+# ServiceAccount 복구 유형 cdm.disaster-recovery-openshift.recovery-plan.service-account-recovery-plan.recovery-type.unused: 보호대상 클러스터 Workload 의 ServiceAccount 를 복구대상 클러스터에서는 사용하지 않음. 복구대상 클러스터의 default ServiceAccount 를 사용 ~~cdm.disaster-recovery-openshift.recovery-plan.service-account-recovery-plan.recovery-type.mirror: 보호대상 클러스터 Workload 의 ServiceAccount 를 복구대상 클러스터에 복제하여 사용하는 방식~~ > mirror 방식은 v1.0.0 에서 지원하지 않음 ~~cdm.disaster-recovery-openshift.recovery-plan.service-account-recovery-plan.recovery-type.mapping: 복구대상 클러스터의 특정 ServiceAccount 를 사용하는 방식~~ > mapping 방식은 이미 존재하는 네임스페이스에 복구할 수 있을 때 추가한다.
+enum OpenShiftDrServiceAccountRecoveryTypeCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SERVICE_ACCOUNT_RECOVERY_PLAN_RECOVERY_TYPE_UNUSED
+}
+
+#
+# open_shift_dr_service_fallback_policy_enum.graphql
+#
+# Service 복구 계획에 문제가 있을 때 처리 방법 cdm.disaster-recovery-openshift.recovery-plan.service-recovery-plan.fallback_policy.ignore-warning: 계획에 문제가 있어도 무시하고 연관 Workload 들을 복구 > 복구대상 클러스터에 Workload 들의 복구를 시도하지만 Service 가 생성되지 않을 수 있음 cdm.disaster-recovery-openshift.recovery-plan.service-recovery-plan.fallback_policy.ignore-recovery: 연관 Workload 들을 복구하지 않음
+enum OpenShiftDrServiceFallbackPolicyEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SERVICE_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_WARNING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SERVICE_RECOVERY_PLAN_FALLBACK_POLICY_IGNORE_RECOVERY
+}
+
+#
+# open_shift_dr_service_recovery_plan.graphql
+#
+# Service 복구계획
+type OpenShiftDrServiceRecoveryPlan {
+  protection_cluster_service: OpenShiftCmService
+  recovery_type_code: OpenShiftDrServiceRecoveryTypeCodeEnum
+  # (update 인 경우) 복구대상 클러스터에서 사용할 ClusterIP
+  cluster_ip: String
+  # (update 인 경우) 복구대상 클러스터에서 사용할 LoadBalancerIP
+  load_balancer_ip: String
+  # (update 인 경우) 복구대상 클러스터에서 사용할 LoadBalancerSourceRanges
+  load_balancer_source_ranges: [String]
+  # (update 인 경우) 복구대상 클러스터에서 사용할 LoadBalancerClass
+  load_balancer_class: String
+  # (update 인 경우) 복구대상 클러스터에서 사용할 ExternalName
+  external_name: String
+  fallback_policy: OpenShiftDrServiceFallbackPolicyEnum
+}
+
+input OpenShiftDrServiceRecoveryPlanInput {
+    protection_cluster_service: OpenShiftCmServiceInput
+    recovery_type_code: OpenShiftDrServiceRecoveryTypeCodeEnum
+    # (update 인 경우) 복구대상 클러스터에서 사용할 ClusterIP
+    cluster_ip: String
+    # (update 인 경우) 복구대상 클러스터에서 사용할 LoadBalancerIP
+    load_balancer_ip: String
+    # (update 인 경우) 복구대상 클러스터에서 사용할 LoadBalancerSourceRanges
+    load_balancer_source_ranges: [String]
+    # (update 인 경우) 복구대상 클러스터에서 사용할 LoadBalancerClass
+    load_balancer_class: String
+    # (update 인 경우) 복구대상 클러스터에서 사용할 ExternalName
+    external_name: String
+    fallback_policy: OpenShiftDrServiceFallbackPolicyEnum
+}
+
+#
+# open_shift_dr_service_recovery_plan_state_code_enum.graphql
+#
+# Service 복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.service-recovery-plan.state.normal: 정상
+enum OpenShiftDrServiceRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SERVICE_RECOVERY_PLAN_STATE_NORMAL
+}
+
+#
+# open_shift_dr_service_recovery_plan_status.graphql
+#
+# Service 복구계획 상태
+type OpenShiftDrServiceRecoveryPlanStatus {
+  # Service ID
+  id: BigInt
+  state_code: OpenShiftDrServiceRecoveryPlanStateCodeEnum
+}
+
+input OpenShiftDrServiceRecoveryPlanStatusInput {
+    # Service ID
+    id: BigInt
+    state_code: OpenShiftDrServiceRecoveryPlanStateCodeEnum
+}
+
+#
+# open_shift_dr_service_recovery_type_code_enum.graphql
+#
+# Service 복구 유형 cdm.disaster-recovery-openshift.recovery-plan.service-recovery-plan.recovery-type.no-action: 보호대상 클러스터의 Service 를 복구대상 클러스터에서도 사용 cdm.disaster-recovery-openshift.recovery-plan.service-recovery-plan.recovery-type.update: 복구대상 클러스터에 복구할 Service 의 속성을 사용자가 설정
+enum OpenShiftDrServiceRecoveryTypeCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SERVICE_RECOVERY_PLAN_RECOVERY_TYPE_NO_ACTION
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_SERVICE_RECOVERY_PLAN_RECOVERY_TYPE_UPDATE
+}
+
+#
+# open_shift_dr_volume_recovery_info.graphql
+#
+# Volume 복구정보
+type OpenShiftDrVolumeRecoveryInfo {
+  protection_cluster_volume: OpenShiftCmVolume
+  recovery_cluster_storage_class: OpenShiftCmStorageClass
+  recovery_cluster_volume_snapshot_class: OpenShiftCmVolumeSnapshotClass
+}
+
+input OpenShiftDrVolumeRecoveryInfoInput {
+    protection_cluster_volume: OpenShiftCmVolumeInput
+    recovery_cluster_storage_class: OpenShiftCmStorageClassInput
+    recovery_cluster_volume_snapshot_class: OpenShiftCmVolumeSnapshotClassInput
+}
+
+#
+# open_shift_dr_volume_recovery_plan.graphql
+#
+# Volume 복구계획
+type OpenShiftDrVolumeRecoveryPlan {
+  protection_cluster_volume: OpenShiftCmVolume
+  recovery_cluster_storage_class: OpenShiftCmStorageClass
+  recovery_cluster_volume_snapshot_class: OpenShiftCmVolumeSnapshotClass
+}
+
+input OpenShiftDrVolumeRecoveryPlanInput {
+    protection_cluster_volume: OpenShiftCmVolumeInput
+    recovery_cluster_storage_class: OpenShiftCmStorageClassInput
+    recovery_cluster_volume_snapshot_class: OpenShiftCmVolumeSnapshotClassInput
+}
+
+#
+# open_shift_dr_volume_recovery_plan_state_code_enum.graphql
+#
+# Volume 복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.volume-recovery-plan.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-plan.volume-recovery-plan.state.not-set-storage-class: Volume 을 복구할 복구대상 클러스터의 StorageClass 가 설정되어있지 않음 cdm.disaster-recovery-openshift.recovery-plan.volume-recovery-plan.state.not-found-storage-class: Volume 을 복구하도록 설정한 복구대상 클러스터의 StorageClass 가 복구대상 클러스터에 존재하지 않음 cdm.disaster-recovery-openshift.recovery-plan.volume-recovery-plan.state.not-set-snapshot-class: Volume 의 스냅샷을 생성할 복구대상 클러스터의 VolumeSnapshotClass 가 설정되어있지 않음 cdm.disaster-recovery-openshift.recovery-plan.volume-recovery-plan.state.not-found-snapshot-class: Volume 의 스냅샷을 생성하도록 설정한 복구대상 클러스터의 StorageClass 가 복구대상 클러스터에 존재하지 않음
+enum OpenShiftDrVolumeRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_VOLUME_RECOVERY_PLAN_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_VOLUME_RECOVERY_PLAN_STATE_NOT_SET_STORAGE_CLASS
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_VOLUME_RECOVERY_PLAN_STATE_NOT_FOUND_STORAGE_CLASS
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_VOLUME_RECOVERY_PLAN_STATE_NOT_SET_SNAPSHOT_CLASS
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_VOLUME_RECOVERY_PLAN_STATE_NOT_FOUND_SNAPSHOT_CLASS
+}
+
+#
+# open_shift_dr_volume_recovery_plan_status.graphql
+#
+# Volume 복구계획 상태
+type OpenShiftDrVolumeRecoveryPlanStatus {
+  # Volume ID
+  id: BigInt
+  state_code: OpenShiftDrVolumeRecoveryPlanStateCodeEnum
+}
+
+input OpenShiftDrVolumeRecoveryPlanStatusInput {
+    # Volume ID
+    id: BigInt
+    state_code: OpenShiftDrVolumeRecoveryPlanStateCodeEnum
+}
+
+#
+# open_shift_dr_volume_snapshot_recovery_info.graphql
+#
+# VolumeSnapshot 복구정보
+type OpenShiftDrVolumeSnapshotRecoveryInfo {
+  protection_cluster_volume_snapshot: OpenShiftCmVolumeSnapshot
+  recovery_cluster_storage_class: OpenShiftCmStorageClass
+  recovery_cluster_volume_snapshot_class: OpenShiftCmVolumeSnapshotClass
+}
+
+input OpenShiftDrVolumeSnapshotRecoveryInfoInput {
+    protection_cluster_volume_snapshot: OpenShiftCmVolumeSnapshotInput
+    recovery_cluster_storage_class: OpenShiftCmStorageClassInput
+    recovery_cluster_volume_snapshot_class: OpenShiftCmVolumeSnapshotClassInput
+}
+
+#
+# open_shift_dr_volume_snapshot_recovery_plan.graphql
+#
+# VolumeSnapshot 복구계획
+type OpenShiftDrVolumeSnapshotRecoveryPlan {
+  protection_cluster_volume_snapshot: OpenShiftCmVolumeSnapshot
+  recovery_cluster_volume_snapshot_class: OpenShiftCmVolumeSnapshotClass
+  recovery_cluster_storage_class: OpenShiftCmStorageClass
+}
+
+input OpenShiftDrVolumeSnapshotRecoveryPlanInput {
+    protection_cluster_volume_snapshot: OpenShiftCmVolumeSnapshotInput
+    recovery_cluster_volume_snapshot_class: OpenShiftCmVolumeSnapshotClassInput
+    recovery_cluster_storage_class: OpenShiftCmStorageClassInput
+}
+
+#
+# open_shift_dr_volume_snapshot_recovery_plan_state_code_enum.graphql
+#
+# VolumeSnapshot 복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.volume-snapshot-recovery-plan.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-plan.volume-snapshot-recovery-plan.state.not-set-snapshot-class: VolumeSnapshot 을 생성할 복구대상 클러스터의 VolumeSnapshotClass 가 설정되어있지 않음 cdm.disaster-recovery-openshift.recovery-plan.volume-snapshot-recovery-plan.state.not-found-snapshot-class: VolumeSnapshot 을 생성하도록 설정한 복구대상 클러스터의 VolumeSnapshotClass 가 복구대상 클러스터에 존재하지 않음 cdm.disaster-recovery-openshift.recovery-plan.volume-snapshot-recovery-plan.state.not-set-storage-class: VolumeSnapshot 을 복구할 복구대상 클러스터의 StorageClass 가 설정되어있지 않음 cdm.disaster-recovery-openshift.recovery-plan.volume-snapshot-recovery-plan.state.not-found-storage-class: VolumeSnapshot 을 복구하도록 설정한 복구대상 클러스터의 StorageClass 가 복구대상 클러스터에 존재하지 않음
+enum OpenShiftDrVolumeSnapshotRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_VOLUME_SNAPSHOT_RECOVERY_PLAN_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_VOLUME_SNAPSHOT_RECOVERY_PLAN_STATE_NOT_SET_SNAPSHOT_CLASS
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_VOLUME_SNAPSHOT_RECOVERY_PLAN_STATE_NOT_FOUND_SNAPSHOT_CLASS
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_VOLUME_SNAPSHOT_RECOVERY_PLAN_STATE_NOT_SET_STORAGE_CLASS
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_VOLUME_SNAPSHOT_RECOVERY_PLAN_STATE_NOT_FOUND_STORAGE_CLASS
+}
+
+#
+# open_shift_dr_volume_snapshot_recovery_plan_status.graphql
+#
+# VolumeSnapshot 복구계획 상태
+type OpenShiftDrVolumeSnapshotRecoveryPlanStatus {
+  # VolumeSnapshot ID
+  id: BigInt
+  state_code: OpenShiftDrVolumeSnapshotRecoveryPlanStateCodeEnum
+}
+
+input OpenShiftDrVolumeSnapshotRecoveryPlanStatusInput {
+    # VolumeSnapshot ID
+    id: BigInt
+    state_code: OpenShiftDrVolumeSnapshotRecoveryPlanStateCodeEnum
+}
+
+#
+# open_shift_dr_workload_dns_config_recovery_type_code_enum.graphql
+#
+# dnsConfig 의 복구 유형 cdm.disaster-recovery-openshift.recovery-plan.workload-recovery-plan.dns-config-recovery-type.unused: 보호대상 클러스터에서 Workload 에 적용한 dnsConfig 를 복구대상 클러스터에서는 사용하지 않음 cdm.disaster-recovery-openshift.recovery-plan.workload-recovery-plan.dns-config-recovery-type.no-action: 보호대상 클러스터에서 Workload 에 적용한 dnsConfig 를 복구대상 클러스터에서도 사용 cdm.disaster-recovery-openshift.recovery-plan.workload-recovery-plan.dns-config-recovery-type.update: 보호대상 클러스터에서 Workload 에 적용한 dnsConfig 를 사용자가 설정
+enum OpenShiftDrWorkloadDnsConfigRecoveryTypeCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_WORKLOAD_RECOVERY_PLAN_DNS_CONFIG_RECOVERY_TYPE_UNUSED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_WORKLOAD_RECOVERY_PLAN_DNS_CONFIG_RECOVERY_TYPE_NO_ACTION
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_WORKLOAD_RECOVERY_PLAN_DNS_CONFIG_RECOVERY_TYPE_UPDATE
+}
+
+#
+# open_shift_dr_workload_recovery_failed_reason_code_enum.graphql
+#
+# Workload 복구 실패 사유 cdm-disaster-recovery-openshift.workload-recovery.failed.recovery_job_task_failed: RecoveryJobTask 실패로 Workload 를 복구하지 못함 cdm-disaster-recovery-openshift.workload-recovery.failed.dependency_workload_not_recovered: 선행 Workload 복구 실패로 Workload 를 복구하지 못함
+enum OpenShiftDrWorkloadRecoveryFailedReasonCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_FAILED_RECOVERY_JOB_TASK_FAILED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_FAILED_DEPENDENCY_WORKLOAD_NOT_RECOVERED
+}
+
+#
+# open_shift_dr_workload_recovery_info.graphql
+#
+# Workload 복구정보
+type OpenShiftDrWorkloadRecoveryInfo {
+  protection_cluster_workload: OpenShiftCmWorkload
+  # 선행 Workload 의 ID 목록
+  dependencies: [BigInt]
+  # Workload 의 복구대상 Resource ID 목록
+  resources: [BigInt]
+  # Workload 의 복구대상 Image 목록
+  images: [String]
+  # Workload 의 복구대상 Volume ID 목록
+  volumes: [BigInt]
+  # Workload 의 복구대상 VolumeSnapshot Resource ID 목록
+  volume_snapshots: [BigInt]
+}
+
+input OpenShiftDrWorkloadRecoveryInfoInput {
+    protection_cluster_workload: OpenShiftCmWorkloadInput
+    # 선행 Workload 의 ID 목록
+    dependencies: [BigInt]
+    # Workload 의 복구대상 Resource ID 목록
+    resources: [BigInt]
+    # Workload 의 복구대상 Image 목록
+    images: [String]
+    # Workload 의 복구대상 Volume ID 목록
+    volumes: [BigInt]
+    # Workload 의 복구대상 VolumeSnapshot Resource ID 목록
+    volume_snapshots: [BigInt]
+}
+
+#
+# open_shift_dr_workload_recovery_plan.graphql
+#
+# Workload 복구계획
+type OpenShiftDrWorkloadRecoveryPlan {
+  protection_cluster_workload: OpenShiftCmWorkload
+  dns_config: OpenShiftDrWorkloadRecoveryPlanDnsConfig
+  # 선행 Workload 의 ID 목록
+  dependencies: [BigInt]
+}
+
+input OpenShiftDrWorkloadRecoveryPlanInput {
+    protection_cluster_workload: OpenShiftCmWorkloadInput
+    dns_config: OpenShiftDrWorkloadRecoveryPlanDnsConfigInput
+    # 선행 Workload 의 ID 목록
+    dependencies: [BigInt]
+}
+
+#
+# open_shift_dr_workload_recovery_plan_dns_config.graphql
+#
+# Workload 에 적용할 dnsConfig 에 대한 계획
+type OpenShiftDrWorkloadRecoveryPlanDnsConfig {
+  recovery_type_code: OpenShiftDrWorkloadDnsConfigRecoveryTypeCodeEnum
+  # (update 인 경우만) 복구대상 클러스터에서 적용할 dnsConfig.nameservers
+  nameservers: [String]
+  # (update 인 경우만) 복구대상 클러스터에서 적용할 dnsConfig.searches
+  searches: [String]
+  # (update 인 경우만) 복구대상 클러스터에서 적용할 dnsConfig.options
+  options: [OpenShiftDrWorkloadRecoveryPlanDnsConfigOption]
+}
+
+input OpenShiftDrWorkloadRecoveryPlanDnsConfigInput {
+    recovery_type_code: OpenShiftDrWorkloadDnsConfigRecoveryTypeCodeEnum
+    # (update 인 경우만) 복구대상 클러스터에서 적용할 dnsConfig.nameservers
+    nameservers: [String]
+    # (update 인 경우만) 복구대상 클러스터에서 적용할 dnsConfig.searches
+    searches: [String]
+    # (update 인 경우만) 복구대상 클러스터에서 적용할 dnsConfig.options
+    options: [OpenShiftDrWorkloadRecoveryPlanDnsConfigOptionInput]
+}
+
+#
+# open_shift_dr_workload_recovery_plan_dns_config_option.graphql
+#
+# dnsConfig option
+type OpenShiftDrWorkloadRecoveryPlanDnsConfigOption {
+  name: String
+  value: String
+}
+
+input OpenShiftDrWorkloadRecoveryPlanDnsConfigOptionInput {
+    name: String
+    value: String
+}
+
+#
+# open_shift_dr_workload_recovery_plan_state_code_enum.graphql
+#
+# Workload 복구계획 상태 cdm.disaster-recovery-openshift.recovery-plan.workload-recovery-plan.state.normal: 정상 cdm.disaster-recovery-openshift.recovery-plan.workload-recovery-plan.state.not-set-dns-config-nameservers: (dnsConfig 의 복구유형이 update 인 경우) 복구대상 클러스터에서 적용할 dnsConfig.nameservers 를 설정하지 않음 cdm.disaster-recovery-openshift.recovery-plan.workload-recovery-plan.state.invalid-dns-config-nameservers: (dnsConfig 의 복구유형이 update 인 경우) 복구대상 클러스터에서 적용할 dnsConfig.nameservers 가 유효하지 않음
+enum OpenShiftDrWorkloadRecoveryPlanStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_WORKLOAD_RECOVERY_PLAN_STATE_NORMAL
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_WORKLOAD_RECOVERY_PLAN_STATE_NOT_SET_DNS_CONFIG_NAMESERVERS
+  CDM_DISASTER_RECOVERY_OPENSHIFT_RECOVERY_PLAN_WORKLOAD_RECOVERY_PLAN_STATE_INVALID_DNS_CONFIG_NAMESERVERS
+}
+
+#
+# open_shift_dr_workload_recovery_plan_status.graphql
+#
+# Workload 복구계획 상태
+type OpenShiftDrWorkloadRecoveryPlanStatus {
+  # Workload ID
+  id: BigInt
+  state_code: OpenShiftDrWorkloadRecoveryPlanStateCodeEnum
+}
+
+input OpenShiftDrWorkloadRecoveryPlanStatusInput {
+    # Workload ID
+    id: BigInt
+    state_code: OpenShiftDrWorkloadRecoveryPlanStateCodeEnum
+}
+
+#
+# open_shift_dr_workload_recovery_result_code_enum.graphql
+#
+# Workload 복구 결과 cdm-disaster-recovery-openshift.workload-recovery.result.succeed: 성공 cdm-disaster-recovery-openshift.workload-recovery.result.canceled: 취소됨 cdm-disaster-recovery-openshift.workload-recovery.result.failed: 실패
+enum OpenShiftDrWorkloadRecoveryResultCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_RESULT_SUCCEED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_RESULT_CANCELED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_RESULT_FAILED
+}
+
+#
+# open_shift_dr_workload_recovery_state_code_enum.graphql
+#
+# Workload 복구 상태 cdm.disaster-recovery-openshift.workload-recovery.state.pending: 선행 Workload 의 복구가 완료될 때까지 대기중 cdm.disaster-recovery-openshift.workload-recovery.state.being-recovered: Workload 를 복구하는 중 cdm.disaster-recovery-openshift.workload-recovery.state.recovered: Workload 의 복구를 완료한 상태 cdm.disaster-recovery-openshift.workload-recovery.state.paused: Workload 의 복구를 일시중지한 상태 cdm.disaster-recovery-openshift.workload-recovery.state.canceled: Workload 의 복구를 취소한 상태 cdm.disaster-recovery-openshift.workload-recovery.state.ignored: 선행 Workload 의 복구 실패로 Workload 를 복구를 하지 않고 무시한 상태 cdm.disaster-recovery-openshift.workload-recovery.state.failed: Workload 의 복구를 실패힌 싱테 cdm.disaster-recovery-openshift.workload-recovery.state.rolling-back: Workload 를 롤백하는 중 cdm.disaster-recovery-openshift.workload-recovery.state.rolled-back: Workload 롤백을 완료한 상태 cdm.disaster-recovery-openshift.workload-recovery.state.rollback-ignored: Workload 롤백을 무시한 상태
+enum OpenShiftDrWorkloadRecoveryStateCodeEnum {
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_STATE_PENDING
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_STATE_BEING_RECOVERED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_STATE_RECOVERED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_STATE_PAUSED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_STATE_CANCELED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_STATE_IGNORED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_STATE_FAILED
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_STATE_ROLLING_BACK
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_STATE_ROLLED_BACK
+  CDM_DISASTER_RECOVERY_OPENSHIFT_WORKLOAD_RECOVERY_STATE_ROLLBACK_IGNORED
+}
+
+#
+# open_shift_dr_workload_recovery_status.graphql
+#
+# Workload 복구 상태
+type OpenShiftDrWorkloadRecoveryStatus {
+  # Workload ID
+  workload_id: BigInt
+  # Workload 를 복구하기 위한 RecoveryJobTask 목록
+  recovery_job_tasks: [String]
+  state_code: OpenShiftDrWorkloadRecoveryStateCodeEnum
+  result_code: OpenShiftDrWorkloadRecoveryResultCodeEnum
+  failed_reason_code: OpenShiftDrWorkloadRecoveryFailedReasonCodeEnum
+  # 복구 실패 사유 상세 데이터
+  failed_reason_contents: String
+}
+
+input OpenShiftDrWorkloadRecoveryStatusInput {
+    # Workload ID
+    workload_id: BigInt
+    # Workload 를 복구하기 위한 RecoveryJobTask 목록
+    recovery_job_tasks: [String]
+    state_code: OpenShiftDrWorkloadRecoveryStateCodeEnum
+    result_code: OpenShiftDrWorkloadRecoveryResultCodeEnum
+    failed_reason_code: OpenShiftDrWorkloadRecoveryFailedReasonCodeEnum
+    # 복구 실패 사유 상세 데이터
+    failed_reason_contents: String
+}
+
+#
+# replicator_image_replication_status.graphql
+#
+# image 의 복제 상태
+type ReplicatorImageReplicationStatus {
+  # image 의 url
+  image_url: String
+  status: ReplicatorImageReplicationStatusStateCodeEnum
+}
+
+input ReplicatorImageReplicationStatusInput {
+    # image 의 url
+    image_url: String
+    status: ReplicatorImageReplicationStatusStateCodeEnum
+}
+
+#
+# replicator_image_replication_status_state_code_enum.graphql
+#
+# image 의 복제 상태 - cdm.replicator.image-replication.state.syncing : 환경 세팅 중 OR 초기 복제 중 - cdm.replicator.image-replication.state.done : 초기 복제 완료 - cdm.replicator.image-replication.state.error : 에러 발생
+enum ReplicatorImageReplicationStatusStateCodeEnum {
+  CDM_REPLICATOR_IMAGE_REPLICATION_STATE_SYNCING
+  CDM_REPLICATOR_IMAGE_REPLICATION_STATE_DONE
+  CDM_REPLICATOR_IMAGE_REPLICATION_STATE_ERROR
+}
+
+#
+# replicator_last_primary_snapshot_state_code_enum.graphql
+#
+# 최신 스냅샷 생성 성공 여부 - cdm.replicator.latest-snapshot-creation.state.success : 스냅샷 생성 성공 - cdm.replicator.latest-snapshot-creation.state.failure : 스냅샷 생성 실패 - cdm.replicator.latest-snapshot-creation.state.not-yet : 아직 아무 스냅샷도 없는 상태 - cdm.replicator.latest-snapshot-creation.state.error : 스냅샷 조회 실패 - cdm.replicator.latest-snapshot-creation.state.being-created : 스냅샷 생성 중
+enum ReplicatorLastPrimarySnapshotStateCodeEnum {
+  CDM_REPLICATOR_LATEST_SNAPSHOT_CREATION_STATE_SUCCESS
+  CDM_REPLICATOR_LATEST_SNAPSHOT_CREATION_STATE_FAILURE
+  CDM_REPLICATOR_LATEST_SNAPSHOT_CREATION_STATE_NOT_YET
+  CDM_REPLICATOR_LATEST_SNAPSHOT_CREATION_STATE_ERROR
+  CDM_REPLICATOR_LATEST_SNAPSHOT_CREATION_STATE_BEING_CREATED
+}
+
+#
+# replicator_mirroring_status.graphql
+#
+# 각 미러링 별 복제 상태
+type ReplicatorMirroringStatus {
+  # 복제 그룹의 id
+  id: BigInt
+  status: ReplicatorMirroringStatusStateCodeEnum
+  # 복제 실패 원인
+  cause: String
+}
+
+input ReplicatorMirroringStatusInput {
+    # 복제 그룹의 id
+    id: BigInt
+    status: ReplicatorMirroringStatusStateCodeEnum
+    # 복제 실패 원인
+    cause: String
+}
+
+#
+# replicator_mirroring_status_state_code_enum.graphql
+#
+# - cdm.replicator.volume-replication.state.syncing : 초기 복제 중 - cdm.replicator.volume-replication.state.mirroring : 미러링(초기 복제 완료) - cdm.replicator.volume-replication.state.error : 복제 에러 발생
+enum ReplicatorMirroringStatusStateCodeEnum {
+  CDM_REPLICATOR_VOLUME_REPLICATION_STATE_SYNCING
+  CDM_REPLICATOR_VOLUME_REPLICATION_STATE_MIRRORING
+  CDM_REPLICATOR_VOLUME_REPLICATION_STATE_ERROR
+}
+
+#
+# replicator_primary_snapshot.graphql
+#
+# 1차 스냅샷 정보
+type ReplicatorPrimarySnapshot {
+  # 1차 스냅샷의 id
+  primary_snapshot_id: BigInt
+  # 스냅샷 시작 시간
+  start_at: BigInt
+  # 스냅샷 locker
+  locker: String
+  # 1차 스냅샷 생성 성공 여부
+  is_success: Boolean
+  # retain count 초과 여부
+  retain_count_over: Boolean
+}
+
+input ReplicatorPrimarySnapshotInput {
+    # 1차 스냅샷의 id
+    primary_snapshot_id: BigInt
+    # 스냅샷 시작 시간
+    start_at: BigInt
+    # 스냅샷 locker
+    locker: String
+    # 1차 스냅샷 생성 성공 여부
+    is_success: Boolean
+    # retain count 초과 여부
+    retain_count_over: Boolean
+}
+
+#
+# replicator_replication_info_status.graphql
+#
+# ReplicationInfo 의 상태
+type ReplicatorReplicationInfoStatus {
+  status: ReplicatorReplicationInfoStatusStateCodeEnum
+  # 볼륨 복제 상태
+  volume_replication_status: [ReplicatorVolumeReplicationStatus]
+  # 이미지 복제 상태
+  image_replication_status: [ReplicatorImageReplicationStatus]
+  last_primary_snapshot_status: ReplicatorLastPrimarySnapshotStateCodeEnum
+}
+
+input ReplicatorReplicationInfoStatusInput {
+    status: ReplicatorReplicationInfoStatusStateCodeEnum
+    # 볼륨 복제 상태
+    volume_replication_status: [ReplicatorVolumeReplicationStatusInput]
+    # 이미지 복제 상태
+    image_replication_status: [ReplicatorImageReplicationStatusInput]
+    last_primary_snapshot_status: ReplicatorLastPrimarySnapshotStateCodeEnum
+}
+
+#
+# replicator_replication_info_status_state_code_enum.graphql
+#
+# 미러링 상태 - cdm.replicator.openshift.replication-info.state.preparing : 초기 복제 중 AND 스냅샷 스케줄러 등록중 - cdm.replicator.openshift.replication-info.state.preparation-failed : 초기 복제 실패 OR 스냅샷 스케줄러 등록 실패 - cdm.replicator.openshift.replication-info.state.normal : 미러링(초기 복제 완료) OR 스냅샷 스케줄러 등록 실패 - cdm.replicator.openshift.replication-info.state.error : 미러링 중 에러 발생 OR 스냅샷 스케줄러 등록 실패
+enum ReplicatorReplicationInfoStatusStateCodeEnum {
+  CDM_REPLICATOR_OPENSHIFT_REPLICATION_INFO_STATE_PREPARING
+  CDM_REPLICATOR_OPENSHIFT_REPLICATION_INFO_STATE_PREPARATION_FAILED
+  CDM_REPLICATOR_OPENSHIFT_REPLICATION_INFO_STATE_NORMAL
+  CDM_REPLICATOR_OPENSHIFT_REPLICATION_INFO_STATE_ERROR
+}
+
+#
+# replicator_snapshot_schedule.graphql
+#
+# 스냅샷 스케줄 정보
+type ReplicatorSnapshotSchedule {
+  # 생성 주기 타입(1 yearly, 2 monthly, 3 weekly, 4 daily, 5 hourly, 6 minutely)
+  schedule_type: BigInt
+  # 스냅샷 생성 시작 시간
+  start_at: BigInt
+  # 스냅샷 종료 시간
+  end_at: BigInt
+  # 스케줄 타입 별 스냅샷 생성 주기
+  primary_snapshot_period: BigInt
+  # 스냅샷 유지 개수
+  primary_snapshot_retain_count: BigInt
+  # 2차 스냅샷 주기
+  secondary_snapshot_period: BigInt
+  # 2차 스냅샷 유지 개수
+  secondary_snapshot_retain_count: BigInt
+  # 백업 타입 메타데이터
+  metadata: JSONObject
+}
+
+input ReplicatorSnapshotScheduleInput {
+    # 생성 주기 타입(1 yearly, 2 monthly, 3 weekly, 4 daily, 5 hourly, 6 minutely)
+    schedule_type: BigInt
+    # 스냅샷 생성 시작 시간
+    start_at: BigInt
+    # 스냅샷 종료 시간
+    end_at: BigInt
+    # 스케줄 타입 별 스냅샷 생성 주기
+    primary_snapshot_period: BigInt
+    # 스냅샷 유지 개수
+    primary_snapshot_retain_count: BigInt
+    # 2차 스냅샷 주기
+    secondary_snapshot_period: BigInt
+    # 2차 스냅샷 유지 개수
+    secondary_snapshot_retain_count: BigInt
+    # 백업 타입 메타데이터
+    metadata: JSONObject
+}
+
+#
+# replicator_volume_replication_status.graphql
+#
+# Volume 의 복제 상태
+type ReplicatorVolumeReplicationStatus {
+  # cluster-manager 에서 관리하는 volume 의 id
+  volume_id: BigInt
+  # 미러링 별 복제 상태 목록
+  mirroring_replication_status: [ReplicatorMirroringStatus]
+}
+
+input ReplicatorVolumeReplicationStatusInput {
+    # cluster-manager 에서 관리하는 volume 의 id
+    volume_id: BigInt
+    # 미러링 별 복제 상태 목록
+    mirroring_replication_status: [ReplicatorMirroringStatusInput]
+}
+

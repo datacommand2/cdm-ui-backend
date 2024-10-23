@@ -1,6 +1,6 @@
 {
-  "watch": ["./"],
-  "exec": "node server.js",
-  "ext": "js json yaml",
-  "ignore": ["./log/"]
+    "watch": ["./"],
+    "exec": "ts-node ./src/server.ts",
+    "ext": "ts js json yaml",
+    "ignore": ["./log/"]
 }

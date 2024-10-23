@@ -1,0 +1,2255 @@
+scalar JSONObject
+
+scalar BigInt
+
+type Query {
+  # 백업작업 조회
+  # @param String backupJobResourceName BackupJob resource name
+  # @return [BackupBackupJobResponse]
+  GetBackupJob(backupJobResourceName: String): BackupBackupJobResponse
+  # 백업작업 상태 조회
+  # @param String backupJobResourceName BackupJob resource name
+  # @return [BackupBackupJobStatusResponse]
+  GetBackupJobStatus(backupJobResourceName: String): BackupBackupJobStatusResponse
+  # 백업작업 목록 조회
+  # @return [BackupBackupJobsResponse]
+  GetBackupJobs: BackupBackupJobsResponse
+  # 백업계획 조회
+  # @param String backupPlanResourceName BackupPlan resource name
+  # @return [BackupBackupPlanResponse]
+  GetBackupPlan(backupPlanResourceName: String): BackupBackupPlanResponse
+  # 백업계획 목록 조회
+  # @return [BackupBackupPlansResponse]
+  GetBackupPlans: BackupBackupPlansResponse
+  # 백업결과 조회
+  # @param String backupResultResourceName BackupResult resource name
+  # @return [BackupBackupResultResponse]
+  GetBackupResult(backupResultResourceName: String): BackupBackupResultResponse
+  # 백업 결과 detail 조회
+  # @param String backupResultResourceName BackupResult resource name
+  # @return [BackupBackupResultDetailResponse]
+  GetBackupResultDetails(backupResultResourceName: String): BackupBackupResultDetailResponse
+  # 백업결과 목록 조회
+  # @return [BackupBackupResultsResponse]
+  GetBackupResults: BackupBackupResultsResponse
+}
+
+type Mutation {
+  # 백업작업 추가
+  # @param BackupBackupJobRequest backupBackupJobRequest
+  # @return [BackupBackupJobResponse]
+  CreateBackupJob(input: CreateBackupJobInput): BackupBackupJobResponse
+  # 백업작업 삭제
+  # @param String backupJobResourceName BackupJob resource name
+  # @return [Boolean]
+  DeleteBackupJob(input: DeleteBackupJobInput): Boolean
+  # 백업작업 수정
+  # @param String backupJobResourceName BackupJob resource name
+  # @param BackupBackupJobRequest backupBackupJobRequest
+  # @return [BackupBackupJobResponse]
+  UpdateBackupJob(input: UpdateBackupJobInput): BackupBackupJobResponse
+  # 백업계획 추가
+  # @param BackupBackupPlanRequest backupBackupPlanRequest
+  # @return [BackupBackupPlanResponse]
+  CreateBackupPlan(input: CreateBackupPlanInput): BackupBackupPlanResponse
+  # 백업계획 삭제
+  # @param String backupPlanResourceName BackupPlan resource name
+  # @return [Boolean]
+  DeleteBackupPlan(input: DeleteBackupPlanInput): Boolean
+  # 백업계획 수정
+  # @param String backupPlanResourceName BackupPlan resource name
+  # @param BackupBackupPlanRequest backupBackupPlanRequest
+  # @return [BackupBackupPlanResponse]
+  UpdateBackupPlan(input: UpdateBackupPlanInput): BackupBackupPlanResponse
+  # 백업결과 삭제
+  # @param String backupResultResourceName BackupResult resource name
+  # @return [Boolean]
+  DeleteBackupResult(input: DeleteBackupResultInput): Boolean
+  # 백업결과 수정
+  # @param String backupResultResourceName BackupResult resource name
+  # @param BackupBackupResultRequest backupBackupResultRequest
+  # @return [BackupBackupResultResponse]
+  UpdateBackupResult(input: UpdateBackupResultInput): BackupBackupResultResponse
+}
+
+# backup_job_api
+input CreateBackupJobInput {
+    backupBackupJobRequest: BackupBackupJobRequestInput
+}
+
+input DeleteBackupJobInput {
+    # BackupJob resource name
+    backupJobResourceName: String
+}
+
+input UpdateBackupJobInput {
+    # BackupJob resource name
+    backupJobResourceName: String,
+    backupBackupJobRequest: BackupBackupJobRequestInput
+}
+
+# backup_plan_api
+input CreateBackupPlanInput {
+    backupBackupPlanRequest: BackupBackupPlanRequestInput
+}
+
+input DeleteBackupPlanInput {
+    # BackupPlan resource name
+    backupPlanResourceName: String
+}
+
+input UpdateBackupPlanInput {
+    # BackupPlan resource name
+    backupPlanResourceName: String,
+    backupBackupPlanRequest: BackupBackupPlanRequestInput
+}
+
+# backup_result_api
+input DeleteBackupResultInput {
+    # BackupResult resource name
+    backupResultResourceName: String
+}
+
+input UpdateBackupResultInput {
+    # BackupResult resource name
+    backupResultResourceName: String,
+    backupBackupResultRequest: BackupBackupResultRequestInput
+}
+
+#
+# backup_backup_cluster_type_enum.graphql
+#
+# 클러스터 타입 cluster.type.openstack: openstack cluster.type.openshift: openshift
+enum BackupBackupClusterTypeEnum {
+  CLUSTER_TYPE_OPENSTACK
+  CLUSTER_TYPE_OPENSHIFT
+}
+
+#
+# backup_backup_job.graphql
+#
+# 백업작업
+type BackupBackupJob {
+  # ProtectionGroup CR 의 Name
+  protection_group_resource_name: String
+  backup_plan: BackupBackupPlan
+  # BackupJob CR 의 Name
+  resource_name: String
+  # 작업명
+  name: String
+  # 작업 설명
+  description: String
+  cluster_type: BackupBackupClusterTypeEnum
+  type: BackupBackupJobTypeEnum
+  # (type 이 reserved 인 경우) 작업 시작 시간
+  reserved_at: BigInt
+  creator: CloudUser
+  # 생성일시
+  created_at: BigInt
+  modifier: CloudUser
+  # 최종수정일시
+  modified_at: BigInt
+}
+
+input BackupBackupJobInput {
+    # ProtectionGroup CR 의 Name
+    protection_group_resource_name: String
+    backup_plan: BackupBackupPlanInput
+    # BackupJob CR 의 Name
+    resource_name: String
+    # 작업명
+    name: String
+    # 작업 설명
+    description: String
+    cluster_type: BackupBackupClusterTypeEnum
+    type: BackupBackupJobTypeEnum
+    # (type 이 reserved 인 경우) 작업 시작 시간
+    reserved_at: BigInt
+    creator: CloudUserInput
+    # 생성일시
+    created_at: BigInt
+    modifier: CloudUserInput
+    # 최종수정일시
+    modified_at: BigInt
+}
+
+#
+# backup_backup_job_request.graphql
+#
+type BackupBackupJobRequest {
+  backup_job: BackupBackupJob
+}
+
+input BackupBackupJobRequestInput {
+    backup_job: BackupBackupJobInput
+}
+
+#
+# backup_backup_job_response.graphql
+#
+type BackupBackupJobResponse {
+  backup_job: BackupBackupJob
+}
+
+input BackupBackupJobResponseInput {
+    backup_job: BackupBackupJobInput
+}
+
+#
+# backup_backup_job_state_code_enum.graphql
+#
+# 백업작업 상태 cdm.backup.job-state.preparing: 준비중 cdm.backup.job-state.waiting: 대기중 cdm.backup.job-state.pending: 보류중 cdm.backup.job-state.running: 백업중 cdm.backup.job-state.done: 백업완료 cdm.backup.job-state.failed: 백업실패
+enum BackupBackupJobStateCodeEnum {
+  CDM_BACKUP_JOB_STATE_PREPARING
+  CDM_BACKUP_JOB_STATE_WAITING
+  CDM_BACKUP_JOB_STATE_PENDING
+  CDM_BACKUP_JOB_STATE_RUNNING
+  CDM_BACKUP_JOB_STATE_DONE
+  CDM_BACKUP_JOB_STATE_FAILED
+}
+
+#
+# backup_backup_job_status.graphql
+#
+# 백업작업 상태
+type BackupBackupJobStatus {
+  state_code: BackupBackupJobStateCodeEnum
+  # 작업실패 사유
+  failed_reason_code: String
+  # 작업실패 사유 상세 데이터
+  failed_reason_contents: String
+  # 다음 백업시간
+  next_runtime: BigInt
+}
+
+input BackupBackupJobStatusInput {
+    state_code: BackupBackupJobStateCodeEnum
+    # 작업실패 사유
+    failed_reason_code: String
+    # 작업실패 사유 상세 데이터
+    failed_reason_contents: String
+    # 다음 백업시간
+    next_runtime: BigInt
+}
+
+#
+# backup_backup_job_status_response.graphql
+#
+type BackupBackupJobStatusResponse {
+  backup_job_status: BackupBackupJobStatus
+}
+
+input BackupBackupJobStatusResponseInput {
+    backup_job_status: BackupBackupJobStatusInput
+}
+
+#
+# backup_backup_job_type_enum.graphql
+#
+# 작업 종류 cdm.backup.job-type.scheduled: 주기 cdm.backup.job-type.immediate: 즉시 cdm.backup.job-type.reserved: 예약
+enum BackupBackupJobTypeEnum {
+  CDM_BACKUP_JOB_TYPE_SCHEDULED
+  CDM_BACKUP_JOB_TYPE_IMMEDIATE
+  CDM_BACKUP_JOB_TYPE_RESERVED
+}
+
+#
+# backup_backup_jobs_response.graphql
+#
+type BackupBackupJobsResponse {
+  backup_jobs: [BackupBackupJob]
+}
+
+input BackupBackupJobsResponseInput {
+    backup_jobs: [BackupBackupJobInput]
+}
+
+#
+# backup_backup_plan.graphql
+#
+# 백업계획
+type BackupBackupPlan {
+  # BackupPlan CR 의 Name
+  resource_name: String
+  # 백업계획 이름
+  name: String
+  # 백업계획 설명
+  description: String
+  repository_storage: SmStorage
+  export_repository_storage: SmStorage
+  # 백업 스케쥴 목록
+  schedules: [ReplicatorSnapshotSchedule]
+  # 백업 가능 시간 (s)
+  lagging_time: BigInt
+  creator: CloudUser
+  # 생성일시
+  created_at: BigInt
+  modifier: CloudUser
+  # 최종수정일시
+  modified_at: BigInt
+}
+
+input BackupBackupPlanInput {
+    # BackupPlan CR 의 Name
+    resource_name: String
+    # 백업계획 이름
+    name: String
+    # 백업계획 설명
+    description: String
+    repository_storage: SmStorageInput
+    export_repository_storage: SmStorageInput
+    # 백업 스케쥴 목록
+    schedules: [ReplicatorSnapshotScheduleInput]
+    # 백업 가능 시간 (s)
+    lagging_time: BigInt
+    creator: CloudUserInput
+    # 생성일시
+    created_at: BigInt
+    modifier: CloudUserInput
+    # 최종수정일시
+    modified_at: BigInt
+}
+
+#
+# backup_backup_plan_request.graphql
+#
+type BackupBackupPlanRequest {
+  backup_plan: BackupBackupPlan
+}
+
+input BackupBackupPlanRequestInput {
+    backup_plan: BackupBackupPlanInput
+}
+
+#
+# backup_backup_plan_response.graphql
+#
+type BackupBackupPlanResponse {
+  backup_plan: BackupBackupPlan
+}
+
+input BackupBackupPlanResponseInput {
+    backup_plan: BackupBackupPlanInput
+}
+
+#
+# backup_backup_plans_response.graphql
+#
+type BackupBackupPlansResponse {
+  backup_plans: [BackupBackupPlan]
+}
+
+input BackupBackupPlansResponseInput {
+    backup_plans: [BackupBackupPlanInput]
+}
+
+#
+# backup_backup_result.graphql
+#
+# 백업결과
+type BackupBackupResult {
+  cluster_type: BackupBackupClusterTypeEnum
+  # ProtectionGroup CR 의 Name
+  protection_group_resource_name: String
+  # ProtectionGroup 의 Name
+  protection_group_name: String
+  repository_storage: SmStorage
+  export_repository_storage: SmStorage
+  backup_plan: BackupBackupPlan
+  backup_job: BackupBackupJob
+  # BackupResult CR 의 Name
+  resource_name: String
+  # 백업결과 설명
+  description: String
+  backup_type: BackupBackupTypeEnum
+  job_type: BackupBackupJobTypeEnum
+  snapshot: ReplicatorProtectionGroupSnapshot
+  # 백업 시작 시간
+  start_at: BigInt
+  # 백업 완료 시간
+  end_at: BigInt
+  # 백업 소요 시간
+  elapsed: BigInt
+  creator: CloudUser
+  # 백업 생성일시
+  created_at: BigInt
+  modifier: CloudUser
+  # 백업 최종 수정일시
+  modified_at: BigInt
+}
+
+input BackupBackupResultInput {
+    cluster_type: BackupBackupClusterTypeEnum
+    # ProtectionGroup CR 의 Name
+    protection_group_resource_name: String
+    # ProtectionGroup 의 Name
+    protection_group_name: String
+    repository_storage: SmStorageInput
+    export_repository_storage: SmStorageInput
+    backup_plan: BackupBackupPlanInput
+    backup_job: BackupBackupJobInput
+    # BackupResult CR 의 Name
+    resource_name: String
+    # 백업결과 설명
+    description: String
+    backup_type: BackupBackupTypeEnum
+    job_type: BackupBackupJobTypeEnum
+    snapshot: ReplicatorProtectionGroupSnapshotInput
+    # 백업 시작 시간
+    start_at: BigInt
+    # 백업 완료 시간
+    end_at: BigInt
+    # 백업 소요 시간
+    elapsed: BigInt
+    creator: CloudUserInput
+    # 백업 생성일시
+    created_at: BigInt
+    modifier: CloudUserInput
+    # 백업 최종 수정일시
+    modified_at: BigInt
+}
+
+#
+# backup_backup_result_detail_response.graphql
+#
+type BackupBackupResultDetailResponse {
+  cluster_type: BackupBackupClusterTypeEnum
+  details: BackupResultProtectionGroupInfo
+}
+
+input BackupBackupResultDetailResponseInput {
+    cluster_type: BackupBackupClusterTypeEnum
+    details: BackupResultProtectionGroupInfoInput
+}
+
+#
+# backup_backup_result_request.graphql
+#
+type BackupBackupResultRequest {
+  backup_result: BackupBackupResult
+}
+
+input BackupBackupResultRequestInput {
+    backup_result: BackupBackupResultInput
+}
+
+#
+# backup_backup_result_response.graphql
+#
+type BackupBackupResultResponse {
+  backup_result: BackupBackupResult
+}
+
+input BackupBackupResultResponseInput {
+    backup_result: BackupBackupResultInput
+}
+
+#
+# backup_backup_results_response.graphql
+#
+type BackupBackupResultsResponse {
+  backup_results: [BackupBackupResult]
+}
+
+input BackupBackupResultsResponseInput {
+    backup_results: [BackupBackupResultInput]
+}
+
+#
+# backup_backup_type_enum.graphql
+#
+# 백업 종류 cdm.backup.backup-type.full-backup: 전체백업 cdm.backup.backup-type.incremental-backup: 증분백업 cdm.backup.backup-type.differential-backup: 차등백업
+enum BackupBackupTypeEnum {
+  CDM_BACKUP_BACKUP_TYPE_FULL_BACKUP
+  CDM_BACKUP_BACKUP_TYPE_INCREMENTAL_BACKUP
+  CDM_BACKUP_BACKUP_TYPE_DIFFERENTIAL_BACKUP
+}
+
+#
+# backup_result_protection_group_info.graphql
+#
+type BackupResultProtectionGroupInfo {
+  # 보호 그룹 info CR 의 이름
+  resource_name: String
+  resources: [OpenShiftCmResource]
+  # workload 정보
+  workloads: [OpenShiftCmWorkload]
+  namespaces: [OpenShiftCmNamespace]
+  # 레지스트리 정보
+  registries: [OpenShiftCmRegistry]
+  # 스케줄러 정보
+  schedulers: [OpenShiftCmScheduler]
+  services: [OpenShiftCmService]
+  runtime_classes: [OpenShiftCmRuntimeClass]
+  priority_classes: [OpenShiftCmPriorityClass]
+  service_accounts: [OpenShiftCmServiceAccount]
+  volumes: [OpenShiftCmVolume]
+  volume_snapshots: [OpenShiftCmVolumeSnapshot]
+  finalizers: [OpenShiftCmFinalizer]
+  readiness_gate_conditions: [String]
+  # 보호 그룹 설명
+  tenant: OpenStackDrTenant
+  # 보호대상 클러스터의 인스턴스 목록
+  instances: [OpenStackDrInstance]
+}
+
+input BackupResultProtectionGroupInfoInput {
+    # 보호 그룹 info CR 의 이름
+    resource_name: String
+    resources: [OpenShiftCmResourceInput]
+    # workload 정보
+    workloads: [OpenShiftCmWorkloadInput]
+    namespaces: [OpenShiftCmNamespaceInput]
+    # 레지스트리 정보
+    registries: [OpenShiftCmRegistryInput]
+    # 스케줄러 정보
+    schedulers: [OpenShiftCmSchedulerInput]
+    services: [OpenShiftCmServiceInput]
+    runtime_classes: [OpenShiftCmRuntimeClassInput]
+    priority_classes: [OpenShiftCmPriorityClassInput]
+    service_accounts: [OpenShiftCmServiceAccountInput]
+    volumes: [OpenShiftCmVolumeInput]
+    volume_snapshots: [OpenShiftCmVolumeSnapshotInput]
+    finalizers: [OpenShiftCmFinalizerInput]
+    readiness_gate_conditions: [String]
+    # 보호 그룹 설명
+    tenant: OpenStackDrTenantInput
+    # 보호대상 클러스터의 인스턴스 목록
+    instances: [OpenStackDrInstanceInput]
+}
+
+#
+# cloud_language_set_enum.graphql
+#
+# 언어셋
+enum CloudLanguageSetEnum {
+  ENG
+  KOR
+}
+
+#
+# cloud_role.graphql
+#
+# 솔루션 역할
+type CloudRole {
+  # 솔루션 역할의 ID
+  id: BigInt
+  # 솔루션 이름
+  solution: String
+  role: CloudRoleEnum
+}
+
+input CloudRoleInput {
+    # 솔루션 역할의 ID
+    id: BigInt
+    # 솔루션 이름
+    solution: String
+    role: CloudRoleEnum
+}
+
+#
+# cloud_role_enum.graphql
+#
+# 역할
+enum CloudRoleEnum {
+  ADMIN
+  MANAGER
+  OPERATOR
+  USER
+}
+
+#
+# cloud_session.graphql
+#
+# 사용자 세션
+type CloudSession {
+  # 세션 키
+  key: String
+}
+
+input CloudSessionInput {
+    # 세션 키
+    key: String
+}
+
+#
+# cloud_tenant.graphql
+#
+# 테넌트
+type CloudTenant {
+  # 테넌트 ID
+  id: BigInt
+  # 테넌트 이름
+  name: String
+  # 사용여부
+  use_flag: Boolean
+  # 테넌트가 사용할 수 있는 솔루션 목록
+  solutions: [CloudTenantSolution]
+  # 비고
+  remarks: String
+  # 테넌트 생성 날짜
+  created_at: BigInt
+  # 테넌트 변경 날짜
+  updated_at: BigInt
+}
+
+input CloudTenantInput {
+    # 테넌트 ID
+    id: BigInt
+    # 테넌트 이름
+    name: String
+    # 사용여부
+    use_flag: Boolean
+    # 테넌트가 사용할 수 있는 솔루션 목록
+    solutions: [CloudTenantSolutionInput]
+    # 비고
+    remarks: String
+    # 테넌트 생성 날짜
+    created_at: BigInt
+    # 테넌트 변경 날짜
+    updated_at: BigInt
+}
+
+#
+# cloud_tenant_solution.graphql
+#
+# 테넌트
+type CloudTenantSolution {
+  # 솔루션 이름
+  name: String
+}
+
+input CloudTenantSolutionInput {
+    # 솔루션 이름
+    name: String
+}
+
+#
+# cloud_user.graphql
+#
+# 사용자
+type CloudUser {
+  # 사용자 ID
+  id: BigInt
+  # 계정 명
+  account: String
+  tenant: CloudTenant
+  # 솔루션별 역할
+  roles: [CloudRole]
+  # 사용자 그룹 목록
+  groups: [CloudUserGroup]
+  # 사용자 타임존 ([참조링크](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))
+  timezone: String
+  language_set: CloudLanguageSetEnum
+  # 사용자 이름
+  name: String
+  # 사용자 부서
+  department: String
+  # 사용자 직책
+  position: String
+  # 사용자 이메일
+  email: String
+  # 사용자 연락처
+  contact: String
+  # 계정 암호 변경 날짜
+  password_updated_at: BigInt
+  # 계정 암호 변경 필요 여부
+  password_update_flag: Boolean
+  # 계정 마지막 로그인 날짜
+  last_logged_in_at: BigInt
+  # 계정 생성 날짜
+  created_at: BigInt
+  # 계정 내용 변경 날짜
+  updated_at: BigInt
+  session: CloudSession
+}
+
+input CloudUserInput {
+    # 사용자 ID
+    id: BigInt
+    # 계정 명
+    account: String
+    tenant: CloudTenantInput
+    # 솔루션별 역할
+    roles: [CloudRoleInput]
+    # 사용자 그룹 목록
+    groups: [CloudUserGroupInput]
+    # 사용자 타임존 ([참조링크](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))
+    timezone: String
+    language_set: CloudLanguageSetEnum
+    # 사용자 이름
+    name: String
+    # 사용자 부서
+    department: String
+    # 사용자 직책
+    position: String
+    # 사용자 이메일
+    email: String
+    # 사용자 연락처
+    contact: String
+    # 계정 암호 변경 날짜
+    password_updated_at: BigInt
+    # 계정 암호 변경 필요 여부
+    password_update_flag: Boolean
+    # 계정 마지막 로그인 날짜
+    last_logged_in_at: BigInt
+    # 계정 생성 날짜
+    created_at: BigInt
+    # 계정 내용 변경 날짜
+    updated_at: BigInt
+    session: CloudSessionInput
+}
+
+#
+# cloud_user_group.graphql
+#
+# 사용자 그룹
+type CloudUserGroup {
+  # 사용자 그룹 ID
+  id: BigInt
+  tenant: CloudTenant
+  # 사용자 그룹 이름
+  name: String
+  # 비고
+  remarks: String
+  # 사용자 그룹 생성 날짜
+  created_at: BigInt
+  # 사용자 그룹 변경 날짜
+  updated_at: BigInt
+  # 삭제 여부
+  delete_flag: Boolean
+}
+
+input CloudUserGroupInput {
+    # 사용자 그룹 ID
+    id: BigInt
+    tenant: CloudTenantInput
+    # 사용자 그룹 이름
+    name: String
+    # 비고
+    remarks: String
+    # 사용자 그룹 생성 날짜
+    created_at: BigInt
+    # 사용자 그룹 변경 날짜
+    updated_at: BigInt
+    # 삭제 여부
+    delete_flag: Boolean
+}
+
+#
+# open_shift_cm_cluster_resource_service_type_enum.graphql
+#
+# 서비스 리소스의 유형 ClusterIP: ClusterIP NodePort: NodePort LoadBalancer: LoadBalancer ExternalName: ExternalName
+enum OpenShiftCmClusterResourceServiceTypeEnum {
+  CLUSTERIP
+  NODEPORT
+  LOADBALANCER
+  EXTERNALNAME
+}
+
+#
+# open_shift_cm_cluster_resource_volume_type_enum.graphql
+#
+# 클러스터 볼륨 유형 hostPath: hostPath emptyDir: emptyDir gcePersistentDisk: gcePersistentDisk awsElasticBlockStore: awsElasticBlockStore gitRepo: gitRepo nfs: nfs iscsi: iscsi glusterfs: glusterfs persistentVolumeClaim: persistentVolumeClaim rbd: rbd flexVolume: flexVolume cinder: cinder cephfs: cephfs flocker: flocker fc: fc azureFile: azureFile configMap: configMap vsphereVolume: vsphereVolume quobyte: quobyte azureDisk: azureDisk photonPersistentDisk: photonPersistentDisk portworxVolume: portworxVolume scaleIO: scaleIO storageos: storageos csi: csi ephemeral: ephemeral
+enum OpenShiftCmClusterResourceVolumeTypeEnum {
+  HOST_PATH
+  EMPTY_DIR
+  GCE_PERSISTENT_DISK
+  AWS_ELASTIC_BLOCK_STORE
+  GIT_REPO
+  NFS
+  ISCSI
+  GLUSTERFS
+  PERSISTENT_VOLUME_CLAIM
+  RBD
+  FLEX_VOLUME
+  CINDER
+  CEPHFS
+  FLOCKER
+  FC
+  AZURE_FILE
+  CONFIG_MAP
+  VSPHERE_VOLUME
+  QUOBYTE
+  AZURE_DISK
+  PHOTON_PERSISTENT_DISK
+  PORTWORX_VOLUME
+  SCALE_I_O
+  STORAGEOS
+  CSI
+  EPHEMERAL
+}
+
+#
+# open_shift_cm_finalizer.graphql
+#
+# 클러스터 finalizer
+type OpenShiftCmFinalizer {
+  # finalizer 의 ID
+  id: BigInt
+  # finalizer 의 이름
+  name: String
+  # finalizer 가 명시된 resource group
+  group: String
+  # finalizer 가 명시된 resource version
+  version: String
+  # finalizer 가 명시된 resource kind
+  kind: String
+  controller_workload: OpenShiftCmWorkload
+}
+
+input OpenShiftCmFinalizerInput {
+    # finalizer 의 ID
+    id: BigInt
+    # finalizer 의 이름
+    name: String
+    # finalizer 가 명시된 resource group
+    group: String
+    # finalizer 가 명시된 resource version
+    version: String
+    # finalizer 가 명시된 resource kind
+    kind: String
+    controller_workload: OpenShiftCmWorkloadInput
+}
+
+#
+# open_shift_cm_namespace.graphql
+#
+# 클러스터 네임스페이스
+type OpenShiftCmNamespace {
+  # 네임스페이스의 resource id
+  resource_id: BigInt
+  # 네임스페이스의 이름
+  name: String
+}
+
+input OpenShiftCmNamespaceInput {
+    # 네임스페이스의 resource id
+    resource_id: BigInt
+    # 네임스페이스의 이름
+    name: String
+}
+
+#
+# open_shift_cm_priority_class.graphql
+#
+# 클러스터의 PriorityClass
+type OpenShiftCmPriorityClass {
+  # PriorityClass Resource ID
+  resource_id: BigInt
+  # PriorityClass Name
+  name: String
+  # PriorityClass Value
+  value: BigInt
+}
+
+input OpenShiftCmPriorityClassInput {
+    # PriorityClass Resource ID
+    resource_id: BigInt
+    # PriorityClass Name
+    name: String
+    # PriorityClass Value
+    value: BigInt
+}
+
+#
+# open_shift_cm_protection_group_info.graphql
+#
+# 보호 그룹 info
+type OpenShiftCmProtectionGroupInfo {
+  # 보호 그룹 info CR 의 이름
+  resource_name: String
+  resources: [OpenShiftCmResource]
+  # workload 정보
+  workloads: [OpenShiftCmWorkload]
+  namespaces: [OpenShiftCmNamespace]
+  # 레지스트리 정보
+  registries: [OpenShiftCmRegistry]
+  # 스케줄러 정보
+  schedulers: [OpenShiftCmScheduler]
+  services: [OpenShiftCmService]
+  runtime_classes: [OpenShiftCmRuntimeClass]
+  priority_classes: [OpenShiftCmPriorityClass]
+  service_accounts: [OpenShiftCmServiceAccount]
+  volumes: [OpenShiftCmVolume]
+  volume_snapshots: [OpenShiftCmVolumeSnapshot]
+  finalizers: [OpenShiftCmFinalizer]
+  readiness_gate_conditions: [String]
+}
+
+input OpenShiftCmProtectionGroupInfoInput {
+    # 보호 그룹 info CR 의 이름
+    resource_name: String
+    resources: [OpenShiftCmResourceInput]
+    # workload 정보
+    workloads: [OpenShiftCmWorkloadInput]
+    namespaces: [OpenShiftCmNamespaceInput]
+    # 레지스트리 정보
+    registries: [OpenShiftCmRegistryInput]
+    # 스케줄러 정보
+    schedulers: [OpenShiftCmSchedulerInput]
+    services: [OpenShiftCmServiceInput]
+    runtime_classes: [OpenShiftCmRuntimeClassInput]
+    priority_classes: [OpenShiftCmPriorityClassInput]
+    service_accounts: [OpenShiftCmServiceAccountInput]
+    volumes: [OpenShiftCmVolumeInput]
+    volume_snapshots: [OpenShiftCmVolumeSnapshotInput]
+    finalizers: [OpenShiftCmFinalizerInput]
+    readiness_gate_conditions: [String]
+}
+
+#
+# open_shift_cm_registry.graphql
+#
+# 클러스터 레지스트리
+type OpenShiftCmRegistry {
+  # 레지스트리의 ID
+  id: BigInt
+  # 레지스트리의 url
+  url: String
+  # private 레지스트리 여부
+  is_private: Boolean
+  # 레지스트리 push credential 필요 여부
+  is_required_push_credential: Boolean
+  # ### 레지스트리 push credential 정보  credential 은 `\"{암호화된 대칭키}.{암호화된 credential 정보}\"` 로 구성된 문자열이다.   - 대칭키는 16 바이트 랜덤 문자열로 생성하고, ClusterManager 의 공개키로 암호화(base64) - credential json 을 대칭키로 암호화(aes-cbc-256, base64)  **credential json** 의 구성: - `registry_server_url`: registry url - `username`: username - `password`: password > v1.0 에서는 `password` 방식만 지원
+  push_credential: String
+  # 레지스트리의 image pull secret 리소스 목록
+  image_pull_secret_resources: [OpenShiftCmResource]
+}
+
+input OpenShiftCmRegistryInput {
+    # 레지스트리의 ID
+    id: BigInt
+    # 레지스트리의 url
+    url: String
+    # private 레지스트리 여부
+    is_private: Boolean
+    # 레지스트리 push credential 필요 여부
+    is_required_push_credential: Boolean
+    # ### 레지스트리 push credential 정보  credential 은 `\"{암호화된 대칭키}.{암호화된 credential 정보}\"` 로 구성된 문자열이다.   - 대칭키는 16 바이트 랜덤 문자열로 생성하고, ClusterManager 의 공개키로 암호화(base64) - credential json 을 대칭키로 암호화(aes-cbc-256, base64)  **credential json** 의 구성: - `registry_server_url`: registry url - `username`: username - `password`: password > v1.0 에서는 `password` 방식만 지원
+    push_credential: String
+    # 레지스트리의 image pull secret 리소스 목록
+    image_pull_secret_resources: [OpenShiftCmResourceInput]
+}
+
+#
+# open_shift_cm_resource.graphql
+#
+# 클러스터 리소스
+type OpenShiftCmResource {
+  # 리소스의 ID
+  id: BigInt
+  # 리소스의 group
+  group: String
+  # 리소스의 version
+  version: String
+  # 리소스의 kind
+  kind: String
+  # 리소스의 네임 스페이스 이름
+  namespace: String
+  # 리소스의 name
+  name: String
+  # 리소스의 uid
+  uid: String
+  # 리소스의 resource version
+  resource_version: String
+  # 리소스의 manifest
+  manifest: String
+  # 리소스의 dependent 리소스 목록
+  dependent_resources: [BigInt]
+  # 리소스의 dependency_resources 리소스 목록
+  dependency_resources: [BigInt]
+}
+
+input OpenShiftCmResourceInput {
+    # 리소스의 ID
+    id: BigInt
+    # 리소스의 group
+    group: String
+    # 리소스의 version
+    version: String
+    # 리소스의 kind
+    kind: String
+    # 리소스의 네임 스페이스 이름
+    namespace: String
+    # 리소스의 name
+    name: String
+    # 리소스의 uid
+    uid: String
+    # 리소스의 resource version
+    resource_version: String
+    # 리소스의 manifest
+    manifest: String
+    # 리소스의 dependent 리소스 목록
+    dependent_resources: [BigInt]
+    # 리소스의 dependency_resources 리소스 목록
+    dependency_resources: [BigInt]
+}
+
+#
+# open_shift_cm_runtime_class.graphql
+#
+# 클러스터 runtime class
+type OpenShiftCmRuntimeClass {
+  # runtime class의 resource id
+  resource_id: BigInt
+  # runtime class의 handler
+  handler: String
+  # runtime class의 name
+  name: String
+}
+
+input OpenShiftCmRuntimeClassInput {
+    # runtime class의 resource id
+    resource_id: BigInt
+    # runtime class의 handler
+    handler: String
+    # runtime class의 name
+    name: String
+}
+
+#
+# open_shift_cm_scheduler.graphql
+#
+# 클러스터 스케줄러
+type OpenShiftCmScheduler {
+  # 스케줄러의 ID
+  id: BigInt
+  # 스케줄러의 이름
+  name: String
+  workload: OpenShiftCmWorkload
+}
+
+input OpenShiftCmSchedulerInput {
+    # 스케줄러의 ID
+    id: BigInt
+    # 스케줄러의 이름
+    name: String
+    workload: OpenShiftCmWorkloadInput
+}
+
+#
+# open_shift_cm_service.graphql
+#
+# 클러스터 서비스
+type OpenShiftCmService {
+  # 서비스의 resource id
+  resource_id: BigInt
+  # 서비스의 이름
+  name: String
+  type: OpenShiftCmClusterResourceServiceTypeEnum
+  # 서비스 유형이 cluster ip 일 경우 서비스의 cluster ip
+  cluster_ip: String
+  # 서비스 유형이 load balancer 일 경우 서비스의 load balancer ip
+  load_balancer_ip: String
+  # 서비스 유형이 load balancer 일 경우 load balance 가 동작 할 ip 범위
+  load_balancer_source_ranges: [String]
+  # 서비스 유형이 load balancer 일 경우 load balancer class 명
+  load_balancer_class: String
+  # 서비스 유형이 external name 일 경우 해당 external name
+  external_name: String
+}
+
+input OpenShiftCmServiceInput {
+    # 서비스의 resource id
+    resource_id: BigInt
+    # 서비스의 이름
+    name: String
+    type: OpenShiftCmClusterResourceServiceTypeEnum
+    # 서비스 유형이 cluster ip 일 경우 서비스의 cluster ip
+    cluster_ip: String
+    # 서비스 유형이 load balancer 일 경우 서비스의 load balancer ip
+    load_balancer_ip: String
+    # 서비스 유형이 load balancer 일 경우 load balance 가 동작 할 ip 범위
+    load_balancer_source_ranges: [String]
+    # 서비스 유형이 load balancer 일 경우 load balancer class 명
+    load_balancer_class: String
+    # 서비스 유형이 external name 일 경우 해당 external name
+    external_name: String
+}
+
+#
+# open_shift_cm_service_account.graphql
+#
+# 클러스터의 ServiceAccount
+type OpenShiftCmServiceAccount {
+  # ServiceAccount Resource ID
+  resource_id: BigInt
+  # ServiceAccount Name
+  name: String
+}
+
+input OpenShiftCmServiceAccountInput {
+    # ServiceAccount Resource ID
+    resource_id: BigInt
+    # ServiceAccount Name
+    name: String
+}
+
+#
+# open_shift_cm_volume.graphql
+#
+# 클러스터 볼륨
+type OpenShiftCmVolume {
+  # 볼륨의 ID
+  id: BigInt
+  type: OpenShiftCmClusterResourceVolumeTypeEnum
+  # 클러스터 볼륨 크기
+  size: String
+  # 볼륨의 resource id
+  resource_id: BigInt
+  snapshots: [OpenShiftCmVolumeSnapshot]
+}
+
+input OpenShiftCmVolumeInput {
+    # 볼륨의 ID
+    id: BigInt
+    type: OpenShiftCmClusterResourceVolumeTypeEnum
+    # 클러스터 볼륨 크기
+    size: String
+    # 볼륨의 resource id
+    resource_id: BigInt
+    snapshots: [OpenShiftCmVolumeSnapshotInput]
+}
+
+#
+# open_shift_cm_volume_snapshot.graphql
+#
+# 클러스터 볼륨 스냅샷
+type OpenShiftCmVolumeSnapshot {
+  # 볼륨 스냅샷의 resource id
+  resource_id: BigInt
+  # 볼륨 스냅샷의 volume id
+  volume_id: BigInt
+  # 볼륨 스냅샷의 이름
+  name: String
+}
+
+input OpenShiftCmVolumeSnapshotInput {
+    # 볼륨 스냅샷의 resource id
+    resource_id: BigInt
+    # 볼륨 스냅샷의 volume id
+    volume_id: BigInt
+    # 볼륨 스냅샷의 이름
+    name: String
+}
+
+#
+# open_shift_cm_workload.graphql
+#
+type OpenShiftCmWorkload {
+  # 워크로드 리소스의 id
+  id: BigInt
+  # 워크로드의 네임스페이스
+  namespace: String
+  # 워크로드의 이름
+  name: String
+  # 워크로드 비고
+  remarks: String
+  # 워크로드의 대표 resource id
+  resource_id: BigInt
+  # 워크로드가 포함된 보호 그룹 리소스 이름
+  protection_group_resource_name: String
+  volumes: [OpenShiftCmWorkloadVolume]
+  resources: [OpenShiftCmResource]
+}
+
+input OpenShiftCmWorkloadInput {
+    # 워크로드 리소스의 id
+    id: BigInt
+    # 워크로드의 네임스페이스
+    namespace: String
+    # 워크로드의 이름
+    name: String
+    # 워크로드 비고
+    remarks: String
+    # 워크로드의 대표 resource id
+    resource_id: BigInt
+    # 워크로드가 포함된 보호 그룹 리소스 이름
+    protection_group_resource_name: String
+    volumes: [OpenShiftCmWorkloadVolumeInput]
+    resources: [OpenShiftCmResourceInput]
+}
+
+#
+# open_shift_cm_workload_volume.graphql
+#
+# 워크로드가 사용하는 Volume
+type OpenShiftCmWorkloadVolume {
+  volume: OpenShiftCmVolume
+  # volume 이름
+  name: String
+}
+
+input OpenShiftCmWorkloadVolumeInput {
+    volume: OpenShiftCmVolumeInput
+    # volume 이름
+    name: String
+}
+
+#
+# open_stack_cm_cluster_instance_extra_spec.graphql
+#
+# 클러스터 인스턴스 Extra Specification
+type OpenStackCmClusterInstanceExtraSpec {
+  key: OpenStackCmClusterInstanceExtraSpecKeyEnum
+  # Extra Specification 의 Value
+  value: String
+}
+
+input OpenStackCmClusterInstanceExtraSpecInput {
+    key: OpenStackCmClusterInstanceExtraSpecKeyEnum
+    # Extra Specification 의 Value
+    value: String
+}
+
+#
+# open_stack_cm_cluster_instance_extra_spec_key_enum.graphql
+#
+# Extra Specification 의 Key  **CPU limits:** - quota:cpu_shares - Specifies the proportional weighted share for the domain. If this element is omitted, the service defaults to the OS provided defaults. There is no unit for the value; it is a relative measure based on the setting of other VMs. For example, a VM configured with value 2048 gets twice as much CPU time as a VM configured with value 1024. - quota:cpu_shares_level - On VMware, specifies the allocation level. Can be custom, high, normal, or low. If you choose custom, set the number of shares using cpu_shares_share. - quota:cpu_period - Specifies the enforcement interval (unit: microseconds) for QEMU and LXC hypervisors. Within a period, each VCPU of the domain is not allowed to consume more than the quota worth of runtime. The value should be in range [1000, 1000000]. A period with value 0 means no value. - quota:cpu_limit - Specifies the upper limit for VMware machine CPU allocation in MHz. This parameter ensures that a machine never uses more than the defined amount of CPU time. It can be used to enforce a limit on the machine's CPU performance. - quota:cpu_reservation - Specifies the guaranteed minimum CPU reservation in MHz for VMware. This means that if needed, the machine will definitely get allocated the reserved amount of CPU cycles. - quota:cpu_quota - Specifies the maximum allowed bandwidth (unit: microseconds). A domain with a negative-value quota indicates that the domain has infinite bandwidth, which means that it is not bandwidth controlled. The value should be in range [1000, 18446744073709551] or less than 0. A quota with value 0 means no value. You can use this feature to ensure that all vCPUs run at the same speed.  **Memory limits:** - quota:memory_limit - Specifies the upper limit for VMware machine memory allocation in MB. The utilization of a virtual machine will not exceed this limit, even if there are available resources. This is typically used to ensure a consistent performance of virtual machines independent of available resources. - quota:memory_reservation - Specifies the guaranteed minimum memory reservation in MB for VMware. This means the specified amount of memory will definitely be allocated to the machine. - quota:memory_shares_level - On VMware, specifies the allocation level. This can be custom, high, normal or low. If you choose custom, set the number of shares using memory_shares_share. - quota:memory_shares_share - Specifies the number of shares allocated in the event that custom is used. There is no unit for this value. It is a relative measure based on the settings for other VMs.  **Disk I/O limits:** - quota:disk_io_limit - Specifies the upper limit for disk utilization in I/O per second. The utilization of a virtual machine will not exceed this limit, even if there are available resources. The default value is -1 which indicates unlimited usage. - quota:disk_io_reservation - Specifies the guaranteed minimum disk allocation in terms of Input/output Operations Per Second (IOPS). - quota:disk_io_shares_level - Specifies the allocation level. This can be custom, high, normal or low. If you choose custom, set the number of shares using disk_io_shares_share. - quota:disk_io_shares_share - Specifies the number of shares allocated in the event that custom is used. When there is resource contention, this value is used to determine the resource allocation.  **Disk tuning:** - quota:disk_read_bytes_sec - quota:disk_read_iops_sec - quota:disk_write_bytes_sec - quota:disk_write_iops_sec - quota:disk_total_bytes_sec - quota:disk_total_iops_sec  **Bandwidth I/O:** - quota:vif_inbound_average - quota:vif_inbound_burst - quota:vif_inbound_peak - quota:vif_outbound_average - quota:vif_outbound_burst - quota:vif_outbound_peak  **Watchdog behavior:** - hw:watchdog_action  **Random-number generator:** - hw_rng:rate-allowed - hw_rng:rate_bytes - hw_rng:rate_period  **CPU topology:** - hw:cpu_sockets - hw:cpu_cores - hw:cpu_threads - hw:cpu_max_sockets - hw:cpu_max_cores - hw:cpu_max_threads  **CPU pinning policy:** - hw:cpu_policy - hw:cpu_thread_policy  **NUMA topology:** - hw:numa_nodes - hw:numa_cpus.N - hw:numa_mem.N  **Large pages allocation:** - hw:mem_page_size  **PCI passthrough:** - pci_passthrough:alias  **Secure Boot:** - os:secure_boot
+enum OpenStackCmClusterInstanceExtraSpecKeyEnum {
+  QUOTA_CPU_SHARES
+  QUOTA_CPU_SHARES_LEVEL
+  QUOTA_CPU_PERIOD
+  QUOTA_CPU_LIMIT
+  QUOTA_CPU_RESERVATION
+  QUOTA_CPU_QUOTA
+  QUOTA_MEMORY_LIMIT
+  QUOTA_MEMORY_RESERVATION
+  QUOTA_MEMORY_SHARES_LEVEL
+  QUOTA_MEMORY_SHARES_SHARE
+  QUOTA_DISK_IO_LIMIT
+  QUOTA_DISK_IO_RESERVATION
+  QUOTA_DISK_IO_SHARES_LEVEL
+  QUOTA_DISK_IO_SHARES_SHARE
+  QUOTA_DISK_READ_BYTES_SEC
+  QUOTA_DISK_READ_IOPS_SEC
+  QUOTA_DISK_WRITE_BYTES_SEC
+  QUOTA_DISK_WRITE_IOPS_SEC
+  QUOTA_DISK_TOTAL_BYTES_SEC
+  QUOTA_DISK_TOTAL_IOPS_SEC
+  QUOTA_VIF_INBOUND_AVERAGE
+  QUOTA_VIF_INBOUND_BURST
+  QUOTA_VIF_INBOUND_PEAK
+  QUOTA_VIF_OUTBOUND_AVERAGE
+  QUOTA_VIF_OUTBOUND_BURST
+  QUOTA_VIF_OUTBOUND_PEAK
+  HW_WATCHDOG_ACTION
+  HW_RNG_RATE_ALLOWED
+  HW_RNG_RATE_BYTES
+  HW_RNG_RATE_PERIOD
+  HW_CPU_SOCKETS
+  HW_CPU_CORES
+  HW_CPU_THREADS
+  HW_CPU_MAX_SOCKETS
+  HW_CPU_MAX_CORES
+  HW_CPU_MAX_THREADS
+  HW_CPU_POLICY
+  HW_CPU_THREAD_POLICY
+  HW_NUMA_NODES
+  HW_NUMA_CPUS__N
+  HW_NUMA_MEM__N
+  HW_MEM_PAGE_SIZE
+  PCI_PASSTHROUGH_ALIAS
+  OS_SECURE_BOOT
+}
+
+#
+# open_stack_cm_cluster_tenant_quota.graphql
+#
+# 클러스터 테넌트 Quota
+type OpenStackCmClusterTenantQuota {
+  # Quota Key
+  key: String
+  # Quota Value
+  value: BigInt
+}
+
+input OpenStackCmClusterTenantQuotaInput {
+    # Quota Key
+    key: String
+    # Quota Value
+    value: BigInt
+}
+
+#
+# open_stack_dr_external_routing_interface.graphql
+#
+# 라우터에 연결될 외부 네트워크 인터페이스
+type OpenStackDrExternalRoutingInterface {
+  # 외부 네트워크
+  network: OpenStackDrNetwork
+  # 외부 서브넷
+  subnet: OpenStackDrSubnet
+  # 인터페이스 IP 주소
+  ip_address: String
+}
+
+input OpenStackDrExternalRoutingInterfaceInput {
+    # 외부 네트워크
+    network: OpenStackDrNetworkInput
+    # 외부 서브넷
+    subnet: OpenStackDrSubnetInput
+    # 인터페이스 IP 주소
+    ip_address: String
+}
+
+#
+# open_stack_dr_floating_ip.graphql
+#
+# 클러스터 Floating IP
+type OpenStackDrFloatingIp {
+  # 클러스터에서의 Floating IP ID
+  uuid: String
+  # IP 주소
+  ip_address: String
+}
+
+input OpenStackDrFloatingIpInput {
+    # 클러스터에서의 Floating IP ID
+    uuid: String
+    # IP 주소
+    ip_address: String
+}
+
+#
+# open_stack_dr_instance.graphql
+#
+# 보호그룹 인포의 보호 대상 인스턴스 전체 정보
+type OpenStackDrInstance {
+  # 인스턴스의 uuid
+  uuid: String
+  # 인스턴스의 이름 *필수 표시 데이터
+  name: String
+  availability_zone: OpenStackDrInstanceAvailabilityZone
+  hypervisor: OpenStackDrInstanceHypervisor
+  # 보호대상 인스턴스의 Keypair
+  keypair: OpenStackDrKeypair
+  # 보호대상 클러스터의 Spec
+  spec: OpenStackDrSpec
+  # 보호대상 클러스터의 Security Group
+  security_groups: [OpenStackDrSecurityGroup]
+  # 보호대상 클러스터의 Network
+  networks: [OpenStackDrNetwork]
+  # 보호대상 클러스터의 Router
+  routers: [OpenStackDrRouter]
+  # 보호대상 클러스터의 Volumes
+  volumes: [OpenStackDrVolume]
+}
+
+input OpenStackDrInstanceInput {
+    # 인스턴스의 uuid
+    uuid: String
+    # 인스턴스의 이름 *필수 표시 데이터
+    name: String
+    availability_zone: OpenStackDrInstanceAvailabilityZoneInput
+    hypervisor: OpenStackDrInstanceHypervisorInput
+    # 보호대상 인스턴스의 Keypair
+    keypair: OpenStackDrKeypairInput
+    # 보호대상 클러스터의 Spec
+    spec: OpenStackDrSpecInput
+    # 보호대상 클러스터의 Security Group
+    security_groups: [OpenStackDrSecurityGroupInput]
+    # 보호대상 클러스터의 Network
+    networks: [OpenStackDrNetworkInput]
+    # 보호대상 클러스터의 Router
+    routers: [OpenStackDrRouterInput]
+    # 보호대상 클러스터의 Volumes
+    volumes: [OpenStackDrVolumeInput]
+}
+
+#
+# open_stack_dr_instance_availability_zone.graphql
+#
+# 인스턴스 보호대상 클러스터의 Availability Zone
+type OpenStackDrInstanceAvailabilityZone {
+  # 보호대상 클러스터의 Availability Zone 이름
+  name: String
+}
+
+input OpenStackDrInstanceAvailabilityZoneInput {
+    # 보호대상 클러스터의 Availability Zone 이름
+    name: String
+}
+
+#
+# open_stack_dr_instance_hypervisor.graphql
+#
+# 인스턴스 보호대상 클러스터의 Hypervisor
+type OpenStackDrInstanceHypervisor {
+  # 보호대상 클러스터의 하이버파이저의 hostname
+  host_name: String
+}
+
+input OpenStackDrInstanceHypervisorInput {
+    # 보호대상 클러스터의 하이버파이저의 hostname
+    host_name: String
+}
+
+#
+# open_stack_dr_internal_routing_interface.graphql
+#
+# 라우터에 연결될 내부 네트워크 인터페이스
+type OpenStackDrInternalRoutingInterface {
+  # 내부 네트워크
+  network: OpenStackDrNetwork
+  # 내부 서브넷
+  subnet: OpenStackDrSubnet
+  # 인터페이스 IP 주소
+  ip_address: String
+}
+
+input OpenStackDrInternalRoutingInterfaceInput {
+    # 내부 네트워크
+    network: OpenStackDrNetworkInput
+    # 내부 서브넷
+    subnet: OpenStackDrSubnetInput
+    # 인터페이스 IP 주소
+    ip_address: String
+}
+
+#
+# open_stack_dr_keypair.graphql
+#
+# 클러스터 KeyPair
+type OpenStackDrKeypair {
+  # KeyPair 의 이름 *필수 표시 데이터
+  name: String
+  # KeyPair 의 public key
+  public_key: String
+  # KeyPair 의 fingerprint
+  fingerprint: String
+  type: OpenStackDrKeypairTypeEnum
+}
+
+input OpenStackDrKeypairInput {
+    # KeyPair 의 이름 *필수 표시 데이터
+    name: String
+    # KeyPair 의 public key
+    public_key: String
+    # KeyPair 의 fingerprint
+    fingerprint: String
+    type: OpenStackDrKeypairTypeEnum
+}
+
+#
+# open_stack_dr_keypair_type_enum.graphql
+#
+# KeyPair 의 타입
+enum OpenStackDrKeypairTypeEnum {
+  OPENSTACK_KEYPAIR_TYPE_SSH
+  OPENSTACK_KEYPAIR_TYPE_X509
+}
+
+#
+# open_stack_dr_network.graphql
+#
+# 클러스터 네트워크
+type OpenStackDrNetwork {
+  # 클러스터에서의 네트워크 ID
+  uuid: String
+  # 클러스터 네트워크의 이름
+  name: String
+  # DHCP 여부
+  dhcp_flag: Boolean
+  # IP 주소 *필수 표시 데이터
+  ip_address: String
+  # 외부 네트워크 여부
+  external_flag: Boolean
+  type: OpenStackDrNetworkTypeEnum
+  # 서브넷 목록
+  subnets: [OpenStackDrSubnet]
+  # FloatingIP 목록
+  floating_ips: [OpenStackDrFloatingIp]
+}
+
+input OpenStackDrNetworkInput {
+    # 클러스터에서의 네트워크 ID
+    uuid: String
+    # 클러스터 네트워크의 이름
+    name: String
+    # DHCP 여부
+    dhcp_flag: Boolean
+    # IP 주소 *필수 표시 데이터
+    ip_address: String
+    # 외부 네트워크 여부
+    external_flag: Boolean
+    type: OpenStackDrNetworkTypeEnum
+    # 서브넷 목록
+    subnets: [OpenStackDrSubnetInput]
+    # FloatingIP 목록
+    floating_ips: [OpenStackDrFloatingIpInput]
+}
+
+#
+# open_stack_dr_network_type_enum.graphql
+#
+# 네트워크 타입
+enum OpenStackDrNetworkTypeEnum {
+  OPENSTACK_NETWORK_TYPE_VLAN
+  OPENSTACK_NETWORK_TYPE_VXLAN
+  OPENSTACK_NETWORK_TYPE_GRE
+  OPENSTACK_NETWORK_TYPE_FLAT
+  OPENSTACK_NETWORK_TYPE_LOCAL
+}
+
+#
+# open_stack_dr_protection_group_info.graphql
+#
+# 보호 그룹 info
+type OpenStackDrProtectionGroupInfo {
+  # 보호 그룹 설명
+  tenant: OpenStackDrTenant
+  # 보호대상 클러스터의 인스턴스 목록
+  instances: [OpenStackDrInstance]
+}
+
+input OpenStackDrProtectionGroupInfoInput {
+    # 보호 그룹 설명
+    tenant: OpenStackDrTenantInput
+    # 보호대상 클러스터의 인스턴스 목록
+    instances: [OpenStackDrInstanceInput]
+}
+
+#
+# open_stack_dr_router.graphql
+#
+# 클러스터 네트워크 라우터
+type OpenStackDrRouter {
+  # 클러스터에서의 네트워크 라우터 ID
+  uuid: String
+  # 클러스터 라우터의 이름
+  name: String
+  # 내부 네트워크로의 라우팅 인터페이스 목록
+  internal_routing_interfaces: [OpenStackDrInternalRoutingInterface]
+  # 외부 네트워크로의 라우팅 인터페이스 목록
+  external_routing_interfaces: [OpenStackDrExternalRoutingInterface]
+  # 추가 라우트 목록
+  extra_routes: [OpenStackDrRouterExtraRoute]
+}
+
+input OpenStackDrRouterInput {
+    # 클러스터에서의 네트워크 라우터 ID
+    uuid: String
+    # 클러스터 라우터의 이름
+    name: String
+    # 내부 네트워크로의 라우팅 인터페이스 목록
+    internal_routing_interfaces: [OpenStackDrInternalRoutingInterfaceInput]
+    # 외부 네트워크로의 라우팅 인터페이스 목록
+    external_routing_interfaces: [OpenStackDrExternalRoutingInterfaceInput]
+    # 추가 라우트 목록
+    extra_routes: [OpenStackDrRouterExtraRouteInput]
+}
+
+#
+# open_stack_dr_router_extra_route.graphql
+#
+# 클러스터 네트워크 추가 라우트
+type OpenStackDrRouterExtraRoute {
+  # 목적지 CIDR
+  destination: String
+  # 목적지에 대한 Nexthop IP 주소
+  nexthop: String
+}
+
+input OpenStackDrRouterExtraRouteInput {
+    # 목적지 CIDR
+    destination: String
+    # 목적지에 대한 Nexthop IP 주소
+    nexthop: String
+}
+
+#
+# open_stack_dr_security_group.graphql
+#
+# 클러스터 보안그룹
+type OpenStackDrSecurityGroup {
+  # 클러스터에서의 보안그룹 ID
+  uuid: String
+  # 클러스터 보안그룹의 이름
+  name: String
+  # 클러스터 보안그룹의 rule 목록
+  security_group_rules: [OpenStackDrSecurityGroupRule]
+}
+
+input OpenStackDrSecurityGroupInput {
+    # 클러스터에서의 보안그룹 ID
+    uuid: String
+    # 클러스터 보안그룹의 이름
+    name: String
+    # 클러스터 보안그룹의 rule 목록
+    security_group_rules: [OpenStackDrSecurityGroupRuleInput]
+}
+
+#
+# open_stack_dr_security_group_rule.graphql
+#
+# 클러스터 보안그룹 규칙
+type OpenStackDrSecurityGroupRule {
+  # 클러스터에서의 보안그룹 규칙 ID
+  uuid: String
+  direction: OpenStackDrSecurityGroupRuleDirectionEnum
+  # 네트워크 CIDR
+  network_cidr: String
+  # 포트 범위 최소 값
+  port_range_min: BigInt
+  # 포트 범위 최대 값
+  port_range_max: BigInt
+  # 프로토콜  The IP protocol can be represented by a string, an integer, or null. Valid string or integer values are any or 0, ah or 51, dccp or 33, egp or 8, esp or 50, gre or 47, icmp or 1, icmpv6 or 58, igmp or 2, ipip or 4, ipv6-encap or 41, ipv6-frag or 44, ipv6-icmp or 58, ipv6-nonxt or 59, ipv6-opts or 60, ipv6-route or 43, ospf or 89, pgm or 113, rsvp or 46, sctp or 132, tcp or 6, udp or 17, udplite or 136, vrrp or 112. Additionally, any integer value between [0-255] is also valid. The string any (or integer 0) means all IP protocols. See the constants in neutron_lib.constants for the most up-to-date list of supported strings.
+  protocol: String
+  ether_type: OpenStackDrSecurityGroupRuleEtherTypeEnum
+}
+
+input OpenStackDrSecurityGroupRuleInput {
+    # 클러스터에서의 보안그룹 규칙 ID
+    uuid: String
+    direction: OpenStackDrSecurityGroupRuleDirectionEnum
+    # 네트워크 CIDR
+    network_cidr: String
+    # 포트 범위 최소 값
+    port_range_min: BigInt
+    # 포트 범위 최대 값
+    port_range_max: BigInt
+    # 프로토콜  The IP protocol can be represented by a string, an integer, or null. Valid string or integer values are any or 0, ah or 51, dccp or 33, egp or 8, esp or 50, gre or 47, icmp or 1, icmpv6 or 58, igmp or 2, ipip or 4, ipv6-encap or 41, ipv6-frag or 44, ipv6-icmp or 58, ipv6-nonxt or 59, ipv6-opts or 60, ipv6-route or 43, ospf or 89, pgm or 113, rsvp or 46, sctp or 132, tcp or 6, udp or 17, udplite or 136, vrrp or 112. Additionally, any integer value between [0-255] is also valid. The string any (or integer 0) means all IP protocols. See the constants in neutron_lib.constants for the most up-to-date list of supported strings.
+    protocol: String
+    ether_type: OpenStackDrSecurityGroupRuleEtherTypeEnum
+}
+
+#
+# open_stack_dr_security_group_rule_direction_enum.graphql
+#
+# 규칙 방향
+enum OpenStackDrSecurityGroupRuleDirectionEnum {
+  INGRESS
+  EGRESS
+}
+
+#
+# open_stack_dr_security_group_rule_ether_type_enum.graphql
+#
+# 이더넷 타입
+enum OpenStackDrSecurityGroupRuleEtherTypeEnum {
+  FOUR
+  SIX
+}
+
+#
+# open_stack_dr_spec.graphql
+#
+# 클러스터 인스턴스 Specification
+type OpenStackDrSpec {
+  # 클러스터에서의 Specification ID
+  uuid: String
+  # Specification 의 이름 *필수 표시 데이터
+  name: String
+  # VCPU 코어 수 (core) *필수 표시 데이터
+  vcpu_total_cnt: BigInt
+  # 메모리 용량 (bytes) *필수 표시 데이터
+  mem_total_bytes: BigInt
+  # 디스크 용량 (bytes) *필수 표시 데이터
+  disk_total_bytes: BigInt
+  # 스왑 영역 (bytes)
+  swap_total_bytes: BigInt
+  # 임시 영역 (bytes)
+  ephemeral_total_bytes: BigInt
+  # Extra Specifications
+  extra_specs: [OpenStackCmClusterInstanceExtraSpec]
+}
+
+input OpenStackDrSpecInput {
+    # 클러스터에서의 Specification ID
+    uuid: String
+    # Specification 의 이름 *필수 표시 데이터
+    name: String
+    # VCPU 코어 수 (core) *필수 표시 데이터
+    vcpu_total_cnt: BigInt
+    # 메모리 용량 (bytes) *필수 표시 데이터
+    mem_total_bytes: BigInt
+    # 디스크 용량 (bytes) *필수 표시 데이터
+    disk_total_bytes: BigInt
+    # 스왑 영역 (bytes)
+    swap_total_bytes: BigInt
+    # 임시 영역 (bytes)
+    ephemeral_total_bytes: BigInt
+    # Extra Specifications
+    extra_specs: [OpenStackCmClusterInstanceExtraSpecInput]
+}
+
+#
+# open_stack_dr_storage.graphql
+#
+# 클러스터 볼륨타입
+type OpenStackDrStorage {
+  # 클러스터에서의 볼륨타입 ID
+  uuid: String
+  # 클러스터 볼륨타입의 이름
+  name: String
+  type: OpenStackDrStorageTypeEnum
+  # 클러스터 볼륨타입의 용량
+  capacity_bytes: BigInt
+  # 클러스터 볼륨타입의 사용량
+  used_bytes: BigInt
+  # 클러스터의 API Credential의 암호문 ## Openstack **password authentication:** ```json {   \"methods\": [\"password\"],   \"password\": {     \"user\": {       \"name\": \"admin\",       \"domain\": {         \"name\": \"admin\"       },       \"password\": \"password\"     }   } } ```
+  credential: String
+}
+
+input OpenStackDrStorageInput {
+    # 클러스터에서의 볼륨타입 ID
+    uuid: String
+    # 클러스터 볼륨타입의 이름
+    name: String
+    type: OpenStackDrStorageTypeEnum
+    # 클러스터 볼륨타입의 용량
+    capacity_bytes: BigInt
+    # 클러스터 볼륨타입의 사용량
+    used_bytes: BigInt
+    # 클러스터의 API Credential의 암호문 ## Openstack **password authentication:** ```json {   \"methods\": [\"password\"],   \"password\": {     \"user\": {       \"name\": \"admin\",       \"domain\": {         \"name\": \"admin\"       },       \"password\": \"password\"     }   } } ```
+    credential: String
+}
+
+#
+# open_stack_dr_storage_type_enum.graphql
+#
+# 클러스터 볼륨타입의 종류
+enum OpenStackDrStorageTypeEnum {
+  OPENSTACK_STORAGE_TYPE_LVM
+  OPENSTACK_STORAGE_TYPE_NFS
+}
+
+#
+# open_stack_dr_subnet.graphql
+#
+# 클러스터 네트워크 서브넷
+type OpenStackDrSubnet {
+  # 클러스터에서의 네트워크 서브넷 ID
+  uuid: String
+  # 클러스터 네트워크 서브넷의 이름
+  name: String
+  # 클러스터 네트워크 서브넷의 네트워크 CIDR
+  network_cidr: String
+  # DHCP 활성화 여부
+  dhcp_enabled: Boolean
+  # 게이트웨이 활성화 여부
+  gateway_enabled: Boolean
+  # 게이트웨이 주소
+  gateway_ip_address: String
+  ipv6_address_mode_code: OpenStackDrSubnetIpv6AddressModeCodeEnum
+  ipv6_ra_mode_code: OpenStackDrSubnetIpv6RaModeCodeEnum
+  # DHCP 할당 범위 목록
+  dhcp_pools: [OpenStackDrSubnetDhcpPool]
+  # 클러스터 네트워크 서브넷의 Nameserver 목록
+  nameservers: [OpenStackDrSubnetNameserver]
+}
+
+input OpenStackDrSubnetInput {
+    # 클러스터에서의 네트워크 서브넷 ID
+    uuid: String
+    # 클러스터 네트워크 서브넷의 이름
+    name: String
+    # 클러스터 네트워크 서브넷의 네트워크 CIDR
+    network_cidr: String
+    # DHCP 활성화 여부
+    dhcp_enabled: Boolean
+    # 게이트웨이 활성화 여부
+    gateway_enabled: Boolean
+    # 게이트웨이 주소
+    gateway_ip_address: String
+    ipv6_address_mode_code: OpenStackDrSubnetIpv6AddressModeCodeEnum
+    ipv6_ra_mode_code: OpenStackDrSubnetIpv6RaModeCodeEnum
+    # DHCP 할당 범위 목록
+    dhcp_pools: [OpenStackDrSubnetDhcpPoolInput]
+    # 클러스터 네트워크 서브넷의 Nameserver 목록
+    nameservers: [OpenStackDrSubnetNameserverInput]
+}
+
+#
+# open_stack_dr_subnet_dhcp_pool.graphql
+#
+# 클러스터 네트워크 서브넷의 DHCP Pool
+type OpenStackDrSubnetDhcpPool {
+  # 할당 범위 시작 주소
+  start_ip_address: String
+  # 할당 범위 종료 주소
+  end_ip_address: String
+}
+
+input OpenStackDrSubnetDhcpPoolInput {
+    # 할당 범위 시작 주소
+    start_ip_address: String
+    # 할당 범위 종료 주소
+    end_ip_address: String
+}
+
+#
+# open_stack_dr_subnet_ipv6_address_mode_code_enum.graphql
+#
+# ipv6 의 ip 주소 할당 방법
+enum OpenStackDrSubnetIpv6AddressModeCodeEnum {
+  SLAAC
+  DHCPV6_STATEFUL
+  DHCPV6_STATELESS
+}
+
+#
+# open_stack_dr_subnet_ipv6_ra_mode_code_enum.graphql
+#
+# ipv6 의 router advertisement 방법
+enum OpenStackDrSubnetIpv6RaModeCodeEnum {
+  SLAAC
+  DHCPV6_STATEFUL
+  DHCPV6_STATELESS
+}
+
+#
+# open_stack_dr_subnet_nameserver.graphql
+#
+# 클러스터 네트워크 서브넷의 Nameserver
+type OpenStackDrSubnetNameserver {
+  # 네임서버 주소
+  nameserver: String
+}
+
+input OpenStackDrSubnetNameserverInput {
+    # 네임서버 주소
+    nameserver: String
+}
+
+#
+# open_stack_dr_tenant.graphql
+#
+# 보호대상 클러스터의 테넌트
+type OpenStackDrTenant {
+  # 테넌트의 uuid
+  uuid: String
+  # 테넌트의 uuid
+  name: String
+  # 보호대상 클러스터에서 테넌트 활성화 여부
+  enabled: Boolean
+  # 클러스터의 쿼타 목록
+  quotas: [OpenStackCmClusterTenantQuota]
+}
+
+input OpenStackDrTenantInput {
+    # 테넌트의 uuid
+    uuid: String
+    # 테넌트의 uuid
+    name: String
+    # 보호대상 클러스터에서 테넌트 활성화 여부
+    enabled: Boolean
+    # 클러스터의 쿼타 목록
+    quotas: [OpenStackCmClusterTenantQuotaInput]
+}
+
+#
+# open_stack_dr_volume.graphql
+#
+# 클러스터 볼륨
+type OpenStackDrVolume {
+  # 클러스터에서의 볼륨 ID
+  uuid: String
+  # 클러스터 볼륨의 이름
+  name: String
+  # 클러스터 볼륨의 용량
+  size_bytes: BigInt
+  # 공유 가능 여부
+  multiattach: Boolean
+  # 부팅 가능 여부
+  bootable: Boolean
+  # 읽기 전용 볼륨 여부
+  readonly: Boolean
+  # 디바이스 경로
+  device_path: String
+  # 부팅 순서
+  boot_index: BigInt
+  storage: OpenStackDrStorage
+  # 클러스터 볼륨 스냅샷 목록
+  snapshots: [OpenStackDrVolumeSnapshot]
+}
+
+input OpenStackDrVolumeInput {
+    # 클러스터에서의 볼륨 ID
+    uuid: String
+    # 클러스터 볼륨의 이름
+    name: String
+    # 클러스터 볼륨의 용량
+    size_bytes: BigInt
+    # 공유 가능 여부
+    multiattach: Boolean
+    # 부팅 가능 여부
+    bootable: Boolean
+    # 읽기 전용 볼륨 여부
+    readonly: Boolean
+    # 디바이스 경로
+    device_path: String
+    # 부팅 순서
+    boot_index: BigInt
+    storage: OpenStackDrStorageInput
+    # 클러스터 볼륨 스냅샷 목록
+    snapshots: [OpenStackDrVolumeSnapshotInput]
+}
+
+#
+# open_stack_dr_volume_snapshot.graphql
+#
+# 클러스터 볼륨 스냅샷
+type OpenStackDrVolumeSnapshot {
+  # 클러스터에서의 볼륨 스냅샷 ID
+  uuid: String
+  # 클러스터 볼륨 스냅샷의 이름
+  name: String
+  # 클러스터에서의 볼륨 그룹 스냅샷 ID
+  cluster_volume_group_snapshot_uuid: String
+  # 클러스터 볼륨 스냅샷의 용량
+  size_bytes: BigInt
+}
+
+input OpenStackDrVolumeSnapshotInput {
+    # 클러스터에서의 볼륨 스냅샷 ID
+    uuid: String
+    # 클러스터 볼륨 스냅샷의 이름
+    name: String
+    # 클러스터에서의 볼륨 그룹 스냅샷 ID
+    cluster_volume_group_snapshot_uuid: String
+    # 클러스터 볼륨 스냅샷의 용량
+    size_bytes: BigInt
+}
+
+#
+# replicator_protection_group_snapshot.graphql
+#
+# 보호그룹 스냅샷 정보
+type ReplicatorProtectionGroupSnapshot {
+  # 보호그룹 스냅샷의 id
+  protection_group_snapshot_id: BigInt
+  # 스냅샷 시작 시간
+  start_at: BigInt
+  # 스냅샷 locker
+  locker: String
+  # 보호그룹 스냅샷 생성 성공 여부
+  is_success: Boolean
+  # retain count 초과 여부
+  retain_count_over: Boolean
+}
+
+input ReplicatorProtectionGroupSnapshotInput {
+    # 보호그룹 스냅샷의 id
+    protection_group_snapshot_id: BigInt
+    # 스냅샷 시작 시간
+    start_at: BigInt
+    # 스냅샷 locker
+    locker: String
+    # 보호그룹 스냅샷 생성 성공 여부
+    is_success: Boolean
+    # retain count 초과 여부
+    retain_count_over: Boolean
+}
+
+#
+# replicator_snapshot_schedule.graphql
+#
+# 스냅샷 스케줄 정보
+type ReplicatorSnapshotSchedule {
+  # 생성 주기 타입(1 yearly, 2 monthly, 3 weekly, 4 daily, 5 hourly, 6 minutely)
+  schedule_type: BigInt
+  # 스냅샷 생성 시작 시간
+  start_at: BigInt
+  # 스냅샷 종료 시간
+  end_at: BigInt
+  # 스케줄 타입 별 스냅샷 생성 주기
+  period: BigInt
+  # 스냅샷 유지 개수
+  retain_count: BigInt
+  # 2차 백업 주기
+  export_period: BigInt
+  # 2차 백업 유지 개수
+  export_retain_count: BigInt
+  # 백업 타입 메타데이터
+  metadata: JSONObject
+}
+
+input ReplicatorSnapshotScheduleInput {
+    # 생성 주기 타입(1 yearly, 2 monthly, 3 weekly, 4 daily, 5 hourly, 6 minutely)
+    schedule_type: BigInt
+    # 스냅샷 생성 시작 시간
+    start_at: BigInt
+    # 스냅샷 종료 시간
+    end_at: BigInt
+    # 스케줄 타입 별 스냅샷 생성 주기
+    period: BigInt
+    # 스냅샷 유지 개수
+    retain_count: BigInt
+    # 2차 백업 주기
+    export_period: BigInt
+    # 2차 백업 유지 개수
+    export_retain_count: BigInt
+    # 백업 타입 메타데이터
+    metadata: JSONObject
+}
+
+#
+# sm_storage.graphql
+#
+type SmStorage {
+  # 스토리지 식별자(사용자 정의 X)
+  resource_name: String
+  spec: SmStorageSpec
+  status: SmStorageStatus
+  primary: Boolean
+}
+
+input SmStorageInput {
+    # 스토리지 식별자(사용자 정의 X)
+    resource_name: String
+    spec: SmStorageSpecInput
+    status: SmStorageStatusInput
+    primary: Boolean
+}
+
+#
+# sm_storage_configuration_aws_s3.graphql
+#
+type SmStorageConfigurationAwsS3 {
+  # https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/id_credentials_access-keys.html
+  access_key_id: String
+  # https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/id_credentials_access-keys.html
+  secret_access_key: String
+  region: SmStorageConfigurationAwsS3RegionEnum
+  # https://stackoverflow.com/questions/50480924/regex-for-s3-bucket-name
+  bucket: String
+}
+
+input SmStorageConfigurationAwsS3Input {
+    # https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/id_credentials_access-keys.html
+    access_key_id: String
+    # https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/id_credentials_access-keys.html
+    secret_access_key: String
+    region: SmStorageConfigurationAwsS3RegionEnum
+    # https://stackoverflow.com/questions/50480924/regex-for-s3-bucket-name
+    bucket: String
+}
+
+#
+# sm_storage_configuration_aws_s3_region_enum.graphql
+#
+enum SmStorageConfigurationAwsS3RegionEnum {
+  US_EAST_2
+  US_EAST_1
+  US_WEST_1
+  US_WEST_2
+  AF_SOUTH_1
+  AP_EAST_1
+  AP_SOUTH_2
+  AP_SOUTHEAST_3
+  AP_SOUTHEAST_4
+  AP_SOUTH_1
+  AP_NORTHEAST_3
+  AP_NORTHEAST_2
+  AP_SOUTHEAST_1
+  AP_SOUTHEAST_2
+  AP_NORTHEAST_1
+  CA_CENTRAL_1
+  CA_WEST_1
+  EU_CENTRAL_1
+  EU_WEST_1
+  EU_WEST_2
+  EU_SOUTH_1
+  EU_WEST_3
+  EU_SOUTH_2
+  EU_NORTH_1
+  EU_CENTRAL_2
+  IL_CENTRAL_1
+  ME_SOUTH_1
+  ME_CENTRAL_1
+  SA_EAST_1
+}
+
+#
+# sm_storage_configuration_azure_blob.graphql
+#
+type SmStorageConfigurationAzureBlob {
+  storage_account_name: String
+  storage_account_key: String
+}
+
+input SmStorageConfigurationAzureBlobInput {
+    storage_account_name: String
+    storage_account_key: String
+}
+
+#
+# sm_storage_configuration_ceph_rbd.graphql
+#
+# 필수가 아닌 옵션은 향후에 추가될 가능성이 존재합니다.
+type SmStorageConfigurationCephRbd {
+  # Ceph 클러스터 fsid
+  fsid: String
+  # Ceph 클러스터 내 모니터 주소 목록
+  monitors: [String]
+  # 쿠버네티스가 스토리지에 접근할 때 사용할 유저 ID
+  user_id: String
+  # 쿠버네티스가 사용할 유저 ID에 대응되는 Key
+  user_key: String
+  # 동적 프로비저닝될 볼륨(이미지)가 생성될 Pool 이름
+  pool: String
+  image_features: [SmStorageConfigurationCephRbdImageFeaturesEnum]
+}
+
+input SmStorageConfigurationCephRbdInput {
+    # Ceph 클러스터 fsid
+    fsid: String
+    # Ceph 클러스터 내 모니터 주소 목록
+    monitors: [String]
+    # 쿠버네티스가 스토리지에 접근할 때 사용할 유저 ID
+    user_id: String
+    # 쿠버네티스가 사용할 유저 ID에 대응되는 Key
+    user_key: String
+    # 동적 프로비저닝될 볼륨(이미지)가 생성될 Pool 이름
+    pool: String
+    image_features: [SmStorageConfigurationCephRbdImageFeaturesEnum]
+}
+
+#
+# sm_storage_configuration_ceph_rbd_image_features_enum.graphql
+#
+# reference: https://docs.ceph.com/en/quincy/man/8/rbd/#cmdoption-rbd-image-feature layering: layering support striping: striping v2 support exclusive-lock: exclusive locking support object-map: object map support (requires exclusive-lock) fast-diff: fast diff calculations (requires object-map) deep-flatten: snapshot flatten support journaling: journaled IO support (requires exclusive-lock) data-pool: erasure coded pool support 필수 옵션: \"layering\"
+enum SmStorageConfigurationCephRbdImageFeaturesEnum {
+  LAYERING
+  JOURNALING
+  STRIPING
+  EXCLUSIVE_LOCK
+  OBJECT_MAP
+  FAST_DIFF
+  DEEP_FLATTEN
+  DATA_POOL
+}
+
+#
+# sm_storage_configuration_nfs.graphql
+#
+type SmStorageConfigurationNfs {
+  server: String
+  share: String
+}
+
+input SmStorageConfigurationNfsInput {
+    server: String
+    share: String
+}
+
+#
+# sm_storage_configuration_type.graphql
+#
+type SmStorageConfigurationType {
+  # Ceph 클러스터 fsid
+  fsid: String
+  # Ceph 클러스터 내 모니터 주소 목록
+  monitors: [String]
+  # 쿠버네티스가 스토리지에 접근할 때 사용할 유저 ID
+  user_id: String
+  # 쿠버네티스가 사용할 유저 ID에 대응되는 Key
+  user_key: String
+  # 동적 프로비저닝될 볼륨(이미지)가 생성될 Pool 이름
+  pool: String
+  image_features: [SmStorageConfigurationCephRbdImageFeaturesEnum]
+  server: String
+  share: String
+  # https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/id_credentials_access-keys.html
+  access_key_id: String
+  # https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/id_credentials_access-keys.html
+  secret_access_key: String
+  region: SmStorageConfigurationAwsS3RegionEnum
+  # https://stackoverflow.com/questions/50480924/regex-for-s3-bucket-name
+  bucket: String
+  storage_account_name: String
+  storage_account_key: String
+}
+
+input SmStorageConfigurationTypeInput {
+    # Ceph 클러스터 fsid
+    fsid: String
+    # Ceph 클러스터 내 모니터 주소 목록
+    monitors: [String]
+    # 쿠버네티스가 스토리지에 접근할 때 사용할 유저 ID
+    user_id: String
+    # 쿠버네티스가 사용할 유저 ID에 대응되는 Key
+    user_key: String
+    # 동적 프로비저닝될 볼륨(이미지)가 생성될 Pool 이름
+    pool: String
+    image_features: [SmStorageConfigurationCephRbdImageFeaturesEnum]
+    server: String
+    share: String
+    # https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/id_credentials_access-keys.html
+    access_key_id: String
+    # https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/id_credentials_access-keys.html
+    secret_access_key: String
+    region: SmStorageConfigurationAwsS3RegionEnum
+    # https://stackoverflow.com/questions/50480924/regex-for-s3-bucket-name
+    bucket: String
+    storage_account_name: String
+    storage_account_key: String
+}
+
+#
+# sm_storage_spec.graphql
+#
+type SmStorageSpec {
+  # 사용자 정의 스토리지 이름
+  name: String
+  # 사용자 정의 스토리지 부가 설명
+  description: String
+  type: SmStorageTypeEnum
+  configuration: SmStorageConfigurationType
+  creator: CloudUser
+  created_at: BigInt
+  modifier: CloudUser
+  modified_at: BigInt
+}
+
+input SmStorageSpecInput {
+    # 사용자 정의 스토리지 이름
+    name: String
+    # 사용자 정의 스토리지 부가 설명
+    description: String
+    type: SmStorageTypeEnum
+    configuration: SmStorageConfigurationTypeInput
+    creator: CloudUserInput
+    created_at: BigInt
+    modifier: CloudUserInput
+    modified_at: BigInt
+}
+
+#
+# sm_storage_state_code_enum.graphql
+#
+enum SmStorageStateCodeEnum {
+  CDM_BACKUP_STORAGE_STATE_AVAILABLE
+  CDM_BACKUP_STORAGE_STATE_UNAVAILABLE
+  CDM_BACKUP_STORAGE_STATE_ERROR
+}
+
+#
+# sm_storage_status.graphql
+#
+# 스토리지 상태
+type SmStorageStatus {
+  capacity: BigInt
+  free_space: BigInt
+  state_code: SmStorageStateCodeEnum
+}
+
+input SmStorageStatusInput {
+    capacity: BigInt
+    free_space: BigInt
+    state_code: SmStorageStateCodeEnum
+}
+
+#
+# sm_storage_type_enum.graphql
+#
+enum SmStorageTypeEnum {
+  CDM_BACKUP_STORAGE_TYPE_CEPH_RBD
+  CDM_BACKUP_STORAGE_TYPE_NFS
+  CDM_BACKUP_STORAGE_TYPE_AWS_S3
+  CDM_BACKUP_STORAGE_TYPE_AZURE_BLOB
+}
+

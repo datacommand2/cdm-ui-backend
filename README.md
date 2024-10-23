@@ -1,19 +1,5 @@
-## CDM 서비스의 Web Backend Repository
+# CDM 서비스의 Web Backend
 
-### 1. Install
+## Getting started
 
-```
-yarn install
-```
-
-### 2. Usage
-
-```
-yarn start
-```
-
-### 3. k8s
-
-```
-kubectl apply -f ./deployment_backend.yaml
-```
+`pnpm start`

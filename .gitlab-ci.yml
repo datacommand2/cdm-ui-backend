@@ -1,0 +1,63 @@
+# cahch files
+# cahch:
+#   paths:
+#     - frontend/node_modules/
+#     - backend/node_modules/
+
+# ## 사용할 이미지 ##
+# image: node:14.19.0-alpine
+
+## 변수 ##
+variables:
+    # 저장소 이름
+    REPO_NAME: registry.datacommand.co.kr
+    IMAGE_TAG: $CI_COMMIT_TAG
+
+    IMAGE_NAME_BACKEND: cdm-ui-backend
+
+# 스테이지
+stages:
+    - deploy
+
+# deploy
+.deploy:image: &deploy_base
+    stage: deploy
+    variables:
+        CI_DEBUG_TRACE: 'true'
+    image: registry.datacommand.co.kr/docker:dind
+    script:
+        - echo "Deploy_base script test!!"
+        - echo "IMAGE_TAG IS"
+        - echo "$IMAGE_TAG"
+        - docker build --tag $REPO_NAME/$IMAGE_NAME_BACKEND:$IMAGE_TAG --build-arg VERSION=$IMAGE_TAG .
+        - docker push $REPO_NAME/$IMAGE_NAME_BACKEND:$IMAGE_TAG
+    tags:
+        - docker
+
+deploy:head: &deploy_head
+    <<: *deploy_base
+    variables:
+        IMAGE_TAG: HEAD
+    only:
+        - main
+
+deploy:release: &deploy_release
+    <<: *deploy_base
+    variables:
+        IMAGE_TAG: $CI_COMMIT_TAG
+    only:
+        - /^.*(QA|PoC|Demo).*$/
+        - /^v\d+\.\d+\.\d+/
+    except:
+        - branches
+
+deploy:issue:
+    <<: *deploy_base
+    variables:
+        IMAGE_TAG: $CI_COMMIT_REF_SLUG
+    when: manual
+    only:
+        - branches
+    except:
+        - /\d+-\d+-stable/
+        - main

@@ -1,0 +1,35 @@
+{
+    "ts-node": {
+        "esm": true,
+        "require": ["tsconfig-paths/register"],
+        "experimentalSpecifierResolution": "node",
+        "transpileOnly": true
+    },
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "ESNext",
+        "lib": ["dom", "dom.iterable", "ES2020"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "composite": true,
+
+        /* Linting */
+        "strict": true,
+        "noFallthroughCasesInSwitch": true,
+
+        /* Bunlder mode */
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        // "noEmit": true,
+        "rootDir": ".",
+        "baseUrl": ".",
+        "outDir": "./dist"
+    },
+    "include": ["./src/**/*.ts", "./src/**/*.js", "./src/**/*.json", "vite.config.ts", "src/server.ts"],
+    "exclude": ["node_modules/**", "nginx/**", "build/**", ".yarn/**"],
+    "types": ["vite/client", "node"]
+}
